@@ -1,0 +1,15 @@
+{
+    "name": "theinad/mediathek",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daniel Gehn",
+            "email": "inad.gamer@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^5.7"
+    }
+}

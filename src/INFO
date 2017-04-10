@@ -1,0 +1,10 @@
+{
+    "name": "mediathek",
+    "hostprefix": "zdf.de",
+    "displayname": "ÖR Mediatheken",
+    "version": "0.0.1",
+    "authentication": "no",
+    "module": "SynoFileHostingMediathek.php",
+    "class": "SynoFileHostingMediathek",
+    "description": "Videos aus allen Mediatheken der ÖR herunterladen."
+}
