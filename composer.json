@@ -1,15 +1,17 @@
 {
-    "name": "theinad/mediathek",
-    "type": "project",
-    "license": "MIT",
     "authors": [
         {
             "name": "Daniel Gehn",
             "email": "inad.gamer@gmail.com"
         }
     ],
+    "description": "Provider for Synology Download Station to enable downloading Videos from German Mediatheken",
+    "homepage": "https://theinad.com",
+    "license": "MIT",
+    "name": "theinad/mediathek",
     "require": {},
     "require-dev": {
         "phpunit/phpunit": "^5.7"
-    }
+    },
+    "type": "project"
 }
