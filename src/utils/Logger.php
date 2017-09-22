@@ -10,9 +10,9 @@
  */
 class Logger
 {
-  protected $enabled = true;
-  protected $path;
-  protected $prefix;
+  private $enabled = true;
+  private $path;
+  private $prefix;
 
   public function __construct($path, $prefix, $enabled = true)
   {

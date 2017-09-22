@@ -10,13 +10,29 @@
  */
 abstract class Mediathek
 {
-  protected $logger;
-  protected $tools;
+  private $logger;
+  private $tools;
 
   public function __construct(Logger $logger, Tools $tools)
   {
     $this->logger = $logger;
     $this->tools = $tools;
+  }
+
+  /**
+   * @return Logger
+   */
+  public function getLogger()
+  {
+    return $this->logger;
+  }
+
+  /**
+   * @return Tools
+   */
+  public function getTools()
+  {
+    return $this->tools;
   }
 
 }

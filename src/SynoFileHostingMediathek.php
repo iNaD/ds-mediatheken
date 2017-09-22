@@ -32,20 +32,20 @@ include_once dirname(__FILE__) . '/mediatheken/ZDF.php';
 
 class SynoFileHostingMediathek {
 
-  protected static $LOG_PATH = '/tmp/mediathek.log';
-  protected static $LOG_PREFIX = 'SynoFileHostingMediathek';
-  protected static $LOG_PREFIX_TOOLS = 'Tools';
+  private static $LOG_PATH = '/tmp/mediathek.log';
+  private static $LOG_PREFIX = 'SynoFileHostingMediathek';
+  private static $LOG_PREFIX_TOOLS = 'Tools';
 
-  protected $url;
-  protected $username;
-  protected $password;
-  protected $hostInfo;
-  protected $filename;
+  private $url;
+  private $username;
+  private $password;
+  private $hostInfo;
+  private $filename;
 
-  protected $logger;
-  protected $tools;
-  protected $logEnabled = false;
-  protected $logPath = false;
+  private $logger;
+  private $tools;
+  private $logEnabled = false;
+  private $logPath = false;
 
   /**
    * Is called on construct by Download Station.
@@ -98,16 +98,31 @@ class SynoFileHostingMediathek {
   /**
    * Returns the Download URI to be used by Download Station.
    *
-   * @return mixed
+   * @return array|bool
    */
   public function GetDownloadInfo()
   {
     $mediathekLogger = new Logger($this->logPath, 'ZDF', $this->logEnabled);
     $mediathek = new ZDF($mediathekLogger, $this->tools);
+    return $this->toDownloadInfo($mediathek->getDownloadInfo($this->url, $this->username,
+      $this->password));
+  }
 
-    return $mediathek->getDownloadInfo($this->url, $this->username, $this->password);
+  private function toDownloadInfo($result) {
+    if ($result === null) {
+      return false;
+    }
+
+    $downloadInfo = array();
+    $downloadInfo[DOWNLOAD_URL] = $result->getUri();
+    $downloadInfo[DOWNLOAD_FILENAME] = $this->filenameForResult($result);
+
+    return $downloadInfo;
+  }
+
+  private function filenameForResult($result) {
+    $videoTitle = $this->tools->videoTitle($result->getTitle(), $result->getEpisodeTitle());
+    return $this->tools->buildFilename($result->getUri(), $videoTitle);
   }
 
 }
-
-?>

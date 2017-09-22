@@ -59,7 +59,7 @@ class Tools
     ),
   );
 
-  protected $logger;
+  private $logger;
 
   /**
    * Tools constructor.
@@ -129,8 +129,6 @@ class Tools
       $filename);
   }
 
-
-
   /**
    * Based on the title build a filename with the url's file extension.
    * If no title is given, the default filename is used.
@@ -150,6 +148,14 @@ class Tools
     }
 
     return $this->safeFilename($filename);
+  }
+
+  public function videoTitle($title, $episodeTitle = '') {
+    if (!empty($episodeTitle)) {
+      return $title . ' - ' . $episodeTitle;
+    }
+
+    return $title;
   }
 
 }
