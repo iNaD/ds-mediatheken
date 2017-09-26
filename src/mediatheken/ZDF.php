@@ -110,55 +110,7 @@ class ZDF extends Mediathek
 
     $downloadJson = json_decode($downloadContent);
     foreach ($downloadJson->{self::$JSON_OBJ_ELEMENT_PRIORITY_LIST} as $priorityListItem) {
-      foreach ($priorityListItem->{self::$JSON_OBJ_ELEMENT_FORMITAETEN} as $formitaet) {
-        $hasUnsupportedFacet = false;
-
-        foreach ($formitaet->facets as $facet) {
-          if (in_array($facet, self::$UNSUPPORTED_FACETS)) {
-            $hasUnsupportedFacet = true;
-            break;
-          }
-        }
-
-        if ($hasUnsupportedFacet === true) {
-          continue;
-        }
-
-        if (array_key_exists($formitaet->mimeType, self::$MIMETYPE_RATING) === false) {
-          $this->getLogger()->log('Unknown Mime Type ' . $formitaet->mimeType);
-          continue;
-        }
-
-        $mimeTypeRating = self::$MIMETYPE_RATING[$formitaet->mimeType];
-
-        if ($mimeTypeRating <= $result->getMimeTypeRating()) {
-          continue;
-        }
-
-        foreach ($formitaet->qualities as $quality) {
-          if (array_key_exists($quality->quality, self::$QUALITY_RATING) === false) {
-            $this->getLogger()->log('Unknown quality ' . $quality->quality);
-            continue;
-          }
-
-          $qualityRating = self::$QUALITY_RATING[$quality->quality];
-
-          if ($qualityRating <= $result->getQualityRating()) {
-            continue;
-          }
-
-          foreach ($quality->audio->tracks as $track) {
-            if (in_array($track->language, self::$SUPPORTED_LANGUAGES) === false) {
-              $this->getLogger()->log('Unknown language ' . $track->language);
-              continue;
-            }
-
-            $result->setUri($track->uri);
-            $result->setMimeTypeRating($mimeTypeRating);
-            $result->setQualityRating($qualityRating);
-          }
-        }
-      }
+      $result = $this->processPriorityListItem($priorityListItem, $result);
     }
 
     if (!$result->hasUri()) {
@@ -167,8 +119,8 @@ class ZDF extends Mediathek
       return null;
     }
 
-    $result->setTitle($contentObject->{self::$JSON_OBJ_ELEMENT_BRAND}->{self::$JSON_OBJ_ELEMENT_BRAND_TITLE});
-    $result->setEpisodeTitle($contentObject->{self::$JSON_OBJ_ELEMENT_TITLE});
+    $result->setTitle(@$contentObject->{self::$JSON_OBJ_ELEMENT_BRAND}->{self::$JSON_OBJ_ELEMENT_BRAND_TITLE});
+    $result->setEpisodeTitle(@$contentObject->{self::$JSON_OBJ_ELEMENT_TITLE});
 
     return $result;
   }
@@ -178,7 +130,6 @@ class ZDF extends Mediathek
     if (preg_match('#"apiToken": "(.*?)",#i', $videoPage, $match) !== 1) {
       return null;
     }
-
     return $match[1];
   }
 
@@ -187,7 +138,6 @@ class ZDF extends Mediathek
     if (preg_match('#"content": "(.*?)",#i', $videoPage, $match) !== 1) {
       return null;
     }
-
     return $match[1];
   }
 
@@ -200,6 +150,83 @@ class ZDF extends Mediathek
         self::$API_AUTH_HEADER . ': ' . str_replace('{token}', $apiToken, self::$API_AUTH_PATTERN)
       )
     ));
+  }
+
+  private function processPriorityListItem($priorityListItem, $result)
+  {
+    foreach ($priorityListItem->{self::$JSON_OBJ_ELEMENT_FORMITAETEN} as $formitaet) {
+      if ($this->isFacetSupported($formitaet) === false) {
+        continue;
+      }
+
+      $mimeTypeRating = $this->getMimeTypeRating($formitaet);
+      if ($mimeTypeRating <= $result->getMimeTypeRating()) {
+        continue;
+      }
+
+      foreach ($formitaet->qualities as $quality) {
+        $result = $this->processQuality($quality, $mimeTypeRating, $result);
+      }
+    }
+
+    return $result;
+  }
+
+  private function isFacetSupported($formitaet)
+  {
+    foreach ($formitaet->facets as $facet) {
+      if (in_array($facet, self::$UNSUPPORTED_FACETS)) {
+        return false;
+      }
+    }
+
+    return true;
+  }
+
+  private function getMimeTypeRating($formitaet)
+  {
+    if (array_key_exists($formitaet->mimeType, self::$MIMETYPE_RATING) === false) {
+      $this->getLogger()->log('Unknown Mime Type ' . $formitaet->mimeType);
+      return -1;
+    }
+
+    return self::$MIMETYPE_RATING[$formitaet->mimeType];
+  }
+
+  private function processQuality($quality, $mimeTypeRating, $result)
+  {
+    $qualityRating = $this->getQualityRating($quality);
+    if ($qualityRating <= $result->getQualityRating()) {
+      return $result;
+    }
+
+    foreach ($quality->audio->tracks as $track) {
+      if ($this->isLanguageSupported($track) === false) {
+        $this->getLogger()->log('Unknown language ' . $track->language);
+        continue;
+      }
+
+      $result = new Result();
+      $result->setUri($track->uri);
+      $result->setMimeTypeRating($mimeTypeRating);
+      $result->setQualityRating($qualityRating);
+    }
+
+    return $result;
+  }
+
+  private function getQualityRating($quality)
+  {
+    if (array_key_exists($quality->quality, self::$QUALITY_RATING) === false) {
+      $this->getLogger()->log('Unknown quality ' . $quality->quality);
+      return -1;
+    }
+    return self::$QUALITY_RATING[$quality->quality];
+  }
+
+  private function isLanguageSupported($track)
+  {
+    return in_array($track->language, self::$SUPPORTED_LANGUAGES);
   }
 
 }

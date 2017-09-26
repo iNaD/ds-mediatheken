@@ -10,6 +10,7 @@
 class Result {
   private $mimeTypeRating = -1;
   private $qualityRating = -1;
+  private $bitrateRating = -1;
   private $uri = null;
   private $title = '';
   private $episodeTitle = '';
@@ -44,6 +45,22 @@ class Result {
   public function setQualityRating($qualityRating)
   {
     $this->qualityRating = $qualityRating;
+  }
+
+  /**
+   * @return int
+   */
+  public function getBitrateRating()
+  {
+    return $this->bitrateRating;
+  }
+
+  /**
+   * @param int $bitrateRating
+   */
+  public function setBitrateRating($bitrateRating)
+  {
+    $this->bitrateRating = $bitrateRating;
   }
 
   /**

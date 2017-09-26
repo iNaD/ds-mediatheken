@@ -16,9 +16,14 @@ if (!defined('DOWNLOAD_STATION_USER_AGENT')) {
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36');
 }
 
+if (!defined('ERR_FILE_NO_EXIST')) {
+  define('ERR_FILE_NO_EXIST', 'ERR_FILE_NO_EXIST');
+}
+
 require_once dirname(__FILE__) . '/utils/Logger.php';
 require_once dirname(__FILE__) . '/utils/Tools.php';
 include_once dirname(__FILE__) . '/mediatheken/ZDF.php';
+include_once dirname(__FILE__) . '/mediatheken/DreiSat.php';
 
 /**
  * Provides download links for all Mediatheken.
@@ -36,7 +41,7 @@ class SynoFileHostingMediathek
   private static $LOG_PATH = '/tmp/mediathek.log';
   private static $LOG_PREFIX = 'SynoFileHostingMediathek';
   private static $LOG_PREFIX_TOOLS = 'Tools';
-  private static $MEDIATHEKEN = array(ZDF::class);
+  private static $MEDIATHEKEN = array(ZDF::class, DreiSat::class);
 
   private $url;
   private $username;

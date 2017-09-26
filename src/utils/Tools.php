@@ -150,6 +150,10 @@ class Tools
   }
 
   public function videoTitle($title, $episodeTitle = '') {
+    if (empty($title)) {
+      return $episodeTitle;
+    }
+
     if (!empty($episodeTitle)) {
       return $title . ' - ' . $episodeTitle;
     }
