@@ -25,7 +25,6 @@ class ZDF extends Mediathek
     'high' => 2,
     'veryhigh' => 3,
   );
-
   /**
    * Maps Mimetypes to ratings.
    *
@@ -40,7 +39,6 @@ class ZDF extends Mediathek
     'video/webm' => 1,
     'video/mp4' => 2,
   );
-
   /**
    * Facets containing this type will be completely ignored.
    *
@@ -50,11 +48,9 @@ class ZDF extends Mediathek
     'hbbtv',
     'restriction_useragent',
   );
-
   private static $SUPPORTED_LANGUAGES = array(
     'deu',
   );
-
   private static $API_BASE_URL = 'https://api.zdf.de';
   private static $BASE_URL = 'https://www.zdf.de';
   private static $JSON_ELEMENT_DOWNLOAD_INFORMATION_URL = 'http://zdf.de/rels/streams/ptmd-template';
@@ -69,6 +65,7 @@ class ZDF extends Mediathek
   private static $JSON_OBJ_ELEMENT_TITLE = 'title';
   private static $JSON_OBJ_ELEMENT_BRAND = 'http://zdf.de/rels/brand';
   private static $JSON_OBJ_ELEMENT_BRAND_TITLE = 'title';
+  protected $supportMatcher = 'zdf.de';
 
   public function getDownloadInfo($url, $username = '', $password = '')
   {

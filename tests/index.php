@@ -2,7 +2,13 @@
 
 require_once dirname(__FILE__) . '/../src/SynoFileHostingMediathek.php';
 
-$mediathek = new SynoFileHostingMediathek(urldecode($_GET['url']),
+$url = isset($_GET['url']) ? $_GET['url'] : null;
+
+if ($url === null) {
+  die('URL is empty');
+}
+
+$mediathek = new SynoFileHostingMediathek(urldecode($url),
   '',
   '',
   '',

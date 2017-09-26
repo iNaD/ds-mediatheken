@@ -12,7 +12,8 @@ if (!defined('DOWNLOAD_FILENAME')) {
 }
 
 if (!defined('DOWNLOAD_STATION_USER_AGENT')) {
-  define('DOWNLOAD_STATION_USER_AGENT', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36');
+  define('DOWNLOAD_STATION_USER_AGENT',
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36');
 }
 
 require_once dirname(__FILE__) . '/utils/Logger.php';
@@ -29,12 +30,13 @@ include_once dirname(__FILE__) . '/mediatheken/ZDF.php';
  * @copyright 2017 Daniel Gehn
  * @license http://opensource.org/licenses/MIT Licensed under MIT License
  */
-
-class SynoFileHostingMediathek {
+class SynoFileHostingMediathek
+{
 
   private static $LOG_PATH = '/tmp/mediathek.log';
   private static $LOG_PREFIX = 'SynoFileHostingMediathek';
   private static $LOG_PREFIX_TOOLS = 'Tools';
+  private static $MEDIATHEKEN = array(ZDF::class);
 
   private $url;
   private $username;
@@ -102,13 +104,35 @@ class SynoFileHostingMediathek {
    */
   public function GetDownloadInfo()
   {
-    $mediathekLogger = new Logger($this->logPath, 'ZDF', $this->logEnabled);
-    $mediathek = new ZDF($mediathekLogger, $this->tools);
+    $mediathek = $this->findSupportingMediathek();
+    if ($mediathek === null) {
+      $this->logger->log('Failed to find mediathek for ' . $this->url);
+      return false;
+    }
+
     return $this->toDownloadInfo($mediathek->getDownloadInfo($this->url, $this->username,
       $this->password));
   }
 
-  private function toDownloadInfo($result) {
+  /**
+   * @return Mediathek
+   */
+  private function findSupportingMediathek()
+  {
+    foreach (self::$MEDIATHEKEN as $mediathek) {
+      $mediathekLogger = new Logger($this->logPath, $mediathek, $this->logEnabled);
+      $instance = new $mediathek($mediathekLogger, $this->tools);
+
+      if ($instance->supportsUrl($this->url)) {
+        return $instance;
+      }
+    }
+
+    return null;
+  }
+
+  private function toDownloadInfo($result)
+  {
     if ($result === null) {
       return false;
     }
@@ -120,7 +144,8 @@ class SynoFileHostingMediathek {
     return $downloadInfo;
   }
 
-  private function filenameForResult($result) {
+  private function filenameForResult($result)
+  {
     $videoTitle = $this->tools->videoTitle($result->getTitle(), $result->getEpisodeTitle());
     return $this->tools->buildFilename($result->getUri(), $videoTitle);
   }

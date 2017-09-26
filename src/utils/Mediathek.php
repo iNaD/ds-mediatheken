@@ -9,6 +9,8 @@
  */
 abstract class Mediathek
 {
+
+  protected $supportMatcher = null;
   private $logger;
   private $tools;
 
@@ -17,6 +19,8 @@ abstract class Mediathek
     $this->logger = $logger;
     $this->tools = $tools;
   }
+
+  abstract public function getDownloadInfo($url, $username, $password);
 
   /**
    * @return Logger
@@ -32,6 +36,15 @@ abstract class Mediathek
   public function getTools()
   {
     return $this->tools;
+  }
+
+  public function supportsUrl($url)
+  {
+    if ($this->supportMatcher === null) {
+      throw new Exception('A supportMatcher is mandatory');
+    }
+
+    return strpos($url, $this->supportMatcher) !== false;
   }
 
 }
