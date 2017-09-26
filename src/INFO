@@ -1,6 +1,6 @@
 {
     "name": "mediathek",
-    "hostprefix": "zdf.de",
+    "hostprefix": "zdf.de,3sat.de",
     "displayname": "ÖR Mediatheken",
     "version": "0.0.1",
     "authentication": "no",
