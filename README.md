@@ -6,7 +6,7 @@ Ermöglicht es mit der Synology Download Station Videos aus den Mediatheken der 
 
 - [Features](#features)
 - [Voraussetzungen](#voraussetzungen)
-- [Unterstützte Mediatheken](#unterstuetzte-mediatheken)
+- [Unterstützte Mediatheken](#unterstützte-mediatheken)
 - [Installation](#installation)
 - [Deinstallation](#deinstallation)
 - [Update](#update)
@@ -52,7 +52,7 @@ Die Installation ist abgeschlossen und es benötigt keine weitere Einrichtung.
 
 ### Nutzung
 
-Zum Herunterladen eines Videos, eine der [unterstützten Mediatheken](#unterstuetzte-mediatheken) aufrufen, Folge heraussuchen und den Link zur Folge kopieren.
+Zum Herunterladen eines Videos, eine der [unterstützten Mediatheken](#unterstützte-mediatheken) aufrufen, Folge heraussuchen und den Link zur Folge kopieren.
 
 Dieser Link wird bei der Download Station nun einfach hinzugefügt und nach kurzer Zeit beginnt der Download über den Provider.
 
