@@ -38,6 +38,10 @@ Ein Synology-NAS mit einer aktuellen Version des `DiskStation Managers` und dem 
 
 Die Installation ist abgeschlossen und es benötigt keine weitere Einrichtung.
 
+**Wichtig für alle Nutzer der alten Provider**
+
+Die alten Provider sollten entfernt werden, da es sonst zu Problemen kommen kann! (Bezieht sich auf die aktuell unterstützten Mediatheken)
+
 ### Deinstallation
 
 1. Über das Webinterface des `Diskstation Managers` die `Download Station` Anwendung öffnen
