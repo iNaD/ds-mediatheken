@@ -40,7 +40,7 @@ Die Installation ist abgeschlossen und es benötigt keine weitere Einrichtung.
 
 **Wichtig für alle Nutzer der alten Provider**
 
-Die alten Provider sollten entfernt werden, da es sonst zu Problemen kommen kann! (Bezieht sich auf die aktuell unterstützten Mediatheken)
+Die alten Provider sollten entfernt werden, da es sonst zu Problemen kommen kann! (Betrifft nur die unterstützten Mediatheken)
 
 ### Deinstallation
 
