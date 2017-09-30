@@ -1,6 +1,6 @@
 {
     "name": "mediathek",
-    "hostprefix": "zdf.de,3sat.de,ardmediathek.de,mediathek.daserste.de",
+    "hostprefix": "zdf.de,3sat.de,ardmediathek.de,mediathek.daserste.de,mediathek.rbb-online.de",
     "displayname": "ÖR Mediatheken",
     "version": "0.0.1",
     "authentication": "no",
