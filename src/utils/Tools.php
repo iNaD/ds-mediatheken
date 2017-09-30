@@ -9,6 +9,7 @@
  */
 class Tools
 {
+
   public static $UNSAFE_CHARACTERS = array(
     'search' => array(
       'ß',
@@ -27,6 +28,7 @@ class Tools
       '\\',
       '|',
       '?',
+      '!',
       '*',
       "\n",
       "\r",
@@ -43,6 +45,7 @@ class Tools
       'Ue',
       '',
       '-',
+      '',
       '',
       '',
       '',
@@ -112,20 +115,19 @@ class Tools
    */
   public function startsWith($haystack, $needle)
   {
-    // search backwards starting from haystack length characters from the end
-    return $needle === '' || strrpos($haystack, $needle, -strlen($haystack)) !== FALSE;
+    return (substr($haystack, 0, strlen($needle)) === $needle);
   }
 
   /**
-   * Returns a Synology safe filename, because Umlauts currently won't work.
+   * Checks if haystack ends with needle.
    *
-   * @param string $filename
-   * @return string
+   * @param $haystack
+   * @param $needle
+   * @return bool
    */
-  public function safeFilename($filename)
+  public function endsWith($haystack, $needle)
   {
-    return str_replace(self::$UNSAFE_CHARACTERS['search'], self::$UNSAFE_CHARACTERS['replace'],
-      $filename);
+    return (substr($haystack, -1 * strlen($needle)) === $needle);
   }
 
   /**
@@ -149,7 +151,20 @@ class Tools
     return $this->safeFilename($filename);
   }
 
-  public function videoTitle($title, $episodeTitle = '') {
+  /**
+   * Returns a Synology safe filename, because Umlauts currently won't work.
+   *
+   * @param string $filename
+   * @return string
+   */
+  public function safeFilename($filename)
+  {
+    return str_replace(self::$UNSAFE_CHARACTERS['search'], self::$UNSAFE_CHARACTERS['replace'],
+      $filename);
+  }
+
+  public function videoTitle($title, $episodeTitle = '')
+  {
     if (empty($title)) {
       return $episodeTitle;
     }

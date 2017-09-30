@@ -22,8 +22,9 @@ if (!defined('ERR_FILE_NO_EXIST')) {
 
 require_once dirname(__FILE__) . '/utils/Logger.php';
 require_once dirname(__FILE__) . '/utils/Tools.php';
-include_once dirname(__FILE__) . '/mediatheken/ZDF.php';
+include_once dirname(__FILE__) . '/mediatheken/ARD.php';
 include_once dirname(__FILE__) . '/mediatheken/DreiSat.php';
+include_once dirname(__FILE__) . '/mediatheken/ZDF.php';
 
 /**
  * Provides download links for all Mediatheken.
@@ -41,7 +42,7 @@ class SynoFileHostingMediathek
   private static $LOG_PATH = '/tmp/mediathek.log';
   private static $LOG_PREFIX = 'SynoFileHostingMediathek';
   private static $LOG_PREFIX_TOOLS = 'Tools';
-  private static $MEDIATHEKEN = array(ZDF::class, DreiSat::class);
+  private static $MEDIATHEKEN = array(ARD::class, DreiSat::class, ZDF::class);
 
   private $url;
   private $username;
@@ -138,7 +139,7 @@ class SynoFileHostingMediathek
 
   private function toDownloadInfo($result)
   {
-    if ($result === null) {
+    if ($result === null || !$result->hasUri()) {
       return false;
     }
 
