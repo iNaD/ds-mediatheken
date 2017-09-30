@@ -10,6 +10,8 @@
 class Tools
 {
 
+  public static $MOBILE_USERAGENT = "Mozilla/5.0 (Linux; Android 4.1; Galaxy Nexus Build/JRN84D) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19";
+
   public static $UNSAFE_CHARACTERS = array(
     'search' => array(
       'ß',
@@ -71,6 +73,11 @@ class Tools
     $this->logger = $logger;
   }
 
+  public function curlRequestMobile($url, $options = array())
+  {
+    $options[CURLOPT_USERAGENT] = self::$MOBILE_USERAGENT;
+    return $this->curlRequest($url, $options);
+  }
 
   /**
    * Unified curl request handling
@@ -174,6 +181,25 @@ class Tools
     }
 
     return $title;
+  }
+
+  public function pregMatchDefault($pattern, $subject, $default = null, $flags = 0, $offset = 0) {
+    $matches = array();
+
+    if (preg_match($pattern, $subject, $matches, $flags, $offset) !== 1) {
+      return $default;
+    }
+    return $matches[1];
+  }
+
+  public function pregMatchAllDefault($pattern, $subject, $default = array(), $flags = 0, $offset = 0) {
+    $matches = array();
+
+    if (preg_match($pattern, $subject, $matches, $flags, $offset) > 0) {
+      return array_slice($matches, 1);
+
+    }
+    return $default;
   }
 
 }
