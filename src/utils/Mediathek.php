@@ -44,7 +44,25 @@ abstract class Mediathek
       throw new Exception('A supportMatcher is mandatory');
     }
 
-    return strpos($url, $this->supportMatcher) !== false;
+    if (is_array($this->supportMatcher)) {
+      if (count($this->supportMatcher) === 0) {
+        throw new Exception('An array supportMatcher needs at least one value');
+      }
+
+      foreach ($this->supportMatcher as $supports) {
+        if (strpos($url, $supports) !== false) {
+          return true;
+        }
+      }
+
+      return false;
+    }
+
+    if (is_string($this->supportMatcher)) {
+      return strpos($url, $this->supportMatcher) !== false;
+    }
+
+    return false;
   }
 
 }
