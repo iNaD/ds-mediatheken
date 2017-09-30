@@ -24,6 +24,7 @@ require_once dirname(__FILE__) . '/utils/Logger.php';
 require_once dirname(__FILE__) . '/utils/Tools.php';
 include_once dirname(__FILE__) . '/mediatheken/ARD.php';
 include_once dirname(__FILE__) . '/mediatheken/DreiSat.php';
+include_once dirname(__FILE__) . '/mediatheken/RBB.php';
 include_once dirname(__FILE__) . '/mediatheken/ZDF.php';
 
 /**
@@ -42,7 +43,7 @@ class SynoFileHostingMediathek
   private static $LOG_PATH = '/tmp/mediathek.log';
   private static $LOG_PREFIX = 'SynoFileHostingMediathek';
   private static $LOG_PREFIX_TOOLS = 'Tools';
-  private static $MEDIATHEKEN = array(ARD::class, DreiSat::class, ZDF::class);
+  private static $MEDIATHEKEN = array(ARD::class, DreiSat::class, RBB::class, ZDF::class);
 
   private $url;
   private $username;
