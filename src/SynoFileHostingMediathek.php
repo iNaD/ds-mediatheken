@@ -1,25 +1,5 @@
 <?php
-if (!defined('USER_IS_PREMIUM')) {
-  define('USER_IS_PREMIUM', 'USER_IS_PREMIUM');
-}
-
-if (!defined('DOWNLOAD_URL')) {
-  define('DOWNLOAD_URL', 'DOWNLOAD_URL');
-}
-
-if (!defined('DOWNLOAD_FILENAME')) {
-  define('DOWNLOAD_FILENAME', 'DOWNLOAD_FILENAME');
-}
-
-if (!defined('DOWNLOAD_STATION_USER_AGENT')) {
-  define('DOWNLOAD_STATION_USER_AGENT',
-    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36');
-}
-
-if (!defined('ERR_FILE_NO_EXIST')) {
-  define('ERR_FILE_NO_EXIST', 'ERR_FILE_NO_EXIST');
-}
-
+require_once dirname(__FILE__) . '/utils/defines.php';
 require_once dirname(__FILE__) . '/utils/Logger.php';
 require_once dirname(__FILE__) . '/utils/Tools.php';
 include_once dirname(__FILE__) . '/mediatheken/ARD.php';
@@ -34,7 +14,7 @@ include_once dirname(__FILE__) . '/mediatheken/ZDF.php';
  * All public functions are required by Synology Download Station.
  *
  * @author Daniel Gehn <me@theinad.com>
- * @version 0.0.1
+ * @version 0.0.2
  * @copyright 2017 Daniel Gehn
  * @license http://opensource.org/licenses/MIT Licensed under MIT License
  */

@@ -25,8 +25,11 @@ Ein Synology-NAS mit einer aktuellen Version des `DiskStation Managers` und dem 
 
 ### Unterstützte Mediatheken
 
-- ZDF Mediathek (`zdf.de`)
 - 3sat (`3sat.de`)
+- ARD (`ardmediathek.de`, `mediathek.daserste.de`)
+- RBB (`mediathek.rbb-online.de`)
+- WDR (`wdr.de/mediathek`, `one.ard.de/mediathek`)
+- ZDF Mediathek (`zdf.de`)
 
 ### Installation
 
