@@ -1,6 +1,7 @@
 *.iml
-.idea
+.idea/
+.vscode/
 
 build
 
-/vendor/
+vendor/

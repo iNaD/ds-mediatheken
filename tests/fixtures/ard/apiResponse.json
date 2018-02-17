@@ -1,0 +1,55 @@
+{
+    "_type": "video",
+    "_isLive": false,
+    "_defaultQuality": ["auto", 2, 4, 3, 1, 0],
+    "_previewImage": "http://www.ardmediathek.de/img/standard/00/50/07/75/32/-1774185891/16x9/960?mandant=ard",
+    "_subtitleUrl": "http://www.ardmediathek.de/subtitle/216309",
+    "_subtitleOffset": 0,
+    "_mediaArray": [{
+        "_plugin": 0,
+        "_mediaStreamArray": [{
+            "_quality": "auto",
+            "_server": "",
+            "_cdn": "akamai",
+            "_stream": "https://dasersteuni-vh.akamaihd.net/z/de/2018/02/07/9e39ab47-315e-44fc-b61b-c5b386d41c00/,640-1,512-1,960-1,.mp4.csmil/manifest.f4m"
+        }, {
+            "_quality": 2,
+            "_server": "",
+            "_cdn": "akamai",
+            "_width": 640,
+            "_height": 360,
+            "_stream": "https://pdvideosdaserste-a.akamaihd.net/de/2018/02/07/9e39ab47-315e-44fc-b61b-c5b386d41c00/640-1.mp4"
+        }]
+    }, {
+        "_plugin": 1,
+        "_mediaStreamArray": [{
+            "_quality": "auto",
+            "_server": "",
+            "_cdn": "flashls",
+            "_stream": "https://dasersteuni-vh.akamaihd.net/i/de/2018/02/07/9e39ab47-315e-44fc-b61b-c5b386d41c00/,480-1,640-1,512-1,320-1,960-1,.mp4.csmil/master.m3u8"
+        }, {
+            "_quality": 0,
+            "_server": "",
+            "_cdn": "akamai",
+            "_stream": "https://pdvideosdaserste-a.akamaihd.net/de/2018/02/07/9e39ab47-315e-44fc-b61b-c5b386d41c00/320-1.mp4"
+        }, {
+            "_quality": 1,
+            "_stream": ["https://pdvideosdaserste-a.akamaihd.net/de/2018/02/07/9e39ab47-315e-44fc-b61b-c5b386d41c00/512-1.mp4", "https://pdvideosdaserste-a.akamaihd.net/de/2018/02/07/9e39ab47-315e-44fc-b61b-c5b386d41c00/480-1.mp4"]
+        }, {
+            "_quality": 2,
+            "_stream": ["https://pdvideosdaserste-a.akamaihd.net/de/2018/02/07/9e39ab47-315e-44fc-b61b-c5b386d41c00/640-1.mp4", "https://pdvideosdaserste-a.akamaihd.net/de/2018/02/07/9e39ab47-315e-44fc-b61b-c5b386d41c00/960-1.mp4"]
+        }, {
+            "_quality": 3,
+            "_server": "",
+            "_cdn": "akamai",
+            "_width": 960,
+            "_height": 540,
+            "_stream": "https://pdvideosdaserste-a.akamaihd.net/de/2018/02/07/9e39ab47-315e-44fc-b61b-c5b386d41c00/960-1.mp4"
+        }]
+    }],
+    "_alternativeMediaArray": [],
+    "_sortierArray": [1, 0],
+    "_duration": 5298,
+    "_dvrEnabled": false,
+    "_geoblocked": true
+}

@@ -9,9 +9,6 @@
  */
 class Tools
 {
-
-  public static $MOBILE_USERAGENT = "Mozilla/5.0 (Linux; Android 4.1; Galaxy Nexus Build/JRN84D) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19";
-
   public static $UNSAFE_CHARACTERS = array(
     'search' => array(
       'ß',
@@ -64,19 +61,25 @@ class Tools
   );
 
   private $logger;
+  private $curl;
 
   /**
    * Tools constructor.
    */
-  public function __construct(Logger $logger)
+  public function __construct(Logger $logger, Curl $curl)
   {
     $this->logger = $logger;
+    $this->curl = $curl;
   }
 
   public function curlRequestMobile($url, $options = array())
   {
-    $options[CURLOPT_USERAGENT] = self::$MOBILE_USERAGENT;
-    return $this->curlRequest($url, $options);
+    try {
+      return $this->curl->requestMobile($url, $options);
+    } catch(\Exception $e) {
+      $this->logger->log($e->getMessage());
+      return null;
+    }
   }
 
   /**
@@ -88,29 +91,12 @@ class Tools
    */
   public function curlRequest($url, $options = array())
   {
-    $curl = curl_init();
-
-    curl_setopt($curl, CURLOPT_URL, $url);
-    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($curl, CURLOPT_USERAGENT, DOWNLOAD_STATION_USER_AGENT);
-    curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true);
-    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
-    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-
-    foreach ($options as $option => $value) {
-      curl_setopt($curl, $option, $value);
-    }
-
-    $result = curl_exec($curl);
-
-    if (!$result) {
-      $this->logger->log('Failed to retrieve XML. Error Info: ' . curl_error($curl));
+    try {
+      return $this->curl->request($url, $options);
+    } catch(\Exception $e) {
+      $this->logger->log($e->getMessage());
       return null;
     }
-
-    curl_close($curl);
-
-    return $result;
   }
 
   /**

@@ -13,7 +13,7 @@ class WDR extends Mediathek
 
   protected $supportMatcher = array('wdr.de/mediathek', 'one.ard.de/mediathek');
 
-  public function getDownloadInfo($url, $username, $password)
+  public function getDownloadInfo($url, $username = '', $password = '')
   {
     $result = new Result();
 
@@ -28,7 +28,6 @@ class WDR extends Mediathek
     }
 
     $bestQualityUrl = $this->getBestQualityUrl($mediaObject);
-
     if ($bestQualityUrl === null) {
       return null;
     }

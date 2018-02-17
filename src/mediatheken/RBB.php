@@ -16,18 +16,17 @@ class RBB extends Mediathek
 
   protected $supportMatcher = 'mediathek.rbb-online.de';
 
-  public function getDownloadInfo($url, $username, $password)
+  public function getDownloadInfo($url, $username = '', $password = '')
   {
     $result = new Result();
-    $documentId = $this->getDocumentId($url);
 
+    $documentId = $this->getDocumentId($url);
     if ($documentId === null) {
       $this->getLogger()->log('No documentId found in ' . $url);
       return null;
     }
 
     $apiData = $this->getApiData($documentId);
-
     if ($apiData === null) {
       return null;
     }

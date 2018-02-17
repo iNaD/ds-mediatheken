@@ -40,7 +40,6 @@ class DreiSat extends Mediathek
   public function getDownloadInfo($url, $username = '', $password = '')
   {
     $objectId = $this->getObjectId($url);
-
     if ($objectId === null) {
       $this->getLogger()->log('Couldn\'t identify object id in ' . $url);
       return null;

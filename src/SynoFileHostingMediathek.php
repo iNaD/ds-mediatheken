@@ -55,7 +55,8 @@ class SynoFileHostingMediathek
 
     $this->logger = new Logger($this->logPath, self::$LOG_PREFIX, $debug);
     $toolsLogger = new Logger($this->logPath, self::$LOG_PREFIX_TOOLS, $debug);
-    $this->tools = new Tools($toolsLogger);
+    $curl = new Curl();
+    $this->tools = new Tools($toolsLogger, $curl);
 
     $this->url = $url;
     $this->username = $username;

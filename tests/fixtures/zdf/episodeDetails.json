@@ -1,0 +1,330 @@
+{
+    "contentType": "episode",
+    "onlineOnly": false,
+    "title": "Das große Besenrennen ",
+    "subtitle": "Folge 51",
+    "editorialDate": "2018-02-17T08:20:00.000+01:00",
+    "leadParagraph": "Bibi und Schubia wollen am großen Besenrennen, einem Staffelwettflug für Junghexen, teilnehmen. Die Konkurrenz ist groß und fast alle hexischen Mittel für Turbobesen sind erlaubt. ",
+    "teasertext": "Bibi und Schubia beim Wettflug für Junghexen. ",
+    "teaserImageRef": {
+        "title": "Das große Besenrennen",
+        "altText": "Bibi und Schubia nehmen am großen Besenrennen teil.",
+        "profile": "http:\/\/zdf.de\/rels\/image",
+        "self": "\/content\/documents\/zdf\/kinder\/bibi-blocksberg\/bilder\/grosse-besenrennen-bib-100.json?profile=player",
+        "canonical": "\/content\/documents\/grosse-besenrennen-bib-100.json",
+        "layouts": {
+            "2400x1350": "https:\/\/www.zdf.de\/assets\/grosse-besenrennen-bib-100~2400x1350?cb=1516191402358",
+            "original": "https:\/\/www.zdf.de\/assets\/grosse-besenrennen-bib-100~original?cb=1516191402358",
+            "1920x1080": "https:\/\/www.zdf.de\/assets\/grosse-besenrennen-bib-100~1920x1080?cb=1516191402358",
+            "1280x720": "https:\/\/www.zdf.de\/assets\/grosse-besenrennen-bib-100~1280x720?cb=1516191402358",
+            "768x432": "https:\/\/www.zdf.de\/assets\/grosse-besenrennen-bib-100~768x432?cb=1516191402358",
+            "384x216": "https:\/\/www.zdf.de\/assets\/grosse-besenrennen-bib-100~384x216?cb=1516191402358"
+        }
+    },
+    "endDate": "2018-02-24T08:20:00.000+01:00",
+    "http:\/\/zdf.de\/rels\/category": {
+        "profile": "http:\/\/zdf.de\/rels\/content\/structureNodeDocument-breadcrumb",
+        "self": "\/content\/structure\/zdf\/kinder?profile=breadcrumb",
+        "canonical": "\/content\/structure\/zdf\/kinder",
+        "title": "ZDFtivi",
+        "http:\/\/zdf.de\/rels\/target": {
+            "id": "zdftivi-fuer-kinder-100",
+            "externalId": "SCMS_08f13918-3912-42aa-9c30-cddb26657638",
+            "title": "ZDFtivi für Kinder",
+            "hasVideo": true,
+            "contentType": "category",
+            "profile": "http:\/\/zdf.de\/rels\/content\/page-index-navigation",
+            "self": "\/content\/documents\/zdf\/kinder?profile=navigation",
+            "canonical": "\/content\/documents\/zdftivi-fuer-kinder-100.json",
+            "structureNodePath": "\/zdf\/kinder"
+        }
+    },
+    "http:\/\/zdf.de\/rels\/uri": "https:\/\/www.zdf.de\/uri\/tivi_vcms_video_1786028",
+    "http:\/\/zdf.de\/rels\/sharing-url": "https:\/\/www.zdf.de\/kinder\/bibi-blocksberg\/das-grosse-besenrennen-102.html",
+    "http:\/\/zdf.de\/rels\/brand": {
+        "profile": "http:\/\/zdf.de\/rels\/content\/structureNodeDocument-breadcrumb",
+        "self": "\/content\/structure\/zdf\/kinder\/bibi-blocksberg?profile=breadcrumb",
+        "canonical": "\/content\/structure\/zdf\/kinder\/bibi-blocksberg",
+        "title": "Bibi Blocksberg",
+        "http:\/\/zdf.de\/rels\/target": {
+            "id": "bibi-blocksberg-110",
+            "externalId": "SCMS_tivi_default_bibiblocksberg",
+            "title": "Bibi Blocksberg",
+            "hasVideo": true,
+            "contentType": "brand",
+            "profile": "http:\/\/zdf.de\/rels\/content\/page-index-navigation",
+            "self": "\/content\/documents\/zdf\/kinder\/bibi-blocksberg?profile=navigation",
+            "canonical": "\/content\/documents\/bibi-blocksberg-110.json",
+            "structureNodePath": "\/zdf\/kinder\/bibi-blocksberg"
+        }
+    },
+    "hasVideo": true,
+    "currentVideoType": "episode",
+    "tvService": "ZDF",
+    "profile": "http:\/\/zdf.de\/rels\/content\/page-video-player",
+    "self": "\/content\/documents\/zdf\/kinder\/bibi-blocksberg\/das-grosse-besenrennen-102.json?profile=player",
+    "canonical": "\/content\/documents\/das-grosse-besenrennen-102.json",
+    "structureNodePath": "\/zdf\/kinder\/bibi-blocksberg",
+    "http:\/\/zdf.de\/rels\/recommended-videos": {
+        "next": "\/recommendation\/fingerprint?docs=SCMS_tivi_vcms_video_1786028%3A1.0&hasVideo=true&types=page-video&paths=%2Fzdf%2Fkinder&limit=1&page=2",
+        "totalResultsCount": 3,
+        "profile": "http:\/\/zdf.de\/rels\/recommendation\/result-page",
+        "self": "\/recommendation\/fingerprint?docs=SCMS_tivi_vcms_video_1786028%3A1.0&hasVideo=true&types=page-video&paths=%2Fzdf%2Fkinder&limit=1",
+        "http:\/\/zdf.de\/rels\/recommendation\/results": [{
+            "score": 6.9489884,
+            "http:\/\/zdf.de\/rels\/target": {
+                "contentType": "episode",
+                "title": "Die fremde Hexe ",
+                "editorialDate": "2018-02-11T07:20:00.000+01:00",
+                "teaserImageRef": {
+                    "title": "Die fremde Hexe",
+                    "altText": "Bibi hilft Herrn Pichler mit den Katzen",
+                    "source": "KIDDINX",
+                    "profile": "http:\/\/zdf.de\/rels\/image",
+                    "self": "\/content\/documents\/zdf\/kinder\/bibi-blocksberg\/bilder\/bibi-blocksberg-die-fremde-hexe-100.json?profile=player",
+                    "canonical": "\/content\/documents\/bibi-blocksberg-die-fremde-hexe-100.json",
+                    "layouts": {
+                        "2400x1350": "https:\/\/www.zdf.de\/assets\/bibi-blocksberg-die-fremde-hexe-100~2400x1350?cb=1518003117932",
+                        "original": "https:\/\/www.zdf.de\/assets\/bibi-blocksberg-die-fremde-hexe-100~original?cb=1518003117932",
+                        "1920x1080": "https:\/\/www.zdf.de\/assets\/bibi-blocksberg-die-fremde-hexe-100~1920x1080?cb=1518003117932",
+                        "1280x720": "https:\/\/www.zdf.de\/assets\/bibi-blocksberg-die-fremde-hexe-100~1280x720?cb=1518003117932",
+                        "768x432": "https:\/\/www.zdf.de\/assets\/bibi-blocksberg-die-fremde-hexe-100~768x432?cb=1518003117932",
+                        "384x216": "https:\/\/www.zdf.de\/assets\/bibi-blocksberg-die-fremde-hexe-100~384x216?cb=1518003117932"
+                    }
+                },
+                "http:\/\/zdf.de\/rels\/category": {
+                    "profile": "http:\/\/zdf.de\/rels\/content\/structureNodeDocument-breadcrumb",
+                    "self": "\/content\/structure\/zdf\/kinder?profile=breadcrumb",
+                    "canonical": "\/content\/structure\/zdf\/kinder",
+                    "title": "ZDFtivi",
+                    "http:\/\/zdf.de\/rels\/target": {
+                        "id": "zdftivi-fuer-kinder-100",
+                        "externalId": "SCMS_08f13918-3912-42aa-9c30-cddb26657638",
+                        "title": "ZDFtivi für Kinder",
+                        "hasVideo": true,
+                        "contentType": "category",
+                        "profile": "http:\/\/zdf.de\/rels\/content\/page-index-navigation",
+                        "self": "\/content\/documents\/zdf\/kinder?profile=navigation",
+                        "canonical": "\/content\/documents\/zdftivi-fuer-kinder-100.json",
+                        "structureNodePath": "\/zdf\/kinder"
+                    }
+                },
+                "http:\/\/zdf.de\/rels\/sharing-url": "https:\/\/www.zdf.de\/kinder\/bibi-blocksberg\/die-fremde-hexe-102.html",
+                "http:\/\/zdf.de\/rels\/brand": {
+                    "profile": "http:\/\/zdf.de\/rels\/content\/structureNodeDocument-breadcrumb",
+                    "self": "\/content\/structure\/zdf\/kinder\/bibi-blocksberg?profile=breadcrumb",
+                    "canonical": "\/content\/structure\/zdf\/kinder\/bibi-blocksberg",
+                    "title": "Bibi Blocksberg",
+                    "http:\/\/zdf.de\/rels\/target": {
+                        "id": "bibi-blocksberg-110",
+                        "externalId": "SCMS_tivi_default_bibiblocksberg",
+                        "title": "Bibi Blocksberg",
+                        "hasVideo": true,
+                        "contentType": "brand",
+                        "profile": "http:\/\/zdf.de\/rels\/content\/page-index-navigation",
+                        "self": "\/content\/documents\/zdf\/kinder\/bibi-blocksberg?profile=navigation",
+                        "canonical": "\/content\/documents\/bibi-blocksberg-110.json",
+                        "structureNodePath": "\/zdf\/kinder\/bibi-blocksberg"
+                    }
+                },
+                "hasVideo": true,
+                "currentVideoType": "episode",
+                "profile": "http:\/\/zdf.de\/rels\/content\/page-video-playlist",
+                "self": "\/content\/documents\/zdf\/kinder\/bibi-blocksberg\/die-fremde-hexe-102.json?profile=playlist",
+                "http:\/\/zdf.de\/rels\/player": "\/content\/documents\/zdf\/kinder\/bibi-blocksberg\/die-fremde-hexe-102.json?profile=player",
+                "canonical": "\/content\/documents\/die-fremde-hexe-102.json",
+                "structureNodePath": "\/zdf\/kinder\/bibi-blocksberg",
+                "tracking": {
+                    "szmng": {
+                        "st": "zdf",
+                        "cp": "ZDFtivi\/Bibi_Blocksberg",
+                        "sv": "ke"
+                    },
+                    "atInternet": {
+                        "page": {
+                            "level1": "zdf",
+                            "level2": "ZDFtivi",
+                            "chapter1": "\/Bibi_Blocksberg",
+                            "chapter2": "episode",
+                            "chapter3": "tivi_vcms_video_1785996",
+                            "name": "Die_fremde_Hexe_",
+                            "customObject": {
+                                "domain": "zdf",
+                                "level1": "zdf",
+                                "level2": "ZDFtivi",
+                                "chapter1": "\/Bibi_Blocksberg",
+                                "broadcast": "ZDF",
+                                "id": "die-fremde-hexe-102",
+                                "inhaltsTyp": "episode"
+                            }
+                        },
+                        "richMedia": {
+                            "mediaType": "video",
+                            "mediaLevel2": "ZDFtivi",
+                            "mediaLabel": "Die_fremde_Hexe_",
+                            "refreshDuration": "30",
+                            "duration": "1513",
+                            "broadcastMode": "clip"
+                        },
+                        "event": {
+                            "level1": "zdf",
+                            "level2": "ZDFtivi",
+                            "chapter1": "\/Bibi_Blocksberg",
+                            "customObject": {
+                                "domain": "zdf",
+                                "level1": "zdf",
+                                "level2": "ZDFtivi",
+                                "chapter1": "\/Bibi_Blocksberg",
+                                "broadcast": "ZDF",
+                                "id": "die-fremde-hexe-102",
+                                "inhaltsTyp": "episode"
+                            }
+                        },
+                        "customVars": {
+                            "site": {
+                                "id": "die-fremde-hexe-102",
+                                "chapter2": "episode",
+                                "chapter3": "tivi_vcms_video_1785996"
+                            }
+                        }
+                    }
+                },
+                "fskBlocked": false,
+                "mainVideoContent": {
+                    "http:\/\/zdf.de\/rels\/target": {
+                        "title": "180211_hexe_folge49_bib",
+                        "duration": 1513,
+                        "visible": true,
+                        "profile": "http:\/\/zdf.de\/rels\/content\/content-video-vod-player",
+                        "self": "\/content\/documents\/zdf\/kinder\/bibi-blocksberg\/videos\/180211-hexe-folge49-bib-100.json?profile=player",
+                        "canonical": "\/content\/documents\/180211-hexe-folge49-bib-100.json",
+                        "http:\/\/zdf.de\/rels\/streams\/ptmd": "\/tmd\/2\/portal\/vod\/ptmd\/tivi\/180211_hexe_folge49_bib",
+                        "http:\/\/zdf.de\/rels\/streams\/ptmd-template": "\/tmd\/2\/{playerId}\/vod\/ptmd\/tivi\/180211_hexe_folge49_bib"
+                    },
+                    "profile": "http:\/\/zdf.de\/rels\/content-reference\/video-content"
+                }
+            },
+            "profile": "http:\/\/zdf.de\/rels\/recommendation\/result",
+            "id": "SCMS_tivi_vcms_video_1785996",
+            "viewCount": 0,
+            "ratingCount": 0
+        }],
+        "first": "\/recommendation\/fingerprint?docs=SCMS_tivi_vcms_video_1786028%3A1.0&hasVideo=true&types=page-video&paths=%2Fzdf%2Fkinder&limit=1"
+    },
+    "http:\/\/zdf.de\/rels\/recommended-videos-object-reference": {
+        "profile": "http:\/\/zdf.de\/rels\/object-reference",
+        "reference-type": "virtual",
+        "uri": "\/recommendation\/fingerprint?docs=SCMS_tivi_vcms_video_1786028%3A1.0&types=page-video&limit=25&paths=%2Fzdf%2Fkinder&profile=player"
+    },
+    "tracking": {
+        "szmng": {
+            "st": "zdf",
+            "cp": "ZDFtivi\/Bibi_Blocksberg",
+            "sv": "ke"
+        },
+        "atInternet": {
+            "page": {
+                "level1": "zdf",
+                "level2": "ZDFtivi",
+                "chapter1": "\/Bibi_Blocksberg",
+                "chapter2": "episode",
+                "chapter3": "tivi_vcms_video_1786028",
+                "name": "Das_grosse_Besenrennen_",
+                "customObject": {
+                    "domain": "zdf",
+                    "level1": "zdf",
+                    "level2": "ZDFtivi",
+                    "chapter1": "\/Bibi_Blocksberg",
+                    "broadcast": "ZDF",
+                    "id": "das-grosse-besenrennen-102",
+                    "inhaltsTyp": "episode"
+                }
+            },
+            "richMedia": {
+                "mediaType": "video",
+                "mediaLevel2": "ZDFtivi",
+                "mediaLabel": "Das_grosse_Besenrennen_",
+                "refreshDuration": "30",
+                "duration": "1513",
+                "broadcastMode": "clip"
+            },
+            "event": {
+                "level1": "zdf",
+                "level2": "ZDFtivi",
+                "chapter1": "\/Bibi_Blocksberg",
+                "customObject": {
+                    "domain": "zdf",
+                    "level1": "zdf",
+                    "level2": "ZDFtivi",
+                    "chapter1": "\/Bibi_Blocksberg",
+                    "broadcast": "ZDF",
+                    "id": "das-grosse-besenrennen-102",
+                    "inhaltsTyp": "episode"
+                }
+            },
+            "customVars": {
+                "site": {
+                    "id": "das-grosse-besenrennen-102",
+                    "chapter2": "episode",
+                    "chapter3": "tivi_vcms_video_1786028"
+                }
+            }
+        },
+        "nielsen": {
+            "content": {
+                "type": "content",
+                "assetid": "180217_besenrennen_folge51_bib",
+                "program": "Bibi Blocksberg",
+                "title": "Bibi Blocksberg|Das große Besenrennen |180217_besenrennen_folge51_bib",
+                "length": "1513",
+                "censuscategory": "Bibi Blocksberg|Das große Besenrennen ",
+                "livestream": "no",
+                "uurl": "180217_besenrennen_folge51_bib",
+                "nol_c2": "p2,N",
+                "nol_c5": "p5,ZDFtivi",
+                "nol_c7": "p7,180217_besenrennen_folge51_bib",
+                "nol_c8": "p8,1513",
+                "nol_c9": "p9,Das große Besenrennen ",
+                "nol_c10": "p10,ZDF",
+                "nol_c12": "p12,Content",
+                "nol_c14": "p14,2018-02-17T08:20:00",
+                "nol_c15": "p15,56167695",
+                "nol_c16": "p16,Bibi Blocksberg",
+                "nol_c18": "p18,N",
+                "nol_c19": "p19,ZDF|17.02.2018 08:20|24.02.2018 08:20|none|de|true"
+            },
+            "addContent": {
+                "nol_c19": "p19,ZDF|17.02.2018 08:20|24.02.2018 08:20|none|de|true",
+                "nol_c15": "p15,56172697",
+                "nol_c14": "p14,2018-02-17T08:20:00",
+                "nol_c10": "p10,ZDFtivi"
+            }
+        }
+    },
+    "fskBlocked": false,
+    "additionalPaths": [],
+    "programmeItem": [{
+        "http:\/\/zdf.de\/rels\/target": {
+            "genre": "Kinderserie",
+            "subtitle": "Das große Besenrennen Zeichentrickserie",
+            "title": "Bibi Blocksberg",
+            "contentId": "POS_999d7dd2-7e04-4655-986f-12ad6d6baa8e",
+            "profile": "http:\/\/zdf.de\/rels\/cmdm\/programme-item-player",
+            "self": "\/cmdm\/epg\/programme-items\/POS_999d7dd2-7e04-4655-986f-12ad6d6baa8e?profile=player"
+        },
+        "profile": "http:\/\/zdf.de\/rels\/content-reference\/programme-item"
+    }],
+    "mainVideoContent": {
+        "http:\/\/zdf.de\/rels\/target": {
+            "title": "180217_besenrennen_folge51_bib",
+            "duration": 1513,
+            "visible": true,
+            "profile": "http:\/\/zdf.de\/rels\/content\/content-video-vod-player",
+            "self": "\/content\/documents\/zdf\/kinder\/bibi-blocksberg\/videos\/180217-besenrennen-folge51-bib-100.json?profile=player",
+            "canonical": "\/content\/documents\/180217-besenrennen-folge51-bib-100.json",
+            "http:\/\/zdf.de\/rels\/streams\/ptmd": "\/tmd\/2\/portal\/vod\/ptmd\/tivi\/180217_besenrennen_folge51_bib",
+            "http:\/\/zdf.de\/rels\/streams\/ptmd-template": "\/tmd\/2\/{playerId}\/vod\/ptmd\/tivi\/180217_besenrennen_folge51_bib"
+        },
+        "profile": "http:\/\/zdf.de\/rels\/content-reference\/video-content"
+    }
+}
