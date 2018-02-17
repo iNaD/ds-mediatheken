@@ -3,6 +3,7 @@ require_once dirname(__FILE__) . '/utils/defines.php';
 require_once dirname(__FILE__) . '/utils/Logger.php';
 require_once dirname(__FILE__) . '/utils/Tools.php';
 include_once dirname(__FILE__) . '/mediatheken/ARD.php';
+include_once dirname(__FILE__) . '/mediatheken/Arte.php';
 include_once dirname(__FILE__) . '/mediatheken/DreiSat.php';
 include_once dirname(__FILE__) . '/mediatheken/RBB.php';
 include_once dirname(__FILE__) . '/mediatheken/WDR.php';
@@ -25,11 +26,12 @@ class SynoFileHostingMediathek
     private static $LOG_PREFIX = 'SynoFileHostingMediathek';
     private static $LOG_PREFIX_TOOLS = 'Tools';
     private static $MEDIATHEKEN = array(
-    ARD::class,
-    DreiSat::class,
-    RBB::class,
-    WDR::class,
-    ZDF::class
+        ARD::class,
+        Arte::class,
+        DreiSat::class,
+        RBB::class,
+        WDR::class,
+        ZDF::class
     );
 
     private $url;
