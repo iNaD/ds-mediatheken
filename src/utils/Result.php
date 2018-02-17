@@ -7,112 +7,113 @@
  * @copyright 2017 Daniel Gehn
  * @license http://opensource.org/licenses/MIT Licensed under MIT License
  */
-class Result {
-  private $mimeTypeRating = -1;
-  private $qualityRating = -1;
-  private $bitrateRating = -1;
-  private $uri = null;
-  private $title = '';
-  private $episodeTitle = '';
+class Result
+{
+    private $mimeTypeRating = -1;
+    private $qualityRating = -1;
+    private $bitrateRating = -1;
+    private $uri = null;
+    private $title = '';
+    private $episodeTitle = '';
 
   /**
    * @return int
    */
-  public function getMimeTypeRating()
-  {
-    return $this->mimeTypeRating;
-  }
+    public function getMimeTypeRating()
+    {
+        return $this->mimeTypeRating;
+    }
 
   /**
    * @param int $mimeTypeRating
    */
-  public function setMimeTypeRating($mimeTypeRating)
-  {
-    $this->mimeTypeRating = $mimeTypeRating;
-  }
+    public function setMimeTypeRating($mimeTypeRating)
+    {
+        $this->mimeTypeRating = $mimeTypeRating;
+    }
 
   /**
    * @return int
    */
-  public function getQualityRating()
-  {
-    return $this->qualityRating;
-  }
+    public function getQualityRating()
+    {
+        return $this->qualityRating;
+    }
 
   /**
    * @param int $qualityRating
    */
-  public function setQualityRating($qualityRating)
-  {
-    $this->qualityRating = $qualityRating;
-  }
+    public function setQualityRating($qualityRating)
+    {
+        $this->qualityRating = $qualityRating;
+    }
 
   /**
    * @return int
    */
-  public function getBitrateRating()
-  {
-    return $this->bitrateRating;
-  }
+    public function getBitrateRating()
+    {
+        return $this->bitrateRating;
+    }
 
   /**
    * @param int $bitrateRating
    */
-  public function setBitrateRating($bitrateRating)
-  {
-    $this->bitrateRating = $bitrateRating;
-  }
+    public function setBitrateRating($bitrateRating)
+    {
+        $this->bitrateRating = $bitrateRating;
+    }
 
   /**
    * @return null
    */
-  public function getUri()
-  {
-    return $this->uri;
-  }
+    public function getUri()
+    {
+        return $this->uri;
+    }
 
   /**
    * @param null $uri
    */
-  public function setUri($uri)
-  {
-    $this->uri = $uri;
-  }
+    public function setUri($uri)
+    {
+        $this->uri = $uri;
+    }
 
-  public function hasUri() {
-    return $this->uri !== null;
-  }
+    public function hasUri()
+    {
+        return $this->uri !== null;
+    }
 
   /**
    * @return string
    */
-  public function getTitle()
-  {
-    return $this->title;
-  }
+    public function getTitle()
+    {
+        return $this->title;
+    }
 
   /**
    * @param string $title
    */
-  public function setTitle($title)
-  {
-    $this->title = $title;
-  }
+    public function setTitle($title)
+    {
+        $this->title = $title;
+    }
 
   /**
    * @return string
    */
-  public function getEpisodeTitle()
-  {
-    return $this->episodeTitle;
-  }
+    public function getEpisodeTitle()
+    {
+        return $this->episodeTitle;
+    }
 
   /**
    * @param string $episodeTitle
    */
-  public function setEpisodeTitle($episodeTitle)
-  {
-    $this->episodeTitle = $episodeTitle;
-  }
-
+    public function setEpisodeTitle($episodeTitle)
+    {
+        $this->episodeTitle = $episodeTitle;
+    }
 }

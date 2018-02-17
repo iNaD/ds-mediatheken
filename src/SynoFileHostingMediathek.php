@@ -21,22 +21,27 @@ include_once dirname(__FILE__) . '/mediatheken/ZDF.php';
 class SynoFileHostingMediathek
 {
 
-  private static $LOG_PATH = '/tmp/mediathek.log';
-  private static $LOG_PREFIX = 'SynoFileHostingMediathek';
-  private static $LOG_PREFIX_TOOLS = 'Tools';
-  private static $MEDIATHEKEN = array(ARD::class, DreiSat::class, RBB::class, WDR::class,
-    ZDF::class);
+    private static $LOG_PATH = '/tmp/mediathek.log';
+    private static $LOG_PREFIX = 'SynoFileHostingMediathek';
+    private static $LOG_PREFIX_TOOLS = 'Tools';
+    private static $MEDIATHEKEN = array(
+    ARD::class,
+    DreiSat::class,
+    RBB::class,
+    WDR::class,
+    ZDF::class
+    );
 
-  private $url;
-  private $username;
-  private $password;
-  private $hostInfo;
-  private $filename;
+    private $url;
+    private $username;
+    private $password;
+    private $hostInfo;
+    private $filename;
 
-  private $logger;
-  private $tools;
-  private $logEnabled = false;
-  private $logPath = false;
+    private $logger;
+    private $tools;
+    private $logEnabled = false;
+    private $logPath = false;
 
   /**
    * Is called on construct by Download Station.
@@ -48,34 +53,40 @@ class SynoFileHostingMediathek
    * @param string $filename Filename
    * @param boolean $debug Debug enabled or disabled
    */
-  public function __construct($url, $username = '', $password = '', $hostInfo = '', $filename = '',
-                              $debug = false, $logPath = null)
-  {
-    $this->logPath = $logPath !== null ? $logPath : self::$LOG_PATH;
+    public function __construct(
+        $url,
+        $username = '',
+        $password = '',
+        $hostInfo = '',
+        $filename = '',
+        $debug = false,
+        $logPath = null
+    ) {
+        $this->logPath = $logPath !== null ? $logPath : self::$LOG_PATH;
 
-    $this->logger = new Logger($this->logPath, self::$LOG_PREFIX, $debug);
-    $toolsLogger = new Logger($this->logPath, self::$LOG_PREFIX_TOOLS, $debug);
-    $curl = new Curl();
-    $this->tools = new Tools($toolsLogger, $curl);
+        $this->logger = new Logger($this->logPath, self::$LOG_PREFIX, $debug);
+        $toolsLogger = new Logger($this->logPath, self::$LOG_PREFIX_TOOLS, $debug);
+        $curl = new Curl();
+        $this->tools = new Tools($toolsLogger, $curl);
 
-    $this->url = $url;
-    $this->username = $username;
-    $this->password = $password;
-    $this->hostInfo = $hostInfo;
-    $this->filename = $filename;
-    $this->logEnabled = $debug;
+        $this->url = $url;
+        $this->username = $username;
+        $this->password = $password;
+        $this->hostInfo = $hostInfo;
+        $this->filename = $filename;
+        $this->logEnabled = $debug;
 
-    $this->logger->log("URL: $url");
-  }
+        $this->logger->log("URL: $url");
+    }
 
   /**
    * Is called after the download finishes
    *
    * @return void
    */
-  public function onDownloaded()
-  {
-  }
+    public function onDownloaded()
+    {
+    }
 
   /**
    * Verifies the Account
@@ -83,61 +94,63 @@ class SynoFileHostingMediathek
    * @param string $clearCookie
    * @return integer
    */
-  public function Verify($clearCookie = '')
-  {
-  }
+    public function Verify($clearCookie = '')
+    {
+    }
 
   /**
    * Returns the Download URI to be used by Download Station.
    *
    * @return array|bool
    */
-  public function GetDownloadInfo()
-  {
-    $mediathek = $this->findSupportingMediathek();
-    if ($mediathek === null) {
-      $this->logger->log('Failed to find mediathek for ' . $this->url);
-      return false;
-    }
+    public function GetDownloadInfo()
+    {
+        $mediathek = $this->findSupportingMediathek();
+        if ($mediathek === null) {
+            $this->logger->log('Failed to find mediathek for ' . $this->url);
+            return false;
+        }
 
-    return $this->toDownloadInfo($mediathek->getDownloadInfo($this->url, $this->username,
-      $this->password));
-  }
+        return $this->toDownloadInfo($mediathek->getDownloadInfo(
+            $this->url,
+            $this->username,
+            $this->password
+        ));
+    }
 
   /**
    * @return Mediathek
    */
-  private function findSupportingMediathek()
-  {
-    foreach (self::$MEDIATHEKEN as $mediathek) {
-      $mediathekLogger = new Logger($this->logPath, $mediathek, $this->logEnabled);
-      $instance = new $mediathek($mediathekLogger, $this->tools);
+    private function findSupportingMediathek()
+    {
+        foreach (self::$MEDIATHEKEN as $mediathek) {
+            $mediathekLogger = new Logger($this->logPath, $mediathek, $this->logEnabled);
+            $instance = new $mediathek($mediathekLogger, $this->tools);
 
-      if ($instance->supportsUrl($this->url)) {
-        return $instance;
-      }
+            if ($instance->supportsUrl($this->url)) {
+                return $instance;
+            }
+        }
+
+        return null;
     }
 
-    return null;
-  }
+    private function toDownloadInfo($result)
+    {
+        if ($result === null || !$result->hasUri()) {
+            return false;
+        }
 
-  private function toDownloadInfo($result)
-  {
-    if ($result === null || !$result->hasUri()) {
-      return false;
+        $downloadInfo = array();
+        $downloadInfo[DOWNLOAD_URL] = $result->getUri();
+        $downloadInfo[DOWNLOAD_FILENAME] = $this->filenameForResult($result);
+
+        return $downloadInfo;
     }
 
-    $downloadInfo = array();
-    $downloadInfo[DOWNLOAD_URL] = $result->getUri();
-    $downloadInfo[DOWNLOAD_FILENAME] = $this->filenameForResult($result);
-
-    return $downloadInfo;
-  }
-
-  private function filenameForResult($result)
-  {
-    $videoTitle = $this->tools->videoTitle($result->getTitle(), $result->getEpisodeTitle());
-    return $this->tools->buildFilename($result->getUri(), $videoTitle);
-  }
-
+    private function filenameForResult($result)
+    {
+        $videoTitle = $this->tools->videoTitle($result->getTitle(), $result->getEpisodeTitle());
+        return $this->tools->buildFilename($result->getUri(), $videoTitle);
+    }
 }
