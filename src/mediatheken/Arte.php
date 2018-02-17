@@ -82,9 +82,8 @@ class Arte extends Mediathek
 
     protected function changeLanguageIfDetected()
     {
-        if (
-            $this->detectedLanguage !== null && 
-            isset(self::$LANGUAGE_MAP[$this->detectedLanguage]) && 
+        if ($this->detectedLanguage !== null &&
+            isset(self::$LANGUAGE_MAP[$this->detectedLanguage]) &&
             isset(self::$LANGUAGE_MAP_SHORT_LIBELLE[$this->detectedLanguage])
         ) {
             $this->language = self::$LANGUAGE_MAP[$this->detectedLanguage];
@@ -116,8 +115,7 @@ class Arte extends Mediathek
         foreach ($json->videoJsonPlayer->VSR as $source) {
             $this->getLogger()->log("found quality of $source->bitrate with language $source->versionLibelle ($source->versionShortLibelle)");
             $shortLibelleLowercase = mb_strtolower($source->versionShortLibelle);
-            if (
-                $source->mediaType == "mp4" &&
+            if ($source->mediaType == "mp4" &&
                 (
                     $this->shortLibelleMatches($shortLibelleLowercase) ||
                     $this->shortLibelleIsOv($shortLibelleLowercase)
