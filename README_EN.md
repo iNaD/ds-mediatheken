@@ -1,6 +1,6 @@
 # DS Mediatheken
 
-#### Dieses Readme ist auch auf [Deutsch](README_DE.md) verfügbar
+#### Dieses Readme ist auch auf [Deutsch](README.md) verfügbar
 
 Allows you to download videos from the german public service broadcasters' media libraries via Synology Download Station.
 
