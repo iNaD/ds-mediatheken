@@ -1,5 +1,7 @@
 # DS Mediatheken
 
+#### This Readme is also available in [English](README_EN.md)
+
 Ermöglicht es mit der Synology Download Station Videos aus den Mediatheken der ÖR herunterzuladen.
 
 ## Inhalt
@@ -27,6 +29,7 @@ Ein Synology-NAS mit einer aktuellen Version des `DiskStation Managers` und dem 
 
 - 3sat (`3sat.de`)
 - ARD (`ardmediathek.de`, `mediathek.daserste.de`)
+- Arte (`arte.tv`)
 - RBB (`mediathek.rbb-online.de`)
 - WDR (`wdr.de/mediathek`, `one.ard.de/mediathek`)
 - ZDF Mediathek (`zdf.de`)
@@ -61,7 +64,7 @@ Die alten Provider sollten entfernt werden, da es sonst zu Problemen kommen kann
 
 Zum Herunterladen eines Videos, eine der [unterstützten Mediatheken](#unterstützte-mediatheken) aufrufen, Folge heraussuchen und den Link zur Folge kopieren.
 
-Dieser Link wird bei der Download Station nun einfach hinzugefügt und nach kurzer Zeit beginnt der Download über den Provider.
+Dieser Link wird bei der `Download Station` nun einfach hinzugefügt und nach kurzer Zeit beginnt der Download über den Provider.
 
 ### Hinweise
 
