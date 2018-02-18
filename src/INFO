@@ -2,7 +2,7 @@
     "name": "mediathek",
     "hostprefix": "zdf.de,3sat.de,ardmediathek.de,mediathek.daserste.de,mediathek.rbb-online.de,wdr.de,one.ard.de,arte.tv",
     "displayname": "ÖR Mediatheken",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "authentication": "no",
     "module": "SynoFileHostingMediathek.php",
     "class": "SynoFileHostingMediathek",
