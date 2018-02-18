@@ -1,5 +1,6 @@
 <?php
 require_once dirname(__FILE__) . '/utils/defines.php';
+require_once dirname(__FILE__) . '/utils/Curl.php';
 require_once dirname(__FILE__) . '/utils/Logger.php';
 require_once dirname(__FILE__) . '/utils/Tools.php';
 include_once dirname(__FILE__) . '/mediatheken/ARD.php';
