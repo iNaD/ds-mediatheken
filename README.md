@@ -9,11 +9,13 @@ Ermöglicht es mit der Synology Download Station Videos aus den Mediatheken der 
 - [Features](#features)
 - [Voraussetzungen](#voraussetzungen)
 - [Unterstützte Mediatheken](#unterstützte-mediatheken)
+- [Download](#download)
 - [Installation](#installation)
 - [Deinstallation](#deinstallation)
 - [Update](#update)
 - [Nutzung](#nutzung)
 - [Hinweise](#hinweise)
+- [Spenden](#spenden)
 - [Lizenz](#lizenz)
 
 ### Features
@@ -33,6 +35,10 @@ Ein Synology-NAS mit einer aktuellen Version des `DiskStation Managers` und dem 
 - RBB (`mediathek.rbb-online.de`)
 - WDR (`wdr.de/mediathek`, `one.ard.de/mediathek`)
 - ZDF Mediathek (`zdf.de`)
+
+### Download
+
+Die aktuelle Version ist immer in den [Releases](https://github.com/iNaD/ds-mediatheken/releases/latest) zu finden als `mediathek.host`.
 
 ### Installation
 
@@ -71,6 +77,10 @@ Dieser Link wird bei der `Download Station` nun einfach hinzugefügt und nach ku
 
 - **Wichtig** Es wird zur Zeit die höchstmögliche MP4 Qualität heruntergeladen die verfügbar ist.
 - Es könnte passieren, dass ein Download nicht funktioniert und keine Videodatei heruntergeladen wird. Sollte dies der Fall sein, so [erstelle ein Ticket](https://github.com/iNaD/ds-mediatheken/issues/new) mit dem Link zur Folge und ein paar Informationen über deine Diskstation.
+
+### Spenden
+
+Du möchtest das Projekt unterstützen und schätzt die Arbeit dahinter? Schreib doch einfach eine nette E-Mail oder spendiere mir über [Paypal](https://paypal.me/theiNaD) eine kleine Erfrischung.
 
 ### Lizenz
 

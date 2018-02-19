@@ -9,11 +9,13 @@ Allows you to download videos from the german public service broadcasters' media
 - [Features](#features)
 - [Requirements](#requirements)
 - [Supported Media Libraries](#supported-media-libraries)
+- [Download](#download)
 - [Installation](#installation)
 - [Uninstallation](#uninstallation)
 - [Update](#update)
 - [Usage](#usage)
 - [Notes](#notes)
+- [Donations](#donations)
 - [License](#license)
 
 ### Features
@@ -33,6 +35,10 @@ A Synology NAS with the latest version of `DiskStation Manager` and the software
 - RBB (`mediathek.rbb-online.de`)
 - WDR (`wdr.de/mediathek`, `one.ard.de/mediathek`)
 - ZDF Mediathek (`zdf.de`)
+
+### Download
+
+The current Version can always be found at the [Releases](https://github.com/iNaD/ds-mediatheken/releases/latest) page as `mediathek.host`.
 
 ### Installation
 
@@ -71,6 +77,10 @@ This link just has to be added in the `Download Station` and after a short perio
 
 - **Important** Currently the highest MP4 quality available will be downloaded.
 - It may happen that a download doesn't work as expected and no video file is downloaded. If this is the case, please [create an Issue](https://github.com/iNaD/ds-mediatheken/issues/new) with the link to the episode and some information about your Diskstation.
+
+### Donations
+
+You want to support the project or appreciate the work? Just write me some kind words via E-Mail or donate a small refreshment via [Paypal](https://paypal.me/theiNaD).
 
 ### License
 
