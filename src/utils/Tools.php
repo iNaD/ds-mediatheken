@@ -191,4 +191,14 @@ class Tools
         }
         return $default;
     }
+
+    public function addProtocolFromUrlIfMissing($bestQualityUrl, $url)
+    {
+        if (!$this->startsWith($bestQualityUrl, '//')) {
+            return $bestQualityUrl;
+        }
+
+        $protocol = substr($url, 0, strpos($url, '://'));
+        return $protocol . ':' . $bestQualityUrl;
+    }
 }

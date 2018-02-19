@@ -32,7 +32,7 @@ class WDR extends Mediathek
             return null;
         }
 
-        $result->setUri($this->addProtocol($bestQualityUrl, $url));
+        $result->setUri($this->getTools()->addProtocolFromUrlIfMissing($bestQualityUrl, $url));
         $result->setTitle($mediaObject->trackerData->trackerClipSubcategory);
         $result->setEpisodeTitle($mediaObject->trackerData->trackerClipTitle);
 
@@ -87,16 +87,5 @@ class WDR extends Mediathek
         $qualities = explode(',', substr($videoURL, $startIndex, $length));
 
         return isset($qualities[$index]) ? $qualities[$index] : null;
-    }
-
-    private function addProtocol($bestQualityUrl, $url)
-    {
-        if (!$this->getTools()->startsWith($bestQualityUrl, '//')) {
-            return $bestQualityUrl;
-        }
-
-        $protocol = substr($url, 0, strpos($url, '://'));
-
-        return $protocol . ':' . $bestQualityUrl;
     }
 }

@@ -24,12 +24,13 @@ class ARD extends Mediathek
 
         $documentId = $this->getDocumentId($url);
         if ($documentId === null) {
-            $this->getLogger()->log('No documentId found in ' . $url);
+            $this->getLogger()->log('no documentId found in ' . $url);
             return null;
         }
 
         $apiData = $this->getApiData($documentId);
         if ($apiData === null) {
+            $this->getLogger()->log('could not retrieve apiData');
             return null;
         }
 
@@ -40,7 +41,7 @@ class ARD extends Mediathek
                     if ($mediaStream->_quality > $result->getQualityRating()) {
                         $result = new Result();
                         $result->setQualityRating($mediaStream->_quality);
-                        $result->setUri($mediaStream->_stream);
+                        $result->setUri($this->getTools()->addProtocolFromUrlIfMissing($mediaStream->_stream, $url));
                     }
                 }
             }
