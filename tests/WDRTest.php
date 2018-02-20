@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * Unit Test for WDR
+ *
+ * @author Daniel Gehn <me@theinad.com>
+ * @copyright 2018 Daniel Gehn
+ * @license http://opensource.org/licenses/MIT Licensed under MIT License
+ */
 final class WDRTest extends TestCase
 {
     protected static $VALID_DOWNLOAD_URL = 'https://www1.wdr.de/mediathek/video/sendungen/fernsehfilm/video-pfarrer-braun-ausgegeigt-100.html';

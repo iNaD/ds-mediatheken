@@ -12,7 +12,8 @@ if ($url !== null && count($url) > 0) {
         '',
         '',
         true,
-        dirname(__FILE__) . '/mediathek.log'
+        null,
+        false
     );
 
     var_dump($mediathek->GetDownloadInfo());

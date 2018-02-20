@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * Unit Test for ZDF
+ *
+ * @author Daniel Gehn <me@theinad.com>
+ * @copyright 2018 Daniel Gehn
+ * @license http://opensource.org/licenses/MIT Licensed under MIT License
+ */
 final class ZDFTest extends TestCase
 {
     protected static $VALID_DOWNLOAD_URL = 'https://www.zdf.de/kinder/bibi-blocksberg/das-grosse-besenrennen-102.html';

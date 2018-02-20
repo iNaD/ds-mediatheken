@@ -9,6 +9,7 @@
     "homepage": "https://theinad.com",
     "license": "MIT",
     "name": "theinad/mediathek",
+    "version": "0.1.2",
     "autoload": {
         "classmap": [
             "src/",

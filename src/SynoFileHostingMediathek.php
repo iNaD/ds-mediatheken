@@ -16,8 +16,8 @@ include_once dirname(__FILE__) . '/mediatheken/ZDF.php';
  * All public functions are required by Synology Download Station.
  *
  * @author Daniel Gehn <me@theinad.com>
- * @version 0.0.2
- * @copyright 2017 Daniel Gehn
+ * @version 0.1.2
+ * @copyright 2017-2018 Daniel Gehn
  * @license http://opensource.org/licenses/MIT Licensed under MIT License
  */
 class SynoFileHostingMediathek
@@ -44,7 +44,8 @@ class SynoFileHostingMediathek
     private $logger;
     private $tools;
     private $logEnabled = false;
-    private $logPath = false;
+    private $logPath = null;
+    private $logToFile = true;
 
   /**
    * Is called on construct by Download Station.
@@ -55,6 +56,8 @@ class SynoFileHostingMediathek
    * @param string $hostInfo Hoster Info
    * @param string $filename Filename
    * @param boolean $debug Debug enabled or disabled
+   * @param string $logPath Path to logfile
+   * @param boolean $logToFile Whether to log into file or not
    */
     public function __construct(
         $url,
@@ -63,12 +66,14 @@ class SynoFileHostingMediathek
         $hostInfo = '',
         $filename = '',
         $debug = false,
-        $logPath = null
+        $logPath = null,
+        $logToFile = true
     ) {
         $this->logPath = $logPath !== null ? $logPath : self::$LOG_PATH;
+        $this->logToFile = $logToFile;
 
-        $this->logger = new Logger($this->logPath, self::$LOG_PREFIX, $debug);
-        $toolsLogger = new Logger($this->logPath, self::$LOG_PREFIX_TOOLS, $debug);
+        $this->logger = new Logger($this->logPath, self::$LOG_PREFIX, $debug, $this->logToFile);
+        $toolsLogger = new Logger($this->logPath, self::$LOG_PREFIX_TOOLS, $debug, $this->logToFile);
         $curl = new Curl();
         $this->tools = new Tools($toolsLogger, $curl);
 
@@ -127,7 +132,7 @@ class SynoFileHostingMediathek
     private function findSupportingMediathek()
     {
         foreach (self::$MEDIATHEKEN as $mediathek) {
-            $mediathekLogger = new Logger($this->logPath, $mediathek, $this->logEnabled);
+            $mediathekLogger = new Logger($this->logPath, $mediathek, $this->logEnabled, $this->logToFile);
             $instance = new $mediathek($mediathekLogger, $this->tools);
 
             if ($instance->supportsUrl($this->url)) {

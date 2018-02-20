@@ -3,6 +3,13 @@ require_once dirname(__FILE__) . '/../src/utils/defines.php';
 
 use PHPUnit\Framework\TestCase as BaseTestCase;
 
+/**
+ * Base TestCase which provides some bootstrapping and utility.
+ *
+ * @author Daniel Gehn <me@theinad.com>
+ * @copyright 2018 Daniel Gehn
+ * @license http://opensource.org/licenses/MIT Licensed under MIT License
+ */
 class TestCase extends BaseTestCase
 {
     protected function getFixture(string $path)

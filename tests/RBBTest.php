@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * Unit Test for RBB
+ *
+ * @author Daniel Gehn <me@theinad.com>
+ * @copyright 2018 Daniel Gehn
+ * @license http://opensource.org/licenses/MIT Licensed under MIT License
+ */
 final class RBBTest extends TestCase
 {
     protected static $VALID_DOWNLOAD_URL = 'http://www.ardmediathek.de/tv/Filme-im-Ersten/St-Josef-am-Berg-Berge-auf-Probe/Das-Erste/Video?bcastId=1933898&documentId=50077518';
