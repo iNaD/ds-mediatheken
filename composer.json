@@ -23,5 +23,17 @@
         "phpunit/phpunit": "^6",
         "squizlabs/php_codesniffer": "^3.2"
     },
-    "type": "project"
+    "type": "project",
+    "scripts": {
+        "serve": "php -S localhost:8080 -t ./frontend",
+        "test": "phpunit",
+        "lint": "phpcs",
+        "autofix": "phpcbf"
+    },
+    "scripts-descriptions": {
+        "serve": "Runs the frontend on the embedded php server at http://localhost:8080",
+        "test": "Executes all Unit Tests",
+        "lint": "Lints all PHP files in src",
+        "autofix": "Tries to fix all PHP files in src according to phpcs.xml rules"
+    }
 }
