@@ -2,10 +2,10 @@
 
 rm -r ./build
 mkdir ./build
-cp -r ./src ./build/mediathek
 
 cd ./build
-tar -czf mediathek.host ./mediathek
+
+tar -C ../src -cvf mediathek .
+gzip --suffix=.host mediathek
 
 cd ..
-rm -r ./build/mediathek
