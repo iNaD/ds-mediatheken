@@ -35,7 +35,7 @@ class DreiSat extends Mediathek
     'high' => 2,
     'veryhigh' => 3,
     );
-    protected $supportMatcher = '3sat.de';
+    protected static $supportMatcher = '3sat.de';
 
     public function getDownloadInfo($url, $username = '', $password = '')
     {

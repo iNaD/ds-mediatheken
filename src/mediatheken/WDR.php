@@ -11,7 +11,7 @@ require_once dirname(__FILE__) . '/../utils/Result.php';
 class WDR extends Mediathek
 {
 
-    protected $supportMatcher = array('wdr.de/mediathek', 'one.ard.de/mediathek');
+    protected static $supportMatcher = array('wdr.de/mediathek', 'one.ard.de/mediathek');
 
     public function getDownloadInfo($url, $username = '', $password = '')
     {

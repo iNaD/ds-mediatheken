@@ -23,10 +23,8 @@ include_once dirname(__FILE__) . '/mediatheken/ZDF.php';
 class SynoFileHostingMediathek
 {
 
-    private static $LOG_PATH = '/tmp/mediathek.log';
-    private static $LOG_PREFIX = 'SynoFileHostingMediathek';
-    private static $LOG_PREFIX_TOOLS = 'Tools';
-    private static $MEDIATHEKEN = array(
+    const DEFAULT_LOG_PATH = '/tmp/mediathek.log';
+    const MEDIATHEKEN = array(
         ARD::class,
         Arte::class,
         DreiSat::class,
@@ -41,24 +39,25 @@ class SynoFileHostingMediathek
     private $hostInfo;
     private $filename;
 
-    private $logger;
-    private $tools;
+    private $logger = null;
+    private $loggers = [];
+    private $tools = null;
     private $logEnabled = false;
     private $logPath = null;
     private $logToFile = true;
 
-  /**
-   * Is called on construct by Download Station.
-   *
-   * @param string $url Download Url
-   * @param string $username Login Username
-   * @param string $password Login Password
-   * @param string $hostInfo Hoster Info
-   * @param string $filename Filename
-   * @param boolean $debug Debug enabled or disabled
-   * @param string $logPath Path to logfile
-   * @param boolean $logToFile Whether to log into file or not
-   */
+    /**
+     * Is called on construct by Download Station.
+     *
+     * @param string $url Download Url
+     * @param string $username Login Username
+     * @param string $password Login Password
+     * @param string $hostInfo Hoster Info
+     * @param string $filename Filename
+     * @param boolean $debug Debug enabled or disabled
+     * @param string $logPath Path to logfile
+     * @param boolean $logToFile Whether to log into file or not
+     */
     public function __construct(
         $url,
         $username = '',
@@ -69,48 +68,50 @@ class SynoFileHostingMediathek
         $logPath = null,
         $logToFile = true
     ) {
-        $this->logPath = $logPath !== null ? $logPath : self::$LOG_PATH;
+        $this->logPath = $logPath !== null ? $logPath : self::DEFAULT_LOG_PATH;
         $this->logToFile = $logToFile;
+        $this->logEnabled = $debug;
 
-        $this->logger = new Logger($this->logPath, self::$LOG_PREFIX, $debug, $this->logToFile);
-        $toolsLogger = new Logger($this->logPath, self::$LOG_PREFIX_TOOLS, $debug, $this->logToFile);
-        $curl = new Curl();
-        $this->tools = new Tools($toolsLogger, $curl);
+        $this->loggers[SynoFileHostingMediathek::class] = new Logger($this->logPath, SynoFileHostingMediathek::class, $this->logEnabled, $this->logToFile);
+        $this->logger = $this->loggers[SynoFileHostingMediathek::class];
+        $this->loggers[Tools::class] = new Logger($this->logPath, Tools::class, $this->logEnabled, $this->logToFile);
+        $this->tools = new Tools($this->loggers[Tools::class], new Curl());
 
         $this->url = $url;
         $this->username = $username;
         $this->password = $password;
         $this->hostInfo = $hostInfo;
         $this->filename = $filename;
-        $this->logEnabled = $debug;
 
         $this->logger->log("URL: $url");
     }
 
-  /**
-   * Is called after the download finishes
-   *
-   * @return void
-   */
+    /**
+     * Is called after the download finishes
+     *
+     * @return void
+     */
     public function onDownloaded()
     {
     }
 
-  /**
-   * Verifies the Account
-   *
-   * @param string $clearCookie
-   * @return integer
-   */
+    /**
+     * Verifies the Account
+     *
+     * @param string $clearCookie
+     * @return integer
+     */
+    // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps -- the function name is given by Synology
     public function Verify($clearCookie = '')
     {
     }
 
-  /**
-   * Returns the Download URI to be used by Download Station.
-   *
-   * @return array|bool
-   */
+    /**
+     * Returns the Download URI to be used by Download Station.
+     *
+     * @return array|bool
+     */
+    // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps -- the function name is given by Synology
     public function GetDownloadInfo()
     {
         $mediathek = $this->findSupportingMediathek();
@@ -126,17 +127,15 @@ class SynoFileHostingMediathek
         ));
     }
 
-  /**
-   * @return Mediathek
-   */
+    /**
+     * @return Mediathek
+     */
     private function findSupportingMediathek()
     {
-        foreach (self::$MEDIATHEKEN as $mediathek) {
-            $mediathekLogger = new Logger($this->logPath, $mediathek, $this->logEnabled, $this->logToFile);
-            $instance = new $mediathek($mediathekLogger, $this->tools);
-
-            if ($instance->supportsUrl($this->url)) {
-                return $instance;
+        foreach (self::MEDIATHEKEN as $mediathek) {
+            if ($mediathek::supportsUrl($this->url)) {
+                $this->loggers[$mediathek] = new Logger($this->logPath, $mediathek, $this->logEnabled, $this->logToFile);
+                return new $mediathek($this->loggers[$mediathek], $this->tools);
             }
         }
 
@@ -160,5 +159,41 @@ class SynoFileHostingMediathek
     {
         $videoTitle = $this->tools->videoTitle($result->getTitle(), $result->getEpisodeTitle());
         return $this->tools->buildFilename($result->getUri(), $videoTitle);
+    }
+
+    /**
+     * Retrieve all logged events by log.
+     *
+     * @return array
+     */
+    public function getLogs()
+    {
+        $logs = [];
+
+        foreach ($this->loggers as $name => $logger) {
+            $logs[$name] = $logger->getEvents();
+        }
+
+        return $logs;
+    }
+
+    /**
+     * Retrieve all logged events combined.
+     *
+     * @return array
+     */
+    public function getCombinedLog()
+    {
+        $events = [];
+
+        foreach ($this->loggers as $name => $logger) {
+            $events = array_merge($events, $logger->getEvents());
+        }
+
+        usort($events, function ($a, $b) {
+            return $a['timestamp'] - $b['timestamp'];
+        });
+
+        return $events;
     }
 }

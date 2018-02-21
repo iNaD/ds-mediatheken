@@ -65,7 +65,7 @@ class ZDF extends Mediathek
     private static $JSON_OBJ_ELEMENT_TITLE = 'title';
     private static $JSON_OBJ_ELEMENT_BRAND = 'http://zdf.de/rels/brand';
     private static $JSON_OBJ_ELEMENT_BRAND_TITLE = 'title';
-    protected $supportMatcher = 'zdf.de';
+    protected static $supportMatcher = 'zdf.de';
 
     public function getDownloadInfo($url, $username = '', $password = '')
     {

@@ -17,6 +17,7 @@ if ($url !== null && count($url) > 0) {
     );
 
     var_dump($mediathek->GetDownloadInfo());
+    var_dump($mediathek->getCombinedLog());
 }
 ?>
 

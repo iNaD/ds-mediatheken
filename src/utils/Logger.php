@@ -11,14 +11,14 @@ class Logger
 {
     private $enabled = true;
     private $path;
-    private $prefix;
+    private $className;
     private $logToFile = true;
-    private $messages = array();
+    private $events = array();
 
-    public function __construct($path, $prefix, $enabled = true, $logToFile = true)
+    public function __construct($path, $className, $enabled = true, $logToFile = true)
     {
         $this->path = $path;
-        $this->prefix = $prefix;
+        $this->className = $className;
         $this->enabled = $enabled;
         $this->logToFile = $logToFile;
     }
@@ -35,18 +35,48 @@ class Logger
             if ($this->logToFile) {
                 file_put_contents($this->path, $formattedMessage . "\n", FILE_APPEND);
             }
-            $this->messages[] = $formattedMessage;
+            $this->events[] = [
+                'logger' => $this->className,
+                'timestamp' => time(),
+                'formattedDate' => $this->getFormattedDate(),
+                'message' => $message,
+            ];
         }
     }
 
     /**
-     * Returns a formatted message including the current date and the component prefix.
-     * 
+     * Returns a formatted message including the current date and the component className.
+     *
      * @param string unformatted message
      * @return string formatted message
      */
     public function formatMessage($message)
     {
-        return "[" . date("c") . "] [$this->prefix]: $message";
+        return "[" . $this->getFormattedDate() . "] [$this->className]: $message";
+    }
+
+    protected function getFormattedDate()
+    {
+        return date("c");
+    }
+
+    /**
+     * Dumps all logged events.
+     *
+     * @return void
+     */
+    public function dump()
+    {
+        var_dump($this->events);
+    }
+
+    /**
+     * Returns all logged events.
+     *
+     * @return array
+     */
+    public function getEvents()
+    {
+        return $this->events;
     }
 }

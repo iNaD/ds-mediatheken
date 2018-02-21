@@ -16,7 +16,7 @@ class ARD extends Mediathek
     private static $TITLE_PREFIX = 'Video zu ';
     private static $TITLE_SUFFIX = ' Video';
 
-    protected $supportMatcher = array('ardmediathek.de', 'mediathek.daserste.de');
+    protected static $supportMatcher = array('ardmediathek.de', 'mediathek.daserste.de');
 
     public function getDownloadInfo($url, $username = '', $password = '')
     {
