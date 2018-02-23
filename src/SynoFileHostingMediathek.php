@@ -114,6 +114,11 @@ class SynoFileHostingMediathek
     // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps -- the function name is given by Synology
     public function GetDownloadInfo()
     {
+        if (strlen(trim($this->url)) === 0) {
+            $this->logger->log('URL is empty');
+            return false;
+        }
+
         $mediathek = $this->findSupportingMediathek();
         if ($mediathek === null) {
             $this->logger->log('Failed to find mediathek for ' . $this->url);

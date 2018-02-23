@@ -26,7 +26,7 @@
     },
     "type": "project",
     "scripts": {
-        "serve": "php -S localhost:8080 -t ./frontend",
+        "serve": "php -S localhost:8080 -t ./frontend/public",
         "test": "phpunit",
         "lint": "phpcs",
         "autofix": "phpcbf"
