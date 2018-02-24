@@ -1,3 +1,11 @@
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+}
+
 input {
     color: #495057;
     font-size: 1rem;
@@ -6,7 +14,7 @@ input {
     border-radius: 0.3rem;
     padding: 0.75rem;
     vertical-align: middle;
-    display: inline-block;
+    display: block;
 }
 
 button {
@@ -18,7 +26,7 @@ button {
     line-height: 1;
     border-radius: 0.25rem;
     cursor: pointer;
-    display: inline-block;
+    display: block;
     font-weight: 500;
     text-align: center;
     white-space: nowrap;
@@ -36,20 +44,29 @@ button {
     background: #f8f9fa;
     padding: .5rem 1rem;
     flex-direction: row;
-    margin-bottom: .5rem;
 }
 
 .navbar-title {
-    display: flex;
     color: #495057;
     margin-right: auto;
     font-size: 2rem;
     text-decoration: none;
+    margin-right: 2rem;
+}
+
+.navbar-form {
+    flex: 1 0;
+    display: flex;
+}
+.navbar-form__input {
+    flex: 1 0;
+    margin-right: 0.5rem;
 }
 
 .result-container {
     display: flex;
     padding: 0 1rem;
+    margin-top: .5rem;
 }
 
 .result {
@@ -58,4 +75,14 @@ button {
 
 .log {
     flex: 1 0;
+}
+
+.help-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: calc(100vh - 60px);
+    font-size: 2.5rem;
+    color: #495057;
 }

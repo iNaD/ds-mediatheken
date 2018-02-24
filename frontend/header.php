@@ -16,7 +16,7 @@
                 DS Mediatheken
             </a>
             <form class="navbar-form" action="index.php" method="GET">
-                <input type="text" name="url" placeholder="URL" value="<?php echo $url; ?>">
-                <button type="submit">Go</button>
+                <input class="navbar-form__input" type="text" name="url" placeholder="URL" value="<?php echo $url; ?>" required autofocus>
+                <button class="navbar-form__button" type="submit">Go</button>
             </form>
         </div>
