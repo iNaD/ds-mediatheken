@@ -11,10 +11,14 @@
     "name": "theinad/mediathek",
     "version": "0.1.2",
     "autoload": {
-        "classmap": [
-            "src/",
-            "tests/"
-        ]
+        "psr-4": {
+            "TheiNaD\\DSMediatheken\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
     },
     "require": {
         "php": "^5.3 || ^7.0"

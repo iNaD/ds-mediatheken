@@ -1,4 +1,8 @@
 <?php
+namespace TheiNaD\DSMediatheken\Mediatheken;
+
+use TheiNaD\DSMediatheken\Utils\Result;
+use TheiNaD\DSMediatheken\Utils\Mediathek;
 
 require_once dirname(__FILE__) . '/../utils/Mediathek.php';
 require_once dirname(__FILE__) . '/../utils/Result.php';

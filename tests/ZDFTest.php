@@ -1,4 +1,11 @@
 <?php
+namespace Tests;
+
+use TheiNaD\DSMediatheken\Utils\Curl;
+use TheiNaD\DSMediatheken\Utils\Tools;
+use TheiNaD\DSMediatheken\Utils\Logger;
+use TheiNaD\DSMediatheken\Utils\Result;
+use TheiNaD\DSMediatheken\Mediatheken\ZDF;
 
 /**
  * Unit Test for ZDF

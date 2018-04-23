@@ -1,4 +1,5 @@
 <?php
+namespace TheiNaD\DSMediatheken\Utils;
 
 /**
  * Represents a result of a Mediathek

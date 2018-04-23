@@ -1,4 +1,6 @@
 <?php
+namespace Tests;
+
 require_once dirname(__FILE__) . '/../src/utils/defines.php';
 
 use PHPUnit\Framework\TestCase as BaseTestCase;

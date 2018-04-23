@@ -1,4 +1,16 @@
 <?php
+namespace TheiNaD\DSMediatheken;
+
+use TheiNaD\DSMediatheken\Utils\Curl;
+use TheiNaD\DSMediatheken\Utils\Tools;
+use TheiNaD\DSMediatheken\Utils\Logger;
+use TheiNaD\DSMediatheken\Mediatheken\ARD;
+use TheiNaD\DSMediatheken\Mediatheken\RBB;
+use TheiNaD\DSMediatheken\Mediatheken\WDR;
+use TheiNaD\DSMediatheken\Mediatheken\ZDF;
+use TheiNaD\DSMediatheken\Mediatheken\Arte;
+use TheiNaD\DSMediatheken\Mediatheken\DreiSat;
+
 require_once dirname(__FILE__) . '/utils/defines.php';
 require_once dirname(__FILE__) . '/utils/Curl.php';
 require_once dirname(__FILE__) . '/utils/Logger.php';

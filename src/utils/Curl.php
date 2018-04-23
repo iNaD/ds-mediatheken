@@ -1,4 +1,5 @@
 <?php
+namespace TheiNaD\DSMediatheken\Utils;
 
 /**
  * Simple Curl wrapper to make things easier and mockable.
