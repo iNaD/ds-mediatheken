@@ -1,0 +1,88 @@
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+}
+
+input {
+    color: #495057;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+    background: #fff;
+    border-radius: 0.3rem;
+    padding: 0.75rem;
+    vertical-align: middle;
+    display: block;
+}
+
+button {
+    color: #fff;
+    background-color: #4582EC;
+    border-color: #4582EC;
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    line-height: 1;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    display: block;
+    font-weight: 500;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    background: #f8f9fa;
+    padding: .5rem 1rem;
+    flex-direction: row;
+}
+
+.navbar-title {
+    color: #495057;
+    margin-right: auto;
+    font-size: 2rem;
+    text-decoration: none;
+    margin-right: 2rem;
+}
+
+.navbar-form {
+    flex: 1 0;
+    display: flex;
+}
+.navbar-form__input {
+    flex: 1 0;
+    margin-right: 0.5rem;
+}
+
+.result-container {
+    display: flex;
+    padding: 0 1rem;
+    margin-top: .5rem;
+}
+
+.result {
+    flex: 1 0;
+}
+
+.log {
+    flex: 1 0;
+}
+
+.help-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: calc(100vh - 60px);
+    font-size: 2.5rem;
+    color: #495057;
+}

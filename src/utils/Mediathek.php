@@ -4,13 +4,12 @@
  * Base class for all Mediatheken.
  *
  * @author Daniel Gehn <me@theinad.com>
- * @copyright 2017 Daniel Gehn
+ * @copyright 2017-2018 Daniel Gehn
  * @license http://opensource.org/licenses/MIT Licensed under MIT License
  */
 abstract class Mediathek
 {
-
-    protected $supportMatcher = null;
+    protected static $supportMatcher = null;
     private $logger;
     private $tools;
 
@@ -22,34 +21,40 @@ abstract class Mediathek
 
     abstract public function getDownloadInfo($url, $username, $password);
 
-  /**
-   * @return Logger
-   */
+    /**
+     * @return Logger
+     */
     public function getLogger()
     {
         return $this->logger;
     }
 
-  /**
-   * @return Tools
-   */
+    /**
+     * @return Tools
+     */
     public function getTools()
     {
         return $this->tools;
     }
 
-    public function supportsUrl($url)
+    /**
+     * Returns if the given url is supported.
+     *
+     * @param string $url
+     * @return boolean
+     */
+    public static function supportsUrl($url)
     {
-        if ($this->supportMatcher === null) {
+        if (static::$supportMatcher === null) {
             throw new Exception('A supportMatcher is mandatory');
         }
 
-        if (is_array($this->supportMatcher)) {
-            if (count($this->supportMatcher) === 0) {
+        if (is_array(static::$supportMatcher)) {
+            if (count(static::$supportMatcher) === 0) {
                 throw new Exception('An array supportMatcher needs at least one value');
             }
 
-            foreach ($this->supportMatcher as $supports) {
+            foreach (static::$supportMatcher as $supports) {
                 if (strpos($url, $supports) !== false) {
                     return true;
                 }
@@ -58,8 +63,8 @@ abstract class Mediathek
             return false;
         }
 
-        if (is_string($this->supportMatcher)) {
-            return strpos($url, $this->supportMatcher) !== false;
+        if (is_string(static::$supportMatcher)) {
+            return strpos($url, static::$supportMatcher) !== false;
         }
 
         return false;

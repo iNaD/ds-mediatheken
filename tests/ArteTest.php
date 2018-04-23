@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * Unit Test for Arte
+ *
+ * @author Daniel Gehn <me@theinad.com>
+ * @copyright 2018 Daniel Gehn
+ * @license http://opensource.org/licenses/MIT Licensed under MIT License
+ */
 final class ArteTest extends TestCase
 {
     public function testDownloadInfoCanBeRetrievedFromValidDeUrlOriginalWithSubtitles(): void

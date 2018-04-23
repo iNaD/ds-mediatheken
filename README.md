@@ -25,7 +25,7 @@ Ermöglicht es mit der Synology Download Station Videos aus den Mediatheken der 
 
 ### Voraussetzungen
 
-Ein Synology-NAS mit einer aktuellen Version des `DiskStation Managers` und dem Programm `Download Station`.
+Ein Synology-NAS mit einer aktuellen Version des `DiskStation Managers` (mindestens DSM 5.0) und dem Programm `Download Station`.
 
 ### Unterstützte Mediatheken
 

@@ -25,7 +25,7 @@ Allows you to download videos from the german public service broadcasters' media
 
 ### Requirements
 
-A Synology NAS with the latest version of `DiskStation Manager` and the software `Download Station`.
+A Synology NAS with the latest version of `DiskStation Manager` (at least DSM 5.0) and the software `Download Station`.
 
 ### Supported Media Libraries
 

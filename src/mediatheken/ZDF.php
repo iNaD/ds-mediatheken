@@ -5,7 +5,7 @@ require_once dirname(__FILE__) . '/../utils/Result.php';
 
 /**
  * @author Daniel Gehn <me@theinad.com>
- * @copyright 2017 Daniel Gehn
+ * @copyright 2017-2018 Daniel Gehn
  * @license http://opensource.org/licenses/MIT Licensed under MIT License
  */
 class ZDF extends Mediathek
@@ -65,7 +65,7 @@ class ZDF extends Mediathek
     private static $JSON_OBJ_ELEMENT_TITLE = 'title';
     private static $JSON_OBJ_ELEMENT_BRAND = 'http://zdf.de/rels/brand';
     private static $JSON_OBJ_ELEMENT_BRAND_TITLE = 'title';
-    protected $supportMatcher = 'zdf.de';
+    protected static $supportMatcher = 'zdf.de';
 
     public function getDownloadInfo($url, $username = '', $password = '')
     {

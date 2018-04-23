@@ -5,7 +5,7 @@ require_once dirname(__FILE__) . '/../utils/Result.php';
 
 /**
  * @author Daniel Gehn <me@theinad.com>
- * @copyright 2017 Daniel Gehn
+ * @copyright 2017-2018 Daniel Gehn
  * @license http://opensource.org/licenses/MIT Licensed under MIT License
  */
 class RBB extends Mediathek
@@ -14,7 +14,7 @@ class RBB extends Mediathek
     private static $API_BASE_URL = 'http://mediathek.rbb-online.de/play/media/';
     private static $VALID_CDNS = array('default', 'akamai');
 
-    protected $supportMatcher = 'mediathek.rbb-online.de';
+    protected static $supportMatcher = 'mediathek.rbb-online.de';
 
     public function getDownloadInfo($url, $username = '', $password = '')
     {

@@ -26,7 +26,7 @@ class Arte extends Mediathek
         'vostf'
     );
 
-    protected $supportMatcher = 'arte.tv';
+    protected static $supportMatcher = 'arte.tv';
 
     protected $language = 'de';
     protected $languageShortLibelle = 'de';
