@@ -68,6 +68,7 @@ class Arte extends Mediathek
         }
 
         $result = $this->addTitle($result, $json);
+        $result->setUri($this->getTools()->addProtocolFromUrlIfMissing($result->getUri(), $url));
         return $result;
     }
 

@@ -114,6 +114,7 @@ class DreiSat extends Mediathek
 
         $result->setTitle($this->getTitle($rawXML));
         $result->setEpisodeTitle($this->getEpisodeTitle($rawXML));
+        $result->setUri($this->getTools()->addProtocolFromUrlIfMissing($result->getUri(), $url));
 
         return $result;
     }

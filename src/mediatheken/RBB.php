@@ -53,6 +53,7 @@ class RBB extends Mediathek
         }
 
         $result = $this->addTitle($url, $result);
+        $result->setUri($this->getTools()->addProtocolFromUrlIfMissing($result->getUri(), $url));
 
         return $result;
     }

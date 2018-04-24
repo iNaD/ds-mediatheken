@@ -128,6 +128,7 @@ class ZDF extends Mediathek
 
         $result->setTitle(trim(@$contentObject->{self::$JSON_OBJ_ELEMENT_BRAND}->{self::$JSON_OBJ_ELEMENT_BRAND_TITLE}));
         $result->setEpisodeTitle(trim(@$contentObject->{self::$JSON_OBJ_ELEMENT_TITLE}));
+        $result->setUri($this->getTools()->addProtocolFromUrlIfMissing($result->getUri(), $url));
 
         return $result;
     }

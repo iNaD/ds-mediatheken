@@ -45,7 +45,7 @@ class ARD extends Mediathek
                     if ($mediaStream->_quality > $result->getQualityRating()) {
                         $result = new Result();
                         $result->setQualityRating($mediaStream->_quality);
-                        $result->setUri($this->getTools()->addProtocolFromUrlIfMissing($mediaStream->_stream, $url));
+                        $result->setUri($mediaStream->_stream);
                     }
                 }
             }
@@ -56,6 +56,7 @@ class ARD extends Mediathek
         }
 
         $result = $this->addTitle($url, $result);
+        $result->setUri($this->getTools()->addProtocolFromUrlIfMissing($result->getUri(), $url));
 
         return $result;
     }
