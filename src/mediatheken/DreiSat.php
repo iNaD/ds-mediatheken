@@ -66,7 +66,7 @@ class DreiSat extends Mediathek
             return null;
         }
 
-        return $this->processXML($rawXML);
+        return $this->processXML($rawXML, $url);
     }
 
     private function getObjectId($url)
@@ -77,7 +77,7 @@ class DreiSat extends Mediathek
         return null;
     }
 
-    protected function processXML($rawXML)
+    protected function processXML($rawXML, $url)
     {
         if ($this->isStatusOk($rawXML) === false) {
             $this->getLogger()->log('status not ok');
