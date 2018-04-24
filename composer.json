@@ -40,5 +40,8 @@
         "test": "Executes all Unit Tests",
         "lint": "Lints all PHP files in src",
         "autofix": "Tries to fix all PHP files in src according to phpcs.xml rules"
+    },
+    "config": {
+        "process-timeout": 0
     }
 }
