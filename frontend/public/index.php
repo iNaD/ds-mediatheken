@@ -1,12 +1,14 @@
 <?php
 
+use TheiNaD\DSMediatheken\SynoFileHostingMediathek;
+
 require_once dirname(__FILE__) . '/../../vendor/autoload.php';
 
 $url = isset($_GET['url']) ? trim($_GET['url']) : null;
 $downloadInfo = null;
 $combinedLog = null;
 
-if ($url !== null && count($url) > 0) {
+if ($url !== null && strlen($url) > 0) {
     $mediathek = new SynoFileHostingMediathek(
         urldecode($url),
         '',

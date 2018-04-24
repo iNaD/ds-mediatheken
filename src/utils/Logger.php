@@ -1,4 +1,5 @@
 <?php
+namespace TheiNaD\DSMediatheken\Utils;
 
 /**
  * Simple Logger
