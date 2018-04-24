@@ -1,0 +1,159 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<avDocument>
+<type>video</type>
+<ivwEnabled>true</ivwEnabled>
+<comScorePixelUrl>https://de.sitestat.com/mdr/kika/s?name=kika.sherlock-yack-der-zoodetektiv.sendungen.videos.video11510-avCustom&amp;m_quelle=kikade.kika.sendungen.sendereihen.s.sherlock-yack-der-zoodetektiv.sendungen.videos.video11510&amp;ns_category=kika.sherlock-yack-der-zoodetektiv.sendungen.videos&amp;m_h1=kikade&amp;m_h2=kika&amp;m_h3=sendungen&amp;m_h4=sendereihen&amp;m_h5=s&amp;m_h6=sherlock-yack-der-zoodetektiv&amp;m_h7=sendungen&amp;m_h8=videos&amp;v_site=kika&amp;m_uuid=c4f491ea-a51f-4e0a-8669-88255811c890&amp;m_cid=video11510&amp;m_extid=VOIDcab986f0-3635-4f80-a83a-ed4c4e2de77f&amp;m_pdt=2015.02.27T12%3A53&amp;m_adt=2018.04.24T13%3A12&amp;m_otp=video&amp;m_zg=6&amp;m_ikat=null&amp;ns_st_ci=sendung61934&amp;ns_st_pl=no_playlisttitle&amp;ns_st_cl=742000&amp;ns_st_pr=SHERLOCK+YACK+-+Der+Zoodetektiv&amp;ns_st_dt=2015-02-27&amp;ns_st_ep=24.+Wer+hat+das+Zebra+bepinselt%3F&amp;ns_st_st=kika</comScorePixelUrl>
+<cmsTrackingUrl>/webapp/doTrack/pixel.png?docId=video11510&amp;amp;docPath=61927491-6ba8-4a70-b340-fb7c2f23f90f%7C444cffc5-eb31-45fa-abaa-b437bcce0afc%7C70744580-46d0-4e2e-8d69-35c018e9ff11%7Cbb6ec21f-ead4-4e39-ac13-ae3cd72adead%7Ccdd150b8-6a86-4a76-ae71-662d27002c73%7C984ef37b-2600-45b0-89a0-09277f2ee609%7Cefdbf6ee-f929-4b2f-ba29-efe78d85f152&amp;amp;docType=video</cmsTrackingUrl>
+<webTime>24.04.2018 13:12</webTime>
+<language>de</language>
+<styleSheets />
+<headline>24. Wer hat das Zebra bepinselt?</headline>
+<topline>SHERLOCK YACK - Der Zoodetektiv</topline>
+<title>24. Wer hat das Zebra bepinselt?</title>
+<htmlUrl>https://www.kika.de/sherlock-yack-der-zoodetektiv/sendungen/videos/video11510.html</htmlUrl>
+<recommendUrl>https://www.kika.de/sherlock-yack-der-zoodetektiv/sendungen/videos/video11510-recommendForm.html</recommendUrl>
+<recommendFormUrl>https://www.kika.de/sherlock-yack-der-zoodetektiv/sendungen/videos/video11510-recommendForm.html</recommendFormUrl>
+<infoLayerUrl>https://www.kika.de/sherlock-yack-der-zoodetektiv/sendungen/videos/video11510-infolayer.html</infoLayerUrl>
+<mainVideoUrl>https://www.kika.de/sherlock-yack-der-zoodetektiv/sendungen/videos/video11510-avCustom.xml</mainVideoUrl>
+<offlineAvailable>false</offlineAvailable>
+<relatedVideosUrl>https://www.kika.de/sherlock-yack-der-zoodetektiv/sendungen/videos/video11510-related.html</relatedVideosUrl>
+<agf-tracking>
+<c0>0</c0>
+<c2>N</c2>
+<c5>https://www.kika.de/sherlock-yack-der-zoodetektiv/sendungen/videos/video11510.html</c5>
+<c7>VOIDcab986f0-3635-4f80-a83a-ed4c4e2de77f</c7>
+<c8>742</c8>
+<c9>SHERLOCK YACK - Der Zoodetektiv_24. Wer hat das Zebra bepinselt?_2018-04-24T13:10:00</c9>
+<c10>KiKA</c10>
+<c12>Content</c12>
+<c14>2018-04-24T13:10:00</c14>
+<c15>431/18/004.056.916</c15>
+<c16>Kinder</c16>
+<c18>N</c18>
+</agf-tracking>
+<teaserimages>
+<teaserimage>
+<url>https://www.kika.de/sherlock-yack-der-zoodetektiv/sendungen/bilder/bild98066-resimage_v-**aspectRatio**_w-**width**.jpg?version=16319</url>
+<variants>
+<large>tlarge169</large>
+<small>tsmall169</small>
+</variants>
+</teaserimage>
+</teaserimages>
+<assets>
+<asset>
+<profileName>Video 2014 | MP4 Web M | 16:9 | 512x288</profileName>
+<fileName>FCMS-cab986f0-3635-4f80-a83a-ed4c4e2de77f-2cc6c1c1f632_ca.mp4</fileName>
+<mediaType>MP4</mediaType>
+<frameWidth>512</frameWidth>
+<frameHeight>288</frameHeight>
+<bitrateVideo>512000</bitrateVideo>
+<bitrateAudio>96000</bitrateAudio>
+<fileSize>56627270</fileSize>
+<flashMediaServerApplicationURL>rtmp://cp325560.edgefcs.net/ondemand</flashMediaServerApplicationURL>
+<flashMediaServerURL>mp4:mp4dyn/c/FCMS-cab986f0-3635-4f80-a83a-ed4c4e2de77f-2cc6c1c1f632_ca.mp4</flashMediaServerURL>
+<adaptiveHttpStreamingRedirectorUrl>https://kikageohls-vh.akamaihd.net/i/mp4dyn/c/VOIDcab986f0-3635-4f80-a83a-ed4c4e2de77f.smil/master.m3u8</adaptiveHttpStreamingRedirectorUrl>
+<dynamicHttpStreamingRedirectorUrl>https://kikageohls-vh.akamaihd.net/z/mp4dyn/c/VOIDcab986f0-3635-4f80-a83a-ed4c4e2de77f.smil/manifest.f4m</dynamicHttpStreamingRedirectorUrl>
+<progressiveDownloadUrl>https://pmdgeokika-a.akamaihd.net/mp4dyn/c/FCMS-cab986f0-3635-4f80-a83a-ed4c4e2de77f-2cc6c1c1f632_ca.mp4</progressiveDownloadUrl>
+</asset>
+<asset>
+<profileName>Video 2014 | MP4 Web L | 16:9 | 960x540</profileName>
+<fileName>FCMS-cab986f0-3635-4f80-a83a-ed4c4e2de77f-31e0be270130_ca.mp4</fileName>
+<mediaType>MP4</mediaType>
+<frameWidth>960</frameWidth>
+<frameHeight>540</frameHeight>
+<bitrateVideo>1800000</bitrateVideo>
+<bitrateAudio>192000</bitrateAudio>
+<fileSize>184831832</fileSize>
+<flashMediaServerApplicationURL>rtmp://cp325560.edgefcs.net/ondemand</flashMediaServerApplicationURL>
+<flashMediaServerURL>mp4:mp4dyn/c/FCMS-cab986f0-3635-4f80-a83a-ed4c4e2de77f-31e0be270130_ca.mp4</flashMediaServerURL>
+<adaptiveHttpStreamingRedirectorUrl>https://kikageohls-vh.akamaihd.net/i/mp4dyn/c/VOIDcab986f0-3635-4f80-a83a-ed4c4e2de77f.smil/master.m3u8</adaptiveHttpStreamingRedirectorUrl>
+<dynamicHttpStreamingRedirectorUrl>https://kikageohls-vh.akamaihd.net/z/mp4dyn/c/VOIDcab986f0-3635-4f80-a83a-ed4c4e2de77f.smil/manifest.f4m</dynamicHttpStreamingRedirectorUrl>
+<progressiveDownloadUrl>https://pmdgeokika-a.akamaihd.net/mp4dyn/c/FCMS-cab986f0-3635-4f80-a83a-ed4c4e2de77f-31e0be270130_ca.mp4</progressiveDownloadUrl>
+</asset>
+<asset>
+<profileName>Video 2014 | MP4 Web L+ | 16:9 | 720x576</profileName>
+<fileName>FCMS-cab986f0-3635-4f80-a83a-ed4c4e2de77f-bd81c5d02fb4_ca.mp4</fileName>
+<mediaType>MP4</mediaType>
+<frameWidth>720</frameWidth>
+<frameHeight>576</frameHeight>
+<bitrateVideo>1536000</bitrateVideo>
+<bitrateAudio>192000</bitrateAudio>
+<fileSize>160362231</fileSize>
+<progressiveDownloadUrl>https://pmdgeokika-a.akamaihd.net/mp4weblplus/c/FCMS-cab986f0-3635-4f80-a83a-ed4c4e2de77f-bd81c5d02fb4_ca.mp4</progressiveDownloadUrl>
+</asset>
+<asset>
+<profileName>Video 2014 | MP4 Web S | 16:9 | 320x180</profileName>
+<fileName>FCMS-cab986f0-3635-4f80-a83a-ed4c4e2de77f-c0fb86e38f5a_ca.mp4</fileName>
+<mediaType>MP4</mediaType>
+<frameWidth>320</frameWidth>
+<frameHeight>180</frameHeight>
+<bitrateVideo>128000</bitrateVideo>
+<bitrateAudio>56000</bitrateAudio>
+<fileSize>17145156</fileSize>
+<flashMediaServerApplicationURL>rtmp://cp325560.edgefcs.net/ondemand</flashMediaServerApplicationURL>
+<flashMediaServerURL>mp4:mp4dyn/c/FCMS-cab986f0-3635-4f80-a83a-ed4c4e2de77f-c0fb86e38f5a_ca.mp4</flashMediaServerURL>
+<adaptiveHttpStreamingRedirectorUrl>https://kikageohls-vh.akamaihd.net/i/mp4dyn/c/VOIDcab986f0-3635-4f80-a83a-ed4c4e2de77f.smil/master.m3u8</adaptiveHttpStreamingRedirectorUrl>
+<progressiveDownloadUrl>https://pmdgeokika-a.akamaihd.net/mp4dyn/c/FCMS-cab986f0-3635-4f80-a83a-ed4c4e2de77f-c0fb86e38f5a_ca.mp4</progressiveDownloadUrl>
+</asset>
+<asset>
+<profileName>Video 2014 | MP4 Web XL | 16:9 | 1280x720</profileName>
+<fileName>FCMS-cab986f0-3635-4f80-a83a-ed4c4e2de77f-5a2c8da1cdb7_ca.mp4</fileName>
+<mediaType>MP4</mediaType>
+<frameWidth>1280</frameWidth>
+<frameHeight>720</frameHeight>
+<bitrateVideo>3584000</bitrateVideo>
+<bitrateAudio>192000</bitrateAudio>
+<fileSize>349916893</fileSize>
+<flashMediaServerApplicationURL>rtmp://cp325560.edgefcs.net/ondemand</flashMediaServerApplicationURL>
+<flashMediaServerURL>mp4:mp4dyn/c/FCMS-cab986f0-3635-4f80-a83a-ed4c4e2de77f-5a2c8da1cdb7_ca.mp4</flashMediaServerURL>
+<adaptiveHttpStreamingRedirectorUrl>https://kikageohls-vh.akamaihd.net/i/mp4dyn/c/VOIDcab986f0-3635-4f80-a83a-ed4c4e2de77f.smil/master.m3u8</adaptiveHttpStreamingRedirectorUrl>
+<dynamicHttpStreamingRedirectorUrl>https://kikageohls-vh.akamaihd.net/z/mp4dyn/c/VOIDcab986f0-3635-4f80-a83a-ed4c4e2de77f.smil/manifest.f4m</dynamicHttpStreamingRedirectorUrl>
+<progressiveDownloadUrl>https://pmdgeokika-a.akamaihd.net/mp4dyn/c/FCMS-cab986f0-3635-4f80-a83a-ed4c4e2de77f-5a2c8da1cdb7_ca.mp4</progressiveDownloadUrl>
+</asset>
+<asset>
+<profileName>Video 2014 | MP4 Web L mobil  | 16:9 | 640x360</profileName>
+<fileName>FCMS-cab986f0-3635-4f80-a83a-ed4c4e2de77f-6b00429f6b07_ca.mp4</fileName>
+<mediaType>MP4</mediaType>
+<frameWidth>640</frameWidth>
+<frameHeight>360</frameHeight>
+<bitrateVideo>1024000</bitrateVideo>
+<bitrateAudio>192000</bitrateAudio>
+<fileSize>113053100</fileSize>
+<flashMediaServerApplicationURL>rtmp://cp325560.edgefcs.net/ondemand</flashMediaServerApplicationURL>
+<flashMediaServerURL>mp4:mp4dyn/c/FCMS-cab986f0-3635-4f80-a83a-ed4c4e2de77f-6b00429f6b07_ca.mp4</flashMediaServerURL>
+<adaptiveHttpStreamingRedirectorUrl>https://kikageohls-vh.akamaihd.net/i/mp4dyn/c/VOIDcab986f0-3635-4f80-a83a-ed4c4e2de77f.smil/master.m3u8</adaptiveHttpStreamingRedirectorUrl>
+<dynamicHttpStreamingRedirectorUrl>https://kikageohls-vh.akamaihd.net/z/mp4dyn/c/VOIDcab986f0-3635-4f80-a83a-ed4c4e2de77f.smil/manifest.f4m</dynamicHttpStreamingRedirectorUrl>
+<rtspStreamingUrl>http://pmdgeokika-a.akamaihd.net/mp4dyn/c/FCMS-cab986f0-3635-4f80-a83a-ed4c4e2de77f-6b00429f6b07_ca.mp4</rtspStreamingUrl>
+<progressiveDownloadUrl>https://pmdgeokika-a.akamaihd.net/mp4dyn/c/FCMS-cab986f0-3635-4f80-a83a-ed4c4e2de77f-6b00429f6b07_ca.mp4</progressiveDownloadUrl>
+</asset>
+<asset>
+<profileName>Video 2014 | MP4 Web M Mobil | 16:9 | 480x270</profileName>
+<fileName>FCMS-cab986f0-3635-4f80-a83a-ed4c4e2de77f-3c3a2d2ca7c6_ca.mp4</fileName>
+<mediaType>MP4</mediaType>
+<frameWidth>480</frameWidth>
+<frameHeight>270</frameHeight>
+<bitrateVideo>256000</bitrateVideo>
+<bitrateAudio>64000</bitrateAudio>
+<fileSize>29866218</fileSize>
+<flashMediaServerApplicationURL>rtmp://cp325560.edgefcs.net/ondemand</flashMediaServerApplicationURL>
+<flashMediaServerURL>mp4:mp4dyn/c/FCMS-cab986f0-3635-4f80-a83a-ed4c4e2de77f-3c3a2d2ca7c6_ca.mp4</flashMediaServerURL>
+<adaptiveHttpStreamingRedirectorUrl>https://kikageohls-vh.akamaihd.net/i/mp4dyn/c/VOIDcab986f0-3635-4f80-a83a-ed4c4e2de77f.smil/master.m3u8</adaptiveHttpStreamingRedirectorUrl>
+<progressiveDownloadUrl>https://pmdgeokika-a.akamaihd.net/mp4dyn/c/FCMS-cab986f0-3635-4f80-a83a-ed4c4e2de77f-3c3a2d2ca7c6_ca.mp4</progressiveDownloadUrl>
+</asset>
+</assets>
+<duration>12:22</duration>
+<rights>KIKA</rights>
+<transmissionType>geo</transmissionType>
+<chapterEntries />
+<broadcast>
+<channelName>SHERLOCK YACK - Der Zoodetektiv</channelName>
+<broadcastName>24. Wer hat das Zebra bepinselt?</broadcastName>
+<broadcastDescription>Dem Zebra wurden die Streifen mit einem Schottenkaro überpinselt. Für Sherlock Yack und Hermione steht außer Frage: es kann nur einer der Verlierer der Wahl zum Mister Streifenmuster gewesen sein. Aber wer neidete dem Zebra den Sieg so sehr, dass er es verunstaltete? Alle drei Konkurrenten, Tiger, Okapi und Strumpfbandnatter, stehen unter Verdacht. Diesmal beweist Hermione Sherlock, dass sie das Zeug zu einem echten Detektiv hat.</broadcastDescription>
+<broadcastDate>2018-04-24T01:10:00.000+0200</broadcastDate>
+<broadcastURL>https://www.kika.de/sherlock-yack-der-zoodetektiv/sendungen/sendung61934.html</broadcastURL>
+<broadcastSeriesName>SHERLOCK YACK - Der Zoodetektiv</broadcastSeriesName>
+<broadcastSeriesURL>https://www.kika.de/sherlock-yack-der-zoodetektiv/sendereihe1642.html</broadcastSeriesURL>
+</broadcast>
+</avDocument>
