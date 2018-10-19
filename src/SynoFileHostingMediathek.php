@@ -11,6 +11,7 @@ use TheiNaD\DSMediatheken\Mediatheken\ZDF;
 use TheiNaD\DSMediatheken\Mediatheken\Arte;
 use TheiNaD\DSMediatheken\Mediatheken\KiKA;
 use TheiNaD\DSMediatheken\Mediatheken\DreiSat;
+use TheiNaD\DSMediatheken\Mediatheken\NDR;
 
 require_once dirname(__FILE__) . '/utils/defines.php';
 require_once dirname(__FILE__) . '/utils/Curl.php';
@@ -20,6 +21,7 @@ include_once dirname(__FILE__) . '/mediatheken/ARD.php';
 include_once dirname(__FILE__) . '/mediatheken/Arte.php';
 include_once dirname(__FILE__) . '/mediatheken/DreiSat.php';
 include_once dirname(__FILE__) . '/mediatheken/KiKA.php';
+include_once dirname(__FILE__) . '/mediatheken/NDR.php';
 include_once dirname(__FILE__) . '/mediatheken/RBB.php';
 include_once dirname(__FILE__) . '/mediatheken/WDR.php';
 include_once dirname(__FILE__) . '/mediatheken/ZDF.php';
@@ -43,6 +45,7 @@ class SynoFileHostingMediathek
         Arte::class,
         DreiSat::class,
         KiKA::class,
+        NDR::class,
         RBB::class,
         WDR::class,
         ZDF::class
