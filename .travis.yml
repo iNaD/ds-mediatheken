@@ -1,0 +1,15 @@
+language: php
+sudo: false
+dist: trusty
+git:
+    depth: 5
+php:
+    - '7.1'
+cache:
+    directories:
+        - $HOME/.composer/cache
+install:
+    - composer install
+script:
+    - vendor/bin/phpcs
+    - phpunit

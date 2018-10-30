@@ -1,4 +1,5 @@
 <?php
+
 namespace TheiNaD\DSMediatheken\Utils;
 
 /**
@@ -11,31 +12,33 @@ namespace TheiNaD\DSMediatheken\Utils;
 class Curl
 {
 
-    public static $MOBILE_USERAGENT = "Mozilla/5.0 (Linux; Android 4.1; Galaxy Nexus Build/JRN84D) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19";
+    public static $MOBILE_USERAGENT =
+        "Mozilla/5.0 (Linux; Android 4.1; Galaxy Nexus Build/JRN84D)' .
+        ' AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19";
 
-  /**
-   * Send a curl request with given options an mobile useragent.
-   *
-   * @param string $url url to be requested
-   * @param array $options modify curl options
-   * @throws \Exception if the request failed
-   * @return string
-   */
-    public function requestMobile($url, $options = array())
+    /**
+     * Send a curl request with given options an mobile useragent.
+     *
+     * @param string $url url to be requested
+     * @param array $options modify curl options
+     * @throws \Exception if the request failed
+     * @return string
+     */
+    public function requestMobile($url, $options = [])
     {
         $options[CURLOPT_USERAGENT] = self::$MOBILE_USERAGENT;
         return $this->request($url, $options);
     }
 
-  /**
-   * Send a curl request with given options.
-   *
-   * @param string $url url to be requested
-   * @param array $options modify curl options
-   * @throws \Exception if the request failed
-   * @return string
-   */
-    public function request($url, $options = array())
+    /**
+     * Send a curl request with given options.
+     *
+     * @param string $url url to be requested
+     * @param array $options modify curl options
+     * @throws \Exception if the request failed
+     * @return string
+     */
+    public function request($url, $options = [])
     {
         $curl = curl_init();
 

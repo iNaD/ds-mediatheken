@@ -1,4 +1,5 @@
 <?php
+
 namespace TheiNaD\DSMediatheken\Utils;
 
 /**
@@ -17,65 +18,65 @@ class Result
     private $title = '';
     private $episodeTitle = '';
 
-  /**
-   * @return int
-   */
+    /**
+     * @return int
+     */
     public function getMimeTypeRating()
     {
         return $this->mimeTypeRating;
     }
 
-  /**
-   * @param int $mimeTypeRating
-   */
+    /**
+     * @param int $mimeTypeRating
+     */
     public function setMimeTypeRating($mimeTypeRating)
     {
         $this->mimeTypeRating = $mimeTypeRating;
     }
 
-  /**
-   * @return int
-   */
+    /**
+     * @return int
+     */
     public function getQualityRating()
     {
         return $this->qualityRating;
     }
 
-  /**
-   * @param int $qualityRating
-   */
+    /**
+     * @param int $qualityRating
+     */
     public function setQualityRating($qualityRating)
     {
         $this->qualityRating = $qualityRating;
     }
 
-  /**
-   * @return int
-   */
+    /**
+     * @return int
+     */
     public function getBitrateRating()
     {
         return $this->bitrateRating;
     }
 
-  /**
-   * @param int $bitrateRating
-   */
+    /**
+     * @param int $bitrateRating
+     */
     public function setBitrateRating($bitrateRating)
     {
         $this->bitrateRating = $bitrateRating;
     }
 
-  /**
-   * @return null
-   */
+    /**
+     * @return null
+     */
     public function getUri()
     {
         return $this->uri;
     }
 
-  /**
-   * @param null $uri
-   */
+    /**
+     * @param null $uri
+     */
     public function setUri($uri)
     {
         $this->uri = $uri;
@@ -86,33 +87,33 @@ class Result
         return $this->uri !== null;
     }
 
-  /**
-   * @return string
-   */
+    /**
+     * @return string
+     */
     public function getTitle()
     {
         return $this->title;
     }
 
-  /**
-   * @param string $title
-   */
+    /**
+     * @param string $title
+     */
     public function setTitle($title)
     {
         $this->title = $title;
     }
 
-  /**
-   * @return string
-   */
+    /**
+     * @return string
+     */
     public function getEpisodeTitle()
     {
         return $this->episodeTitle;
     }
 
-  /**
-   * @param string $episodeTitle
-   */
+    /**
+     * @param string $episodeTitle
+     */
     public function setEpisodeTitle($episodeTitle)
     {
         $this->episodeTitle = $episodeTitle;

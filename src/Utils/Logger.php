@@ -1,4 +1,5 @@
 <?php
+
 namespace TheiNaD\DSMediatheken\Utils;
 
 /**
@@ -14,7 +15,7 @@ class Logger
     private $path;
     private $className;
     private $logToFile = true;
-    private $events = array();
+    private $events = [];
 
     public function __construct($path, $className, $enabled = true, $logToFile = true)
     {

@@ -1,11 +1,12 @@
 <?php
+
 namespace Tests;
 
+use TheiNaD\DSMediatheken\Mediatheken\NDR;
 use TheiNaD\DSMediatheken\Utils\Curl;
-use TheiNaD\DSMediatheken\Utils\Tools;
 use TheiNaD\DSMediatheken\Utils\Logger;
 use TheiNaD\DSMediatheken\Utils\Result;
-use TheiNaD\DSMediatheken\Mediatheken\NDR;
+use TheiNaD\DSMediatheken\Utils\Tools;
 
 /**
  * Unit Test for NDR
@@ -26,13 +27,13 @@ final class NDRTest extends TestCase
         $tools = new Tools($logger, $curl);
 
         $curl->expects($this->exactly(1))
-        ->method('request')
-        ->withConsecutive(
-            [$this->equalTo($VALID_DOWNLOAD_URL)]
-        )
-        ->willReturnOnConsecutiveCalls(
-            $this->getFixture('ndr/videoPage.html')
-        );
+            ->method('request')
+            ->withConsecutive(
+                [$this->equalTo($VALID_DOWNLOAD_URL)]
+            )
+            ->willReturnOnConsecutiveCalls(
+                $this->getFixture('ndr/videoPage.html')
+            );
 
         $ndr = new NDR($logger, $tools);
         $result = $ndr->getDownloadInfo($VALID_DOWNLOAD_URL);
@@ -45,7 +46,8 @@ final class NDRTest extends TestCase
 
     public function testTitleWithoutEpisodeNumber(): void
     {
-        $VALID_DOWNLOAD_URL = 'https://www.ndr.de/fernsehen/sendungen/extra_3/extra-3-Spezial-Das-Beste,sendung827176.html';
+        $VALID_DOWNLOAD_URL =
+            'https://www.ndr.de/fernsehen/sendungen/extra_3/extra-3-Spezial-Das-Beste,sendung827176.html';
         $MEDIA_FILE_URL = 'https://mediandr-a.akamaihd.net/progressive/2018/1019/TV-20181019-1321-3000.hq.mp4';
 
         $logger = $this->createMock(Logger::class);
@@ -53,13 +55,13 @@ final class NDRTest extends TestCase
         $tools = new Tools($logger, $curl);
 
         $curl->expects($this->exactly(1))
-        ->method('request')
-        ->withConsecutive(
-            [$this->equalTo($VALID_DOWNLOAD_URL)]
-        )
-        ->willReturnOnConsecutiveCalls(
-            $this->getFixture('ndr/videoPageExtra3.html')
-        );
+            ->method('request')
+            ->withConsecutive(
+                [$this->equalTo($VALID_DOWNLOAD_URL)]
+            )
+            ->willReturnOnConsecutiveCalls(
+                $this->getFixture('ndr/videoPageExtra3.html')
+            );
 
         $ndr = new NDR($logger, $tools);
         $result = $ndr->getDownloadInfo($VALID_DOWNLOAD_URL);
@@ -80,13 +82,13 @@ final class NDRTest extends TestCase
         $tools = new Tools($logger, $curl);
 
         $curl->expects($this->exactly(1))
-        ->method('request')
-        ->withConsecutive(
-            [$this->equalTo($VALID_DOWNLOAD_URL)]
-        )
-        ->willReturnOnConsecutiveCalls(
-            $this->getFixture('ndr/videoPageGrossstadtrevier.html')
-        );
+            ->method('request')
+            ->withConsecutive(
+                [$this->equalTo($VALID_DOWNLOAD_URL)]
+            )
+            ->willReturnOnConsecutiveCalls(
+                $this->getFixture('ndr/videoPageGrossstadtrevier.html')
+            );
 
         $ndr = new NDR($logger, $tools);
         $result = $ndr->getDownloadInfo($VALID_DOWNLOAD_URL);

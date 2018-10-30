@@ -1,11 +1,9 @@
 <?php
+
 namespace TheiNaD\DSMediatheken\Mediatheken;
 
-use TheiNaD\DSMediatheken\Utils\Result;
 use TheiNaD\DSMediatheken\Utils\Mediathek;
-
-require_once dirname(__FILE__) . '/../utils/Mediathek.php';
-require_once dirname(__FILE__) . '/../utils/Result.php';
+use TheiNaD\DSMediatheken\Utils\Result;
 
 /**
  * @author Daniel Gehn <me@theinad.com>
@@ -16,7 +14,7 @@ class RBB extends Mediathek
 {
 
     private static $API_BASE_URL = 'http://mediathek.rbb-online.de/play/media/';
-    private static $VALID_CDNS = array('default', 'akamai');
+    private static $VALID_CDNS = ['default', 'akamai'];
 
     protected static $supportMatcher = 'mediathek.rbb-online.de';
 
@@ -38,7 +36,7 @@ class RBB extends Mediathek
         foreach ($apiData->_mediaArray as $media) {
             foreach ($media->_mediaStreamArray as $mediaStream) {
                 if ($this->mediaStreamHasNeededProperties($mediaStream)
-                && $this->mediaStreamHasValidCdn($mediaStream)) {
+                    && $this->mediaStreamHasValidCdn($mediaStream)) {
                     if ($mediaStream->_quality > $result->getQualityRating()) {
                         $result = new Result();
                         $result->setQualityRating($mediaStream->_quality);
@@ -75,7 +73,7 @@ class RBB extends Mediathek
     private function mediaStreamHasNeededProperties($mediaStream)
     {
         return property_exists($mediaStream, '_cdn') && property_exists($mediaStream, '_stream')
-        && property_exists($mediaStream, '_quality');
+            && property_exists($mediaStream, '_quality');
     }
 
     private function mediaStreamHasValidCdn($mediaStream)

@@ -1,20 +1,18 @@
 <?php
+
 namespace TheiNaD\DSMediatheken\Mediatheken;
 
-use TheiNaD\DSMediatheken\Utils\Result;
 use TheiNaD\DSMediatheken\Utils\Mediathek;
-
-require_once dirname(__FILE__) . '/../utils/Mediathek.php';
-require_once dirname(__FILE__) . '/../utils/Result.php';
+use TheiNaD\DSMediatheken\Utils\Result;
 
 /**
  * @author Daniel Gehn <me@theinad.com>
  * @copyright 2017-2018 Daniel Gehn
  * @license http://opensource.org/licenses/MIT Licensed under MIT License
  */
-class KiKA extends Mediathek
+class KiKa extends Mediathek
 {
-    protected static $supportMatcher = array('kika.de');
+    protected static $supportMatcher = ['kika.de'];
 
     public function getDownloadInfo($url, $username = '', $password = '')
     {
@@ -50,8 +48,7 @@ class KiKA extends Mediathek
 
     protected function getApiUrl($videoPage)
     {
-        if(preg_match('#dataURL:\'(.*?)\'#si', $videoPage, $match) === 1)
-        {
+        if (preg_match('#dataURL:\'(.*?)\'#si', $videoPage, $match) === 1) {
             return $match[1];
         }
         return null;
@@ -66,23 +63,19 @@ class KiKA extends Mediathek
     protected function processSource($source, $result)
     {
         // source has needed download url
-        if (preg_match("#<progressiveDownloadUrl>(.*?)<\/progressiveDownloadUrl>#si", $source, $downloadUrl) !== 1)
-        {
+        if (preg_match("#<progressiveDownloadUrl>(.*?)<\/progressiveDownloadUrl>#si", $source, $downloadUrl) !== 1) {
             return $result;
         }
 
         $url = $downloadUrl[1];
-        if (strpos($url, '.mp4') !== false)
-        {
+        if (strpos($url, '.mp4') !== false) {
             // we need a bitrate to find the best quality
-            if (preg_match("#<bitrateVideo>(.*?)<\/bitrateVideo>#si", $source, $bitrateVideo) !== 1)
-            {
+            if (preg_match("#<bitrateVideo>(.*?)<\/bitrateVideo>#si", $source, $bitrateVideo) !== 1) {
                 return $result;
             }
 
             $bitrate = $bitrateVideo[1];
-            if ($result->getBitrateRating() < $bitrate)
-            {
+            if ($result->getBitrateRating() < $bitrate) {
                 $result = new Result();
                 $result->setBitrateRating($bitrate);
                 $result->setUri($url);

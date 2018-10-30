@@ -1,30 +1,36 @@
 <?php
+
 namespace TheiNaD\DSMediatheken;
 
-use TheiNaD\DSMediatheken\Utils\Curl;
-use TheiNaD\DSMediatheken\Utils\Tools;
-use TheiNaD\DSMediatheken\Utils\Logger;
 use TheiNaD\DSMediatheken\Mediatheken\ARD;
+use TheiNaD\DSMediatheken\Mediatheken\Arte;
+use TheiNaD\DSMediatheken\Mediatheken\DreiSat;
+use TheiNaD\DSMediatheken\Mediatheken\KiKa;
+use TheiNaD\DSMediatheken\Mediatheken\NDR;
 use TheiNaD\DSMediatheken\Mediatheken\RBB;
 use TheiNaD\DSMediatheken\Mediatheken\WDR;
 use TheiNaD\DSMediatheken\Mediatheken\ZDF;
-use TheiNaD\DSMediatheken\Mediatheken\Arte;
-use TheiNaD\DSMediatheken\Mediatheken\KiKA;
-use TheiNaD\DSMediatheken\Mediatheken\DreiSat;
-use TheiNaD\DSMediatheken\Mediatheken\NDR;
+use TheiNaD\DSMediatheken\Utils\Curl;
+use TheiNaD\DSMediatheken\Utils\Logger;
+use TheiNaD\DSMediatheken\Utils\Mediathek;
+use TheiNaD\DSMediatheken\Utils\Tools;
 
-require_once dirname(__FILE__) . '/utils/defines.php';
-require_once dirname(__FILE__) . '/utils/Curl.php';
-require_once dirname(__FILE__) . '/utils/Logger.php';
-require_once dirname(__FILE__) . '/utils/Tools.php';
-include_once dirname(__FILE__) . '/mediatheken/ARD.php';
-include_once dirname(__FILE__) . '/mediatheken/Arte.php';
-include_once dirname(__FILE__) . '/mediatheken/DreiSat.php';
-include_once dirname(__FILE__) . '/mediatheken/KiKA.php';
-include_once dirname(__FILE__) . '/mediatheken/NDR.php';
-include_once dirname(__FILE__) . '/mediatheken/RBB.php';
-include_once dirname(__FILE__) . '/mediatheken/WDR.php';
-include_once dirname(__FILE__) . '/mediatheken/ZDF.php';
+// phpcs:disable
+require_once dirname(__FILE__) . '/Utils/defines.php';
+require_once dirname(__FILE__) . '/Utils/Mediathek.php';
+require_once dirname(__FILE__) . '/Utils/Result.php';
+require_once dirname(__FILE__) . '/Utils/Curl.php';
+require_once dirname(__FILE__) . '/Utils/Logger.php';
+require_once dirname(__FILE__) . '/Utils/Tools.php';
+include_once dirname(__FILE__) . '/Mediatheken/ARD.php';
+include_once dirname(__FILE__) . '/Mediatheken/Arte.php';
+include_once dirname(__FILE__) . '/Mediatheken/DreiSat.php';
+include_once dirname(__FILE__) . '/Mediatheken/KiKa.php';
+include_once dirname(__FILE__) . '/Mediatheken/NDR.php';
+include_once dirname(__FILE__) . '/Mediatheken/RBB.php';
+include_once dirname(__FILE__) . '/Mediatheken/WDR.php';
+include_once dirname(__FILE__) . '/Mediatheken/ZDF.php';
+// phpcs:enable
 
 /**
  * Provides download links for all Mediatheken.
@@ -40,16 +46,16 @@ class SynoFileHostingMediathek
 {
 
     const DEFAULT_LOG_PATH = '/tmp/mediathek.log';
-    const MEDIATHEKEN = array(
+    const MEDIATHEKEN = [
         ARD::class,
         Arte::class,
         DreiSat::class,
-        KiKA::class,
+        KiKa::class,
         NDR::class,
         RBB::class,
         WDR::class,
         ZDF::class
-    );
+    ];
 
     private $url;
     private $username;
@@ -90,7 +96,13 @@ class SynoFileHostingMediathek
         $this->logToFile = $logToFile;
         $this->logEnabled = $debug;
 
-        $this->loggers[SynoFileHostingMediathek::class] = new Logger($this->logPath, SynoFileHostingMediathek::class, $this->logEnabled, $this->logToFile);
+        $this->loggers[SynoFileHostingMediathek::class] =
+            new Logger(
+                $this->logPath,
+                SynoFileHostingMediathek::class,
+                $this->logEnabled,
+                $this->logToFile
+            );
         $this->logger = $this->loggers[SynoFileHostingMediathek::class];
         $this->loggers[Tools::class] = new Logger($this->logPath, Tools::class, $this->logEnabled, $this->logToFile);
         $this->tools = new Tools($this->loggers[Tools::class], new Curl());
@@ -157,7 +169,13 @@ class SynoFileHostingMediathek
     {
         foreach (self::MEDIATHEKEN as $mediathek) {
             if ($mediathek::supportsUrl($this->url)) {
-                $this->loggers[$mediathek] = new Logger($this->logPath, $mediathek, $this->logEnabled, $this->logToFile);
+                $this->loggers[$mediathek] =
+                    new Logger(
+                        $this->logPath,
+                        $mediathek,
+                        $this->logEnabled,
+                        $this->logToFile
+                    );
                 return new $mediathek($this->loggers[$mediathek], $this->tools);
             }
         }
@@ -171,7 +189,7 @@ class SynoFileHostingMediathek
             return false;
         }
 
-        $downloadInfo = array();
+        $downloadInfo = [];
         $downloadInfo[DOWNLOAD_URL] = $result->getUri();
         $downloadInfo[DOWNLOAD_FILENAME] = $this->filenameForResult($result);
 

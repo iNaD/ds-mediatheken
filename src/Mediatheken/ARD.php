@@ -1,11 +1,9 @@
 <?php
+
 namespace TheiNaD\DSMediatheken\Mediatheken;
 
-use TheiNaD\DSMediatheken\Utils\Result;
 use TheiNaD\DSMediatheken\Utils\Mediathek;
-
-require_once dirname(__FILE__) . '/../utils/Mediathek.php';
-require_once dirname(__FILE__) . '/../utils/Result.php';
+use TheiNaD\DSMediatheken\Utils\Result;
 
 /**
  * @author Daniel Gehn <me@theinad.com>
@@ -20,7 +18,7 @@ class ARD extends Mediathek
     private static $TITLE_PREFIX = 'Video zu ';
     private static $TITLE_SUFFIX = ' Video';
 
-    protected static $supportMatcher = array('ardmediathek.de', 'mediathek.daserste.de');
+    protected static $supportMatcher = ['ardmediathek.de', 'mediathek.daserste.de'];
 
     public function getDownloadInfo($url, $username = '', $password = '')
     {
@@ -41,7 +39,7 @@ class ARD extends Mediathek
         foreach ($apiData->_mediaArray as $media) {
             foreach ($media->_mediaStreamArray as $mediaStream) {
                 if ($this->mediaStreamHasNeededProperties($mediaStream)
-                && $this->mediaStreamHasValidQuality($mediaStream)) {
+                    && $this->mediaStreamHasValidQuality($mediaStream)) {
                     if ($mediaStream->_quality > $result->getQualityRating()) {
                         $stream = $this->getHighestQualityStream($mediaStream->_stream);
                         if ($stream !== null) {

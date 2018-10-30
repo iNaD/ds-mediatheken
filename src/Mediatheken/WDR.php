@@ -1,11 +1,9 @@
 <?php
+
 namespace TheiNaD\DSMediatheken\Mediatheken;
 
-use TheiNaD\DSMediatheken\Utils\Result;
 use TheiNaD\DSMediatheken\Utils\Mediathek;
-
-require_once dirname(__FILE__) . '/../utils/Mediathek.php';
-require_once dirname(__FILE__) . '/../utils/Result.php';
+use TheiNaD\DSMediatheken\Utils\Result;
 
 /**
  * @author Daniel Gehn <me@theinad.com>
@@ -15,7 +13,7 @@ require_once dirname(__FILE__) . '/../utils/Result.php';
 class WDR extends Mediathek
 {
 
-    protected static $supportMatcher = array('wdr.de/mediathek', 'one.ard.de/mediathek');
+    protected static $supportMatcher = ['wdr.de/mediathek', 'one.ard.de/mediathek'];
 
     public function getDownloadInfo($url, $username = '', $password = '')
     {
@@ -47,7 +45,7 @@ class WDR extends Mediathek
     {
         $html = $this->getTools()->curlRequestMobile($url);
         $matches =
-        $this->getTools()->pregMatchAllDefault('#data-extension=["\']{(.*?)}["\']#i', $html, array());
+            $this->getTools()->pregMatchAllDefault('#data-extension=["\']{(.*?)}["\']#i', $html, []);
         foreach ($matches as $match) {
             $fixedMatch = '{' . str_replace("'", '"', $match) . '}';
             $dataExtension = json_decode($fixedMatch);
@@ -64,7 +62,7 @@ class WDR extends Mediathek
     {
         $html = $this->getTools()->curlRequestMobile($mediaObjectUrl);
         return json_decode($this->getTools()
-        ->pregMatchDefault('#\$mediaObject\.jsonpHelper\.storeAndPlay\((.*?)\);#i', $html));
+            ->pregMatchDefault('#\$mediaObject\.jsonpHelper\.storeAndPlay\((.*?)\);#i', $html));
     }
 
     private function getBestQualityUrl($mediaObject)

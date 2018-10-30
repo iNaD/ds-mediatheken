@@ -1,7 +1,11 @@
 <?php
+
 namespace Tests;
 
-require_once dirname(__FILE__) . '/../src/utils/defines.php';
+// phpcs:disable
+require_once dirname(__FILE__) . '/../src/Utils/defines.php';
+
+// phpcs:enable
 
 use PHPUnit\Framework\TestCase as BaseTestCase;
 
