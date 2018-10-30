@@ -1,11 +1,9 @@
 <?php
+
 namespace TheiNaD\DSMediatheken\Mediatheken;
 
-use TheiNaD\DSMediatheken\Utils\Result;
 use TheiNaD\DSMediatheken\Utils\Mediathek;
-
-require_once dirname(__FILE__) . '/../utils/Mediathek.php';
-require_once dirname(__FILE__) . '/../utils/Result.php';
+use TheiNaD\DSMediatheken\Utils\Result;
 
 /**
  * @author Daniel Gehn <me@theinad.com>
@@ -15,20 +13,20 @@ require_once dirname(__FILE__) . '/../utils/Result.php';
 class Arte extends Mediathek
 {
 
-    protected static $LANGUAGE_MAP = array(
+    protected static $LANGUAGE_MAP = [
         'de' => 'de',
         'fr' => 'fr',
-    );
-    protected static $LANGUAGE_MAP_SHORT_LIBELLE = array(
+    ];
+    protected static $LANGUAGE_MAP_SHORT_LIBELLE = [
         'de' => 'de',
         'fr' => ['vf', 'vof'],
-    );
-    protected static $OV_SHORT_LIBELLE = array(
+    ];
+    protected static $OV_SHORT_LIBELLE = [
         'og',
         'ov',
         'omu',
         'vostf'
-    );
+    ];
 
     protected static $supportMatcher = 'arte.tv';
 
@@ -48,7 +46,13 @@ class Arte extends Mediathek
 
         $this->changeLanguageIfDetected();
 
-        $this->getLogger()->log('using language ' . $this->language . ' (' . print_r($this->languageShortLibelle, true) . ').');
+        $this->getLogger()->log(
+            sprintf(
+                'using language %s (%s)',
+                $this->language,
+                print_r($this->languageShortLibelle, true)
+            )
+        );
 
         $this->getLogger()->log('fetching page content.');
 
@@ -118,7 +122,15 @@ class Arte extends Mediathek
         $result = new Result();
 
         foreach ($json->videoJsonPlayer->VSR as $source) {
-            $this->getLogger()->log("found quality of $source->bitrate with language $source->versionLibelle ($source->versionShortLibelle)");
+            $this->getLogger()->log(
+                sprintf(
+                    "found quality of %d with language %s (%s)",
+                    $source->bitrate,
+                    $source->versionLibelle,
+                    $source->versionShortLibelle
+                )
+            );
+
             $shortLibelleLowercase = mb_strtolower($source->versionShortLibelle);
             if ($source->mediaType == "mp4" &&
                 (

@@ -21,7 +21,9 @@
         }
     },
     "require": {
-        "php": "^5.3 || ^7.0"
+        "php": "^5.6 || ^7.0",
+        "ext-curl": "*",
+        "ext-json": "*"
     },
     "require-dev": {
         "php": "^7.0",

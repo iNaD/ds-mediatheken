@@ -1,11 +1,9 @@
 <?php
+
 namespace TheiNaD\DSMediatheken\Mediatheken;
 
-use TheiNaD\DSMediatheken\Utils\Result;
 use TheiNaD\DSMediatheken\Utils\Mediathek;
-
-require_once dirname(__FILE__) . '/../utils/Mediathek.php';
-require_once dirname(__FILE__) . '/../utils/Result.php';
+use TheiNaD\DSMediatheken\Utils\Result;
 
 /**
  * @author Daniel Gehn <me@theinad.com>
@@ -15,48 +13,47 @@ require_once dirname(__FILE__) . '/../utils/Result.php';
 class ZDF extends Mediathek
 {
 
-  /**
-   * Maps Qualities to ratings.
-   *
-   * A higher rating means the quality is preferred.
-   * A rating of -1 means the quality will be ignored.
-   *
-   * @var array
-   */
-    private static $QUALITY_RATING = array(
-    'low' => 0,
-    'med' => 1,
-    'high' => 2,
-    'veryhigh' => 3,
-    );
-  /**
-   * Maps Mimetypes to ratings.
-   *
-   * A higher rating means the mimetype is preferred.
-   * A rating of -1 means the mimetype will be ignored.
-   *
-   * @var array
-   */
-    private static $MIMETYPE_RATING = array(
-    'application/x-mpegURL' => -1,
-    'application/f4m+xml' => -1,
-    'video/webm' => 1,
-    'video/mp4' => 2,
-    );
-  /**
-   * Facets containing this type will be completely ignored.
-   *
-   * @var array
-   */
-    private static $UNSUPPORTED_FACETS = array(
-    'hbbtv',
-    'restriction_useragent',
-    );
-    private static $SUPPORTED_LANGUAGES = array(
-    'deu',
-    );
+    /**
+     * Maps Qualities to ratings.
+     *
+     * A higher rating means the quality is preferred.
+     * A rating of -1 means the quality will be ignored.
+     *
+     * @var array
+     */
+    private static $QUALITY_RATING = [
+        'low' => 0,
+        'med' => 1,
+        'high' => 2,
+        'veryhigh' => 3,
+    ];
+    /**
+     * Maps Mimetypes to ratings.
+     *
+     * A higher rating means the mimetype is preferred.
+     * A rating of -1 means the mimetype will be ignored.
+     *
+     * @var array
+     */
+    private static $MIMETYPE_RATING = [
+        'application/x-mpegURL' => -1,
+        'application/f4m+xml' => -1,
+        'video/webm' => 1,
+        'video/mp4' => 2,
+    ];
+    /**
+     * Facets containing this type will be completely ignored.
+     *
+     * @var array
+     */
+    private static $UNSUPPORTED_FACETS = [
+        'hbbtv',
+        'restriction_useragent',
+    ];
+    private static $SUPPORTED_LANGUAGES = [
+        'deu',
+    ];
     private static $API_BASE_URL = 'https://api.zdf.de';
-    private static $BASE_URL = 'https://www.zdf.de';
     private static $JSON_ELEMENT_DOWNLOAD_INFORMATION_URL = 'http://zdf.de/rels/streams/ptmd-template';
     private static $JSON_OBJ_ELEMENT_TARGET = 'http://zdf.de/rels/target';
     private static $JSON_OBJ_ELEMENT_MAIN_VIDEO_CONTENT = 'mainVideoContent';
@@ -78,7 +75,7 @@ class ZDF extends Mediathek
         $videoPage = $this->getTools()->curlRequest($url);
         if ($videoPage === null) {
             $this->getLogger()->log('Video Page (' . $url . ') using login data (' . $username . '@'
-            . $password . ') could not be loaded.');
+                . $password . ') could not be loaded.');
             return null;
         }
 
@@ -86,7 +83,7 @@ class ZDF extends Mediathek
         $contentUrl = $this->getContentUrl($videoPage);
         if ($apiToken === null || $contentUrl === null) {
             $this->getLogger()->log('API Token (' . $apiToken . ') or content url (' . $contentUrl
-            . ') could not be found.');
+                . ') could not be found.');
             return null;
         }
 
@@ -101,13 +98,16 @@ class ZDF extends Mediathek
         $contentObject = json_decode($content);
 
         $downloadInformationUrl =
-        $contentObject->{self::$JSON_OBJ_ELEMENT_MAIN_VIDEO_CONTENT}->{self::$JSON_OBJ_ELEMENT_TARGET}->{self::$JSON_ELEMENT_DOWNLOAD_INFORMATION_URL};
+            $contentObject
+                ->{self::$JSON_OBJ_ELEMENT_MAIN_VIDEO_CONTENT}
+                ->{self::$JSON_OBJ_ELEMENT_TARGET}
+                ->{self::$JSON_ELEMENT_DOWNLOAD_INFORMATION_URL};
         $downloadUrl =
-        self::$API_BASE_URL . str_replace(
-            self::$PLACEHOLDER_PLAYER_ID,
-            self::$PLAYER_ID,
-            $downloadInformationUrl
-        );
+            self::$API_BASE_URL . str_replace(
+                self::$PLACEHOLDER_PLAYER_ID,
+                self::$PLAYER_ID,
+                $downloadInformationUrl
+            );
 
         $downloadContent = $this->apiRequest($downloadUrl, $apiToken);
         if ($downloadContent === null) {
@@ -122,12 +122,12 @@ class ZDF extends Mediathek
 
         if (!$result->hasUri()) {
             $this->getLogger()->log('Failed to fetch a suitable file:' . "\n\n" . $downloadContent
-            . "\n\n");
+                . "\n\n");
             return null;
         }
 
-        $result->setTitle(trim(@$contentObject->{self::$JSON_OBJ_ELEMENT_BRAND}->{self::$JSON_OBJ_ELEMENT_BRAND_TITLE}));
-        $result->setEpisodeTitle(trim(@$contentObject->{self::$JSON_OBJ_ELEMENT_TITLE}));
+        $result->setTitle($this->getTitle($contentObject));
+        $result->setEpisodeTitle($this->getEpisodeTitle($contentObject));
         $result->setUri($this->getTools()->addProtocolFromUrlIfMissing($result->getUri(), $url));
 
         return $result;
@@ -151,16 +151,22 @@ class ZDF extends Mediathek
 
     private function apiRequest($url, $apiToken)
     {
-        $this->getLogger()->log('API Request to "' . $url . '" with token "' . $apiToken . '"');
+        $this->getLogger()->log(
+            sprintf(
+                'API Request to "%s" with token "%s"',
+                $url,
+                $apiToken
+            )
+        );
 
-        return $this->getTools()->curlRequest($url, array(
-        CURLOPT_HTTPHEADER => array(
-        self::$API_AUTH_HEADER . ': ' . str_replace('{token}', $apiToken, self::$API_AUTH_PATTERN)
-        )
-        ));
+        return $this->getTools()->curlRequest($url, [
+            CURLOPT_HTTPHEADER => [
+                self::$API_AUTH_HEADER . ': ' . str_replace('{token}', $apiToken, self::$API_AUTH_PATTERN)
+            ]
+        ]);
     }
 
-    private function processPriorityListItem($priorityListItem, $result)
+    private function processPriorityListItem($priorityListItem, Result $result)
     {
         foreach ($priorityListItem->{self::$JSON_OBJ_ELEMENT_FORMITAETEN} as $formitaet) {
             if ($this->isFacetSupported($formitaet) === false) {
@@ -201,7 +207,7 @@ class ZDF extends Mediathek
         return self::$MIMETYPE_RATING[$formitaet->mimeType];
     }
 
-    private function processQuality($quality, $mimeTypeRating, $result)
+    private function processQuality($quality, $mimeTypeRating, Result $result)
     {
         $qualityRating = $this->getQualityRating($quality);
         if ($qualityRating <= $result->getQualityRating()) {
@@ -235,5 +241,21 @@ class ZDF extends Mediathek
     private function isLanguageSupported($track)
     {
         return in_array($track->language, self::$SUPPORTED_LANGUAGES);
+    }
+
+    private function getTitle($contentObject)
+    {
+        $title = @$contentObject
+            ->{self::$JSON_OBJ_ELEMENT_BRAND}
+            ->{self::$JSON_OBJ_ELEMENT_BRAND_TITLE};
+
+        return trim($title);
+    }
+
+    private function getEpisodeTitle($contentObject)
+    {
+        $episodeTitle = @$contentObject->{self::$JSON_OBJ_ELEMENT_TITLE};
+
+        return trim($episodeTitle);
     }
 }
