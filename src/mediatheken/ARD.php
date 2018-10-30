@@ -16,7 +16,7 @@ class ARD extends Mediathek
 {
 
     private static $API_BASE_URL = 'http://www.ardmediathek.de/play/media/';
-    private static $VALID_CDNS = array('default', 'akamai');
+    private static $VALID_QUALITIES = [0, 1, 2, 3, 4];
     private static $TITLE_PREFIX = 'Video zu ';
     private static $TITLE_SUFFIX = ' Video';
 
@@ -41,11 +41,14 @@ class ARD extends Mediathek
         foreach ($apiData->_mediaArray as $media) {
             foreach ($media->_mediaStreamArray as $mediaStream) {
                 if ($this->mediaStreamHasNeededProperties($mediaStream)
-                && $this->mediaStreamHasValidCdn($mediaStream)) {
+                && $this->mediaStreamHasValidQuality($mediaStream)) {
                     if ($mediaStream->_quality > $result->getQualityRating()) {
-                        $result = new Result();
-                        $result->setQualityRating($mediaStream->_quality);
-                        $result->setUri($mediaStream->_stream);
+                        $stream = $this->getHighestQualityStream($mediaStream->_stream);
+                        if ($stream !== null) {
+                            $result = new Result();
+                            $result->setQualityRating($mediaStream->_quality);
+                            $result->setUri($stream);
+                        }
                     }
                 }
             }
@@ -77,13 +80,39 @@ class ARD extends Mediathek
 
     private function mediaStreamHasNeededProperties($mediaStream)
     {
-        return property_exists($mediaStream, '_cdn') && property_exists($mediaStream, '_stream')
-        && property_exists($mediaStream, '_quality');
+        return property_exists($mediaStream, '_stream') && property_exists($mediaStream, '_quality');
     }
 
-    private function mediaStreamHasValidCdn($mediaStream)
+    private function mediaStreamHasValidQuality($mediaStream)
     {
-        return in_array($mediaStream->_cdn, self::$VALID_CDNS);
+        return in_array($mediaStream->_quality, self::$VALID_QUALITIES, true);
+    }
+
+    private function getHighestQualityStream($streams)
+    {
+        if (!is_array($streams)) {
+            return $streams;
+        }
+
+        $hqStream = [
+            'quality' => 0,
+            'url' => null,
+        ];
+
+        foreach ($streams as $stream) {
+            $quality = $this->getQualityFromStreamUrl($stream);
+            if ($quality > $hqStream['quality']) {
+                $hqStream['quality'] = $quality;
+                $hqStream['url'] = $stream;
+            }
+        }
+
+        return $hqStream['url'];
+    }
+
+    private function getQualityFromStreamUrl($stream)
+    {
+        return $this->getTools()->pregMatchDefault('#\/(\d+)-\d.mp4#i', $stream, 0);
     }
 
     private function addTitle($url, Result $result)
