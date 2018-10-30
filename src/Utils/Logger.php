@@ -11,12 +11,29 @@ namespace TheiNaD\DSMediatheken\Utils;
  */
 class Logger
 {
+    /** @var bool */
     private $enabled = true;
+
+    /** @var string */
     private $path;
+
+    /** @var string */
     private $className;
+
+    /** @var bool */
     private $logToFile = true;
+
+    /** @var array */
     private $events = [];
 
+    /**
+     * Logger constructor.
+     *
+     * @param string $path
+     * @param string $className
+     * @param bool $enabled
+     * @param bool $logToFile
+     */
     public function __construct($path, $className, $enabled = true, $logToFile = true)
     {
         $this->path = $path;
@@ -39,7 +56,7 @@ class Logger
             }
             $this->events[] = [
                 'logger' => $this->className,
-                'timestamp' => time(),
+                'timestamp' => microtime(true),
                 'formattedDate' => $this->getFormattedDate(),
                 'message' => $message,
             ];
@@ -64,8 +81,6 @@ class Logger
 
     /**
      * Dumps all logged events.
-     *
-     * @return void
      */
     public function dump()
     {

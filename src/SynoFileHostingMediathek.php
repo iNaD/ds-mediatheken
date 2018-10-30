@@ -14,6 +14,7 @@ use TheiNaD\DSMediatheken\Mediatheken\ZDF;
 use TheiNaD\DSMediatheken\Utils\Curl;
 use TheiNaD\DSMediatheken\Utils\Logger;
 use TheiNaD\DSMediatheken\Utils\Mediathek;
+use TheiNaD\DSMediatheken\Utils\Result;
 use TheiNaD\DSMediatheken\Utils\Tools;
 
 // phpcs:disable
@@ -189,7 +190,7 @@ class SynoFileHostingMediathek
         return null;
     }
 
-    private function toDownloadInfo($result)
+    private function toDownloadInfo(Result $result)
     {
         if ($result === null || !$result->hasUri()) {
             return false;
@@ -202,7 +203,7 @@ class SynoFileHostingMediathek
         return $downloadInfo;
     }
 
-    private function filenameForResult($result)
+    private function filenameForResult(Result $result)
     {
         $videoTitle = $this->tools->videoTitle($result->getTitle(), $result->getEpisodeTitle());
         return $this->tools->buildFilename($result->getUri(), $videoTitle);

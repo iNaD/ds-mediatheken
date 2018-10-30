@@ -2,6 +2,8 @@
 
 namespace TheiNaD\DSMediatheken\Utils;
 
+use Exception;
+
 /**
  * Base class for all Mediatheken.
  *
@@ -44,6 +46,7 @@ abstract class Mediathek
      *
      * @param string $url
      * @return boolean
+     * @throws Exception
      */
     public static function supportsUrl($url)
     {

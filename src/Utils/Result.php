@@ -11,11 +11,22 @@ namespace TheiNaD\DSMediatheken\Utils;
  */
 class Result
 {
+    /** @var int */
     private $mimeTypeRating = -1;
+
+    /** @var int */
     private $qualityRating = -1;
+
+    /** @var int */
     private $bitrateRating = -1;
+
+    /** @var null */
     private $uri = null;
+
+    /** @var string */
     private $title = '';
+
+    /** @var string */
     private $episodeTitle = '';
 
     /**
