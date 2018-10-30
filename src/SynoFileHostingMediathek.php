@@ -6,6 +6,7 @@ use TheiNaD\DSMediatheken\Mediatheken\ARD;
 use TheiNaD\DSMediatheken\Mediatheken\Arte;
 use TheiNaD\DSMediatheken\Mediatheken\DreiSat;
 use TheiNaD\DSMediatheken\Mediatheken\KiKa;
+use TheiNaD\DSMediatheken\Mediatheken\MDR;
 use TheiNaD\DSMediatheken\Mediatheken\NDR;
 use TheiNaD\DSMediatheken\Mediatheken\RBB;
 use TheiNaD\DSMediatheken\Mediatheken\WDR;
@@ -26,6 +27,7 @@ include_once dirname(__FILE__) . '/Mediatheken/ARD.php';
 include_once dirname(__FILE__) . '/Mediatheken/Arte.php';
 include_once dirname(__FILE__) . '/Mediatheken/DreiSat.php';
 include_once dirname(__FILE__) . '/Mediatheken/KiKa.php';
+include_once dirname(__FILE__) . '/Mediatheken/MDR.php';
 include_once dirname(__FILE__) . '/Mediatheken/NDR.php';
 include_once dirname(__FILE__) . '/Mediatheken/RBB.php';
 include_once dirname(__FILE__) . '/Mediatheken/WDR.php';
@@ -51,6 +53,7 @@ class SynoFileHostingMediathek
         Arte::class,
         DreiSat::class,
         KiKa::class,
+        MDR::class,
         NDR::class,
         RBB::class,
         WDR::class,
@@ -140,6 +143,7 @@ class SynoFileHostingMediathek
      * Returns the Download URI to be used by Download Station.
      *
      * @return array|bool
+     * @throws \Exception
      */
     // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps -- the function name is given by Synology
     public function GetDownloadInfo()
@@ -164,10 +168,12 @@ class SynoFileHostingMediathek
 
     /**
      * @return Mediathek
+     * @throws \Exception
      */
     private function findSupportingMediathek()
     {
         foreach (self::MEDIATHEKEN as $mediathek) {
+            /** @var Mediathek $mediathek */
             if ($mediathek::supportsUrl($this->url)) {
                 $this->loggers[$mediathek] =
                     new Logger(
