@@ -4,6 +4,8 @@
 
 Ermöglicht es mit der Synology Download Station Videos aus den Mediatheken der ÖR herunterzuladen.
 
+[![Build Status](https://travis-ci.com/iNaD/ds-mediatheken.svg?branch=master)](https://travis-ci.com/iNaD/ds-mediatheken)
+
 ## Inhalt
 
 - [Features](#features)
