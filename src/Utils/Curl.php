@@ -13,8 +13,8 @@ class Curl
 {
 
     public static $MOBILE_USERAGENT =
-        "Mozilla/5.0 (Linux; Android 4.1; Galaxy Nexus Build/JRN84D)' .
-        ' AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19";
+        'Mozilla/5.0 (Linux; Android 4.1; Galaxy Nexus Build/JRN84D)' .
+        ' AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19';
 
     /**
      * Send a curl request with given options an mobile useragent.

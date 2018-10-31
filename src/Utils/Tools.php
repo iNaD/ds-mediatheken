@@ -49,7 +49,7 @@ class Tools
             '',
             '',
             '',
-            '',
+            '-',
             '',
             '',
             '',
@@ -62,7 +62,10 @@ class Tools
         ],
     ];
 
+    /** @var Logger */
     private $logger;
+
+    /** @var Curl */
     private $curl;
 
     /**
@@ -77,6 +80,13 @@ class Tools
         $this->curl = $curl;
     }
 
+    /**
+     * Unified curl request handling with mobile user agent
+     *
+     * @param string $url
+     * @param array $options
+     * @return null|string
+     */
     public function curlRequestMobile($url, $options = [])
     {
         try {
@@ -107,8 +117,8 @@ class Tools
     /**
      * Checks if haystack starts with needle.
      *
-     * @param $haystack
-     * @param $needle
+     * @param string $haystack
+     * @param string $needle
      * @return bool
      */
     public function startsWith($haystack, $needle)
@@ -119,8 +129,8 @@ class Tools
     /**
      * Checks if haystack ends with needle.
      *
-     * @param $haystack
-     * @param $needle
+     * @param string $haystack
+     * @param string $needle
      * @return bool
      */
     public function endsWith($haystack, $needle)
@@ -164,6 +174,13 @@ class Tools
         );
     }
 
+    /**
+     * Builds a video title based on the given title and episode title
+     *
+     * @param string $title
+     * @param string $episodeTitle
+     * @return string
+     */
     public function videoTitle($title, $episodeTitle = '')
     {
         if (empty($title)) {
@@ -177,6 +194,16 @@ class Tools
         return $title;
     }
 
+    /**
+     * Wrapper for preg_match adding default value functionality
+     *
+     * @param string $pattern
+     * @param string $subject
+     * @param mixed|null $default
+     * @param int $flags
+     * @param int $offset
+     * @return mixed|null
+     */
     public function pregMatchDefault($pattern, $subject, $default = null, $flags = 0, $offset = 0)
     {
         $matches = [];
@@ -187,6 +214,16 @@ class Tools
         return $matches[1];
     }
 
+    /**
+     * Wrapper for preg_match_all adding default matches value functionality
+     *
+     * @param string $pattern
+     * @param string $subject
+     * @param array $default
+     * @param int $flags
+     * @param int $offset
+     * @return array
+     */
     public function pregMatchAllDefault($pattern, $subject, $default = [], $flags = 0, $offset = 0)
     {
         $matches = [];
@@ -197,13 +234,20 @@ class Tools
         return $default;
     }
 
-    public function addProtocolFromUrlIfMissing($bestQualityUrl, $url)
+    /**
+     * If the file url starts with a generic "//" add the protocol based on baseUrl
+     *
+     * @param string $fileUrl
+     * @param string $baseUrl
+     * @return string
+     */
+    public function addProtocolFromUrlIfMissing($fileUrl, $baseUrl)
     {
-        if (!$this->startsWith($bestQualityUrl, '//')) {
-            return $bestQualityUrl;
+        if (!$this->startsWith($fileUrl, '//')) {
+            return $fileUrl;
         }
 
-        $protocol = substr($url, 0, strpos($url, '://'));
-        return $protocol . ':' . $bestQualityUrl;
+        $protocol = substr($baseUrl, 0, strpos($baseUrl, '://'));
+        return $protocol . ':' . $fileUrl;
     }
 }

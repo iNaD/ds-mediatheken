@@ -1,10 +1,10 @@
 {
     "name": "mediathek",
-    "hostprefix": "zdf.de,3sat.de,ardmediathek.de,mediathek.daserste.de,mediathek.rbb-online.de,wdr.de,one.ard.de,arte.tv,kika.de,ndr.de",
+    "hostprefix": "zdf.de,3sat.de,ardmediathek.de,mediathek.daserste.de,mediathek.rbb-online.de,wdr.de,one.ard.de,arte.tv,kika.de,ndr.de,mdr.de",
     "displayname": "ÖR Mediatheken",
-    "version": "0.2.1",
+    "version": "0.3.0",
     "authentication": "no",
     "module": "SynoFileHostingMediathek.php",
-    "class": "SynoFileHostingMediathek",
+    "class": "TheiNaD\\DSMediatheken\\SynoFileHostingMediathek",
     "description": "Videos aus allen Mediatheken der ÖR herunterladen."
 }
