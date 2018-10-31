@@ -35,6 +35,7 @@ Ein Synology-NAS mit einer aktuellen Version des `DiskStation Managers` (mindest
 - ARD (`ardmediathek.de`, `mediathek.daserste.de`)
 - Arte (`arte.tv`)
 - KiKa (`kika.de`)
+- MDR (`mdr.de`)
 - NDR (`ndr.de`)
 - RBB (`mediathek.rbb-online.de`)
 - WDR (`wdr.de/mediathek`, `one.ard.de/mediathek`)
