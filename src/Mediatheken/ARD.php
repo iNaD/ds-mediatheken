@@ -15,8 +15,6 @@ class ARD extends Mediathek
 
     private static $API_BASE_URL = 'http://www.ardmediathek.de/play/media/';
     private static $VALID_QUALITIES = [0, 1, 2, 3, 4];
-    private static $TITLE_PREFIX = 'Video zu ';
-    private static $TITLE_SUFFIX = ' Video';
 
     protected static $supportMatcher = ['ardmediathek.de', 'mediathek.daserste.de'];
 
@@ -24,7 +22,14 @@ class ARD extends Mediathek
     {
         $result = new Result();
 
-        $documentId = $this->getDocumentId($url);
+        $pageContent = $this->getPageContent($url);
+
+        if ($pageContent === null) {
+            $this->getLogger()->log(sprintf('could not retrieve page content from %s', $url));
+            return null;
+        }
+
+        $documentId = $this->getDocumentId($pageContent);
         if ($documentId === null) {
             $this->getLogger()->log('no documentId found in ' . $url);
             return null;
@@ -56,15 +61,20 @@ class ARD extends Mediathek
             return null;
         }
 
-        $result = $this->addTitle($url, $result);
+        $result = $this->addTitle($pageContent, $result);
         $result->setUri($this->getTools()->addProtocolFromUrlIfMissing($result->getUri(), $url));
 
         return $result;
     }
 
-    private function getDocumentId($url)
+    private function getPageContent($url)
     {
-        if (preg_match('#documentId=([0-9]+)#i', $url, $match) !== 1) {
+        return $this->getTools()->curlRequest($url);
+    }
+
+    private function getDocumentId($pageContent)
+    {
+        if (preg_match('#"contentId":([0-9]+)#i', $pageContent, $match) !== 1) {
             return null;
         }
 
@@ -113,35 +123,57 @@ class ARD extends Mediathek
         return $this->getTools()->pregMatchDefault('#\/(\d+)-\d.mp4#i', $stream, 0);
     }
 
-    private function addTitle($url, Result $result)
+    private function addTitle($pageContent, Result $result)
     {
-        $html = $this->getTools()->curlRequest($url);
+        $videoMeta = $this->getVideoMeta($pageContent);
 
-        $htmlTitle = $this->getTitleFromHtml($html);
-        list($episodeTitle, $title) = explode(' | ', $htmlTitle);
+        if ($videoMeta === null) {
+            return $result;
+        }
 
-        $result->setTitle($this->cleanupTitle($title));
-        $result->setEpisodeTitle(trim($episodeTitle));
+        $show = $this->getShowFromMeta($videoMeta);
+        $clipTitle = $this->getClipTitleFromMeta($videoMeta);
+
+        $result->setTitle(trim($show));
+        $result->setEpisodeTitle(trim($clipTitle));
 
         return $result;
     }
 
-    private function getTitleFromHtml($html)
+    private function getVideoMeta($pageContent)
     {
-        if (preg_match('#<title>(.*?)<\/title>#i', $html, $match) !== 1) {
+        \preg_match_all('#<script>(.*?)<\/script>#si', $pageContent, $scriptTags);
+
+        if (count($scriptTags) === 0) {
             return null;
         }
+
+        foreach ($scriptTags[1] as $scriptTag) {
+            if (\preg_match('#tracking\.atiCustomVars":{(.*?)}#si', $scriptTag, $match) !== 1) {
+                continue;
+            }
+
+            return $match[1];
+        }
+
+        return null;
+    }
+
+    private function getShowFromMeta($videoMeta)
+    {
+        if (preg_match('#"show":"(.*?)"#i', $videoMeta, $match) !== 1) {
+            return null;
+        }
+
         return $match[1];
     }
 
-    private function cleanupTitle($title)
+    private function getClipTitleFromMeta($videoMeta)
     {
-        $title = str_replace(self::$TITLE_PREFIX, '', $title);
-
-        if ($this->getTools()->endsWith($title, self::$TITLE_SUFFIX)) {
-            $title = substr($title, 0, strlen($title) - strlen(self::$TITLE_SUFFIX));
+        if (preg_match('#"clipTitle":"(.*?)"#i', $videoMeta, $match) !== 1) {
+            return null;
         }
 
-        return trim($title);
+        return $match[1];
     }
 }
