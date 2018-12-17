@@ -1,50 +1,64 @@
 {
     "_type": "video",
     "_isLive": false,
-    "_defaultQuality": ["auto", 2, 4, 3, 1, 0],
-    "_previewImage": "http://www.ardmediathek.de/img/standard/00/50/01/85/90/1663778729/16x9/960?mandant=ard",
+    "_defaultQuality": [
+        "auto",
+        2,
+        4,
+        3,
+        1,
+        0
+    ],
+    "_previewImage": "https://img.ardmediathek.de/standard/00/58/54/68/72/-1774185891/16x9/960?mandant=ard",
+    "_subtitleUrl": "https://www.ardmediathek.de/subtitle/273253",
     "_subtitleOffset": 0,
-    "_mediaArray": [{
-        "_plugin": 0,
-        "_mediaStreamArray": [{
-            "_quality": "auto",
-            "_server": "//wdradaptiv-vh.akamaihd.net/z/medp/ondemand/weltweit/fsk0/157/1573923/,1573923_18098338,1573923_18098334,1573923_18098339,1573923_18098337,1573923_18098336,.mp4.csmil",
-            "_cdn": "akamai",
-            "_stream": "manifest.f4m"
-        }, {
-            "_quality": 2,
-            "_server": "",
-            "_cdn": "akamai",
-            "_width": 640,
-            "_height": 360,
-            "_stream": "//wdrmedien-a.akamaihd.net/medp/ondemand/weltweit/fsk0/157/1573923/1573923_18098334.mp4"
-        }]
-    }, {
-        "_plugin": 1,
-        "_mediaStreamArray": [{
-            "_quality": "auto",
-            "_server": "",
-            "_cdn": "flashls",
-            "_stream": "//wdradaptiv-vh.akamaihd.net/i/medp/ondemand/weltweit/fsk0/157/1573923/,1573923_18098339,1573923_18098334,1573923_18098338,1573923_18098336,1573923_18098335,1573923_18098337,.mp4.csmil/master.m3u8"
-        }, {
-            "_quality": 0,
-            "_server": "",
-            "_cdn": "akamai",
-            "_stream": "//wdrmedien-a.akamaihd.net/medp/ondemand/weltweit/fsk0/157/1573923/1573923_18098335.mp4"
-        }, {
-            "_quality": 1,
-            "_stream": ["//wdrmedien-a.akamaihd.net/medp/ondemand/weltweit/fsk0/157/1573923/1573923_18098339.mp4", "//wdrmedien-a.akamaihd.net/medp/ondemand/weltweit/fsk0/157/1573923/1573923_18098336.mp4"]
-        }, {
-            "_quality": 2,
-            "_stream": ["//wdrmedien-a.akamaihd.net/medp/ondemand/weltweit/fsk0/157/1573923/1573923_18098334.mp4", "//wdrmedien-a.akamaihd.net/medp/ondemand/weltweit/fsk0/157/1573923/1573923_18098338.mp4"]
-        }, {
-            "_quality": 3,
-            "_stream": ["//wdrmedien-a.akamaihd.net/medp/ondemand/weltweit/fsk0/157/1573923/1573923_18098337.mp4", "//wdrmedien-a.akamaihd.net/medp/ondemand/weltweit/fsk0/157/1573923/1573923_18098338.mp4"]
-        }]
-    }],
+    "_mediaArray": [
+        {
+            "_plugin": 1,
+            "_mediaStreamArray": [
+                {
+                    "_quality": "auto",
+                    "_server": "",
+                    "_cdn": "flashls",
+                    "_stream": "//wdradaptiv-vh.akamaihd.net/i/medp/ondemand/weltweit/fsk0/179/1797623/,1797623_21039279,1797623_21039274,1797623_21039276,1797623_21039277,1797623_21039275,1797623_21039278,.mp4.csmil/master.m3u8"
+                },
+                {
+                    "_quality": 0,
+                    "_server": "",
+                    "_cdn": "akamai",
+                    "_stream": "//wdrmedien-a.akamaihd.net/medp/ondemand/weltweit/fsk0/179/1797623/1797623_21039275.mp4"
+                },
+                {
+                    "_quality": 1,
+                    "_stream": [
+                        "//wdrmedien-a.akamaihd.net/medp/ondemand/weltweit/fsk0/179/1797623/1797623_21039279.mp4",
+                        "//wdrmedien-a.akamaihd.net/medp/ondemand/weltweit/fsk0/179/1797623/1797623_21039277.mp4",
+                        "//wdrmedien-a.akamaihd.net/medp/podcast/weltweit/fsk0/179/1797623/diestory_2018-12-12_wolfgangbosbachvomloslasseneinesgefesselten_wdr.mp4"
+                    ]
+                },
+                {
+                    "_quality": 2,
+                    "_stream": [
+                        "//wdrmedien-a.akamaihd.net/medp/ondemand/weltweit/fsk0/179/1797623/1797623_21039274.mp4",
+                        "//wdrmedien-a.akamaihd.net/medp/ondemand/weltweit/fsk0/179/1797623/1797623_21039276.mp4"
+                    ]
+                },
+                {
+                    "_quality": 3,
+                    "_server": "",
+                    "_cdn": "akamai",
+                    "_width": 1280,
+                    "_height": 720,
+                    "_stream": "//wdrmedien-a.akamaihd.net/medp/ondemand/weltweit/fsk0/179/1797623/1797623_21039278.mp4"
+                }
+            ]
+        }
+    ],
     "_alternativeMediaArray": [],
-    "_sortierArray": [1, 0],
-    "_duration": 5362,
+    "_sortierArray": [
+        1
+    ],
+    "_duration": 2616,
     "_dvrEnabled": false,
     "_geoblocked": false
 }

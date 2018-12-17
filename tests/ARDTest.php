@@ -20,11 +20,11 @@ final class ARDTest extends TestCase
     public function testDownloadInfoCanBeRetrievedFromValidUrl(): void
     {
         $VALID_DOWNLOAD_URL =
-            'http://www.ardmediathek.de/tv/Filme-im-Ersten/' .
-            'St-Josef-am-Berg-Berge-auf-Probe/Das-Erste/Video?bcastId=1933898&documentId=50077518';
-        $API_URL = 'http://www.ardmediathek.de/play/media/50077518';
+            'https://www.ardmediathek.de/daserste/player/'.
+            'Y3JpZDovL2Rhc2Vyc3RlLmRlL3RhdG9ydC85NDE0YjI0Mi04NjAwLTRjNmItOWRmZC1jM2Y1M2VkYTg1YTE/';
+        $API_URL = 'http://www.ardmediathek.de/play/media/58459694';
         $MEDIA_FILE_URL =
-            'https://pdvideosdaserste-a.akamaihd.net/de/2018/02/07/9e39ab47-315e-44fc-b61b-c5b386d41c00/960-1.mp4';
+            'https://pdvideosdaserste-a.akamaihd.net/int/2018/12/05/9414b242-8600-4c6b-9dfd-c3f53eda85a1/1280-1.mp4';
 
         $logger = $this->createMock(Logger::class);
         $curl = $this->createMock(Curl::class);
@@ -33,12 +33,12 @@ final class ARDTest extends TestCase
         $curl->expects($this->exactly(2))
             ->method('request')
             ->withConsecutive(
-                [$this->equalTo($API_URL)],
-                [$this->equalTo($VALID_DOWNLOAD_URL)]
+                [$this->equalTo($VALID_DOWNLOAD_URL)],
+                [$this->equalTo($API_URL)]
             )
             ->willReturnOnConsecutiveCalls(
-                $this->getFixture('ard/apiResponse.json'),
-                $this->getFixture('ard/videoPage.html')
+                $this->getFixture('ard/videoPage.html'),
+                $this->getFixture('ard/apiResponse.json')
             );
 
         $ard = new ARD($logger, $tools);
@@ -46,18 +46,18 @@ final class ARDTest extends TestCase
 
         $this->assertInstanceOf(Result::class, $result);
         $this->assertEquals($MEDIA_FILE_URL, $result->getUri());
-        $this->assertEquals('Filme im Ersten', $result->getTitle());
-        $this->assertEquals('St. Josef am Berg - Berge auf Probe', $result->getEpisodeTitle());
+        $this->assertEquals('Tatort', $result->getTitle());
+        $this->assertEquals('Vom Himmel hoch', $result->getEpisodeTitle());
     }
 
     public function testDownloadInfoCanBeRetrievedFromValidUrlWhereResultHasMissingProtocol(): void
     {
         $VALID_DOWNLOAD_URL =
-            'http://www.ardmediathek.de/tv/Doku-am-Freitag/' .
-            'Meine-Br%C3%BCder-und-Schwestern-in-Nordkorea/WDR-Fernsehen/Video?bcastId=12877116&documentId=50018574';
-        $API_URL = 'http://www.ardmediathek.de/play/media/50018574';
+            'https://www.ardmediathek.de/wdr/player/'.
+            'Y3JpZDovL3dkci5kZS9CZWl0cmFnLWYwYzQ5MDliLWZiNzYtNDc4NS04Yzg5LWFlY2NhMWQ1YjU4Yw/wolfgang-bosbach';
+        $API_URL = 'http://www.ardmediathek.de/play/media/58546868';
         $MEDIA_FILE_URL =
-            'http://wdrmedien-a.akamaihd.net/medp/ondemand/weltweit/fsk0/157/1573923/1573923_18098334.mp4';
+            'https://wdrmedien-a.akamaihd.net/medp/ondemand/weltweit/fsk0/179/1797623/1797623_21039278.mp4';
 
         $logger = $this->createMock(Logger::class);
         $curl = $this->createMock(Curl::class);
@@ -66,12 +66,12 @@ final class ARDTest extends TestCase
         $curl->expects($this->exactly(2))
             ->method('request')
             ->withConsecutive(
-                [$this->equalTo($API_URL)],
-                [$this->equalTo($VALID_DOWNLOAD_URL)]
+                [$this->equalTo($VALID_DOWNLOAD_URL)],
+                [$this->equalTo($API_URL)]
             )
             ->willReturnOnConsecutiveCalls(
-                $this->getFixture('ard/missingProtocol/apiResponse.json'),
-                $this->getFixture('ard/missingProtocol/videoPage.html')
+                $this->getFixture('ard/missingProtocol/videoPage.html'),
+                $this->getFixture('ard/missingProtocol/apiResponse.json')
             );
 
         $ard = new ARD($logger, $tools);
@@ -79,7 +79,7 @@ final class ARDTest extends TestCase
 
         $this->assertInstanceOf(Result::class, $result);
         $this->assertEquals($MEDIA_FILE_URL, $result->getUri());
-        $this->assertEquals('Doku am Freitag', $result->getTitle());
-        $this->assertEquals('Meine Brüder und Schwestern in Nordkorea', $result->getEpisodeTitle());
+        $this->assertEquals('die story', $result->getTitle());
+        $this->assertEquals('Wolfgang Bosbach - vom Loslassen eines Gefesselten', $result->getEpisodeTitle());
     }
 }
