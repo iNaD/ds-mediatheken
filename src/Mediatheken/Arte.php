@@ -68,6 +68,10 @@ class Arte extends Mediathek
 
         $result = $this->getBestSource($json);
         if (!$result->hasUri()) {
+            $result = $this->getBestSource($json, true);
+        }
+
+        if (!$result->hasUri()) {
             return null;
         }
 
@@ -117,7 +121,7 @@ class Arte extends Mediathek
         return null;
     }
 
-    protected function getBestSource($json)
+    protected function getBestSource($json, $ov = false)
     {
         $result = new Result();
 
@@ -132,10 +136,17 @@ class Arte extends Mediathek
             );
 
             $shortLibelleLowercase = mb_strtolower($source->versionShortLibelle);
+
             if ($source->mediaType == "mp4" &&
                 (
-                    $this->shortLibelleMatches($shortLibelleLowercase) ||
-                    $this->shortLibelleIsOv($shortLibelleLowercase)
+                    (
+                        !$ov &&
+                        $this->shortLibelleMatches($shortLibelleLowercase)
+                    ) ||
+                    (
+                        $ov &&
+                        $this->shortLibelleIsOv($shortLibelleLowercase)
+                    )
                 ) &&
                 $source->bitrate > $result->getBitrateRating()
             ) {
