@@ -22,7 +22,6 @@ class DreiSat extends Mediathek
      * @var array
      */
     private static $UNSUPPORTED_FACETS = [
-        'hbbtv',
         'restriction_useragent',
     ];
     /**
