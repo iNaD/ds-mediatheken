@@ -20,8 +20,8 @@ final class DreiSatTest extends TestCase
     protected static $VALID_DOWNLOAD_URL = 'http://www.3sat.de/mediathek/?mode=play&obj=48258';
     protected static $API_URL = 'http://www.3sat.de/mediathek/xmlservice/web/beitragsDetails?ak=web&id=48258&ak=web';
     protected static $MEDIA_FILE_URL =
-        'http://nrodl.zdf.de/dach/3sat/14/12/141213_meisterfaelscher3_online' .
-        '/5/141213_meisterfaelscher3_online_1456k_p13v11.mp4';
+        'http://tvdl.zdf.de/dach/3sat/14/12/141213_meisterfaelscher3_online' .
+        '/5/141213_meisterfaelscher3_online_2328k_p35v11.mp4';
 
     public function testDownloadInfoCanBeRetrievedFromValidUrl(): void
     {
