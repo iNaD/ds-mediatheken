@@ -169,12 +169,22 @@ class ZDF extends Mediathek
     private function processPriorityListItem($priorityListItem, Result $result)
     {
         foreach ($priorityListItem->{self::$JSON_OBJ_ELEMENT_FORMITAETEN} as $formitaet) {
+            $this->getLogger()->log(sprintf('Formität: %s', join(', ', $formitaet->facets)));
+
             if ($this->isFacetSupported($formitaet) === false) {
+                $this->getLogger()->log(sprintf('Unsupported facets %s', join(', ', $formitaet->facets)));
                 continue;
             }
 
             $mimeTypeRating = $this->getMimeTypeRating($formitaet);
             if ($mimeTypeRating <= $result->getMimeTypeRating()) {
+                $this->getLogger()->log(
+                    sprintf(
+                        'Mimetype Rating "%d" is lower or equal to previous "%d"',
+                        $mimeTypeRating,
+                        $result->getMimeTypeRating()
+                    )
+                );
                 continue;
             }
 
@@ -197,6 +207,10 @@ class ZDF extends Mediathek
         return true;
     }
 
+    /**
+     * @param $formitaet
+     * @return int
+     */
     private function getMimeTypeRating($formitaet)
     {
         if (array_key_exists($formitaet->mimeType, self::$MIMETYPE_RATING) === false) {
@@ -211,6 +225,14 @@ class ZDF extends Mediathek
     {
         $qualityRating = $this->getQualityRating($quality);
         if ($qualityRating <= $result->getQualityRating()) {
+            $this->getLogger()->log(
+                sprintf(
+                    'Quality Rating "%d" is lower than previous of "%d"',
+                    $qualityRating,
+                    $result->getQualityRating()
+                )
+            );
+
             return $result;
         }
 
@@ -229,6 +251,10 @@ class ZDF extends Mediathek
         return $result;
     }
 
+    /**
+     * @param $quality
+     * @return int
+     */
     private function getQualityRating($quality)
     {
         if (array_key_exists($quality->quality, self::$QUALITY_RATING) === false) {
