@@ -6,7 +6,7 @@ namespace TheiNaD\DSMediatheken\Utils;
  * Simple Curl wrapper to make things easier and mockable.
  *
  * @author Daniel Gehn <me@theinad.com>
- * @copyright 2018 Daniel Gehn
+ * @copyright 2018-2019 Daniel Gehn
  * @license http://opensource.org/licenses/MIT Licensed under MIT License
  */
 class Curl

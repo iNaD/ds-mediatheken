@@ -92,7 +92,7 @@ You want to support the project or appreciate the work? Just write me some kind 
 ```
 The MIT License (MIT)
 
-Copyright (c) 2017-2018 Daniel Gehn
+Copyright (c) 2017-2019 Daniel Gehn
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

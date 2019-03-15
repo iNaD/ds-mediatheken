@@ -12,7 +12,7 @@ use TheiNaD\DSMediatheken\Utils\Tools;
  * Unit Test for MDR
  *
  * @author Daniel Gehn <me@theinad.com>
- * @copyright 2018 Daniel Gehn
+ * @copyright 2018-2019 Daniel Gehn
  * @license http://opensource.org/licenses/MIT Licensed under MIT License
  */
 final class MDRTest extends TestCase

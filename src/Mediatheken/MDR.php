@@ -7,7 +7,7 @@ use TheiNaD\DSMediatheken\Utils\Result;
 
 /**
  * @author Daniel Gehn <me@theinad.com>
- * @copyright 2017-2018 Daniel Gehn
+ * @copyright 2017-2019 Daniel Gehn
  * @license http://opensource.org/licenses/MIT Licensed under MIT License
  */
 class MDR extends Mediathek

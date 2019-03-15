@@ -42,7 +42,7 @@ include_once dirname(__FILE__) . '/Mediatheken/ZDF.php';
  *
  * @author Daniel Gehn <me@theinad.com>
  * @version 0.4.2
- * @copyright 2017-2018 Daniel Gehn
+ * @copyright 2017-2019 Daniel Gehn
  * @license http://opensource.org/licenses/MIT Licensed under MIT License
  */
 class SynoFileHostingMediathek
@@ -190,7 +190,7 @@ class SynoFileHostingMediathek
         return null;
     }
 
-    private function toDownloadInfo(Result $result)
+    private function toDownloadInfo($result)
     {
         if ($result === null || !$result->hasUri()) {
             return false;
