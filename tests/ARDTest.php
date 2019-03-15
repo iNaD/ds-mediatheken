@@ -82,4 +82,37 @@ final class ARDTest extends TestCase
         $this->assertEquals('die story', $result->getTitle());
         $this->assertEquals('Wolfgang Bosbach - vom Loslassen eines Gefesselten', $result->getEpisodeTitle());
     }
+
+    public function testDownloadInfoCanBeRetrievedFromValidUrlContainingDocumentId(): void
+    {
+        $VALID_DOWNLOAD_URL =
+            'http://mediathek.daserste.de/Die-Sendung-mit-der-Maus/MausSpezial-Frankreich-Maus/'.
+            'Video?bcastId=1458&documentId=61013370';
+        $API_URL = 'http://www.ardmediathek.de/play/media/61013370';
+        $MEDIA_FILE_URL =
+            'http://wdrmedien-a.akamaihd.net/medp/ondemand/weltweit/fsk0/187/1872647/1872647_21969608.mp4';
+
+        $logger = $this->createMock(Logger::class);
+        $curl = $this->createMock(Curl::class);
+        $tools = new Tools($logger, $curl);
+
+        $curl->expects($this->exactly(2))
+            ->method('request')
+            ->withConsecutive(
+                [$this->equalTo($VALID_DOWNLOAD_URL)],
+                [$this->equalTo($API_URL)]
+            )
+            ->willReturnOnConsecutiveCalls(
+                $this->getFixture('ard/docIdInUrl/videoPage.html'),
+                $this->getFixture('ard/docIdInUrl/apiResponse.json')
+            );
+
+        $ard = new ARD($logger, $tools);
+        $result = $ard->getDownloadInfo($VALID_DOWNLOAD_URL);
+
+        $this->assertInstanceOf(Result::class, $result);
+        $this->assertEquals($MEDIA_FILE_URL, $result->getUri());
+        $this->assertEquals('Die Sendung mit der Maus', $result->getTitle());
+        $this->assertEquals('MausSpezial: Frankreich-Maus', $result->getEpisodeTitle());
+    }
 }

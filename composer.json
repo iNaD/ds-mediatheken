@@ -9,7 +9,7 @@
     "homepage": "https://theinad.com",
     "license": "MIT",
     "name": "theinad/mediathek",
-    "version": "0.4.2",
+    "version": "0.4.3",
     "autoload": {
         "psr-4": {
             "TheiNaD\\DSMediatheken\\": "src/"

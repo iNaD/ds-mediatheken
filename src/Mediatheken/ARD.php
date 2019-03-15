@@ -23,13 +23,16 @@ class ARD extends Mediathek
         $result = new Result();
 
         $pageContent = $this->getPageContent($url);
-
         if ($pageContent === null) {
             $this->getLogger()->log(sprintf('could not retrieve page content from %s', $url));
             return null;
         }
 
-        $documentId = $this->getDocumentId($pageContent);
+        $documentId = $this->getDocumentIdFromUrl($url);
+        if ($documentId === null) {
+            $documentId = $this->getDocumentId($pageContent);
+        }
+
         if ($documentId === null) {
             $this->getLogger()->log('no documentId found in ' . $url);
             return null;
@@ -72,13 +75,14 @@ class ARD extends Mediathek
         return $this->getTools()->curlRequest($url);
     }
 
+    private function getDocumentIdFromUrl($url)
+    {
+        return $this->getTools()->pregMatchDefault('#documentId=([0-9]+)#i', $url, null);
+    }
+
     private function getDocumentId($pageContent)
     {
-        if (preg_match('#"contentId":([0-9]+)#i', $pageContent, $match) !== 1) {
-            return null;
-        }
-
-        return $match[1];
+        return $this->getTools()->pregMatchDefault('#"contentId":([0-9]+)#i', $pageContent, null);
     }
 
     private function getApiData($documentId)
@@ -126,11 +130,34 @@ class ARD extends Mediathek
     private function addTitle($pageContent, Result $result)
     {
         $videoMeta = $this->getVideoMeta($pageContent);
+        if ($videoMeta !== null) {
+            return $this->addTitleFromVideoMeta($result, $videoMeta);
+        }
 
-        if ($videoMeta === null) {
+        $titleTag = $this->getTools()->pregMatchDefault('#<title>(.*?)</title>#i', $pageContent, null);
+        if ($titleTag === null) {
             return $result;
         }
 
+        $splitted = explode('|', $titleTag);
+        $episode = trim($splitted[0]);
+        $title = isset($splitted[1]) ? trim($splitted[1]) : null;
+
+        if ($title === null) {
+            $result->setTitle($episode);
+            return $result;
+        }
+
+        $title = str_replace('Video zu ', '', $title);
+
+        $result->setTitle($title);
+        $result->setEpisodeTitle($episode);
+
+        return $result;
+    }
+
+    private function addTitleFromVideoMeta(Result $result, $videoMeta)
+    {
         $show = $this->getShowFromMeta($videoMeta);
         $clipTitle = $this->getClipTitleFromMeta($videoMeta);
 
@@ -143,7 +170,6 @@ class ARD extends Mediathek
     private function getVideoMeta($pageContent)
     {
         \preg_match_all('#<script>(.*?)<\/script>#si', $pageContent, $scriptTags);
-
         if (count($scriptTags) === 0) {
             return null;
         }
@@ -161,19 +187,11 @@ class ARD extends Mediathek
 
     private function getShowFromMeta($videoMeta)
     {
-        if (preg_match('#"show":"(.*?)"#i', $videoMeta, $match) !== 1) {
-            return null;
-        }
-
-        return $match[1];
+        return $this->getTools()->pregMatchDefault('#"show":"(.*?)"#i', $videoMeta, null);
     }
 
     private function getClipTitleFromMeta($videoMeta)
     {
-        if (preg_match('#"clipTitle":"(.*?)"#i', $videoMeta, $match) !== 1) {
-            return null;
-        }
-
-        return $match[1];
+        return $this->getTools()->pregMatchDefault('#"clipTitle":"(.*?)"#i', $videoMeta, null);
     }
 }
