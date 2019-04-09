@@ -25,7 +25,8 @@ class Arte extends Mediathek
         'og',
         'ov',
         'omu',
-        'vostf'
+        'vostf',
+        'vo'
     ];
 
     protected static $supportMatcher = 'arte.tv';
