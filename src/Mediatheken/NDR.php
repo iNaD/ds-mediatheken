@@ -12,7 +12,7 @@ use TheiNaD\DSMediatheken\Utils\Result;
  */
 class NDR extends Mediathek
 {
-    protected static $supportMatcher = ['ndr.de'];
+    protected static $SUPPORT_MATCHER = ['ndr.de'];
 
     public function getDownloadInfo($url, $username = '', $password = '')
     {

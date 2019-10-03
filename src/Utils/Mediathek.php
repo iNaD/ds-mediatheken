@@ -13,7 +13,8 @@ use Exception;
  */
 abstract class Mediathek
 {
-    protected static $supportMatcher = null;
+    protected static $SUPPORT_MATCHER = null;
+
     private $logger;
     private $tools;
 
@@ -50,16 +51,16 @@ abstract class Mediathek
      */
     public static function supportsUrl($url)
     {
-        if (static::$supportMatcher === null) {
+        if (static::$SUPPORT_MATCHER === null) {
             throw new Exception('A supportMatcher is mandatory');
         }
 
-        if (is_array(static::$supportMatcher)) {
-            if (count(static::$supportMatcher) === 0) {
+        if (is_array(static::$SUPPORT_MATCHER)) {
+            if (count(static::$SUPPORT_MATCHER) === 0) {
                 throw new Exception('An array supportMatcher needs at least one value');
             }
 
-            foreach (static::$supportMatcher as $supports) {
+            foreach (static::$SUPPORT_MATCHER as $supports) {
                 if (strpos($url, $supports) !== false) {
                     return true;
                 }
@@ -68,8 +69,8 @@ abstract class Mediathek
             return false;
         }
 
-        if (is_string(static::$supportMatcher)) {
-            return strpos($url, static::$supportMatcher) !== false;
+        if (is_string(static::$SUPPORT_MATCHER)) {
+            return strpos($url, static::$SUPPORT_MATCHER) !== false;
         }
 
         return false;

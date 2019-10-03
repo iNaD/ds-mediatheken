@@ -16,7 +16,7 @@ class RBB extends Mediathek
     private static $API_BASE_URL = 'http://mediathek.rbb-online.de/play/media/';
     private static $VALID_CDNS = ['default', 'akamai'];
 
-    protected static $supportMatcher = 'mediathek.rbb-online.de';
+    protected static $SUPPORT_MATCHER = 'mediathek.rbb-online.de';
 
     public function getDownloadInfo($url, $username = '', $password = '')
     {

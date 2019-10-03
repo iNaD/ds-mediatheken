@@ -1,0 +1,462 @@
+{
+    "contentType": "episode",
+    "title": "Reykjavik - Rotterdam: Tödliche Lieferung",
+    "editorialDate": "2019-08-09T21:58:00.000Z",
+    "leadParagraph": "Der Seemann Kristófer lebt mit seiner Familie in Reykjavik. Wegen Alkoholschmuggels verurteilt, ist er nur auf Bewährung frei. Aus finanzieller Not plant er jedoch einen letzten Coup.",
+    "teasertext": "Der Seemann Kristófer lebt mit seiner Familie in Reykjavik. Wegen Alkoholschmuggels verurteilt, ist er nur auf Bewährung frei. Aus finanzieller Not plant er jedoch einen letzten Coup.",
+    "teaserImageRef": {
+        "title": "Reykjavík - Rotterdam: Tödliche Lieferung",
+        "altText": "Reykjavík - Rotterdam: Tödliche Lieferung",
+        "caption": "Mit dem brutalen Hehler Hoogland (Victor Löw) ist nicht zu spaßen.",
+        "copyrightNotice": "ARD Degeto\/Bavaria Pictures\/Blue",
+        "source": "ZDF und ARD Degeto\/Bavaria Pictu",
+        "profile": "http:\/\/zdf.de\/rels\/image",
+        "self": "\/content\/documents\/zdf\/film\/spielfilm\/bilder\/reykjaviv-rotterdam-100.json?profile=player",
+        "canonical": "\/content\/documents\/reykjaviv-rotterdam-100.json",
+        "layouts": {
+            "original": "https:\/\/www.3sat.de\/assets\/reykjaviv-rotterdam-100~original?cb=1565010341937",
+            "768x432": "https:\/\/www.3sat.de\/assets\/reykjaviv-rotterdam-100~768x432?cb=1565010341937",
+            "384x216": "https:\/\/www.3sat.de\/assets\/reykjaviv-rotterdam-100~384x216?cb=1565010341937"
+        }
+    },
+    "embeddingPossible": false,
+    "http:\/\/zdf.de\/rels\/category": {
+        "profile": "http:\/\/zdf.de\/rels\/content\/structureNodeDocument-breadcrumb",
+        "self": "\/content\/structure\/zdf\/film?profile=breadcrumb",
+        "canonical": "\/content\/structure\/zdf\/film",
+        "title": "Film",
+        "http:\/\/zdf.de\/rels\/target": {
+            "id": "film-100",
+            "externalId": "SCMS_7efa7dda-0ab7-4244-b01b-bba0d9cac801",
+            "title": "Film",
+            "hasVideo": true,
+            "contentType": "category",
+            "profile": "http:\/\/zdf.de\/rels\/content\/page-index-navigation",
+            "self": "\/content\/documents\/zdf\/film?profile=navigation",
+            "canonical": "\/content\/documents\/film-100.json",
+            "structureNodePath": "\/zdf\/film",
+            "stage": [{
+                "profile": "http:\/\/zdf.de\/rels\/content\/group-stage-background-navigation",
+                "teaser": [{
+                    "http:\/\/zdf.de\/rels\/target": {
+                        "title": "Film",
+                        "altText": "Film",
+                        "profile": "http:\/\/zdf.de\/rels\/image",
+                        "self": "\/content\/documents\/zdf\/film\/rubrik-header2850x300film-100.json",
+                        "canonical": "\/content\/documents\/rubrik-header2850x300film-100.json",
+                        "layouts": {
+                            "1900x200": "https:\/\/www.3sat.de\/assets\/rubrik-header2850x300film-100~1900x200?cb=1554448016892",
+                            "original": "https:\/\/www.3sat.de\/assets\/rubrik-header2850x300film-100~original?cb=1554448016892",
+                            "384xauto": "https:\/\/www.3sat.de\/assets\/rubrik-header2850x300film-100~384xauto?cb=1554448016892",
+                            "768xauto": "https:\/\/www.3sat.de\/assets\/rubrik-header2850x300film-100~768xauto?cb=1554448016892",
+                            "276x155": "https:\/\/www.3sat.de\/assets\/rubrik-header2850x300film-100~276x155?cb=1554448016892",
+                            "1280xauto": "https:\/\/www.3sat.de\/assets\/rubrik-header2850x300film-100~1280xauto?cb=1554448016892",
+                            "240x270": "https:\/\/www.3sat.de\/assets\/rubrik-header2850x300film-100~240x270?cb=1554448016892",
+                            "384x216": "https:\/\/www.3sat.de\/assets\/rubrik-header2850x300film-100~384x216?cb=1554448016892",
+                            "840x280": "https:\/\/www.3sat.de\/assets\/rubrik-header2850x300film-100~840x280?cb=1554448016892",
+                            "380x170": "https:\/\/www.3sat.de\/assets\/rubrik-header2850x300film-100~380x170?cb=1554448016892",
+                            "1500x300": "https:\/\/www.3sat.de\/assets\/rubrik-header2850x300film-100~1500x300?cb=1554448016892",
+                            "2850x300": "https:\/\/www.3sat.de\/assets\/rubrik-header2850x300film-100~2850x300?cb=1554448016892",
+                            "840x140": "https:\/\/www.3sat.de\/assets\/rubrik-header2850x300film-100~840x140?cb=1554448016892"
+                        }
+                    },
+                    "profile": "http:\/\/zdf.de\/rels\/content-reference\/image-background"
+                }]
+            }]
+        }
+    },
+    "http:\/\/zdf.de\/rels\/sharing-url": "https:\/\/www.3sat.de\/film\/spielfilm\/reykjavik-rotterdam-toedliche-lieferung-100.html",
+    "http:\/\/zdf.de\/rels\/brand": {
+        "profile": "http:\/\/zdf.de\/rels\/content\/structureNodeDocument-breadcrumb",
+        "self": "\/content\/structure\/zdf\/film\/spielfilm?profile=breadcrumb",
+        "canonical": "\/content\/structure\/zdf\/film\/spielfilm",
+        "title": "Spielfilm",
+        "http:\/\/zdf.de\/rels\/target": {
+            "id": "spielfilm-100",
+            "externalId": "SCMS_9719ceef-43e1-4925-9ddb-8b7239779936",
+            "title": "Spielfilm",
+            "hasVideo": true,
+            "contentType": "brand",
+            "profile": "http:\/\/zdf.de\/rels\/content\/page-index-navigation",
+            "self": "\/content\/documents\/zdf\/film\/spielfilm?profile=navigation",
+            "canonical": "\/content\/documents\/spielfilm-100.json",
+            "structureNodePath": "\/zdf\/film\/spielfilm",
+            "stage": [{
+                "profile": "http:\/\/zdf.de\/rels\/content\/group-stage-background-navigation",
+                "teaser": [{
+                    "http:\/\/zdf.de\/rels\/target": {
+                        "title": "Spielfilm",
+                        "altText": "Spielfilm",
+                        "profile": "http:\/\/zdf.de\/rels\/image",
+                        "self": "\/content\/documents\/zdf\/film\/spielfilm\/sb-material\/higru-sb-sammel-spielfilm-2850x-100.json",
+                        "canonical": "\/content\/documents\/higru-sb-sammel-spielfilm-2850x-100.json",
+                        "layouts": {
+                            "1900x200": "https:\/\/www.3sat.de\/assets\/higru-sb-sammel-spielfilm-2850x-100~1900x200?cb=1558345727911",
+                            "1900x400": "https:\/\/www.3sat.de\/assets\/higru-sb-sammel-spielfilm-2850x-100~1900x400?cb=1558345727911",
+                            "640x720": "https:\/\/www.3sat.de\/assets\/higru-sb-sammel-spielfilm-2850x-100~640x720?cb=1558345727911",
+                            "768xauto": "https:\/\/www.3sat.de\/assets\/higru-sb-sammel-spielfilm-2850x-100~768xauto?cb=1558345727911",
+                            "1280xauto": "https:\/\/www.3sat.de\/assets\/higru-sb-sammel-spielfilm-2850x-100~1280xauto?cb=1558345727911",
+                            "240x270": "https:\/\/www.3sat.de\/assets\/higru-sb-sammel-spielfilm-2850x-100~240x270?cb=1558345727911",
+                            "384x216": "https:\/\/www.3sat.de\/assets\/higru-sb-sammel-spielfilm-2850x-100~384x216?cb=1558345727911",
+                            "760x340": "https:\/\/www.3sat.de\/assets\/higru-sb-sammel-spielfilm-2850x-100~760x340?cb=1558345727911",
+                            "840x280": "https:\/\/www.3sat.de\/assets\/higru-sb-sammel-spielfilm-2850x-100~840x280?cb=1558345727911",
+                            "1500x300": "https:\/\/www.3sat.de\/assets\/higru-sb-sammel-spielfilm-2850x-100~1500x300?cb=1558345727911",
+                            "840x140": "https:\/\/www.3sat.de\/assets\/higru-sb-sammel-spielfilm-2850x-100~840x140?cb=1558345727911",
+                            "840x360": "https:\/\/www.3sat.de\/assets\/higru-sb-sammel-spielfilm-2850x-100~840x360?cb=1558345727911",
+                            "1900x570": "https:\/\/www.3sat.de\/assets\/higru-sb-sammel-spielfilm-2850x-100~1900x570?cb=1558345727911",
+                            "original": "https:\/\/www.3sat.de\/assets\/higru-sb-sammel-spielfilm-2850x-100~original?cb=1558345727911",
+                            "384xauto": "https:\/\/www.3sat.de\/assets\/higru-sb-sammel-spielfilm-2850x-100~384xauto?cb=1558345727911",
+                            "2850x855": "https:\/\/www.3sat.de\/assets\/higru-sb-sammel-spielfilm-2850x-100~2850x855?cb=1558345727911",
+                            "276x155": "https:\/\/www.3sat.de\/assets\/higru-sb-sammel-spielfilm-2850x-100~276x155?cb=1558345727911",
+                            "1280x720": "https:\/\/www.3sat.de\/assets\/higru-sb-sammel-spielfilm-2850x-100~1280x720?cb=1558345727911",
+                            "1500x600": "https:\/\/www.3sat.de\/assets\/higru-sb-sammel-spielfilm-2850x-100~1500x600?cb=1558345727911",
+                            "1500x800": "https:\/\/www.3sat.de\/assets\/higru-sb-sammel-spielfilm-2850x-100~1500x800?cb=1558345727911",
+                            "380x170": "https:\/\/www.3sat.de\/assets\/higru-sb-sammel-spielfilm-2850x-100~380x170?cb=1558345727911",
+                            "2850x300": "https:\/\/www.3sat.de\/assets\/higru-sb-sammel-spielfilm-2850x-100~2850x300?cb=1558345727911",
+                            "314x314": "https:\/\/www.3sat.de\/assets\/higru-sb-sammel-spielfilm-2850x-100~314x314?cb=1558345727911",
+                            "2850x600": "https:\/\/www.3sat.de\/assets\/higru-sb-sammel-spielfilm-2850x-100~2850x600?cb=1558345727911",
+                            "768x432": "https:\/\/www.3sat.de\/assets\/higru-sb-sammel-spielfilm-2850x-100~768x432?cb=1558345727911"
+                        }
+                    },
+                    "profile": "http:\/\/zdf.de\/rels\/content-reference\/image-background"
+                }]
+            }]
+        }
+    },
+    "tvService": "3sat",
+    "profile": "http:\/\/zdf.de\/rels\/content\/page-video-player2",
+    "self": "\/content\/documents\/zdf\/film\/spielfilm\/reykjavik-rotterdam-toedliche-lieferung-100.json?profile=player2",
+    "canonical": "\/content\/documents\/reykjavik-rotterdam-toedliche-lieferung-100.json",
+    "http:\/\/zdf.de\/rels\/recommended-videos": {
+        "filterType": "search_date_desc",
+        "filterDocTypes": ["page-video_clip_vod", "page-video_episode_vod"],
+        "profile": "http:\/\/zdf.de\/rels\/content\/content-filter-player2",
+        "self": "\/content\/documents\/zdf\/suche\/neueste-film-100.json?profile=player2",
+        "canonical": "\/content\/documents\/neueste-film-100.json",
+        "resultsWithVideo": {
+            "totalResultsCount": 96,
+            "next": "\/search\/documents?q=*&limit=1&from=2019-04-03T00%3A00%3A00Z&to=2019-10-04T00%3A00%3A00Z&attrs=&sender=&paths=%2Fzdf%2Ffilm&editorialTags=&exclEditorialTags=&allEditorialTags=false&tagTypes=editorial&videoTypes=episode_clip%2Cclip_clip%2Cclip_episode%2Cepisode_episode&sortBy=date&sortOrder=desc&profile=player2&page=2",
+            "http:\/\/zdf.de\/rels\/search\/suggestions": [],
+            "http:\/\/zdf.de\/rels\/search\/results": [{
+                "score": null,
+                "http:\/\/zdf.de\/rels\/target": {
+                    "title": "Der gleiche Himmel (3\/3)",
+                    "editorialDate": "2019-10-03T21:20:00.000Z",
+                    "teaserImageRef": {
+                        "title": "Der gleiche Himmel (3\/3)",
+                        "altText": "\"Der gleiche Himmel (3)\": Sabine Cutter (Friederike Becht) und Lars Weber (Tom Schilling) stehen Schulter an Schulter im Esszimmer der Familie Cutter. Lars schaut Sabine an. Im Hintergrund ist der Rest der Familie zu sehen.",
+                        "caption": "Sabine Cutter (Friederike Becht) und Lars Weber (Tom Schilling).",
+                        "copyrightNotice": "ZDF\/Bernd Schuller",
+                        "profile": "http:\/\/zdf.de\/rels\/image",
+                        "self": "\/content\/documents\/zdf\/film\/der-gleiche-himmel\/bilder\/der-gleiche-himmel3-100.json?profile=player",
+                        "canonical": "\/content\/documents\/der-gleiche-himmel3-100.json",
+                        "layouts": {
+                            "2400x1350": "https:\/\/www.3sat.de\/assets\/der-gleiche-himmel3-100~2400x1350?cb=1569326936404",
+                            "original": "https:\/\/www.3sat.de\/assets\/der-gleiche-himmel3-100~original?cb=1569326936404",
+                            "1920x1080": "https:\/\/www.3sat.de\/assets\/der-gleiche-himmel3-100~1920x1080?cb=1569326936404",
+                            "1280x720": "https:\/\/www.3sat.de\/assets\/der-gleiche-himmel3-100~1280x720?cb=1569326936404",
+                            "768x432": "https:\/\/www.3sat.de\/assets\/der-gleiche-himmel3-100~768x432?cb=1569326936404",
+                            "384x216": "https:\/\/www.3sat.de\/assets\/der-gleiche-himmel3-100~384x216?cb=1569326936404"
+                        }
+                    },
+                    "http:\/\/zdf.de\/rels\/category": {
+                        "profile": "http:\/\/zdf.de\/rels\/content\/structureNodeDocument-breadcrumb",
+                        "self": "\/content\/structure\/zdf\/film?profile=breadcrumb",
+                        "canonical": "\/content\/structure\/zdf\/film",
+                        "title": "Film",
+                        "http:\/\/zdf.de\/rels\/target": {
+                            "id": "film-100",
+                            "externalId": "SCMS_7efa7dda-0ab7-4244-b01b-bba0d9cac801",
+                            "title": "Film",
+                            "hasVideo": true,
+                            "contentType": "category",
+                            "profile": "http:\/\/zdf.de\/rels\/content\/page-index-navigation",
+                            "self": "\/content\/documents\/zdf\/film?profile=navigation",
+                            "canonical": "\/content\/documents\/film-100.json",
+                            "structureNodePath": "\/zdf\/film",
+                            "stage": [{
+                                "profile": "http:\/\/zdf.de\/rels\/content\/group-stage-background-navigation",
+                                "teaser": [{
+                                    "http:\/\/zdf.de\/rels\/target": {
+                                        "title": "Film",
+                                        "altText": "Film",
+                                        "profile": "http:\/\/zdf.de\/rels\/image",
+                                        "self": "\/content\/documents\/zdf\/film\/rubrik-header2850x300film-100.json",
+                                        "canonical": "\/content\/documents\/rubrik-header2850x300film-100.json",
+                                        "layouts": {
+                                            "1900x200": "https:\/\/www.3sat.de\/assets\/rubrik-header2850x300film-100~1900x200?cb=1554448016892",
+                                            "original": "https:\/\/www.3sat.de\/assets\/rubrik-header2850x300film-100~original?cb=1554448016892",
+                                            "384xauto": "https:\/\/www.3sat.de\/assets\/rubrik-header2850x300film-100~384xauto?cb=1554448016892",
+                                            "768xauto": "https:\/\/www.3sat.de\/assets\/rubrik-header2850x300film-100~768xauto?cb=1554448016892",
+                                            "276x155": "https:\/\/www.3sat.de\/assets\/rubrik-header2850x300film-100~276x155?cb=1554448016892",
+                                            "1280xauto": "https:\/\/www.3sat.de\/assets\/rubrik-header2850x300film-100~1280xauto?cb=1554448016892",
+                                            "240x270": "https:\/\/www.3sat.de\/assets\/rubrik-header2850x300film-100~240x270?cb=1554448016892",
+                                            "384x216": "https:\/\/www.3sat.de\/assets\/rubrik-header2850x300film-100~384x216?cb=1554448016892",
+                                            "840x280": "https:\/\/www.3sat.de\/assets\/rubrik-header2850x300film-100~840x280?cb=1554448016892",
+                                            "380x170": "https:\/\/www.3sat.de\/assets\/rubrik-header2850x300film-100~380x170?cb=1554448016892",
+                                            "1500x300": "https:\/\/www.3sat.de\/assets\/rubrik-header2850x300film-100~1500x300?cb=1554448016892",
+                                            "2850x300": "https:\/\/www.3sat.de\/assets\/rubrik-header2850x300film-100~2850x300?cb=1554448016892",
+                                            "840x140": "https:\/\/www.3sat.de\/assets\/rubrik-header2850x300film-100~840x140?cb=1554448016892"
+                                        }
+                                    },
+                                    "profile": "http:\/\/zdf.de\/rels\/content-reference\/image-background"
+                                }]
+                            }]
+                        }
+                    },
+                    "http:\/\/zdf.de\/rels\/sharing-url": "https:\/\/www.3sat.de\/film\/der-gleiche-himmel\/der-gleiche-himmel3-102.html",
+                    "http:\/\/zdf.de\/rels\/brand": {
+                        "profile": "http:\/\/zdf.de\/rels\/content\/structureNodeDocument-breadcrumb",
+                        "self": "\/content\/structure\/zdf\/film\/der-gleiche-himmel?profile=breadcrumb",
+                        "canonical": "\/content\/structure\/zdf\/film\/der-gleiche-himmel",
+                        "title": "Der gleiche Himmel"
+                    },
+                    "profile": "http:\/\/zdf.de\/rels\/content\/page-video-playlist2",
+                    "self": "\/content\/documents\/zdf\/film\/der-gleiche-himmel\/der-gleiche-himmel3-102.json?profile=playlist2",
+                    "http:\/\/zdf.de\/rels\/player": "\/content\/documents\/zdf\/film\/der-gleiche-himmel\/der-gleiche-himmel3-102.json?profile=player2",
+                    "canonical": "\/content\/documents\/der-gleiche-himmel3-102.json",
+                    "tracking": {
+                        "szmng": {
+                            "st": "3sat",
+                            "cp": "Film\/Der_gleiche_Himmel",
+                            "sv": "ke"
+                        },
+                        "zdf": {
+                            "config": {
+                                "playerTrackingRateInSeconds": 10
+                            },
+                            "templates": {
+                                "view": "\/\/tracking.3sat.de\/event?eventType=view&trackingId={trackingId}&start={start}&agent={agent}&appId={appId}{&searchResultsCount,abGroup,abName}&asset=SCMS_98573799-1acf-4a40-93b5-87d4b8bbc96a&pagePath=https%3A%2F%2Fwww.3sat.de%2Ffilm%2Fder-gleiche-himmel%2Fder-gleiche-himmel3-102.html&pageTitle=Der_gleiche_Himmel_(3\/3)&pageType=episode",
+                                "click": "\/\/tracking.3sat.de\/event?eventType=click&trackingId={trackingId}&start={start}&agent={agent}&appId={appId}&clickedClusterPosition={clickedClusterPosition}&clickedTeaserPosition={clickedTeaserPosition}{&searchParams,abGroup,abName,recommendationEngine,element,action,displayedIds}&asset=SCMS_98573799-1acf-4a40-93b5-87d4b8bbc96a&targetAsset={targetAsset}&pagePath=https%3A%2F%2Fwww.3sat.de%2Ffilm%2Fder-gleiche-himmel%2Fder-gleiche-himmel3-102.html&pageType=episode",
+                                "pause": "\/\/tracking.3sat.de\/event?eventType=pause&trackingId={trackingId}&start={start}&agent={agent}&appId={appId}&currentPosition={currentPosition}&duration={duration}{&abGroup,abName,playbackProgress,videoPath,videoAsset}&asset=SCMS_98573799-1acf-4a40-93b5-87d4b8bbc96a&pagePath=https%3A%2F%2Fwww.3sat.de%2Ffilm%2Fder-gleiche-himmel%2Fder-gleiche-himmel3-102.html&pageType=episode",
+                                "play": "\/\/tracking.3sat.de\/event?eventType=play&trackingId={trackingId}&start={start}&agent={agent}&appId={appId}&currentPosition={currentPosition}&duration={duration}{&abGroup,abName,playbackProgress,videoPath,videoAsset}&asset=SCMS_98573799-1acf-4a40-93b5-87d4b8bbc96a&pagePath=https%3A%2F%2Fwww.3sat.de%2Ffilm%2Fder-gleiche-himmel%2Fder-gleiche-himmel3-102.html&pageType=episode"
+                            }
+                        },
+                        "atInternet": {
+                            "page": {
+                                "level1": "3sat",
+                                "level2": "Film",
+                                "chapter1": "\/Der_gleiche_Himmel",
+                                "chapter2": "episode",
+                                "chapter3": "98573799-1acf-4a40-93b5-87d4b8bbc96a",
+                                "name": "Der_gleiche_Himmel_(3\/3)",
+                                "customObject": {
+                                    "domain": "3sat",
+                                    "level1": "3sat",
+                                    "level2": "Film",
+                                    "chapter1": "\/Der_gleiche_Himmel",
+                                    "broadcast": "3sat",
+                                    "id": "der-gleiche-himmel3-102",
+                                    "inhaltsTyp": "episode"
+                                }
+                            },
+                            "richMedia": {
+                                "mediaType": "video",
+                                "mediaLevel2": "9",
+                                "mediaLabel": "Der_gleiche_Himmel::Der_gleiche_Himmel_(3\/3)",
+                                "mediaTheme1": "Film",
+                                "mediaTheme2": "Der_gleiche_Himmel",
+                                "mediaTheme3": "episode",
+                                "refreshDuration": {
+                                    "0": 5,
+                                    "1": 30,
+                                    "5": 60
+                                },
+                                "duration": "5572",
+                                "broadcastMode": "clip"
+                            },
+                            "event": {
+                                "level1": "3sat",
+                                "level2": "Film",
+                                "chapter1": "\/Der_gleiche_Himmel",
+                                "customObject": {
+                                    "domain": "3sat",
+                                    "level1": "3sat",
+                                    "level2": "Film",
+                                    "chapter1": "\/Der_gleiche_Himmel",
+                                    "broadcast": "3sat",
+                                    "id": "der-gleiche-himmel3-102",
+                                    "inhaltsTyp": "episode"
+                                }
+                            },
+                            "customVars": {
+                                "site": {
+                                    "id": "der-gleiche-himmel3-102",
+                                    "chapter2": "episode",
+                                    "chapter3": "98573799-1acf-4a40-93b5-87d4b8bbc96a"
+                                }
+                            }
+                        }
+                    },
+                    "mainVideoContent": {
+                        "http:\/\/zdf.de\/rels\/target": {
+                            "title": "Der gleiche Himmel (3\/3)",
+                            "duration": 5572,
+                            "visible": true,
+                            "visibleFrom": "2019-10-03T04:00:00.000Z",
+                            "visibleTo": "2019-11-02T22:59:00.000Z",
+                            "profile": "http:\/\/zdf.de\/rels\/content\/content-video-vod-player",
+                            "self": "\/content\/documents\/zdf\/film\/der-gleiche-himmel\/videos\/191003-der-gleiche-himmel3-fernsehfilm-100.json?profile=player",
+                            "canonical": "\/content\/documents\/191003-der-gleiche-himmel3-fernsehfilm-100.json",
+                            "http:\/\/zdf.de\/rels\/streams\/ptmd-template": "\/tmd\/2\/{playerId}\/vod\/ptmd\/3sat\/191003_der_gleiche_himmel3_fernsehfilm"
+                        },
+                        "profile": "http:\/\/zdf.de\/rels\/content-reference\/video-content"
+                    }
+                },
+                "profile": "http:\/\/zdf.de\/rels\/search\/result",
+                "id": "SCMS_98573799-1acf-4a40-93b5-87d4b8bbc96a",
+                "viewCount": 0,
+                "ratingCount": 0,
+                "resultType": "default"
+            }],
+            "profile": "http:\/\/zdf.de\/rels\/search\/result-page",
+            "self": "\/search\/documents?q=*&limit=1&from=2019-04-03T00%3A00%3A00Z&to=2019-10-04T00%3A00%3A00Z&attrs=&sender=&paths=%2Fzdf%2Ffilm&editorialTags=&exclEditorialTags=&allEditorialTags=false&tagTypes=editorial&videoTypes=episode_clip%2Cclip_clip%2Cclip_episode%2Cepisode_episode&sortBy=date&sortOrder=desc&profile=player2",
+            "first": "\/search\/documents?q=*&limit=1&from=2019-04-03T00%3A00%3A00Z&to=2019-10-04T00%3A00%3A00Z&attrs=&sender=&paths=%2Fzdf%2Ffilm&editorialTags=&exclEditorialTags=&allEditorialTags=false&tagTypes=editorial&videoTypes=episode_clip%2Cclip_clip%2Cclip_episode%2Cepisode_episode&sortBy=date&sortOrder=desc&profile=player2",
+            "facets": {
+                "teilbereich": [],
+                "broadcasters": [{
+                    "docCount": 96,
+                    "key": "3sat"
+                }],
+                "episodes": {
+                    "docCount": 95
+                },
+                "attrs": [{
+                    "docCount": 12,
+                    "key": "UT"
+                }]
+            }
+        }
+    },
+    "http:\/\/zdf.de\/rels\/recommended-videos-object-reference": {
+        "profile": "http:\/\/zdf.de\/rels\/object-reference",
+        "reference-type": "virtual",
+        "uri": "\/content\/documents\/zdf\/suche\/neueste-film-100.json?docId=SCMS_cf170a18-7eb1-43bd-8f55-a18d3c95ef14&maxResults=26&profile=player2"
+    },
+    "tracking": {
+        "szmng": {
+            "st": "3sat",
+            "cp": "Film\/Spielfilm",
+            "sv": "ke"
+        },
+        "zdf": {
+            "config": {
+                "playerTrackingRateInSeconds": 10
+            },
+            "templates": {
+                "view": "\/\/tracking.3sat.de\/event?eventType=view&trackingId={trackingId}&start={start}&agent={agent}&appId={appId}{&searchResultsCount,abGroup,abName}&asset=SCMS_cf170a18-7eb1-43bd-8f55-a18d3c95ef14&pagePath=https%3A%2F%2Fwww.3sat.de%2Ffilm%2Fspielfilm%2Freykjavik-rotterdam-toedliche-lieferung-100.html&pageTitle=Reykjavik_-_Rotterdam:_Toedliche_Lieferung&pageType=episode",
+                "click": "\/\/tracking.3sat.de\/event?eventType=click&trackingId={trackingId}&start={start}&agent={agent}&appId={appId}&clickedClusterPosition={clickedClusterPosition}&clickedTeaserPosition={clickedTeaserPosition}{&searchParams,abGroup,abName,recommendationEngine,element,action,displayedIds}&asset=SCMS_cf170a18-7eb1-43bd-8f55-a18d3c95ef14&targetAsset={targetAsset}&pagePath=https%3A%2F%2Fwww.3sat.de%2Ffilm%2Fspielfilm%2Freykjavik-rotterdam-toedliche-lieferung-100.html&pageType=episode",
+                "pause": "\/\/tracking.3sat.de\/event?eventType=pause&trackingId={trackingId}&start={start}&agent={agent}&appId={appId}&currentPosition={currentPosition}&duration={duration}{&abGroup,abName,playbackProgress,videoPath,videoAsset}&asset=SCMS_cf170a18-7eb1-43bd-8f55-a18d3c95ef14&pagePath=https%3A%2F%2Fwww.3sat.de%2Ffilm%2Fspielfilm%2Freykjavik-rotterdam-toedliche-lieferung-100.html&pageType=episode",
+                "play": "\/\/tracking.3sat.de\/event?eventType=play&trackingId={trackingId}&start={start}&agent={agent}&appId={appId}&currentPosition={currentPosition}&duration={duration}{&abGroup,abName,playbackProgress,videoPath,videoAsset}&asset=SCMS_cf170a18-7eb1-43bd-8f55-a18d3c95ef14&pagePath=https%3A%2F%2Fwww.3sat.de%2Ffilm%2Fspielfilm%2Freykjavik-rotterdam-toedliche-lieferung-100.html&pageType=episode"
+            }
+        },
+        "atInternet": {
+            "page": {
+                "level1": "3sat",
+                "level2": "Film",
+                "chapter1": "\/Spielfilm",
+                "chapter2": "episode",
+                "chapter3": "cf170a18-7eb1-43bd-8f55-a18d3c95ef14",
+                "name": "Reykjavik_-_Rotterdam:_Toedliche_Lieferung",
+                "customObject": {
+                    "domain": "3sat",
+                    "level1": "3sat",
+                    "level2": "Film",
+                    "chapter1": "\/Spielfilm",
+                    "broadcast": "3sat",
+                    "id": "reykjavik-rotterdam-toedliche-lieferung-100",
+                    "inhaltsTyp": "episode"
+                }
+            },
+            "richMedia": {
+                "mediaType": "video",
+                "mediaLevel2": "9",
+                "mediaLabel": "Spielfilm::Reykjavik_-_Rotterdam:_Toedliche_Lieferung",
+                "mediaTheme1": "Film",
+                "mediaTheme2": "Spielfilm",
+                "mediaTheme3": "episode",
+                "refreshDuration": {
+                    "0": 5,
+                    "1": 30,
+                    "5": 60
+                },
+                "duration": "4810",
+                "broadcastMode": "clip"
+            },
+            "event": {
+                "level1": "3sat",
+                "level2": "Film",
+                "chapter1": "\/Spielfilm",
+                "customObject": {
+                    "domain": "3sat",
+                    "level1": "3sat",
+                    "level2": "Film",
+                    "chapter1": "\/Spielfilm",
+                    "broadcast": "3sat",
+                    "id": "reykjavik-rotterdam-toedliche-lieferung-100",
+                    "inhaltsTyp": "episode"
+                }
+            },
+            "customVars": {
+                "site": {
+                    "id": "reykjavik-rotterdam-toedliche-lieferung-100",
+                    "chapter2": "episode",
+                    "chapter3": "cf170a18-7eb1-43bd-8f55-a18d3c95ef14"
+                }
+            }
+        },
+        "nielsen": {
+            "content": {
+                "type": "content",
+                "assetid": "190809_reykjavik_rotterdam_krimisommer",
+                "program": "Spielfilm",
+                "title": "Spielfilm|Reykjavik - Rotterdam: Tödliche Lieferung|190809_reykjavik_rotterdam_krimisommer",
+                "length": "4810",
+                "nol_c2": "p2,N",
+                "nol_c5": "p5,3sat Mediathek",
+                "nol_c7": "p7,190809_reykjavik_rotterdam_krimisommer",
+                "nol_c8": "p8,4810",
+                "nol_c9": "p9,Reykjavik - Rotterdam: Tödliche Lieferung",
+                "nol_c10": "p10,3sat",
+                "nol_c12": "p12,Content",
+                "nol_c14": "p14,2019-08-09T21:58:00",
+                "nol_c15": "p15,66666666",
+                "nol_c16": "p16,Spielfilm",
+                "nol_c18": "p18,N",
+                "nol_c19": "p19,|09.08.2019 21:55|09.11.2019 19:15|none|dach|true"
+            },
+            "addContent": {
+                "nol_c10": "p10,3sat",
+                "nol_c14": "p14,2019-10-01T13:20:00",
+                "nol_c15": "p15,16191019",
+                "nol_c19": "p19,|09.08.2019 21:55|09.11.2019 19:15|none|dach|true"
+            }
+        }
+    },
+    "additionalPaths": ["\/zdf\/film\/krimisommer"],
+    "programmeItem": [{
+        "http:\/\/zdf.de\/rels\/target": {
+            "genre": "Spielfilm",
+            "subtitle": "Spielfilm, Island 2008",
+            "title": "Reykjavik - Rotterdam: Tödliche Lieferung",
+            "contentId": "POS_a5286960-a086-4793-a5c2-bda5dd732b1b",
+            "profile": "http:\/\/zdf.de\/rels\/cmdm\/programme-item-player2",
+            "self": "\/cmdm\/dreisat\/epg\/programme-items\/POS_a5286960-a086-4793-a5c2-bda5dd732b1b?profile=player2"
+        },
+        "profile": "http:\/\/zdf.de\/rels\/content-reference\/programme-item"
+    }],
+    "mainVideoContent": {
+        "http:\/\/zdf.de\/rels\/target": {
+            "title": "190809_reykjavik_rotterdam_krimisommer",
+            "duration": 4810,
+            "visible": true,
+            "visibleFrom": "2019-08-09T21:55:00.000Z",
+            "visibleTo": "2019-11-09T19:15:00.000Z",
+            "profile": "http:\/\/zdf.de\/rels\/content\/content-video-vod-player",
+            "self": "\/content\/documents\/zdf\/film\/spielfilm\/videos\/190809-reykjavik-rotterdam-krimisommer-100.json?profile=player",
+            "canonical": "\/content\/documents\/190809-reykjavik-rotterdam-krimisommer-100.json",
+            "http:\/\/zdf.de\/rels\/streams\/ptmd-template": "\/tmd\/2\/{playerId}\/vod\/ptmd\/3sat\/190809_reykjavik_rotterdam_krimisommer"
+        },
+        "profile": "http:\/\/zdf.de\/rels\/content-reference\/video-content"
+    }
+}

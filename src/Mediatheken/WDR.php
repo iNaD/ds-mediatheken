@@ -13,7 +13,7 @@ use TheiNaD\DSMediatheken\Utils\Result;
 class WDR extends Mediathek
 {
 
-    protected static $supportMatcher = ['wdr.de/mediathek', 'one.ard.de/mediathek'];
+    protected static $SUPPORT_MATCHER = ['wdr.de/mediathek', 'one.ard.de/mediathek'];
 
     public function getDownloadInfo($url, $username = '', $password = '')
     {

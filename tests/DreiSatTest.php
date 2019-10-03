@@ -3,6 +3,7 @@
 namespace Tests;
 
 use TheiNaD\DSMediatheken\Mediatheken\DreiSat;
+use TheiNaD\DSMediatheken\Mediatheken\ZDF;
 use TheiNaD\DSMediatheken\Utils\Curl;
 use TheiNaD\DSMediatheken\Utils\Logger;
 use TheiNaD\DSMediatheken\Utils\Result;
@@ -17,11 +18,19 @@ use TheiNaD\DSMediatheken\Utils\Tools;
  */
 final class DreiSatTest extends TestCase
 {
-    protected static $VALID_DOWNLOAD_URL = 'http://www.3sat.de/mediathek/?mode=play&obj=48258';
-    protected static $API_URL = 'http://www.3sat.de/mediathek/xmlservice/web/beitragsDetails?ak=web&id=48258&ak=web';
+    protected static $VALID_DOWNLOAD_URL = 'https://www.3sat.de/film/spielfilm/' .
+    'reykjavik-rotterdam-toedliche-lieferung-100.html';
+
+    protected static $EPISODE_DETAILS_URL =
+        'https://api.3sat.de/content/documents/zdf/film/spielfilm/reykjavik-rotterdam-toedliche-lieferung-100.json' .
+        '?profile=player2';
+
+    protected static $FORMITAETEN_URL =
+        'https://api.3sat.de/tmd/2/ngplayer_2_3/vod/ptmd/3sat/190809_reykjavik_rotterdam_krimisommer';
+
     protected static $MEDIA_FILE_URL =
-        'http://tvdl.zdf.de/dach/3sat/14/12/141213_meisterfaelscher3_online' .
-        '/5/141213_meisterfaelscher3_online_2328k_p35v11.mp4';
+        'https://nrodlzdf-a.akamaihd.net/dach/3sat/19/08/190809_reykjavik_rotterdam_krimisommer/2/' .
+        '190809_reykjavik_rotterdam_krimisommer_1496k_p13v13.mp4';
 
     public function testDownloadInfoCanBeRetrievedFromValidUrl(): void
     {
@@ -29,13 +38,17 @@ final class DreiSatTest extends TestCase
         $curl = $this->createMock(Curl::class);
         $tools = new Tools($logger, $curl);
 
-        $curl->expects($this->exactly(1))
+        $curl->expects($this->exactly(3))
             ->method('request')
             ->withConsecutive(
-                [$this->equalTo(self::$API_URL)]
+                [$this->equalTo(self::$VALID_DOWNLOAD_URL)],
+                [$this->equalTo(self::$EPISODE_DETAILS_URL)],
+                [$this->equalTo(self::$FORMITAETEN_URL)]
             )
             ->willReturnOnConsecutiveCalls(
-                $this->getFixture('dreiSat/apiResponse.xml')
+                $this->getFixture('dreiSat/videoPage.html'),
+                $this->getFixture('dreiSat/episodeDetails.json'),
+                $this->getFixture('dreiSat/formitaeten.json')
             );
 
         $dreiSat = new DreiSat($logger, $tools);
@@ -43,7 +56,7 @@ final class DreiSatTest extends TestCase
 
         $this->assertInstanceOf(Result::class, $result);
         $this->assertEquals(self::$MEDIA_FILE_URL, $result->getUri());
-        $this->assertEquals('3sat', $result->getTitle());
-        $this->assertEquals('<![CDATA[Der Meisterfälscher]]>', $result->getEpisodeTitle());
+        $this->assertEquals('Spielfilm', $result->getTitle());
+        $this->assertEquals('Reykjavik - Rotterdam: Tödliche Lieferung', $result->getEpisodeTitle());
     }
 }

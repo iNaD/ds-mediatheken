@@ -21,7 +21,7 @@ class ZDF extends Mediathek
      *
      * @var array
      */
-    private static $QUALITY_RATING = [
+    protected static $QUALITY_RATING = [
         'low' => 0,
         'med' => 1,
         'high' => 2,
@@ -35,7 +35,7 @@ class ZDF extends Mediathek
      *
      * @var array
      */
-    private static $MIMETYPE_RATING = [
+    protected static $MIMETYPE_RATING = [
         'application/x-mpegURL' => -1,
         'application/f4m+xml' => -1,
         'video/webm' => 1,
@@ -46,27 +46,27 @@ class ZDF extends Mediathek
      *
      * @var array
      */
-    private static $UNSUPPORTED_FACETS = [
+    protected static $UNSUPPORTED_FACETS = [
         'hbbtv',
         'restriction_useragent',
     ];
-    private static $SUPPORTED_LANGUAGES = [
+    protected static $SUPPORTED_LANGUAGES = [
         'deu',
     ];
-    private static $API_BASE_URL = 'https://api.zdf.de';
-    private static $JSON_ELEMENT_DOWNLOAD_INFORMATION_URL = 'http://zdf.de/rels/streams/ptmd-template';
-    private static $JSON_OBJ_ELEMENT_TARGET = 'http://zdf.de/rels/target';
-    private static $JSON_OBJ_ELEMENT_MAIN_VIDEO_CONTENT = 'mainVideoContent';
-    private static $API_AUTH_HEADER = 'Api-Auth';
-    private static $API_AUTH_PATTERN = 'Bearer {token}';
-    private static $PLACEHOLDER_PLAYER_ID = '{playerId}';
-    private static $PLAYER_ID = 'ngplayer_2_3';
-    private static $JSON_OBJ_ELEMENT_PRIORITY_LIST = 'priorityList';
-    private static $JSON_OBJ_ELEMENT_FORMITAETEN = 'formitaeten';
-    private static $JSON_OBJ_ELEMENT_TITLE = 'title';
-    private static $JSON_OBJ_ELEMENT_BRAND = 'http://zdf.de/rels/brand';
-    private static $JSON_OBJ_ELEMENT_BRAND_TITLE = 'title';
-    protected static $supportMatcher = 'zdf.de';
+    protected static $API_BASE_URL = 'https://api.zdf.de';
+    protected static $JSON_ELEMENT_DOWNLOAD_INFORMATION_URL = 'http://zdf.de/rels/streams/ptmd-template';
+    protected static $JSON_OBJ_ELEMENT_TARGET = 'http://zdf.de/rels/target';
+    protected static $JSON_OBJ_ELEMENT_MAIN_VIDEO_CONTENT = 'mainVideoContent';
+    protected static $API_AUTH_HEADER = 'Api-Auth';
+    protected static $API_AUTH_PATTERN = 'Bearer {token}';
+    protected static $PLACEHOLDER_PLAYER_ID = '{playerId}';
+    protected static $PLAYER_ID = 'ngplayer_2_3';
+    protected static $JSON_OBJ_ELEMENT_PRIORITY_LIST = 'priorityList';
+    protected static $JSON_OBJ_ELEMENT_FORMITAETEN = 'formitaeten';
+    protected static $JSON_OBJ_ELEMENT_TITLE = 'title';
+    protected static $JSON_OBJ_ELEMENT_BRAND = 'http://zdf.de/rels/brand';
+    protected static $JSON_OBJ_ELEMENT_BRAND_TITLE = 'title';
+    protected static $SUPPORT_MATCHER = 'zdf.de';
 
     public function getDownloadInfo($url, $username = '', $password = '')
     {
@@ -95,17 +95,18 @@ class ZDF extends Mediathek
             return null;
         }
 
-        $contentObject = json_decode($content);
+        $contentObject = json_decode($content, false);
 
         $downloadInformationUrl =
             $contentObject
-                ->{self::$JSON_OBJ_ELEMENT_MAIN_VIDEO_CONTENT}
-                ->{self::$JSON_OBJ_ELEMENT_TARGET}
-                ->{self::$JSON_ELEMENT_DOWNLOAD_INFORMATION_URL};
+                ->{static::$JSON_OBJ_ELEMENT_MAIN_VIDEO_CONTENT}
+                ->{static::$JSON_OBJ_ELEMENT_TARGET}
+                ->{static::$JSON_ELEMENT_DOWNLOAD_INFORMATION_URL};
+
         $downloadUrl =
-            self::$API_BASE_URL . str_replace(
-                self::$PLACEHOLDER_PLAYER_ID,
-                self::$PLAYER_ID,
+            static::$API_BASE_URL . str_replace(
+                static::$PLACEHOLDER_PLAYER_ID,
+                static::$PLAYER_ID,
                 $downloadInformationUrl
             );
 
@@ -115,8 +116,8 @@ class ZDF extends Mediathek
             return null;
         }
 
-        $downloadJson = json_decode($downloadContent);
-        foreach ($downloadJson->{self::$JSON_OBJ_ELEMENT_PRIORITY_LIST} as $priorityListItem) {
+        $downloadJson = json_decode($downloadContent, false);
+        foreach ($downloadJson->{static::$JSON_OBJ_ELEMENT_PRIORITY_LIST} as $priorityListItem) {
             $result = $this->processPriorityListItem($priorityListItem, $result);
         }
 
@@ -133,7 +134,7 @@ class ZDF extends Mediathek
         return $result;
     }
 
-    private function getApiToken($videoPage)
+    protected function getApiToken($videoPage)
     {
         if (preg_match('#"apiToken": "(.*?)",#i', $videoPage, $match) !== 1) {
             return null;
@@ -141,7 +142,7 @@ class ZDF extends Mediathek
         return $match[1];
     }
 
-    private function getContentUrl($videoPage)
+    protected function getContentUrl($videoPage)
     {
         if (preg_match('#"content": "(.*?)",#i', $videoPage, $match) !== 1) {
             return null;
@@ -149,7 +150,7 @@ class ZDF extends Mediathek
         return $match[1];
     }
 
-    private function apiRequest($url, $apiToken)
+    protected function apiRequest($url, $apiToken)
     {
         $this->getLogger()->log(
             sprintf(
@@ -161,14 +162,14 @@ class ZDF extends Mediathek
 
         return $this->getTools()->curlRequest($url, [
             CURLOPT_HTTPHEADER => [
-                self::$API_AUTH_HEADER . ': ' . str_replace('{token}', $apiToken, self::$API_AUTH_PATTERN)
+                static::$API_AUTH_HEADER . ': ' . str_replace('{token}', $apiToken, static::$API_AUTH_PATTERN)
             ]
         ]);
     }
 
-    private function processPriorityListItem($priorityListItem, Result $result)
+    protected function processPriorityListItem($priorityListItem, Result $result)
     {
-        foreach ($priorityListItem->{self::$JSON_OBJ_ELEMENT_FORMITAETEN} as $formitaet) {
+        foreach ($priorityListItem->{static::$JSON_OBJ_ELEMENT_FORMITAETEN} as $formitaet) {
             $this->getLogger()->log(sprintf('Formität: %s', join(', ', $formitaet->facets)));
 
             if ($this->isFacetSupported($formitaet) === false) {
@@ -196,10 +197,10 @@ class ZDF extends Mediathek
         return $result;
     }
 
-    private function isFacetSupported($formitaet)
+    protected function isFacetSupported($formitaet)
     {
         foreach ($formitaet->facets as $facet) {
-            if (in_array($facet, self::$UNSUPPORTED_FACETS)) {
+            if (in_array($facet, static::$UNSUPPORTED_FACETS)) {
                 return false;
             }
         }
@@ -211,17 +212,17 @@ class ZDF extends Mediathek
      * @param $formitaet
      * @return int
      */
-    private function getMimeTypeRating($formitaet)
+    protected function getMimeTypeRating($formitaet)
     {
-        if (array_key_exists($formitaet->mimeType, self::$MIMETYPE_RATING) === false) {
+        if (array_key_exists($formitaet->mimeType, static::$MIMETYPE_RATING) === false) {
             $this->getLogger()->log('Unknown Mime Type ' . $formitaet->mimeType);
             return -1;
         }
 
-        return self::$MIMETYPE_RATING[$formitaet->mimeType];
+        return static::$MIMETYPE_RATING[$formitaet->mimeType];
     }
 
-    private function processQuality($quality, $mimeTypeRating, Result $result)
+    protected function processQuality($quality, $mimeTypeRating, Result $result)
     {
         $qualityRating = $this->getQualityRating($quality);
         if ($qualityRating <= $result->getQualityRating()) {
@@ -255,32 +256,32 @@ class ZDF extends Mediathek
      * @param $quality
      * @return int
      */
-    private function getQualityRating($quality)
+    protected function getQualityRating($quality)
     {
-        if (array_key_exists($quality->quality, self::$QUALITY_RATING) === false) {
+        if (array_key_exists($quality->quality, static::$QUALITY_RATING) === false) {
             $this->getLogger()->log('Unknown quality ' . $quality->quality);
             return -1;
         }
-        return self::$QUALITY_RATING[$quality->quality];
+        return static::$QUALITY_RATING[$quality->quality];
     }
 
-    private function isLanguageSupported($track)
+    protected function isLanguageSupported($track)
     {
-        return in_array($track->language, self::$SUPPORTED_LANGUAGES);
+        return in_array($track->language, static::$SUPPORTED_LANGUAGES);
     }
 
-    private function getTitle($contentObject)
+    protected function getTitle($contentObject)
     {
         $title = @$contentObject
-            ->{self::$JSON_OBJ_ELEMENT_BRAND}
-            ->{self::$JSON_OBJ_ELEMENT_BRAND_TITLE};
+            ->{static::$JSON_OBJ_ELEMENT_BRAND}
+            ->{static::$JSON_OBJ_ELEMENT_BRAND_TITLE};
 
         return trim($title);
     }
 
-    private function getEpisodeTitle($contentObject)
+    protected function getEpisodeTitle($contentObject)
     {
-        $episodeTitle = @$contentObject->{self::$JSON_OBJ_ELEMENT_TITLE};
+        $episodeTitle = @$contentObject->{static::$JSON_OBJ_ELEMENT_TITLE};
 
         return trim($episodeTitle);
     }

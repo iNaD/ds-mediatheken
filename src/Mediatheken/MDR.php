@@ -12,7 +12,7 @@ use TheiNaD\DSMediatheken\Utils\Result;
  */
 class MDR extends Mediathek
 {
-    protected static $supportMatcher = ['mdr.de'];
+    protected static $SUPPORT_MATCHER = ['mdr.de'];
 
     private static $apiBaseUrl = 'https://www.mdr.de';
 

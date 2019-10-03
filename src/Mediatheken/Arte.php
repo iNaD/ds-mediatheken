@@ -29,7 +29,7 @@ class Arte extends Mediathek
         'vo'
     ];
 
-    protected static $supportMatcher = 'arte.tv';
+    protected static $SUPPORT_MATCHER = 'arte.tv';
 
     protected $language = 'de';
     protected $languageShortLibelle = 'de';

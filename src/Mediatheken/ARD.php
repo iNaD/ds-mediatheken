@@ -16,7 +16,7 @@ class ARD extends Mediathek
     private static $API_BASE_URL = 'http://www.ardmediathek.de/play/media/';
     private static $VALID_QUALITIES = [0, 1, 2, 3, 4];
 
-    protected static $supportMatcher = ['ardmediathek.de', 'mediathek.daserste.de'];
+    protected static $SUPPORT_MATCHER = ['ardmediathek.de', 'mediathek.daserste.de'];
 
     public function getDownloadInfo($url, $username = '', $password = '')
     {

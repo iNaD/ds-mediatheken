@@ -18,21 +18,21 @@ use TheiNaD\DSMediatheken\Utils\Result;
 use TheiNaD\DSMediatheken\Utils\Tools;
 
 // phpcs:disable
-require_once dirname(__FILE__) . '/Utils/defines.php';
-require_once dirname(__FILE__) . '/Utils/Mediathek.php';
-require_once dirname(__FILE__) . '/Utils/Result.php';
-require_once dirname(__FILE__) . '/Utils/Curl.php';
-require_once dirname(__FILE__) . '/Utils/Logger.php';
-require_once dirname(__FILE__) . '/Utils/Tools.php';
-include_once dirname(__FILE__) . '/Mediatheken/ARD.php';
-include_once dirname(__FILE__) . '/Mediatheken/Arte.php';
-include_once dirname(__FILE__) . '/Mediatheken/DreiSat.php';
-include_once dirname(__FILE__) . '/Mediatheken/KiKa.php';
-include_once dirname(__FILE__) . '/Mediatheken/MDR.php';
-include_once dirname(__FILE__) . '/Mediatheken/NDR.php';
-include_once dirname(__FILE__) . '/Mediatheken/RBB.php';
-include_once dirname(__FILE__) . '/Mediatheken/WDR.php';
-include_once dirname(__FILE__) . '/Mediatheken/ZDF.php';
+require_once __DIR__ . '/Utils/defines.php';
+require_once __DIR__ . '/Utils/Mediathek.php';
+require_once __DIR__ . '/Utils/Result.php';
+require_once __DIR__ . '/Utils/Curl.php';
+require_once __DIR__ . '/Utils/Logger.php';
+require_once __DIR__ . '/Utils/Tools.php';
+include_once __DIR__ . '/Mediatheken/ARD.php';
+include_once __DIR__ . '/Mediatheken/Arte.php';
+include_once __DIR__ . '/Mediatheken/DreiSat.php';
+include_once __DIR__ . '/Mediatheken/KiKa.php';
+include_once __DIR__ . '/Mediatheken/MDR.php';
+include_once __DIR__ . '/Mediatheken/NDR.php';
+include_once __DIR__ . '/Mediatheken/RBB.php';
+include_once __DIR__ . '/Mediatheken/WDR.php';
+include_once __DIR__ . '/Mediatheken/ZDF.php';
 // phpcs:enable
 
 /**
@@ -41,7 +41,7 @@ include_once dirname(__FILE__) . '/Mediatheken/ZDF.php';
  * All public functions are required by Synology Download Station.
  *
  * @author Daniel Gehn <me@theinad.com>
- * @version 0.4.4
+ * @version 0.5.0
  * @copyright 2017-2019 Daniel Gehn
  * @license http://opensource.org/licenses/MIT Licensed under MIT License
  */

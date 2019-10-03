@@ -12,7 +12,7 @@ use TheiNaD\DSMediatheken\Utils\Result;
  */
 class KiKa extends Mediathek
 {
-    protected static $supportMatcher = ['kika.de'];
+    protected static $SUPPORT_MATCHER = ['kika.de'];
 
     public function getDownloadInfo($url, $username = '', $password = '')
     {
