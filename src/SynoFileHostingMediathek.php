@@ -26,13 +26,13 @@ require_once __DIR__ . '/Utils/Logger.php';
 require_once __DIR__ . '/Utils/Tools.php';
 include_once __DIR__ . '/Mediatheken/ARD.php';
 include_once __DIR__ . '/Mediatheken/Arte.php';
-include_once __DIR__ . '/Mediatheken/DreiSat.php';
 include_once __DIR__ . '/Mediatheken/KiKa.php';
 include_once __DIR__ . '/Mediatheken/MDR.php';
 include_once __DIR__ . '/Mediatheken/NDR.php';
 include_once __DIR__ . '/Mediatheken/RBB.php';
 include_once __DIR__ . '/Mediatheken/WDR.php';
 include_once __DIR__ . '/Mediatheken/ZDF.php';
+include_once __DIR__ . '/Mediatheken/DreiSat.php';
 // phpcs:enable
 
 /**
