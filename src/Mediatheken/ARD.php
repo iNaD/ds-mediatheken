@@ -188,7 +188,7 @@ class ARD extends Mediathek
             return $this->addTitleFromVideoMeta($result, $videoMeta);
         }
 
-        $titleTag = $this->getTools()->pregMatchDefault('#<title>(.*?)</title>#i', $pageContent, null);
+        $titleTag = $this->getTools()->pregMatchDefault('#<title>(.*?)<\/title>#i', $pageContent, null);
         if ($titleTag === null) {
             return $result;
         }
@@ -236,7 +236,7 @@ class ARD extends Mediathek
     protected function getVideoMeta($pageContent)
     {
         $scriptTags = $this->getTools()->pregMatchAllDefault(
-            '#<script type="text/javascript">(.*?)</script>#si',
+            '#<script type="text/javascript">(.*?)<\/script>#si',
             $pageContent
         );
 
