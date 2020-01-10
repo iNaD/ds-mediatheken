@@ -6,18 +6,23 @@ use TheiNaD\DSMediatheken\Utils\Mediathek;
 use TheiNaD\DSMediatheken\Utils\Result;
 
 /**
- * @author Daniel Gehn <me@theinad.com>
+ * @author    Daniel Gehn <me@theinad.com>
  * @copyright 2017-2020 Daniel Gehn
- * @license http://opensource.org/licenses/MIT Licensed under MIT License
+ * @license   http://opensource.org/licenses/MIT Licensed under MIT License
  */
 class RBB extends Mediathek
 {
-
-    private static $API_BASE_URL = 'http://mediathek.rbb-online.de/play/media/';
-    private static $VALID_CDNS = ['default', 'akamai'];
-
+    protected static $API_BASE_URL = 'http://mediathek.rbb-online.de/play/media/';
+    protected static $VALID_CDNS = ['default', 'akamai'];
     protected static $SUPPORT_MATCHER = 'mediathek.rbb-online.de';
 
+    /**
+     * @param string $url
+     * @param string $username
+     * @param string $password
+     *
+     * @return Result|null
+     */
     public function getDownloadInfo($url, $username = '', $password = '')
     {
         $result = new Result();
@@ -25,6 +30,7 @@ class RBB extends Mediathek
         $documentId = $this->getDocumentId($url);
         if ($documentId === null) {
             $this->getLogger()->log('No documentId found in ' . $url);
+
             return null;
         }
 
@@ -56,32 +62,54 @@ class RBB extends Mediathek
         return $result;
     }
 
-    private function getDocumentId($url)
+    /**
+     * @param string $url
+     *
+     * @return string|null
+     */
+    protected function getDocumentId($url)
     {
-        if (preg_match('#documentId=([0-9]+)#i', $url, $match) !== 1) {
-            return null;
-        }
-
-        return $match[1];
+        return $this->getTools()->pregMatchDefault('#documentId=([0-9]+)#i', $url);
     }
 
-    private function getApiData($documentId)
+    /**
+     * @param string $documentId
+     *
+     * @return object
+     */
+    protected function getApiData($documentId)
     {
-        return json_decode($this->getTools()->curlRequest(self::$API_BASE_URL . $documentId));
+        return json_decode($this->getTools()->curlRequest(self::$API_BASE_URL . $documentId), false);
     }
 
-    private function mediaStreamHasNeededProperties($mediaStream)
+    /**
+     * @param object $mediaStream
+     *
+     * @return bool
+     */
+    protected function mediaStreamHasNeededProperties($mediaStream)
     {
         return property_exists($mediaStream, '_cdn') && property_exists($mediaStream, '_stream')
             && property_exists($mediaStream, '_quality');
     }
 
-    private function mediaStreamHasValidCdn($mediaStream)
+    /**
+     * @param object $mediaStream
+     *
+     * @return bool
+     */
+    protected function mediaStreamHasValidCdn($mediaStream)
     {
-        return in_array($mediaStream->_cdn, self::$VALID_CDNS);
+        return in_array($mediaStream->_cdn, self::$VALID_CDNS, true);
     }
 
-    private function addTitle($url, Result $result)
+    /**
+     * @param string $url
+     * @param Result $result
+     *
+     * @return Result
+     */
+    protected function addTitle($url, Result $result)
     {
         $html = $this->getTools()->curlRequest($url);
         $title = $this->getTitleFromHtml($html);
@@ -90,11 +118,13 @@ class RBB extends Mediathek
         return $result;
     }
 
-    private function getTitleFromHtml($html)
+    /**
+     * @param string $html
+     *
+     * @return string|null
+     */
+    protected function getTitleFromHtml($html)
     {
-        if (preg_match('#<h3 class="headline">(.*?)<\/h3>#i', $html, $match) !== 1) {
-            return null;
-        }
-        return $match[1];
+        return $this->getTools()->pregMatchDefault('#<h3 class="headline">(.*?)<\/h3>#i', $html);
     }
 }
