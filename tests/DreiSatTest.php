@@ -13,7 +13,7 @@ use TheiNaD\DSMediatheken\Utils\Tools;
  * Unit Test for DreiSat
  *
  * @author Daniel Gehn <me@theinad.com>
- * @copyright 2018-2019 Daniel Gehn
+ * @copyright 2018-2020 Daniel Gehn
  * @license http://opensource.org/licenses/MIT Licensed under MIT License
  */
 final class DreiSatTest extends TestCase
