@@ -2,6 +2,7 @@
 
 namespace TheiNaD\DSMediatheken;
 
+use Exception;
 use TheiNaD\DSMediatheken\Mediatheken\ARD;
 use TheiNaD\DSMediatheken\Mediatheken\Arte;
 use TheiNaD\DSMediatheken\Mediatheken\DreiSat;
@@ -40,14 +41,13 @@ include_once __DIR__ . '/Mediatheken/DreiSat.php';
  *
  * All public functions are required by Synology Download Station.
  *
- * @author Daniel Gehn <me@theinad.com>
- * @version 0.5.2
+ * @author    Daniel Gehn <me@theinad.com>
+ * @version   0.5.2
  * @copyright 2017-2020 Daniel Gehn
- * @license http://opensource.org/licenses/MIT Licensed under MIT License
+ * @license   http://opensource.org/licenses/MIT Licensed under MIT License
  */
 class SynoFileHostingMediathek
 {
-
     const DEFAULT_LOG_PATH = '/tmp/mediathek.log';
     const MEDIATHEKEN = [
         ARD::class,
@@ -58,7 +58,7 @@ class SynoFileHostingMediathek
         NDR::class,
         RBB::class,
         WDR::class,
-        ZDF::class
+        ZDF::class,
     ];
 
     private $url;
@@ -67,23 +67,23 @@ class SynoFileHostingMediathek
     private $hostInfo;
     private $filename;
 
-    private $logger = null;
+    private $logger;
     private $loggers = [];
-    private $tools = null;
-    private $logEnabled = false;
-    private $logPath = null;
-    private $logToFile = true;
+    private $tools;
+    private $logEnabled;
+    private $logPath;
+    private $logToFile;
 
     /**
      * Is called on construct by Download Station.
      *
-     * @param string $url Download Url
-     * @param string $username Login Username
-     * @param string $password Login Password
-     * @param string $hostInfo Hoster Info
-     * @param string $filename Filename
-     * @param boolean $debug Debug enabled or disabled
-     * @param string $logPath Path to logfile
+     * @param string  $url       Download Url
+     * @param string  $username  Login Username
+     * @param string  $password  Login Password
+     * @param string  $hostInfo  Hoster Info
+     * @param string  $filename  Filename
+     * @param boolean $debug     Debug enabled or disabled
+     * @param string  $logPath   Path to logfile
      * @param boolean $logToFile Whether to log into file or not
      */
     public function __construct(
@@ -100,14 +100,14 @@ class SynoFileHostingMediathek
         $this->logToFile = $logToFile;
         $this->logEnabled = $debug;
 
-        $this->loggers[SynoFileHostingMediathek::class] =
+        $this->loggers[__CLASS__] =
             new Logger(
                 $this->logPath,
-                SynoFileHostingMediathek::class,
+                __CLASS__,
                 $this->logEnabled,
                 $this->logToFile
             );
-        $this->logger = $this->loggers[SynoFileHostingMediathek::class];
+        $this->logger = $this->loggers[__CLASS__];
         $this->loggers[Tools::class] = new Logger($this->logPath, Tools::class, $this->logEnabled, $this->logToFile);
         $this->tools = new Tools($this->loggers[Tools::class], new Curl());
 
@@ -133,7 +133,8 @@ class SynoFileHostingMediathek
      * Verifies the Account
      *
      * @param string $clearCookie
-     * @return integer
+     *
+     * @return integer|void
      */
     // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps -- the function name is given by Synology
     public function Verify($clearCookie = '')
@@ -144,19 +145,21 @@ class SynoFileHostingMediathek
      * Returns the Download URI to be used by Download Station.
      *
      * @return array|bool
-     * @throws \Exception
+     * @throws Exception
      */
     // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps -- the function name is given by Synology
     public function GetDownloadInfo()
     {
-        if (strlen(trim($this->url)) === 0) {
+        if (trim($this->url) === '') {
             $this->logger->log('URL is empty');
+
             return false;
         }
 
         $mediathek = $this->findSupportingMediathek();
         if ($mediathek === null) {
             $this->logger->log('Failed to find mediathek for ' . $this->url);
+
             return false;
         }
 
@@ -169,7 +172,7 @@ class SynoFileHostingMediathek
 
     /**
      * @return Mediathek
-     * @throws \Exception
+     * @throws Exception
      */
     private function findSupportingMediathek()
     {
@@ -183,6 +186,7 @@ class SynoFileHostingMediathek
                         $this->logEnabled,
                         $this->logToFile
                     );
+
                 return new $mediathek($this->loggers[$mediathek], $this->tools);
             }
         }
@@ -190,6 +194,11 @@ class SynoFileHostingMediathek
         return null;
     }
 
+    /**
+     * @param Result|null $result
+     *
+     * @return array|bool
+     */
     private function toDownloadInfo($result)
     {
         if ($result === null || !$result->hasUri()) {
@@ -203,9 +212,15 @@ class SynoFileHostingMediathek
         return $downloadInfo;
     }
 
+    /**
+     * @param Result $result
+     *
+     * @return string
+     */
     private function filenameForResult(Result $result)
     {
         $videoTitle = $this->tools->videoTitle($result->getTitle(), $result->getEpisodeTitle());
+
         return $this->tools->buildFilename($result->getUri(), $videoTitle);
     }
 
@@ -235,8 +250,10 @@ class SynoFileHostingMediathek
         $events = [];
 
         foreach ($this->loggers as $name => $logger) {
-            $events = array_merge($events, $logger->getEvents());
+            $events[] = $logger->getEvents();
         }
+
+        $events = array_merge([], ...$events);
 
         usort($events, function ($a, $b) {
             return $a['timestamp'] - $b['timestamp'];
