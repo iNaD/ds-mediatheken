@@ -3,7 +3,6 @@
 namespace Tests;
 
 use TheiNaD\DSMediatheken\Mediatheken\DreiSat;
-use TheiNaD\DSMediatheken\Mediatheken\ZDF;
 use TheiNaD\DSMediatheken\Utils\Curl;
 use TheiNaD\DSMediatheken\Utils\Logger;
 use TheiNaD\DSMediatheken\Utils\Result;
@@ -12,9 +11,9 @@ use TheiNaD\DSMediatheken\Utils\Tools;
 /**
  * Unit Test for DreiSat
  *
- * @author Daniel Gehn <me@theinad.com>
+ * @author    Daniel Gehn <me@theinad.com>
  * @copyright 2018-2020 Daniel Gehn
- * @license http://opensource.org/licenses/MIT Licensed under MIT License
+ * @license   http://opensource.org/licenses/MIT Licensed under MIT License
  */
 final class DreiSatTest extends TestCase
 {

@@ -11,16 +11,16 @@ use TheiNaD\DSMediatheken\Utils\Tools;
 /**
  * Unit Test for ARD
  *
- * @author Daniel Gehn <me@theinad.com>
+ * @author    Daniel Gehn <me@theinad.com>
  * @copyright 2018-2020 Daniel Gehn
- * @license http://opensource.org/licenses/MIT Licensed under MIT License
+ * @license   http://opensource.org/licenses/MIT Licensed under MIT License
  */
 final class ARDTest extends TestCase
 {
     public function testDownloadInfoCanBeRetrievedFromValidUrl(): void
     {
         $VALID_DOWNLOAD_URL =
-            'https://www.ardmediathek.de/daserste/player/'.
+            'https://www.ardmediathek.de/daserste/player/' .
             'Y3JpZDovL2Rhc2Vyc3RlLmRlL3RhdG9ydC85NDE0YjI0Mi04NjAwLTRjNmItOWRmZC1jM2Y1M2VkYTg1YTE/';
         $API_URL = 'http://www.ardmediathek.de/play/media/58459694';
         $MEDIA_FILE_URL =
@@ -53,7 +53,7 @@ final class ARDTest extends TestCase
     public function testDownloadInfoCanBeRetrievedFromValidUrlWhereResultHasMissingProtocol(): void
     {
         $VALID_DOWNLOAD_URL =
-            'https://www.ardmediathek.de/wdr/player/'.
+            'https://www.ardmediathek.de/wdr/player/' .
             'Y3JpZDovL3dkci5kZS9CZWl0cmFnLWYwYzQ5MDliLWZiNzYtNDc4NS04Yzg5LWFlY2NhMWQ1YjU4Yw/wolfgang-bosbach';
         $API_URL = 'http://www.ardmediathek.de/play/media/58546868';
         $MEDIA_FILE_URL =
@@ -86,7 +86,7 @@ final class ARDTest extends TestCase
     public function testDownloadInfoCanBeRetrievedFromValidUrlContainingDocumentId(): void
     {
         $VALID_DOWNLOAD_URL =
-            'http://mediathek.daserste.de/Die-Sendung-mit-der-Maus/MausSpezial-Frankreich-Maus/'.
+            'http://mediathek.daserste.de/Die-Sendung-mit-der-Maus/MausSpezial-Frankreich-Maus/' .
             'Video?bcastId=1458&documentId=61013370';
         $API_URL = 'http://www.ardmediathek.de/play/media/61013370';
         $MEDIA_FILE_URL =
