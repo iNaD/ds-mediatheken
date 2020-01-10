@@ -2,7 +2,7 @@
 
 use TheiNaD\DSMediatheken\SynoFileHostingMediathek;
 
-require_once dirname(__FILE__) . '/../../vendor/autoload.php';
+require_once __DIR__ . '/../../vendor/autoload.php';
 
 $url = isset($_GET['url']) ? trim($_GET['url']) : null;
 $downloadInfo = null;
@@ -24,6 +24,6 @@ if ($url !== null && strlen($url) > 0) {
     $combinedLog = $mediathek->getCombinedLog();
 }
 
-include dirname(__FILE__) . '/../header.php';
-include dirname(__FILE__) . '/../start.php';
-include dirname(__FILE__) . '/../footer.php';
+include __DIR__ . '/../header.php';
+include __DIR__ . '/../start.php';
+include __DIR__ . '/../footer.php';
