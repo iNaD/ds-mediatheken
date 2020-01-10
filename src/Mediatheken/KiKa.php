@@ -6,12 +6,14 @@ use TheiNaD\DSMediatheken\Utils\Mediathek;
 use TheiNaD\DSMediatheken\Utils\Result;
 
 /**
- * @author Daniel Gehn <me@theinad.com>
+ * @author    Daniel Gehn <me@theinad.com>
  * @copyright 2017-2020 Daniel Gehn
- * @license http://opensource.org/licenses/MIT Licensed under MIT License
+ * @license   http://opensource.org/licenses/MIT Licensed under MIT License
  */
 class KiKa extends Mediathek
 {
+    const PROGRESSIVE_DOWNLOAD_PATTERN = '#<progressiveDownloadUrl>(.*?)<\/progressiveDownloadUrl>#si';
+
     protected static $SUPPORT_MATCHER = ['kika.de'];
 
     public function getDownloadInfo($url, $username = '', $password = '')
@@ -22,16 +24,19 @@ class KiKa extends Mediathek
         $apiUrl = $this->getApiUrl($videoPage);
         if ($apiUrl === null) {
             $this->getLogger()->log('no apiUrl found at ' . $url);
+
             return null;
         }
 
         $apiData = $this->getTools()->curlRequest($apiUrl);
         if ($apiData === null) {
             $this->getLogger()->log('could not retrieve apiData');
+
             return null;
         }
 
         $sources = $this->getSources($apiData);
+
         foreach ($sources as $source) {
             $result = $this->processSource($source, $result);
         }
@@ -46,65 +51,88 @@ class KiKa extends Mediathek
         return $result;
     }
 
+    /**
+     * @param string $videoPage
+     *
+     * @return string|null
+     */
     protected function getApiUrl($videoPage)
     {
-        if (preg_match('#dataURL:\'(.*?)\'#si', $videoPage, $match) === 1) {
-            return $match[1];
-        }
-        return null;
+        return $this->getTools()->pregMatchDefault('#dataURL:\'(.*?)\'#si', $videoPage);
     }
 
+    /**
+     * @param string $apiData
+     *
+     * @return array
+     */
     protected function getSources($apiData)
     {
-        preg_match_all('#<asset>(.*?)<\/asset>#si', $apiData, $matches);
-        return $matches[1];
+        return $this->getTools()->pregMatchAllDefault('#<asset>(.*?)<\/asset>#si', $apiData);
     }
 
+    /**
+     * @param string $source
+     * @param Result $result
+     *
+     * @return Result
+     */
     protected function processSource($source, $result)
     {
         // source has needed download url
-        if (preg_match("#<progressiveDownloadUrl>(.*?)<\/progressiveDownloadUrl>#si", $source, $downloadUrl) !== 1) {
+        $downloadUrl = $this->getTools()->pregMatchDefault(self::PROGRESSIVE_DOWNLOAD_PATTERN, $source);
+        if ($downloadUrl === null) {
             return $result;
         }
 
-        $url = $downloadUrl[1];
-        if (strpos($url, '.mp4') !== false) {
+        if (strpos($downloadUrl, '.mp4') !== false) {
             // we need a bitrate to find the best quality
-            if (preg_match("#<bitrateVideo>(.*?)<\/bitrateVideo>#si", $source, $bitrateVideo) !== 1) {
+            $bitrateVideo = $this->getTools()->pregMatchDefault('#<bitrateVideo>(.*?)<\/bitrateVideo>#si', $source);
+            if ($bitrateVideo === null) {
                 return $result;
             }
 
-            $bitrate = $bitrateVideo[1];
-            if ($result->getBitrateRating() < $bitrate) {
+            if ($result->getBitrateRating() < $bitrateVideo) {
                 $result = new Result();
-                $result->setBitrateRating($bitrate);
-                $result->setUri($url);
+                $result->setBitrateRating($bitrateVideo);
+                $result->setUri($downloadUrl);
             }
         }
 
         return $result;
     }
 
+    /**
+     * @param Result $result
+     * @param string $apiData
+     *
+     * @return mixed
+     */
     protected function addTitle($result, $apiData)
     {
         $result->setTitle($this->getTitleFromApiData($apiData));
         $result->setEpisodeTitle($this->getEpisodeTitleFromApiData($apiData));
+
         return $result;
     }
 
+    /**
+     * @param string $apiData
+     *
+     * @return string|null
+     */
     protected function getTitleFromApiData($apiData)
     {
-        if (preg_match('#<topline>(.*?)<\/topline>#i', $apiData, $match) !== 1) {
-            return null;
-        }
-        return $match[1];
+        return $this->getTools()->pregMatchDefault('#<topline>(.*?)<\/topline>#i', $apiData);
     }
 
+    /**
+     * @param string $apiData
+     *
+     * @return string|null
+     */
     protected function getEpisodeTitleFromApiData($apiData)
     {
-        if (preg_match('#<title>(.*?)<\/title>#i', $apiData, $match) !== 1) {
-            return null;
-        }
-        return $match[1];
+        return $this->getTools()->pregMatchDefault('#<title>(.*?)<\/title>#i', $apiData);
     }
 }

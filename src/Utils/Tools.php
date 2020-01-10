@@ -2,12 +2,14 @@
 
 namespace TheiNaD\DSMediatheken\Utils;
 
+use Exception;
+
 /**
  * Little helpers
  *
- * @author Daniel Gehn <me@theinad.com>
+ * @author    Daniel Gehn <me@theinad.com>
  * @copyright 2017-2020 Daniel Gehn
- * @license http://opensource.org/licenses/MIT Licensed under MIT License
+ * @license   http://opensource.org/licenses/MIT Licensed under MIT License
  */
 class Tools
 {
@@ -72,7 +74,7 @@ class Tools
      * Tools constructor.
      *
      * @param Logger $logger
-     * @param Curl $curl
+     * @param Curl   $curl
      */
     public function __construct(Logger $logger, Curl $curl)
     {
@@ -84,15 +86,17 @@ class Tools
      * Unified curl request handling with mobile user agent
      *
      * @param string $url
-     * @param array $options
+     * @param array  $options
+     *
      * @return null|string
      */
     public function curlRequestMobile($url, $options = [])
     {
         try {
             return $this->curl->requestMobile($url, $options);
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             $this->logger->log($e->getMessage());
+
             return null;
         }
     }
@@ -100,16 +104,18 @@ class Tools
     /**
      * Unified curl request handling
      *
-     * @param string $url url to be requested
-     * @param array $options modify curl options
-     * @return null | string
+     * @param string $url     url to be requested
+     * @param array  $options modify curl options
+     *
+     * @return null|string
      */
     public function curlRequest($url, $options = [])
     {
         try {
             return $this->curl->request($url, $options);
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             $this->logger->log($e->getMessage());
+
             return null;
         }
     }
@@ -119,11 +125,12 @@ class Tools
      *
      * @param string $haystack
      * @param string $needle
+     *
      * @return bool
      */
     public function startsWith($haystack, $needle)
     {
-        return (substr($haystack, 0, strlen($needle)) === $needle);
+        return strpos($haystack, $needle) === 0;
     }
 
     /**
@@ -131,6 +138,7 @@ class Tools
      *
      * @param string $haystack
      * @param string $needle
+     *
      * @return bool
      */
     public function endsWith($haystack, $needle)
@@ -144,6 +152,7 @@ class Tools
      *
      * @param string $url
      * @param string $title
+     *
      * @return string
      */
     public function buildFilename($url, $title = '')
@@ -163,6 +172,7 @@ class Tools
      * Returns a Synology safe filename, because Umlauts currently won't work.
      *
      * @param string $filename
+     *
      * @return string
      */
     public function safeFilename($filename)
@@ -179,6 +189,7 @@ class Tools
      *
      * @param string $title
      * @param string $episodeTitle
+     *
      * @return string
      */
     public function videoTitle($title, $episodeTitle = '')
@@ -197,11 +208,12 @@ class Tools
     /**
      * Wrapper for preg_match adding default value functionality
      *
-     * @param string $pattern
-     * @param string $subject
+     * @param string     $pattern
+     * @param string     $subject
      * @param mixed|null $default
-     * @param int $flags
-     * @param int $offset
+     * @param int        $flags
+     * @param int        $offset
+     *
      * @return mixed|null
      */
     public function pregMatchDefault($pattern, $subject, $default = null, $flags = 0, $offset = 0)
@@ -211,6 +223,7 @@ class Tools
         if (preg_match($pattern, $subject, $matches, $flags, $offset) !== 1) {
             return $default;
         }
+
         return $matches[1];
     }
 
@@ -219,18 +232,20 @@ class Tools
      *
      * @param string $pattern
      * @param string $subject
-     * @param array $default
-     * @param int $flags
-     * @param int $offset
+     * @param array  $default
+     * @param int    $flags
+     * @param int    $offset
+     *
      * @return array
      */
     public function pregMatchAllDefault($pattern, $subject, $default = [], $flags = 0, $offset = 0)
     {
         $matches = [];
 
-        if (preg_match($pattern, $subject, $matches, $flags, $offset) > 0) {
-            return array_slice($matches, 1);
+        if (preg_match_all($pattern, $subject, $matches, $flags, $offset) > 0) {
+            return $matches[1];
         }
+
         return $default;
     }
 
@@ -239,6 +254,7 @@ class Tools
      *
      * @param string $fileUrl
      * @param string $baseUrl
+     *
      * @return string
      */
     public function addProtocolFromUrlIfMissing($fileUrl, $baseUrl)
@@ -248,6 +264,17 @@ class Tools
         }
 
         $protocol = substr($baseUrl, 0, strpos($baseUrl, '://'));
+
         return $protocol . ':' . $fileUrl;
+    }
+
+    /**
+     * @param string $filename
+     *
+     * @return false|string
+     */
+    public function readGraphqlQuery($filename)
+    {
+        return file_get_contents(__DIR__ . '/../graphql/' . $filename);
     }
 }

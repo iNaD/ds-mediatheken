@@ -236,7 +236,7 @@ class ARD extends Mediathek
     protected function getVideoMeta($pageContent)
     {
         $scriptTags = $this->getTools()->pregMatchAllDefault(
-            '#<script type="text/javascript">(.*?)<\/script>#si',
+            '#<script type="text\/javascript">(.*?)<\/script>#si',
             $pageContent
         );
 
