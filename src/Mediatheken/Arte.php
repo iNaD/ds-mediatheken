@@ -6,13 +6,12 @@ use TheiNaD\DSMediatheken\Utils\Mediathek;
 use TheiNaD\DSMediatheken\Utils\Result;
 
 /**
- * @author Daniel Gehn <me@theinad.com>
+ * @author    Daniel Gehn <me@theinad.com>
  * @copyright 2018-2020 Daniel Gehn
- * @license http://opensource.org/licenses/MIT Licensed under MIT License
+ * @license   http://opensource.org/licenses/MIT Licensed under MIT License
  */
 class Arte extends Mediathek
 {
-
     protected static $LANGUAGE_MAP = [
         'de' => 'de',
         'fr' => 'fr',
@@ -26,7 +25,7 @@ class Arte extends Mediathek
         'ov',
         'omu',
         'vostf',
-        'vo'
+        'vo',
     ];
 
     protected static $SUPPORT_MATCHER = 'arte.tv';
@@ -34,10 +33,17 @@ class Arte extends Mediathek
     protected $language = 'de';
     protected $languageShortLibelle = 'de';
 
-    protected $platform = null;
-    protected $detectedLanguage = null;
-    protected $subdomain = null;
+    protected $platform;
+    protected $detectedLanguage;
+    protected $subdomain;
 
+    /**
+     * @param string $url
+     * @param string $username
+     * @param string $password
+     *
+     * @return Result|null
+     */
     public function getDownloadInfo($url, $username = '', $password = '')
     {
         $this->getLogger()->log('determining website and language by url ' . $url);
@@ -78,33 +84,46 @@ class Arte extends Mediathek
 
         $result = $this->addTitle($result, $json);
         $result->setUri($this->getTools()->addProtocolFromUrlIfMissing($result->getUri(), $url));
+
         return $result;
     }
 
+    /**
+     * @param string $url
+     *
+     * @return bool
+     */
     protected function extractLanguageAndPlatformFromUrl($url)
     {
-        if (preg_match('#https?:\/\/(\w+\.)?arte.tv\/(?:guide\/)?([a-zA-Z]+)#si', $url, $match) > 0) {
+        if (preg_match('#https?://(\w+\.)?arte.tv/(?:guide/)?([a-zA-Z]+)#si', $url, $match) > 0) {
             $this->platform = 'arte';
             $this->subdomain = $match[1];
             $this->detectedLanguage = isset($match[2]) ? $match[2] : null;
+
             return true;
         }
 
         $this->getLogger()->log('not a known arte website');
+
         return false;
     }
 
+    /**
+     * @return void
+     */
     protected function changeLanguageIfDetected()
     {
-        if ($this->detectedLanguage !== null &&
-            isset(self::$LANGUAGE_MAP[$this->detectedLanguage]) &&
-            isset(self::$LANGUAGE_MAP_SHORT_LIBELLE[$this->detectedLanguage])
-        ) {
+        if ($this->languageExists($this->detectedLanguage)) {
             $this->language = self::$LANGUAGE_MAP[$this->detectedLanguage];
             $this->languageShortLibelle = self::$LANGUAGE_MAP_SHORT_LIBELLE[$this->detectedLanguage];
         }
     }
 
+    /**
+     * @param string $videoPage
+     *
+     * @return object|null
+     */
     protected function processVideoPage($videoPage)
     {
         if (preg_match('#src=["|\']http.*?json_url=(.*?)%3F.*["|\']#si', $videoPage, $match) === 1) {
@@ -115,13 +134,20 @@ class Arte extends Mediathek
                 return null;
             }
 
-            return json_decode($json);
+            return json_decode($json, false);
         }
 
         $this->getLogger()->log('could not identify player meta.');
+
         return null;
     }
 
+    /**
+     * @param object $json
+     * @param bool   $ov
+     *
+     * @return Result
+     */
     protected function getBestSource($json, $ov = false)
     {
         $result = new Result();
@@ -129,7 +155,7 @@ class Arte extends Mediathek
         foreach ($json->videoJsonPlayer->VSR as $source) {
             $this->getLogger()->log(
                 sprintf(
-                    "found quality of %d with language %s (%s)",
+                    'found quality of %d with language %s (%s)',
                     $source->bitrate,
                     $source->versionLibelle,
                     $source->versionShortLibelle
@@ -138,7 +164,8 @@ class Arte extends Mediathek
 
             $shortLibelleLowercase = mb_strtolower($source->versionShortLibelle);
 
-            if ($source->mediaType == "mp4" &&
+            if ($source->mediaType === 'mp4' &&
+                $source->bitrate > $result->getBitrateRating() &&
                 (
                     (
                         !$ov &&
@@ -148,8 +175,7 @@ class Arte extends Mediathek
                         $ov &&
                         $this->shortLibelleIsOv($shortLibelleLowercase)
                     )
-                ) &&
-                $source->bitrate > $result->getBitrateRating()
+                )
             ) {
                 $result = new Result();
 
@@ -161,24 +187,58 @@ class Arte extends Mediathek
         return $result;
     }
 
+    /**
+     * @param string|array $shortLibelle
+     *
+     * @return bool
+     */
     protected function shortLibelleMatches($shortLibelle)
     {
         if (!is_array($this->languageShortLibelle)) {
             return $shortLibelle === $this->languageShortLibelle;
         }
 
-        return in_array($shortLibelle, $this->languageShortLibelle);
+        return in_array($shortLibelle, $this->languageShortLibelle, true);
     }
 
+    /**
+     * @param string $shortLibelle
+     *
+     * @return bool
+     */
     protected function shortLibelleIsOv($shortLibelle)
     {
-        return in_array($shortLibelle, self::$OV_SHORT_LIBELLE);
+        return in_array($shortLibelle, self::$OV_SHORT_LIBELLE, true);
     }
 
+    /**
+     * @param Result $result
+     * @param object $json
+     *
+     * @return Result
+     */
     protected function addTitle($result, $json)
     {
         $result->setTitle(trim($json->videoJsonPlayer->VTI));
         $result->setEpisodeTitle(isset($json->videoJsonPlayer->VSU) ? trim($json->videoJsonPlayer->VSU) : '');
+
         return $result;
+    }
+
+    /**
+     * @param string|null $detectedLanguage
+     *
+     * @return bool
+     */
+    protected function languageExists($detectedLanguage)
+    {
+        if ($detectedLanguage === null) {
+            return false;
+        }
+
+        return isset(
+            self::$LANGUAGE_MAP[$detectedLanguage],
+            self::$LANGUAGE_MAP_SHORT_LIBELLE[$detectedLanguage]
+        );
     }
 }
