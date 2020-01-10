@@ -124,7 +124,7 @@ class ARD extends Mediathek
 
     private function getQualityFromStreamUrl($stream)
     {
-        return $this->getTools()->pregMatchDefault('#\/(\d+)-\d.mp4#i', $stream, 0);
+        return $this->getTools()->pregMatchDefault('#\/(\d+)-\d_\d{6}.mp4#i', $stream, 0);
     }
 
     private function addTitle($pageContent, Result $result)
@@ -169,7 +169,7 @@ class ARD extends Mediathek
 
     private function getVideoMeta($pageContent)
     {
-        \preg_match_all('#<script>(.*?)<\/script>#si', $pageContent, $scriptTags);
+        \preg_match_all('#<script type="text/javascript">(.*?)<\/script>#si', $pageContent, $scriptTags);
         if (count($scriptTags) === 0) {
             return null;
         }
