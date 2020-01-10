@@ -235,17 +235,22 @@ class ARD extends Mediathek
      */
     protected function getVideoMeta($pageContent)
     {
-        \preg_match_all('#<script type="text/javascript">(.*?)<\/script>#si', $pageContent, $scriptTags);
+        $scriptTags = $this->getTools()->pregMatchAllDefault(
+            '#<script type="text/javascript">(.*?)</script>#si',
+            $pageContent
+        );
+
         if (count($scriptTags) === 0) {
             return null;
         }
 
-        foreach ($scriptTags[1] as $scriptTag) {
-            if (\preg_match('#tracking\.atiCustomVars":{(.*?)}#si', $scriptTag, $match) !== 1) {
+        foreach ($scriptTags as $scriptTag) {
+            $atiCustomVars = $this->getTools()->pregMatchDefault('#tracking\.atiCustomVars":{(.*?)}#si', $scriptTag);
+            if ($atiCustomVars === null) {
                 continue;
             }
 
-            return $match[1];
+            return $atiCustomVars;
         }
 
         return null;
