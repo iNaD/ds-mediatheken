@@ -6,14 +6,21 @@ use TheiNaD\DSMediatheken\Utils\Mediathek;
 use TheiNaD\DSMediatheken\Utils\Result;
 
 /**
- * @author Daniel Gehn <me@theinad.com>
+ * @author    Daniel Gehn <me@theinad.com>
  * @copyright 2018-2020 Daniel Gehn
- * @license http://opensource.org/licenses/MIT Licensed under MIT License
+ * @license   http://opensource.org/licenses/MIT Licensed under MIT License
  */
 class NDR extends Mediathek
 {
     protected static $SUPPORT_MATCHER = ['ndr.de'];
 
+    /**
+     * @param string $url
+     * @param string $username
+     * @param string $password
+     *
+     * @return Result|null
+     */
     public function getDownloadInfo($url, $username = '', $password = '')
     {
         $result = new Result();
@@ -23,12 +30,14 @@ class NDR extends Mediathek
         $contentUrl = $this->getContentUrl($videoPage);
         if ($contentUrl === null) {
             $this->getLogger()->log('no contentUrl found at ' . $url);
+
             return null;
         }
 
         $result = $this->processSource($contentUrl, $result);
         if (!$result->hasUri()) {
             $this->getLogger()->log('no source found at ' . $url);
+
             return null;
         }
 
@@ -38,61 +47,90 @@ class NDR extends Mediathek
         return $result;
     }
 
+    /**
+     * @param string $videoPage
+     *
+     * @return string|null
+     */
     protected function getContentUrl($videoPage)
     {
-        if (preg_match('#itemprop="contentUrl" content="(.*?)"#si', $videoPage, $match) === 1) {
-            return $match[1];
-        }
-        return null;
+        return $this->getTools()->pregMatchDefault('#itemprop="contentUrl" content="(.*?)"#si', $videoPage);
     }
 
+    /**
+     * @param string $source
+     * @param Result $result
+     *
+     * @return Result
+     */
     protected function processSource($source, $result)
     {
-        $result = new Result();
         $result->setUri($source);
 
         return $result;
     }
 
+    /**
+     * @param Result $result
+     * @param string $videoPage
+     *
+     * @return Result
+     */
     protected function addTitles($result, $videoPage)
     {
         $result = $this->handleNamesFromVideoPage($result, $videoPage);
         $result = $this->handleEpisodeNumberAndDateFromVideoPage($result, $videoPage);
+
         return $result;
     }
 
+    /**
+     * @param Result $result
+     * @param string $videoPage
+     *
+     * @return Result
+     */
     protected function handleNamesFromVideoPage($result, $videoPage)
     {
-        if (preg_match('#itemprop="name" content="(.*?)"#is', $videoPage, $nameMatch) === 1) {
-            $result->setTitle(str_replace('Video: ', '', $nameMatch[1]));
+        $name = $this->getTools()->pregMatchDefault('#itemprop="name" content="(.*?)"#is', $videoPage);
+        if ($name !== null) {
+            $result->setTitle(str_replace('Video: ', '', $name));
 
-            if (preg_match('#itemprop="alternateName">(.*?)<\/#is', $videoPage, $alternateNameMatch) === 1) {
+            $alternateName = $this->getTools()->pregMatchDefault('#itemprop="alternateName">(.*?)<\/#is', $videoPage);
+            if ($alternateName !== null) {
                 $result->setEpisodeTitle($result->getTitle());
-                $result->setTitle($alternateNameMatch[1]);
+                $result->setTitle($alternateName);
             }
-
-            return $result;
-        }
-
-        if (preg_match('#itemprop="headline">(.*?)<\/#i', $videoPage, $headlineMatch) === 1) {
-            $result->setTitle($headlineMatch[1]);
+        } else {
+            $headline = $this->getTools()->pregMatchDefault('#itemprop="headline">(.*?)<\/#i', $videoPage);
+            if ($headline !== null) {
+                $result->setTitle($headline);
+            }
         }
 
         return $result;
     }
 
+    /**
+     * @param Result $result
+     * @param string $videoPage
+     *
+     * @return Result
+     */
     protected function handleEpisodeNumberAndDateFromVideoPage($result, $videoPage)
     {
         $episodeTitle = $result->getEpisodeTitle();
 
-        if (preg_match('#itemprop="episodeNumber">(.*?)<\/#is', $videoPage, $episodeNumber) === 1) {
+        $episodeNumber = $this->getTools()->pregMatchDefault('#itemprop="episodeNumber">(.*?)<\/#is', $videoPage);
+        if ($episodeNumber !== null) {
             $episodeTitle = empty($episodeTitle) ? '' : $episodeTitle . ' ';
-            $episodeTitle .= $episodeNumber[1];
+            $episodeTitle .= $episodeNumber;
         }
 
-        if (preg_match('#itemprop="startDate" content="(.*?)">#is', $videoPage, $startDate) === 1) {
+        $startDate = $this->getTools()->pregMatchDefault('#itemprop="startDate" content="(.*?)">#is', $videoPage);
+        if ($startDate !== null) {
             $episodeTitle = empty($episodeTitle) ? '' : $episodeTitle . ' ';
-            $episodeTitle .= 'vom ' . date('d.m.Y', strtotime($startDate[1]));
+            $episodeTitle .= 'vom ' . date('d.m.Y', strtotime($startDate));
         }
 
         $result->setEpisodeTitle($episodeTitle);
