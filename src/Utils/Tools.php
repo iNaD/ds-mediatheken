@@ -6,7 +6,7 @@ namespace TheiNaD\DSMediatheken\Utils;
  * Little helpers
  *
  * @author Daniel Gehn <me@theinad.com>
- * @copyright 2017-2019 Daniel Gehn
+ * @copyright 2017-2020 Daniel Gehn
  * @license http://opensource.org/licenses/MIT Licensed under MIT License
  */
 class Tools

@@ -2,8 +2,12 @@
     <div class="result-container">
         <div class="result">
             <h3>Result:</h3>
-            DOWNLOAD_URL: <a href="<?php echo $downloadInfo['DOWNLOAD_URL']; ?>" target="_blank"><?php echo $downloadInfo['DOWNLOAD_URL']; ?></a><br>
-            DOWNLOAD_FILENAME: <?php echo $downloadInfo['DOWNLOAD_FILENAME']; ?>
+            <?php if (isset($downloadInfo['DOWNLOAD_URL'])) : ?>
+                DOWNLOAD_URL: <a href="<?php echo $downloadInfo['DOWNLOAD_URL']; ?>" target="_blank"><?php echo $downloadInfo['DOWNLOAD_URL']; ?></a><br>
+                DOWNLOAD_FILENAME: <?php echo $downloadInfo['DOWNLOAD_FILENAME']; ?>
+            <?php else : ?>
+                Error, see log
+            <?php endif; ?>
         </div>
         <div class="log">
             <h3>Log:</h3>
