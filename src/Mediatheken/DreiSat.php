@@ -3,9 +3,9 @@
 namespace TheiNaD\DSMediatheken\Mediatheken;
 
 /**
- * @author Daniel Gehn <me@theinad.com>
+ * @author    Daniel Gehn <me@theinad.com>
  * @copyright 2017-2020 Daniel Gehn
- * @license http://opensource.org/licenses/MIT Licensed under MIT License
+ * @license   http://opensource.org/licenses/MIT Licensed under MIT License
  */
 class DreiSat extends ZDF
 {
