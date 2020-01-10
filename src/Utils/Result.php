@@ -5,9 +5,9 @@ namespace TheiNaD\DSMediatheken\Utils;
 /**
  * Represents a result of a Mediathek
  *
- * @author Daniel Gehn <me@theinad.com>
+ * @author    Daniel Gehn <me@theinad.com>
  * @copyright 2017-2020 Daniel Gehn
- * @license http://opensource.org/licenses/MIT Licensed under MIT License
+ * @license   http://opensource.org/licenses/MIT Licensed under MIT License
  */
 class Result
 {
@@ -20,8 +20,8 @@ class Result
     /** @var int */
     private $bitrateRating = -1;
 
-    /** @var null */
-    private $uri = null;
+    /** @var string|null */
+    private $uri;
 
     /** @var string */
     private $title = '';
@@ -78,7 +78,7 @@ class Result
     }
 
     /**
-     * @return null
+     * @return string|null
      */
     public function getUri()
     {
@@ -86,13 +86,16 @@ class Result
     }
 
     /**
-     * @param null $uri
+     * @param string|null $uri
      */
     public function setUri($uri)
     {
         $this->uri = $uri;
     }
 
+    /**
+     * @return bool
+     */
     public function hasUri()
     {
         return $this->uri !== null;

@@ -2,20 +2,23 @@
 
 namespace TheiNaD\DSMediatheken\Utils;
 
-use Exception;
+use RuntimeException;
 
 /**
  * Base class for all Mediatheken.
  *
- * @author Daniel Gehn <me@theinad.com>
+ * @author    Daniel Gehn <me@theinad.com>
  * @copyright 2017-2020 Daniel Gehn
- * @license http://opensource.org/licenses/MIT Licensed under MIT License
+ * @license   http://opensource.org/licenses/MIT Licensed under MIT License
  */
 abstract class Mediathek
 {
-    protected static $SUPPORT_MATCHER = null;
+    protected static $SUPPORT_MATCHER;
 
+    /** @var Logger */
     private $logger;
+
+    /** @var Tools */
     private $tools;
 
     public function __construct(Logger $logger, Tools $tools)
@@ -24,6 +27,13 @@ abstract class Mediathek
         $this->tools = $tools;
     }
 
+    /**
+     * @param string $url
+     * @param string $username
+     * @param string $password
+     *
+     * @return Result|null
+     */
     abstract public function getDownloadInfo($url, $username, $password);
 
     /**
@@ -46,18 +56,20 @@ abstract class Mediathek
      * Returns if the given url is supported.
      *
      * @param string $url
+     *
      * @return boolean
-     * @throws Exception
+     *
+     * @throws RuntimeException
      */
     public static function supportsUrl($url)
     {
         if (static::$SUPPORT_MATCHER === null) {
-            throw new Exception('A supportMatcher is mandatory');
+            throw new RuntimeException('A supportMatcher is mandatory');
         }
 
         if (is_array(static::$SUPPORT_MATCHER)) {
             if (count(static::$SUPPORT_MATCHER) === 0) {
-                throw new Exception('An array supportMatcher needs at least one value');
+                throw new RuntimeException('An array supportMatcher needs at least one value');
             }
 
             foreach (static::$SUPPORT_MATCHER as $supports) {

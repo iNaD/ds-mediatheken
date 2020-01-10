@@ -5,14 +5,14 @@ namespace TheiNaD\DSMediatheken\Utils;
 /**
  * Simple Logger
  *
- * @author Daniel Gehn <me@theinad.com>
+ * @author    Daniel Gehn <me@theinad.com>
  * @copyright 2017-2020 Daniel Gehn
- * @license http://opensource.org/licenses/MIT Licensed under MIT License
+ * @license   http://opensource.org/licenses/MIT Licensed under MIT License
  */
 class Logger
 {
     /** @var bool */
-    private $enabled = true;
+    private $enabled;
 
     /** @var string */
     private $path;
@@ -21,7 +21,7 @@ class Logger
     private $className;
 
     /** @var bool */
-    private $logToFile = true;
+    private $logToFile;
 
     /** @var array */
     private $events = [];
@@ -31,8 +31,8 @@ class Logger
      *
      * @param string $path
      * @param string $className
-     * @param bool $enabled
-     * @param bool $logToFile
+     * @param bool   $enabled
+     * @param bool   $logToFile
      */
     public function __construct($path, $className, $enabled = true, $logToFile = true)
     {
@@ -67,16 +67,20 @@ class Logger
      * Returns a formatted message including the current date and the component className.
      *
      * @param string unformatted message
+     *
      * @return string formatted message
      */
     public function formatMessage($message)
     {
-        return "[" . $this->getFormattedDate() . "] [$this->className]: $message";
+        return sprintf('[%s] [%s]: %s', $this->getFormattedDate(), $this->className, $message);
     }
 
+    /**
+     * @return false|string
+     */
     protected function getFormattedDate()
     {
-        return date("c");
+        return date('c');
     }
 
     /**

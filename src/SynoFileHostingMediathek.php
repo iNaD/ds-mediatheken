@@ -2,7 +2,7 @@
 
 namespace TheiNaD\DSMediatheken;
 
-use Exception;
+use RuntimeException;
 use TheiNaD\DSMediatheken\Mediatheken\ARD;
 use TheiNaD\DSMediatheken\Mediatheken\Arte;
 use TheiNaD\DSMediatheken\Mediatheken\DreiSat;
@@ -145,7 +145,8 @@ class SynoFileHostingMediathek
      * Returns the Download URI to be used by Download Station.
      *
      * @return array|bool
-     * @throws Exception
+     *
+     * @throws RuntimeException
      */
     // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps -- the function name is given by Synology
     public function GetDownloadInfo()
@@ -172,7 +173,8 @@ class SynoFileHostingMediathek
 
     /**
      * @return Mediathek
-     * @throws Exception
+     *
+     * @throws RuntimeException
      */
     private function findSupportingMediathek()
     {
