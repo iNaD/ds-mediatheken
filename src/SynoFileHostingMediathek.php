@@ -5,6 +5,7 @@ namespace TheiNaD\DSMediatheken;
 use RuntimeException;
 use TheiNaD\DSMediatheken\Mediatheken\ARD;
 use TheiNaD\DSMediatheken\Mediatheken\Arte;
+use TheiNaD\DSMediatheken\Mediatheken\BR;
 use TheiNaD\DSMediatheken\Mediatheken\DreiSat;
 use TheiNaD\DSMediatheken\Mediatheken\KiKa;
 use TheiNaD\DSMediatheken\Mediatheken\MDR;
@@ -27,6 +28,7 @@ require_once __DIR__ . '/Utils/Logger.php';
 require_once __DIR__ . '/Utils/Tools.php';
 include_once __DIR__ . '/Mediatheken/ARD.php';
 include_once __DIR__ . '/Mediatheken/Arte.php';
+include_once __DIR__ . '/Mediatheken/BR.php';
 include_once __DIR__ . '/Mediatheken/KiKa.php';
 include_once __DIR__ . '/Mediatheken/MDR.php';
 include_once __DIR__ . '/Mediatheken/NDR.php';
@@ -52,6 +54,7 @@ class SynoFileHostingMediathek
     const MEDIATHEKEN = [
         ARD::class,
         Arte::class,
+        BR::class,
         DreiSat::class,
         KiKa::class,
         MDR::class,
