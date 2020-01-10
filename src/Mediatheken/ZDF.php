@@ -6,13 +6,12 @@ use TheiNaD\DSMediatheken\Utils\Mediathek;
 use TheiNaD\DSMediatheken\Utils\Result;
 
 /**
- * @author Daniel Gehn <me@theinad.com>
+ * @author    Daniel Gehn <me@theinad.com>
  * @copyright 2017-2020 Daniel Gehn
- * @license http://opensource.org/licenses/MIT Licensed under MIT License
+ * @license   http://opensource.org/licenses/MIT Licensed under MIT License
  */
 class ZDF extends Mediathek
 {
-
     /**
      * Maps Qualities to ratings.
      *
@@ -68,6 +67,13 @@ class ZDF extends Mediathek
     protected static $JSON_OBJ_ELEMENT_BRAND_TITLE = 'title';
     protected static $SUPPORT_MATCHER = 'zdf.de';
 
+    /**
+     * @param string $url
+     * @param string $username
+     * @param string $password
+     *
+     * @return Result|null
+     */
     public function getDownloadInfo($url, $username = '', $password = '')
     {
         $result = new Result();
@@ -76,6 +82,7 @@ class ZDF extends Mediathek
         if ($videoPage === null) {
             $this->getLogger()->log('Video Page (' . $url . ') using login data (' . $username . '@'
                 . $password . ') could not be loaded.');
+
             return null;
         }
 
@@ -84,6 +91,7 @@ class ZDF extends Mediathek
         if ($apiToken === null || $contentUrl === null) {
             $this->getLogger()->log('API Token (' . $apiToken . ') or content url (' . $contentUrl
                 . ') could not be found.');
+
             return null;
         }
 
@@ -92,6 +100,7 @@ class ZDF extends Mediathek
         $content = $this->apiRequest($contentUrl, $apiToken);
         if ($content === null) {
             $this->getLogger()->log('Failed to retrieve content.');
+
             return null;
         }
 
@@ -113,6 +122,7 @@ class ZDF extends Mediathek
         $downloadContent = $this->apiRequest($downloadUrl, $apiToken);
         if ($downloadContent === null) {
             $this->getLogger()->log('Failed to retrieve download content from "' . $downloadUrl . '".');
+
             return null;
         }
 
@@ -124,6 +134,7 @@ class ZDF extends Mediathek
         if (!$result->hasUri()) {
             $this->getLogger()->log('Failed to fetch a suitable file:' . "\n\n" . $downloadContent
                 . "\n\n");
+
             return null;
         }
 
@@ -134,22 +145,32 @@ class ZDF extends Mediathek
         return $result;
     }
 
+    /**
+     * @param string $videoPage
+     *
+     * @return string|null
+     */
     protected function getApiToken($videoPage)
     {
-        if (preg_match('#"apiToken": "(.*?)",#i', $videoPage, $match) !== 1) {
-            return null;
-        }
-        return $match[1];
+        return $this->getTools()->pregMatchDefault('#"apiToken": "(.*?)",#i', $videoPage);
     }
 
+    /**
+     * @param string $videoPage
+     *
+     * @return string|null
+     */
     protected function getContentUrl($videoPage)
     {
-        if (preg_match('#"content": "(.*?)",#i', $videoPage, $match) !== 1) {
-            return null;
-        }
-        return $match[1];
+        return $this->getTools()->pregMatchDefault('#"content": "(.*?)",#i', $videoPage);
     }
 
+    /**
+     * @param string $url
+     * @param string $apiToken
+     *
+     * @return string|null
+     */
     protected function apiRequest($url, $apiToken)
     {
         $this->getLogger()->log(
@@ -162,18 +183,24 @@ class ZDF extends Mediathek
 
         return $this->getTools()->curlRequest($url, [
             CURLOPT_HTTPHEADER => [
-                static::$API_AUTH_HEADER . ': ' . str_replace('{token}', $apiToken, static::$API_AUTH_PATTERN)
-            ]
+                static::$API_AUTH_HEADER . ': ' . str_replace('{token}', $apiToken, static::$API_AUTH_PATTERN),
+            ],
         ]);
     }
 
+    /**
+     * @param object $priorityListItem
+     * @param Result $result
+     *
+     * @return Result
+     */
     protected function processPriorityListItem($priorityListItem, Result $result)
     {
         foreach ($priorityListItem->{static::$JSON_OBJ_ELEMENT_FORMITAETEN} as $formitaet) {
-            $this->getLogger()->log(sprintf('Formität: %s', join(', ', $formitaet->facets)));
+            $this->getLogger()->log(sprintf('Formität: %s', implode(', ', $formitaet->facets)));
 
             if ($this->isFacetSupported($formitaet) === false) {
-                $this->getLogger()->log(sprintf('Unsupported facets %s', join(', ', $formitaet->facets)));
+                $this->getLogger()->log(sprintf('Unsupported facets %s', implode(', ', $formitaet->facets)));
                 continue;
             }
 
@@ -197,10 +224,15 @@ class ZDF extends Mediathek
         return $result;
     }
 
+    /**
+     * @param object $formitaet
+     *
+     * @return bool
+     */
     protected function isFacetSupported($formitaet)
     {
         foreach ($formitaet->facets as $facet) {
-            if (in_array($facet, static::$UNSUPPORTED_FACETS)) {
+            if (in_array($facet, static::$UNSUPPORTED_FACETS, true)) {
                 return false;
             }
         }
@@ -209,19 +241,28 @@ class ZDF extends Mediathek
     }
 
     /**
-     * @param $formitaet
+     * @param object $formitaet
+     *
      * @return int
      */
     protected function getMimeTypeRating($formitaet)
     {
         if (array_key_exists($formitaet->mimeType, static::$MIMETYPE_RATING) === false) {
             $this->getLogger()->log('Unknown Mime Type ' . $formitaet->mimeType);
+
             return -1;
         }
 
         return static::$MIMETYPE_RATING[$formitaet->mimeType];
     }
 
+    /**
+     * @param object $quality
+     * @param int    $mimeTypeRating
+     * @param Result $result
+     *
+     * @return Result
+     */
     protected function processQuality($quality, $mimeTypeRating, Result $result)
     {
         $qualityRating = $this->getQualityRating($quality);
@@ -254,22 +295,35 @@ class ZDF extends Mediathek
 
     /**
      * @param $quality
+     *
      * @return int
      */
     protected function getQualityRating($quality)
     {
         if (array_key_exists($quality->quality, static::$QUALITY_RATING) === false) {
             $this->getLogger()->log('Unknown quality ' . $quality->quality);
+
             return -1;
         }
+
         return static::$QUALITY_RATING[$quality->quality];
     }
 
+    /**
+     * @param object $track
+     *
+     * @return bool
+     */
     protected function isLanguageSupported($track)
     {
-        return in_array($track->language, static::$SUPPORTED_LANGUAGES);
+        return in_array($track->language, static::$SUPPORTED_LANGUAGES, true);
     }
 
+    /**
+     * @param object $contentObject
+     *
+     * @return string
+     */
     protected function getTitle($contentObject)
     {
         $title = @$contentObject
@@ -279,6 +333,11 @@ class ZDF extends Mediathek
         return trim($title);
     }
 
+    /**
+     * @param object $contentObject
+     *
+     * @return string
+     */
     protected function getEpisodeTitle($contentObject)
     {
         $episodeTitle = @$contentObject->{static::$JSON_OBJ_ELEMENT_TITLE};
