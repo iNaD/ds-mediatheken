@@ -57,6 +57,8 @@ class ARD extends Mediathek
                 if ($this->mediaStreamHasNeededProperties($mediaStream)
                     && $this->mediaStreamHasValidQuality($mediaStream)) {
                     if ($mediaStream->_quality > $result->getQualityRating()) {
+                        $this->getLogger()->log(sprintf('Found stream with quality "%s"', $mediaStream->_quality));
+
                         $stream = $this->getHighestQualityStream($mediaStream->_stream);
                         if ($stream !== null) {
                             $result = new Result();
@@ -71,6 +73,12 @@ class ARD extends Mediathek
         if (!$result->hasUri()) {
             return null;
         }
+
+        $this->getLogger()->log(sprintf(
+            'Url "%s" won with quality of "%s"',
+            $result->getUri(),
+            $result->getQualityRating()
+        ));
 
         $result = $this->addTitle($pageContent, $result);
         $result->setUri($this->getTools()->addProtocolFromUrlIfMissing($result->getUri(), $url));
@@ -149,6 +157,8 @@ class ARD extends Mediathek
             return $streams;
         }
 
+        $this->getLogger()->log('Multiple streams found for single quality');
+
         $hqStream = [
             'quality' => 0,
             'url' => null,
@@ -156,11 +166,20 @@ class ARD extends Mediathek
 
         foreach ($streams as $stream) {
             $quality = $this->getQualityFromStreamUrl($stream);
+
+            $this->getLogger()->log(sprintf('Found quality "%s" for url "%s"', $quality, $stream));
+
             if ($quality > $hqStream['quality']) {
                 $hqStream['quality'] = $quality;
                 $hqStream['url'] = $stream;
             }
         }
+
+        $this->getLogger()->log(sprintf(
+            'Best url is "%s" with quality of "%s"',
+            $hqStream['url'],
+            $hqStream['quality']
+        ));
 
         return $hqStream['url'];
     }
@@ -172,7 +191,7 @@ class ARD extends Mediathek
      */
     protected function getQualityFromStreamUrl($stream)
     {
-        return $this->getTools()->pregMatchDefault('#\/(\d+)-\d_\d{6}.mp4#i', $stream, 0);
+        return $this->getTools()->pregMatchDefault('#\/(\d+)-[\d_]+\.mp4#i', $stream, 0);
     }
 
     /**

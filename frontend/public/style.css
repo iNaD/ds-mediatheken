@@ -70,11 +70,12 @@ button {
 }
 
 .result {
-    flex: 1 0;
+    flex: 1 0 50%;
 }
 
 .log {
-    flex: 1 0;
+    flex: 1 0 50%;
+    word-break: break-all;
 }
 
 .help-text {
