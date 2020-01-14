@@ -44,7 +44,7 @@ include_once __DIR__ . '/Mediatheken/DreiSat.php';
  * All public functions are required by Synology Download Station.
  *
  * @author    Daniel Gehn <me@theinad.com>
- * @version   0.6.0
+ * @version   0.6.1
  * @copyright 2017-2020 Daniel Gehn
  * @license   http://opensource.org/licenses/MIT Licensed under MIT License
  */
