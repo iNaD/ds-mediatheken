@@ -34,6 +34,7 @@ A Synology NAS with the latest version of `DiskStation Manager` (at least DSM 5.
 - 3sat (`3sat.de`)
 - ARD (`ardmediathek.de`, `mediathek.daserste.de`)
 - Arte (`arte.tv`)
+- BR (`br.de`)
 - KiKa (`kika.de`)
 - MDR (`mdr.de`)
 - NDR (`ndr.de`)
