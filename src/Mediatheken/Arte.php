@@ -12,6 +12,9 @@ use TheiNaD\DSMediatheken\Utils\Result;
  */
 class Arte extends Mediathek
 {
+    const STATIC_APIPLAYER_JSON_URL = 'https://static-cdn.arte.tv/static/artevp/5.2.2/config/json/general.json';
+    const API_URL_PATTERN = 'https://api.arte.tv/api/player/v1/config/%s/%s';
+
     protected static $LANGUAGE_MAP = [
         'de' => 'de',
         'fr' => 'fr',
@@ -68,7 +71,14 @@ class Arte extends Mediathek
             return null;
         }
 
-        $json = $this->processVideoPage($videoPage);
+        $token = $this->getApiToken();
+        if (empty($token)) {
+            $this->getLogger()->log('Could not retrieve token');
+
+            return null;
+        }
+
+        $json = $this->processVideoPage($videoPage, $token);
         if ($json === null) {
             return null;
         }
@@ -121,25 +131,32 @@ class Arte extends Mediathek
 
     /**
      * @param string $videoPage
+     * @param string $token
      *
      * @return object|null
      */
-    protected function processVideoPage($videoPage)
+    protected function processVideoPage($videoPage, $token)
     {
-        if (preg_match('#src=["|\']http.*?json_url=(.*?)%3F.*["|\']#si', $videoPage, $match) === 1) {
-            $playerUrl = urldecode($match[1]);
-            $this->getLogger()->log('the player is located at ' . $playerUrl);
-            $json = $this->getTools()->curlRequest($playerUrl);
-            if ($json === null) {
-                return null;
-            }
-
-            return json_decode($json, false);
+        $videoId = $this->getTools()->pregMatchDefault('#arte://program/(.*?)\?source=web#si', $videoPage);
+        if ($videoId === null) {
+            $this->getLogger()->log('Could not identify video id');
+            return null;
         }
 
-        $this->getLogger()->log('could not identify player meta.');
+        $playerUrl = sprintf(static::API_URL_PATTERN, $this->language, $videoId);
+        $this->getLogger()->log('the player is located at ' . $playerUrl);
 
-        return null;
+        $json = $this->getTools()->curlRequest($playerUrl, [
+            CURLOPT_HTTPHEADER => [
+                'Authorization: Bearer ' . $token,
+            ],
+        ]);
+
+        if ($json === null) {
+            return null;
+        }
+
+        return json_decode($json, false);
     }
 
     /**
@@ -240,5 +257,16 @@ class Arte extends Mediathek
             self::$LANGUAGE_MAP[$detectedLanguage],
             self::$LANGUAGE_MAP_SHORT_LIBELLE[$detectedLanguage]
         );
+    }
+
+    /**
+     * @return string
+     */
+    protected function getApiToken()
+    {
+        $response = $this->getTools()->curlRequest(self::STATIC_APIPLAYER_JSON_URL);
+        $data = json_decode($response, false);
+
+        return $data->apiplayer->token;
     }
 }

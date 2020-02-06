@@ -37,6 +37,7 @@ class Tools
             "\r",
             '![CDATA[',
             ']]',
+            'é',
         ],
         'replace' => [
             'ss',
@@ -61,6 +62,7 @@ class Tools
             '',
             '',
             '',
+            'e',
         ],
     ];
 
