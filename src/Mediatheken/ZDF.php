@@ -284,6 +284,11 @@ class ZDF extends Mediathek
                 continue;
             }
 
+            if ($track->class !== 'main') {
+                $this->getLogger()->log('Is not class "main" ' . $track->class);
+                continue;
+            }
+
             $result = new Result();
             $result->setUri($track->uri);
             $result->setMimeTypeRating($mimeTypeRating);
