@@ -12,8 +12,9 @@ use TheiNaD\DSMediatheken\Utils\Result;
  */
 class Arte extends Mediathek
 {
-    const STATIC_APIPLAYER_JSON_URL = 'https://static-cdn.arte.tv/static/artevp/5.2.2/config/json/general.json';
-    const API_URL_PATTERN = 'https://api.arte.tv/api/player/v1/config/%s/%s';
+    public const STATIC_APIPLAYER_JSON_URL = 'https://static-cdn.arte.tv/static/artevp/5.2.2/config/json/' .
+        'general.json';
+    protected const API_URL_PATTERN = 'https://api.arte.tv/api/player/v1/config/%s/%s';
 
     protected static $LANGUAGE_MAP = [
         'de' => 'de',
@@ -179,26 +180,30 @@ class Arte extends Mediathek
                 )
             );
 
+            if ($source->mediaType !== 'mp4') {
+                continue;
+            }
+
+            if ($source->bitrate <= $result->getBitrateRating()) {
+                continue;
+            }
+
             $shortLibelleLowercase = mb_strtolower($source->versionShortLibelle);
 
-            if ($source->mediaType === 'mp4' &&
-                $source->bitrate > $result->getBitrateRating() &&
-                (
-                    (
-                        !$ov &&
-                        $this->shortLibelleMatches($shortLibelleLowercase)
-                    ) ||
-                    (
-                        $ov &&
-                        $this->shortLibelleIsOv($shortLibelleLowercase)
-                    )
-                )
-            ) {
-                $result = new Result();
-
-                $result->setBitrateRating($source->bitrate);
-                $result->setUri($source->url);
+            if ($ov) {
+                if (!$this->shortLibelleIsOv($shortLibelleLowercase)) {
+                    continue;
+                }
+            } else {
+                if (!$this->shortLibelleMatches($shortLibelleLowercase)) {
+                    continue;
+                }
             }
+
+            $result = new Result();
+
+            $result->setBitrateRating($source->bitrate);
+            $result->setUri($source->url);
         }
 
         return $result;

@@ -13,8 +13,7 @@ use RuntimeException;
  */
 class Curl
 {
-    public static $MOBILE_USERAGENT =
-        'Mozilla/5.0 (Linux; Android 4.1; Galaxy Nexus Build/JRN84D)' .
+    public static $MOBILE_USERAGENT = 'Mozilla/5.0 (Linux; Android 4.1; Galaxy Nexus Build/JRN84D)' .
         ' AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19';
 
     /**
@@ -55,7 +54,14 @@ class Curl
 
         $result = curl_exec($curl);
         if (!$result) {
-            throw new RuntimeException(sprintf('Request failed for URL %s (%s): %s', $url, curl_errno($curl), curl_error($curl)));
+            throw new RuntimeException(
+                sprintf(
+                    'Request failed for URL %s (%s): %s',
+                    $url,
+                    curl_errno($curl),
+                    curl_error($curl)
+                )
+            );
         }
 
         curl_close($curl);

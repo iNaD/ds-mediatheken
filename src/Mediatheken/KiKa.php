@@ -12,7 +12,7 @@ use TheiNaD\DSMediatheken\Utils\Result;
  */
 class KiKa extends Mediathek
 {
-    const PROGRESSIVE_DOWNLOAD_PATTERN = '#<progressiveDownloadUrl>(.*?)<\/progressiveDownloadUrl>#si';
+    protected const PROGRESSIVE_DOWNLOAD_PATTERN = '#<progressiveDownloadUrl>(.*?)<\/progressiveDownloadUrl>#si';
 
     protected static $SUPPORT_MATCHER = ['kika.de'];
 

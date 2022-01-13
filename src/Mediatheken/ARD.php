@@ -50,8 +50,8 @@ class ARD extends Mediathek
             foreach ($widget->mediaCollection->embedded->_mediaArray as $media) {
                 foreach ($media->_mediaStreamArray as $mediaStream) {
                     if (
-                        $this->mediaStreamHasNeededProperties($mediaStream)
-                        && $this->mediaStreamHasValidQuality($mediaStream)
+                        $this->mediaStreamHasNeededProperties($mediaStream) &&
+                        $this->mediaStreamHasValidQuality($mediaStream)
                     ) {
                         if ($mediaStream->_quality > $result->getQualityRating()) {
                             $this->getLogger()->log(sprintf('Found stream with quality "%s"', $mediaStream->_quality));

@@ -41,8 +41,10 @@ class RBB extends Mediathek
 
         foreach ($apiData->_mediaArray as $media) {
             foreach ($media->_mediaStreamArray as $mediaStream) {
-                if ($this->mediaStreamHasNeededProperties($mediaStream)
-                    && $this->mediaStreamHasValidCdn($mediaStream)) {
+                if (
+                    $this->mediaStreamHasNeededProperties($mediaStream)
+                    && $this->mediaStreamHasValidCdn($mediaStream)
+                ) {
                     if ($mediaStream->_quality > $result->getQualityRating()) {
                         $result = new Result();
                         $result->setQualityRating($mediaStream->_quality);

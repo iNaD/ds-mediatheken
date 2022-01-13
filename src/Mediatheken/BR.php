@@ -12,8 +12,8 @@ use TheiNaD\DSMediatheken\Utils\Result;
  */
 class BR extends Mediathek
 {
-    const RELAY_BOOTSTRAP_DATA_PATTERN = '#window\.__RELAY_BOOTSTRAP_DATA__ = (.*?);#i';
-    const ALLOWED_MIMETYPES = ['video/mp4'];
+    protected const RELAY_BOOTSTRAP_DATA_PATTERN = '#window\.__RELAY_BOOTSTRAP_DATA__ = (.*?);#i';
+    protected const ALLOWED_MIMETYPES = ['video/mp4'];
 
     protected static $SUPPORT_MATCHER = 'br.de';
     protected static $API_BASE_URL = 'https://api.mediathek.br.de';

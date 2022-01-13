@@ -50,8 +50,8 @@ include_once __DIR__ . '/Mediatheken/DreiSat.php';
  */
 class SynoFileHostingMediathek
 {
-    const DEFAULT_LOG_PATH = '/tmp/mediathek.log';
-    const MEDIATHEKEN = [
+    protected const DEFAULT_LOG_PATH = '/tmp/mediathek.log';
+    protected const MEDIATHEKEN = [
         ARD::class,
         Arte::class,
         BR::class,
