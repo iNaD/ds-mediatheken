@@ -21,21 +21,20 @@
         }
     },
     "require": {
-        "php": "^5.6 || ^7.0",
+        "php": "^7.3",
         "ext-curl": "*",
         "ext-json": "*",
         "ext-mbstring": "*"
     },
     "require-dev": {
-        "php": "^7.1",
-        "phpunit/phpunit": "^6",
+        "phpunit/phpunit": "^9.5",
         "squizlabs/php_codesniffer": "^3.2"
     },
     "type": "project",
     "scripts": {
         "serve": "php -S localhost:8080 -t ./frontend/public",
         "test": "phpunit",
-        "lint": "phpcs",
+        "lint": "phpcs -p",
         "autofix": "phpcbf"
     },
     "scripts-descriptions": {
