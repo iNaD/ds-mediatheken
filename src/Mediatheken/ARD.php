@@ -12,7 +12,7 @@ use TheiNaD\DSMediatheken\Utils\Result;
  */
 class ARD extends Mediathek
 {
-    protected static $API_BASE_URL = 'https://api.ardmediathek.de/page-gateway/pages/ard/item/';
+    public static $API_BASE_URL = 'https://api.ardmediathek.de/page-gateway/pages/ard/item/';
     protected static $VALID_QUALITIES = [0, 1, 2, 3, 4];
     protected static $SUPPORT_MATCHER = ['ardmediathek.de', 'mediathek.daserste.de'];
     protected static $PLAYER_WIDGET_TYPE = 'player_ondemand';

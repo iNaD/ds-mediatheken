@@ -1,63 +1,2300 @@
 {
-    "_type": "video",
-    "_isLive": false,
-    "_defaultQuality": [
-        "auto",
-        2,
-        4,
-        3,
-        1,
-        0
-    ],
-    "_previewImage": "https://img.ardmediathek.de/standard/00/58/45/97/24/-1774185891/16x9/960?mandant=ard",
-    "_subtitleUrl": "https://www.ardmediathek.de/subtitle/272522",
-    "_subtitleOffset": 0,
-    "_mediaArray": [
-        {
-            "_plugin": 1,
-            "_mediaStreamArray": [
-                {
-                    "_quality": "auto",
-                    "_server": "",
-                    "_cdn": "flashls",
-                    "_stream": "https://dasersteuni-vh.akamaihd.net/i/int/2018/12/05/9414b242-8600-4c6b-9dfd-c3f53eda85a1/,640-1,480-1,320-1,960-1,512-1,1280-1,.mp4.csmil/master.m3u8"
-                },
-                {
-                    "_quality": 0,
-                    "_server": "",
-                    "_cdn": "akamai",
-                    "_stream": "https://pdvideosdaserste-a.akamaihd.net/int/2018/12/05/9414b242-8600-4c6b-9dfd-c3f53eda85a1/320-1.mp4"
-                },
-                {
-                    "_quality": 1,
-                    "_stream": [
-                        "https://pdvideosdaserste-a.akamaihd.net/int/2018/12/05/9414b242-8600-4c6b-9dfd-c3f53eda85a1/512-1.mp4",
-                        "https://pdvideosdaserste-a.akamaihd.net/int/2018/12/05/9414b242-8600-4c6b-9dfd-c3f53eda85a1/480-1.mp4"
-                    ]
-                },
-                {
-                    "_quality": 2,
-                    "_stream": [
-                        "https://pdvideosdaserste-a.akamaihd.net/int/2018/12/05/9414b242-8600-4c6b-9dfd-c3f53eda85a1/640-1.mp4",
-                        "https://pdvideosdaserste-a.akamaihd.net/int/2018/12/05/9414b242-8600-4c6b-9dfd-c3f53eda85a1/960-1.mp4"
-                    ]
-                },
-                {
-                    "_quality": 3,
-                    "_server": "",
-                    "_cdn": "akamai",
-                    "_width": 1280,
-                    "_height": 720,
-                    "_stream": "https://pdvideosdaserste-a.akamaihd.net/int/2018/12/05/9414b242-8600-4c6b-9dfd-c3f53eda85a1/1280-1.mp4"
-                }
-            ]
+    "fskRating": "NONE",
+    "id": "1m0kFcyvowSiEYW4c6YYWg",
+    "isChildContent": false,
+    "personalized": false,
+    "links": {
+        "self": {
+            "id": "1m0kFcyvowSiEYW4c6YYWg",
+            "urlId": "1m0kFcyvowSiEYW4c6YYWg",
+            "title": "Ondemand PlayerPage ARD",
+            "href": "https://api.ardmediathek.de/page-gateway/pages/ard/item/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMjE4MzkzZTMtYjIyMy00Njg2LWJmNTMtM2M2NTg5MzIxYzMw?embedded=true",
+            "type": "application/vnd.ard.page+json",
+            "partner": "ard"
         }
-    ],
-    "_alternativeMediaArray": [],
-    "_sortierArray": [
-        1
-    ],
-    "_duration": 5308,
-    "_dvrEnabled": false,
-    "_geoblocked": false
+    },
+    "title": "Geliefert",
+    "tracking": {
+        "aggregationLevelId": 38,
+        "atiCustomVars": {
+            "clipTitle": "Geliefert",
+            "mediaType": "video",
+            "lra": "Das Erste",
+            "channel": "Das Erste",
+            "show": "FilmMittwoch im Ersten",
+            "contentTypes": "UT",
+            "mediaDistributionType": 1,
+            "contentId": 93708664,
+            "metadataId": "crid://daserste.de/filmmittwoch im ersten/218393e3-b223-4686-bf53-3c6589321c30",
+            "clipLength": 5323
+        },
+        "chapter2": "Player",
+        "chapter3": "FilmMittwoch im Ersten",
+        "environmentId": 511893,
+        "pageTitle": "Mediathek/Player/FilmMittwoch im Ersten/Geliefert/93708664/20211013_1815",
+        "szmType": "CP"
+    },
+    "widgets": [
+        {
+            "availableTo": "2022-01-13T22:59:00Z",
+            "blockedByFsk": false,
+            "broadcastedOn": "2021-10-13T18:15:00Z",
+            "embeddable": false,
+            "geoblocked": false,
+            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMjE4MzkzZTMtYjIyMy00Njg2LWJmNTMtM2M2NTg5MzIxYzMw",
+            "image": {
+                "alt": "Volker Feldmann (Bjarne Mädel) arbeitet als Paketzusteller.",
+                "producerName": "ARTE/BR/TV60 Filmproduktion GmbH",
+                "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:160db5bf7b5cfff9?w={width}&f=",
+                "title": "Geliefert - Standbild"
+            },
+            "isChildContent": false,
+            "maturityContentRating": "NONE",
+            "mediaCollection": {
+                "embedded": {
+                    "_defaultQuality": [
+                        "auto",
+                        2,
+                        3,
+                        4,
+                        1,
+                        0,
+                        5
+                    ],
+                    "_duration": 5323,
+                    "_dvrEnabled": false,
+                    "_geoblocked": false,
+                    "_isLive": false,
+                    "_mediaArray": [
+                        {
+                            "_mediaStreamArray": [
+                                {
+                                    "_quality": "auto",
+                                    "_stream": "https://dasersteuni-vh.akamaihd.net/i/int/2021/10/04/218393e3-b223-4686-bf53-3c6589321c30/,640-1_978535,480-1_978535,960-1_978535,1280-1_978535,1920-1_978535,.mp4.csmil/master.m3u8"
+                                },
+                                {
+                                    "_height": 1080,
+                                    "_quality": 4,
+                                    "_stream": "https://pdvideosdaserste-a.akamaihd.net/int/2021/10/04/218393e3-b223-4686-bf53-3c6589321c30/1920-1_978535.mp4",
+                                    "_width": 1920
+                                },
+                                {
+                                    "_height": 540,
+                                    "_quality": 2,
+                                    "_stream": "https://pdvideosdaserste-a.akamaihd.net/int/2021/10/04/218393e3-b223-4686-bf53-3c6589321c30/960-1_978535.mp4",
+                                    "_width": 960
+                                },
+                                {
+                                    "_height": 360,
+                                    "_quality": 1,
+                                    "_stream": "https://pdvideosdaserste-a.akamaihd.net/int/2021/10/04/218393e3-b223-4686-bf53-3c6589321c30/640-1_978535.mp4",
+                                    "_width": 640
+                                },
+                                {
+                                    "_height": 720,
+                                    "_quality": 3,
+                                    "_stream": "https://pdvideosdaserste-a.akamaihd.net/int/2021/10/04/218393e3-b223-4686-bf53-3c6589321c30/1280-1_978535.mp4",
+                                    "_width": 1280
+                                },
+                                {
+                                    "_height": 270,
+                                    "_quality": 0,
+                                    "_stream": "https://pdvideosdaserste-a.akamaihd.net/int/2021/10/04/218393e3-b223-4686-bf53-3c6589321c30/480-1_978535.mp4",
+                                    "_width": 480
+                                }
+                            ],
+                            "_plugin": 1
+                        }
+                    ],
+                    "_previewImage": "https://api.ardmediathek.de/image-service/images/urn:ard:image:160db5bf7b5cfff9?w=960&f=jp2",
+                    "_sortierArray": [
+                        1
+                    ],
+                    "_subtitleUrl": "https://api.ardmediathek.de/subtitle-format-service/ebutt/urn:ard:subtitle:a3180941a37f267d",
+                    "_subtitleWebVTTUrl": "https://api.ardmediathek.de/subtitle-format-service/webvtt/urn:ard:subtitle:a3180941a37f267d.vtt",
+                    "_type": "video"
+                },
+                "href": "https://api.ardmediathek.de/page-gateway/mediacollection/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMjE4MzkzZTMtYjIyMy00Njg2LWJmNTMtM2M2NTg5MzIxYzMw?devicetype=pc"
+            },
+            "pagination": null,
+            "personalized": false,
+            "playerConfig": {
+                "embedded": {
+                    "_autoplay": "FORCE",
+                    "_baseAssetUrl": "/ard/static/player/base/",
+                    "_baseUrl": "/ard/static/player/",
+                    "_pixelConfig": [
+                        {
+                            "agfMetaDataSDK": {
+                                "assetId": "93708664",
+                                "length": "5323",
+                                "nol_c0": "p0,0",
+                                "nol_c10": "p10,Das Erste",
+                                "nol_c12": "p12,Content",
+                                "nol_c15": "p15,X004635878",
+                                "nol_c16": "p16,Das Erste_Fiction|Film|Filmmittwoch im Ersten|FilmMittwoch im Ersten",
+                                "nol_c18": "p18,N",
+                                "nol_c19": "p19,Das Erste",
+                                "nol_c2": "p2,N",
+                                "nol_c5": "p5,ARD Mediathek",
+                                "nol_c7": "p7,crid://daserste.de/filmmittwoch im ersten/2021-10-13_20-15-MESZ",
+                                "nol_c8": "p8,5323",
+                                "nol_c9": "p9,FilmMittwoch im Ersten_Geliefert_13.10.2021 18:15",
+                                "program": "FilmMittwoch im Ersten",
+                                "title": "Das Erste_FilmMittwoch im Ersten_Geliefert_13.10.2021 18:15",
+                                "type": "content"
+                            },
+                            "appId": "PA02DC09C-B8D3-4098-87D2-2C023682D6D5",
+                            "tracker": "AGF"
+                        }
+                    ],
+                    "_showSubtitelAtStart": false
+                },
+                "href": "https://api.ardmediathek.de/page-gateway/playerconfig/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMjE4MzkzZTMtYjIyMy00Njg2LWJmNTMtM2M2NTg5MzIxYzMw"
+            },
+            "publicationService": {
+                "name": "Das Erste",
+                "logo": {
+                    "title": "Logo Das Erste",
+                    "alt": "Logo Das Erste",
+                    "producerName": "Das Erste",
+                    "src": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2213972a8d101de1/16x9?w={width}&f=",
+                    "aspectRatio": "16x9"
+                },
+                "publisherType": "TV",
+                "partner": "das_erste",
+                "id": "b3JnYW5pemF0aW9uX0RhcyBFcnN0ZQ"
+            },
+            "links": {
+                "self": {
+                    "id": "5kG69Jms5UMSSUMwMCY0k0",
+                    "urlId": "5kG69Jms5UMSSUMwMCY0k0",
+                    "title": "Player Widget ARD",
+                    "href": "https://api.ardmediathek.de/page-gateway/widgets/ard/editorials/5kG69Jms5UMSSUMwMCY0k0/item/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMjE4MzkzZTMtYjIyMy00Njg2LWJmNTMtM2M2NTg5MzIxYzMw?pageNumber=0&pageSize=100&embedded=true",
+                    "type": "application/vnd.ard.widget+json",
+                    "partner": "ard"
+                }
+            },
+            "show": {
+                "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4",
+                "title": "FilmMittwoch im Ersten",
+                "image": {
+                    "alt": "Bild zur Sendung FilmMittwoch im Ersten",
+                    "producerName": "Das Erste",
+                    "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:f2a1910d6674d399?w={width}&f=",
+                    "title": "FilmMittwoch im Ersten"
+                }
+            },
+            "synopsis": "Fernsehfilm Deutschland 2021 +++ Volker ist Paketzusteller, alleinerziehender Vater seines 16-jährigen Sohnes Benny und nebenbei Fußballtrainer einer Jugendmannschaft. Er gehört eindeutig zu den gesellschaftlich Unterprivilegierten, lässt sich seine gute Laune jedoch nie verderben. Die langen Arbeitstage, die miserable Bezahlung und die Pubertät seines Sohnes bringen Volker zunehmend an persönliche Grenzen. +++ Mit Bjarne Mädel, Nick Julius Schuck, Anne Schäfer u.a. | Regie: Jan Fehse",
+            "title": "Geliefert",
+            "type": "player_ondemand"
+        },
+        {
+            "compilationType": "itemsOfShow",
+            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4",
+            "isChildContent": false,
+            "pagination": {
+                "pageNumber": 0,
+                "pageSize": 24,
+                "totalElements": 21
+            },
+            "personalized": false,
+            "links": {
+                "self": {
+                    "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4",
+                    "urlId": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4",
+                    "title": "FilmMittwoch im Ersten",
+                    "href": "https://api.ardmediathek.de/page-gateway/widgets/ard/asset/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4?excludedAssetIds=Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMjE4MzkzZTMtYjIyMy00Njg2LWJmNTMtM2M2NTg5MzIxYzMw&pageNumber=0&pageSize=24&embedded=true&seasoned=false&seasonNumber=&withAudiodescription=false&withOriginalWithSubtitle=false&withOriginalversion=false",
+                    "type": "application/vnd.ard.widget+json",
+                    "partner": "ard"
+                }
+            },
+            "size": "m",
+            "swipeable": true,
+            "teasers": [
+                {
+                    "availableTo": null,
+                    "broadcastedOn": "2021-10-13T18:15:00Z",
+                    "decor": "none",
+                    "duration": 297,
+                    "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vYTdkMjM2ZjAtMjhjOS00Zjc3LThmOTctODVkMzVhOWYzZjU3",
+                    "images": {
+                        "aspect16x9": {
+                            "alt": "Volker Feldmann (Bjarne Mädel) arbeitet als Paketzusteller.",
+                            "producerName": "ARTE/BR/TV60 Filmproduktion GmbH",
+                            "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:c41bcda187571d83?w={width}&f=",
+                            "title": "Extra zu \"Geliefert\": Bjarne Mädel liefert aus - Standbild"
+                        }
+                    },
+                    "isChildContent": false,
+                    "longTitle": "Extra zu \"Geliefert\": Bjarne Mädel liefert aus",
+                    "maturityContentRating": "NONE",
+                    "mediumTitle": "Extra zu \"Geliefert\": Bjarne Mädel liefert aus",
+                    "personalized": false,
+                    "playtime": null,
+                    "publicationService": {
+                        "name": "Das Erste",
+                        "logo": {
+                            "title": "Logo Das Erste",
+                            "alt": "Logo Das Erste",
+                            "producerName": "Das Erste",
+                            "src": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2213972a8d101de1/16x9?w={width}&f=",
+                            "aspectRatio": "16x9"
+                        },
+                        "publisherType": "TV",
+                        "partner": "das_erste",
+                        "id": "b3JnYW5pemF0aW9uX0RhcyBFcnN0ZQ"
+                    },
+                    "links": {
+                        "self": {
+                            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vYTdkMjM2ZjAtMjhjOS00Zjc3LThmOTctODVkMzVhOWYzZjU3",
+                            "urlId": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vYTdkMjM2ZjAtMjhjOS00Zjc3LThmOTctODVkMzVhOWYzZjU3",
+                            "title": "Extra zu \"Geliefert\": Bjarne Mädel liefert aus",
+                            "href": "https://api.ardmediathek.de/page-gateway/teasers/ard/items/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vYTdkMjM2ZjAtMjhjOS00Zjc3LThmOTctODVkMzVhOWYzZjU3",
+                            "type": "application/vnd.ard.teaser+json",
+                            "partner": "ard"
+                        },
+                        "target": {
+                            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vYTdkMjM2ZjAtMjhjOS00Zjc3LThmOTctODVkMzVhOWYzZjU3",
+                            "urlId": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vYTdkMjM2ZjAtMjhjOS00Zjc3LThmOTctODVkMzVhOWYzZjU3",
+                            "title": "Extra zu \"Geliefert\": Bjarne Mädel liefert aus",
+                            "href": "https://api.ardmediathek.de/page-gateway/pages/ard/item/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vYTdkMjM2ZjAtMjhjOS00Zjc3LThmOTctODVkMzVhOWYzZjU3?devicetype=pc&embedded=true",
+                            "type": "application/vnd.ard.page+json",
+                            "partner": "ard"
+                        }
+                    },
+                    "shortTitle": "Extra zu \"Geliefert\": Bjarne Mädel liefert aus",
+                    "show": {
+                        "id": "crid://daserste.de/filmmittwoch im ersten",
+                        "coremediaId": 10318946,
+                        "title": "FilmMittwoch im Ersten",
+                        "publisher": {
+                            "name": "Das Erste",
+                            "logo": {
+                                "title": "Logo Das Erste",
+                                "alt": "Logo Das Erste",
+                                "producerName": "Das Erste",
+                                "src": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2213972a8d101de1/16x9?w={width}&f=",
+                                "aspectRatio": "16x9"
+                            },
+                            "publisherType": "TV",
+                            "partner": "das_erste",
+                            "id": "b3JnYW5pemF0aW9uX0RhcyBFcnN0ZQ"
+                        },
+                        "self": null,
+                        "images": {
+                            "16x9": {
+                                "title": "FilmMittwoch im Ersten",
+                                "alt": "Bild zur Sendung FilmMittwoch im Ersten",
+                                "producerName": "Das Erste",
+                                "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:f2a1910d6674d399?w={width}&f=",
+                                "aspectRatio": "16x9"
+                            }
+                        },
+                        "shortSynopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "synopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "longSynopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "modificationDate": null,
+                        "assetSource": "TwilightFeeder",
+                        "groupingType": "SHOW",
+                        "homepage": {
+                            "id": null,
+                            "title": "FilmMittwoch im Ersten",
+                            "href": "https://www.daserste.de/unterhaltung/film/filmmittwoch-im-ersten/index.html",
+                            "type": null
+                        },
+                        "hasSeasons": false,
+                        "seriesDetail": null,
+                        "isChildContent": false
+                    },
+                    "subtitled": false,
+                    "titleVisible": true,
+                    "type": "ondemand"
+                },
+                {
+                    "availableTo": "2022-01-13T22:59:00Z",
+                    "broadcastedOn": "2021-10-13T18:15:00Z",
+                    "decor": "none",
+                    "duration": 5323,
+                    "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMjE4MzkzZTMtYjIyMy00Njg2LWJmNTMtM2M2NTg5MzIxYzMwL2F1ZGlvZGVza3JpcHRpb24",
+                    "images": {
+                        "aspect16x9": {
+                            "alt": "Volker Feldmann (Bjarne Mädel) arbeitet als Paketzusteller.",
+                            "producerName": "ARTE/BR/TV60 Filmproduktion GmbH",
+                            "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:160db5bf7b5cfff9?w={width}&f=",
+                            "title": "Geliefert - Standbild"
+                        }
+                    },
+                    "isChildContent": false,
+                    "longTitle": "Geliefert - Hörfassung",
+                    "maturityContentRating": "NONE",
+                    "mediumTitle": "Geliefert - Hörfassung",
+                    "personalized": false,
+                    "playtime": null,
+                    "publicationService": {
+                        "name": "Das Erste",
+                        "logo": {
+                            "title": "Logo Das Erste",
+                            "alt": "Logo Das Erste",
+                            "producerName": "Das Erste",
+                            "src": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2213972a8d101de1/16x9?w={width}&f=",
+                            "aspectRatio": "16x9"
+                        },
+                        "publisherType": "TV",
+                        "partner": "das_erste",
+                        "id": "b3JnYW5pemF0aW9uX0RhcyBFcnN0ZQ"
+                    },
+                    "links": {
+                        "self": {
+                            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMjE4MzkzZTMtYjIyMy00Njg2LWJmNTMtM2M2NTg5MzIxYzMwL2F1ZGlvZGVza3JpcHRpb24",
+                            "urlId": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMjE4MzkzZTMtYjIyMy00Njg2LWJmNTMtM2M2NTg5MzIxYzMwL2F1ZGlvZGVza3JpcHRpb24",
+                            "title": "Geliefert - Hörfassung",
+                            "href": "https://api.ardmediathek.de/page-gateway/teasers/ard/items/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMjE4MzkzZTMtYjIyMy00Njg2LWJmNTMtM2M2NTg5MzIxYzMwL2F1ZGlvZGVza3JpcHRpb24",
+                            "type": "application/vnd.ard.teaser+json",
+                            "partner": "ard"
+                        },
+                        "target": {
+                            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMjE4MzkzZTMtYjIyMy00Njg2LWJmNTMtM2M2NTg5MzIxYzMwL2F1ZGlvZGVza3JpcHRpb24",
+                            "urlId": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMjE4MzkzZTMtYjIyMy00Njg2LWJmNTMtM2M2NTg5MzIxYzMwL2F1ZGlvZGVza3JpcHRpb24",
+                            "title": "Geliefert - Hörfassung",
+                            "href": "https://api.ardmediathek.de/page-gateway/pages/ard/item/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMjE4MzkzZTMtYjIyMy00Njg2LWJmNTMtM2M2NTg5MzIxYzMwL2F1ZGlvZGVza3JpcHRpb24?devicetype=pc&embedded=true",
+                            "type": "application/vnd.ard.page+json",
+                            "partner": "ard"
+                        }
+                    },
+                    "shortTitle": "Geliefert - Hörfassung",
+                    "show": {
+                        "id": "crid://daserste.de/filmmittwoch im ersten",
+                        "coremediaId": 10318946,
+                        "title": "FilmMittwoch im Ersten",
+                        "publisher": {
+                            "name": "Das Erste",
+                            "logo": {
+                                "title": "Logo Das Erste",
+                                "alt": "Logo Das Erste",
+                                "producerName": "Das Erste",
+                                "src": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2213972a8d101de1/16x9?w={width}&f=",
+                                "aspectRatio": "16x9"
+                            },
+                            "publisherType": "TV",
+                            "partner": "das_erste",
+                            "id": "b3JnYW5pemF0aW9uX0RhcyBFcnN0ZQ"
+                        },
+                        "self": null,
+                        "images": {
+                            "16x9": {
+                                "title": "FilmMittwoch im Ersten",
+                                "alt": "Bild zur Sendung FilmMittwoch im Ersten",
+                                "producerName": "Das Erste",
+                                "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:f2a1910d6674d399?w={width}&f=",
+                                "aspectRatio": "16x9"
+                            }
+                        },
+                        "shortSynopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "synopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "longSynopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "modificationDate": null,
+                        "assetSource": "TwilightFeeder",
+                        "groupingType": "SHOW",
+                        "homepage": {
+                            "id": null,
+                            "title": "FilmMittwoch im Ersten",
+                            "href": "https://www.daserste.de/unterhaltung/film/filmmittwoch-im-ersten/index.html",
+                            "type": null
+                        },
+                        "hasSeasons": false,
+                        "seriesDetail": null,
+                        "isChildContent": false
+                    },
+                    "subtitled": true,
+                    "titleVisible": true,
+                    "type": "ondemand"
+                },
+                {
+                    "availableTo": "2022-04-05T18:15:00Z",
+                    "broadcastedOn": "2022-01-12T19:15:00Z",
+                    "decor": "none",
+                    "duration": 5296,
+                    "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vYWIxY2Y3MDQtZDhiOC00MTExLTg4M2MtZWVlZjc5ZjU2ODA2",
+                    "images": {
+                        "aspect16x9": {
+                            "alt": "Entfremden sich immer mehr: Gregor (Roeland Wiesnekker) und Agnes (Ulrike C. Tscharre)",
+                            "producerName": "NDR",
+                            "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:943f9ca09c0236a2?w={width}&f=",
+                            "title": "Wo ist die Liebe hin"
+                        }
+                    },
+                    "isChildContent": false,
+                    "longTitle": "Wo ist die Liebe hin",
+                    "maturityContentRating": "NONE",
+                    "mediumTitle": "Wo ist die Liebe hin",
+                    "personalized": false,
+                    "playtime": null,
+                    "publicationService": {
+                        "name": "Das Erste",
+                        "logo": {
+                            "title": "Logo Das Erste",
+                            "alt": "Logo Das Erste",
+                            "producerName": "Das Erste",
+                            "src": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2213972a8d101de1/16x9?w={width}&f=",
+                            "aspectRatio": "16x9"
+                        },
+                        "publisherType": "TV",
+                        "partner": "das_erste",
+                        "id": "b3JnYW5pemF0aW9uX0RhcyBFcnN0ZQ"
+                    },
+                    "links": {
+                        "self": {
+                            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vYWIxY2Y3MDQtZDhiOC00MTExLTg4M2MtZWVlZjc5ZjU2ODA2",
+                            "urlId": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vYWIxY2Y3MDQtZDhiOC00MTExLTg4M2MtZWVlZjc5ZjU2ODA2",
+                            "title": "Wo ist die Liebe hin",
+                            "href": "https://api.ardmediathek.de/page-gateway/teasers/ard/items/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vYWIxY2Y3MDQtZDhiOC00MTExLTg4M2MtZWVlZjc5ZjU2ODA2",
+                            "type": "application/vnd.ard.teaser+json",
+                            "partner": "ard"
+                        },
+                        "target": {
+                            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vYWIxY2Y3MDQtZDhiOC00MTExLTg4M2MtZWVlZjc5ZjU2ODA2",
+                            "urlId": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vYWIxY2Y3MDQtZDhiOC00MTExLTg4M2MtZWVlZjc5ZjU2ODA2",
+                            "title": "Wo ist die Liebe hin",
+                            "href": "https://api.ardmediathek.de/page-gateway/pages/ard/item/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vYWIxY2Y3MDQtZDhiOC00MTExLTg4M2MtZWVlZjc5ZjU2ODA2?devicetype=pc&embedded=true",
+                            "type": "application/vnd.ard.page+json",
+                            "partner": "ard"
+                        }
+                    },
+                    "shortTitle": "Wo ist die Liebe hin",
+                    "show": {
+                        "id": "crid://daserste.de/filmmittwoch im ersten",
+                        "coremediaId": 10318946,
+                        "title": "FilmMittwoch im Ersten",
+                        "publisher": {
+                            "name": "Das Erste",
+                            "logo": {
+                                "title": "Logo Das Erste",
+                                "alt": "Logo Das Erste",
+                                "producerName": "Das Erste",
+                                "src": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2213972a8d101de1/16x9?w={width}&f=",
+                                "aspectRatio": "16x9"
+                            },
+                            "publisherType": "TV",
+                            "partner": "das_erste",
+                            "id": "b3JnYW5pemF0aW9uX0RhcyBFcnN0ZQ"
+                        },
+                        "self": null,
+                        "images": {
+                            "16x9": {
+                                "title": "FilmMittwoch im Ersten",
+                                "alt": "Bild zur Sendung FilmMittwoch im Ersten",
+                                "producerName": "Das Erste",
+                                "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:f2a1910d6674d399?w={width}&f=",
+                                "aspectRatio": "16x9"
+                            }
+                        },
+                        "shortSynopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "synopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "longSynopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "modificationDate": null,
+                        "assetSource": "TwilightFeeder",
+                        "groupingType": "SHOW",
+                        "homepage": {
+                            "id": null,
+                            "title": "FilmMittwoch im Ersten",
+                            "href": "https://www.daserste.de/unterhaltung/film/filmmittwoch-im-ersten/index.html",
+                            "type": null
+                        },
+                        "hasSeasons": false,
+                        "seriesDetail": null,
+                        "isChildContent": false
+                    },
+                    "subtitled": true,
+                    "titleVisible": true,
+                    "type": "ondemand"
+                },
+                {
+                    "availableTo": "2022-04-05T18:15:00Z",
+                    "broadcastedOn": "2022-01-12T19:15:00Z",
+                    "decor": "none",
+                    "duration": 5296,
+                    "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vYWIxY2Y3MDQtZDhiOC00MTExLTg4M2MtZWVlZjc5ZjU2ODA2L2F1ZGlvZGVza3JpcHRpb24",
+                    "images": {
+                        "aspect16x9": {
+                            "alt": "Entfremden sich immer mehr: Gregor (Roeland Wiesnekker) und Agnes (Ulrike C. Tscharre)",
+                            "producerName": "NDR",
+                            "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:943f9ca09c0236a2?w={width}&f=",
+                            "title": "Wo ist die Liebe hin"
+                        }
+                    },
+                    "isChildContent": false,
+                    "longTitle": "Wo ist die Liebe hin - Hörfassung",
+                    "maturityContentRating": "NONE",
+                    "mediumTitle": "Wo ist die Liebe hin - Hörfassung",
+                    "personalized": false,
+                    "playtime": null,
+                    "publicationService": {
+                        "name": "Das Erste",
+                        "logo": {
+                            "title": "Logo Das Erste",
+                            "alt": "Logo Das Erste",
+                            "producerName": "Das Erste",
+                            "src": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2213972a8d101de1/16x9?w={width}&f=",
+                            "aspectRatio": "16x9"
+                        },
+                        "publisherType": "TV",
+                        "partner": "das_erste",
+                        "id": "b3JnYW5pemF0aW9uX0RhcyBFcnN0ZQ"
+                    },
+                    "links": {
+                        "self": {
+                            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vYWIxY2Y3MDQtZDhiOC00MTExLTg4M2MtZWVlZjc5ZjU2ODA2L2F1ZGlvZGVza3JpcHRpb24",
+                            "urlId": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vYWIxY2Y3MDQtZDhiOC00MTExLTg4M2MtZWVlZjc5ZjU2ODA2L2F1ZGlvZGVza3JpcHRpb24",
+                            "title": "Wo ist die Liebe hin - Hörfassung",
+                            "href": "https://api.ardmediathek.de/page-gateway/teasers/ard/items/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vYWIxY2Y3MDQtZDhiOC00MTExLTg4M2MtZWVlZjc5ZjU2ODA2L2F1ZGlvZGVza3JpcHRpb24",
+                            "type": "application/vnd.ard.teaser+json",
+                            "partner": "ard"
+                        },
+                        "target": {
+                            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vYWIxY2Y3MDQtZDhiOC00MTExLTg4M2MtZWVlZjc5ZjU2ODA2L2F1ZGlvZGVza3JpcHRpb24",
+                            "urlId": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vYWIxY2Y3MDQtZDhiOC00MTExLTg4M2MtZWVlZjc5ZjU2ODA2L2F1ZGlvZGVza3JpcHRpb24",
+                            "title": "Wo ist die Liebe hin - Hörfassung",
+                            "href": "https://api.ardmediathek.de/page-gateway/pages/ard/item/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vYWIxY2Y3MDQtZDhiOC00MTExLTg4M2MtZWVlZjc5ZjU2ODA2L2F1ZGlvZGVza3JpcHRpb24?devicetype=pc&embedded=true",
+                            "type": "application/vnd.ard.page+json",
+                            "partner": "ard"
+                        }
+                    },
+                    "shortTitle": "Wo ist die Liebe hin - Hörfassung",
+                    "show": {
+                        "id": "crid://daserste.de/filmmittwoch im ersten",
+                        "coremediaId": 10318946,
+                        "title": "FilmMittwoch im Ersten",
+                        "publisher": {
+                            "name": "Das Erste",
+                            "logo": {
+                                "title": "Logo Das Erste",
+                                "alt": "Logo Das Erste",
+                                "producerName": "Das Erste",
+                                "src": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2213972a8d101de1/16x9?w={width}&f=",
+                                "aspectRatio": "16x9"
+                            },
+                            "publisherType": "TV",
+                            "partner": "das_erste",
+                            "id": "b3JnYW5pemF0aW9uX0RhcyBFcnN0ZQ"
+                        },
+                        "self": null,
+                        "images": {
+                            "16x9": {
+                                "title": "FilmMittwoch im Ersten",
+                                "alt": "Bild zur Sendung FilmMittwoch im Ersten",
+                                "producerName": "Das Erste",
+                                "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:f2a1910d6674d399?w={width}&f=",
+                                "aspectRatio": "16x9"
+                            }
+                        },
+                        "shortSynopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "synopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "longSynopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "modificationDate": null,
+                        "assetSource": "TwilightFeeder",
+                        "groupingType": "SHOW",
+                        "homepage": {
+                            "id": null,
+                            "title": "FilmMittwoch im Ersten",
+                            "href": "https://www.daserste.de/unterhaltung/film/filmmittwoch-im-ersten/index.html",
+                            "type": null
+                        },
+                        "hasSeasons": false,
+                        "seriesDetail": null,
+                        "isChildContent": false
+                    },
+                    "subtitled": true,
+                    "titleVisible": true,
+                    "type": "ondemand"
+                },
+                {
+                    "availableTo": "2022-06-25T18:15:00Z",
+                    "broadcastedOn": "2021-12-22T19:15:00Z",
+                    "decor": "none",
+                    "duration": 5986,
+                    "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vM2ZkYWFkNDctY2RmMi00NTVkLWJkNmMtYjY3YTNlYjRmM2Ji",
+                    "images": {
+                        "aspect16x9": {
+                            "alt": "Um kein Aufsehen zu erregen und möglichst viel Akzeptanz im Umfeld zu erhalten, erfinden Alma (Maren Eggert) und Tom (Dan Stevens) eine gemeinsame, \"menschliche\" Geschichte.",
+                            "producerName": "SWR/Letterbox Filmproduktion",
+                            "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:97f0d74a66943511?w={width}&f=",
+                            "title": "Ich bin dein Mensch"
+                        }
+                    },
+                    "isChildContent": false,
+                    "longTitle": "Ich bin dein Mensch",
+                    "maturityContentRating": "NONE",
+                    "mediumTitle": "Ich bin dein Mensch",
+                    "personalized": false,
+                    "playtime": null,
+                    "publicationService": {
+                        "name": "Das Erste",
+                        "logo": {
+                            "title": "Logo Das Erste",
+                            "alt": "Logo Das Erste",
+                            "producerName": "Das Erste",
+                            "src": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2213972a8d101de1/16x9?w={width}&f=",
+                            "aspectRatio": "16x9"
+                        },
+                        "publisherType": "TV",
+                        "partner": "das_erste",
+                        "id": "b3JnYW5pemF0aW9uX0RhcyBFcnN0ZQ"
+                    },
+                    "links": {
+                        "self": {
+                            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vM2ZkYWFkNDctY2RmMi00NTVkLWJkNmMtYjY3YTNlYjRmM2Ji",
+                            "urlId": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vM2ZkYWFkNDctY2RmMi00NTVkLWJkNmMtYjY3YTNlYjRmM2Ji",
+                            "title": "Ich bin dein Mensch",
+                            "href": "https://api.ardmediathek.de/page-gateway/teasers/ard/items/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vM2ZkYWFkNDctY2RmMi00NTVkLWJkNmMtYjY3YTNlYjRmM2Ji",
+                            "type": "application/vnd.ard.teaser+json",
+                            "partner": "ard"
+                        },
+                        "target": {
+                            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vM2ZkYWFkNDctY2RmMi00NTVkLWJkNmMtYjY3YTNlYjRmM2Ji",
+                            "urlId": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vM2ZkYWFkNDctY2RmMi00NTVkLWJkNmMtYjY3YTNlYjRmM2Ji",
+                            "title": "Ich bin dein Mensch",
+                            "href": "https://api.ardmediathek.de/page-gateway/pages/ard/item/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vM2ZkYWFkNDctY2RmMi00NTVkLWJkNmMtYjY3YTNlYjRmM2Ji?devicetype=pc&embedded=true",
+                            "type": "application/vnd.ard.page+json",
+                            "partner": "ard"
+                        }
+                    },
+                    "shortTitle": "Ich bin dein Mensch",
+                    "show": {
+                        "id": "crid://daserste.de/filmmittwoch im ersten",
+                        "coremediaId": 10318946,
+                        "title": "FilmMittwoch im Ersten",
+                        "publisher": {
+                            "name": "Das Erste",
+                            "logo": {
+                                "title": "Logo Das Erste",
+                                "alt": "Logo Das Erste",
+                                "producerName": "Das Erste",
+                                "src": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2213972a8d101de1/16x9?w={width}&f=",
+                                "aspectRatio": "16x9"
+                            },
+                            "publisherType": "TV",
+                            "partner": "das_erste",
+                            "id": "b3JnYW5pemF0aW9uX0RhcyBFcnN0ZQ"
+                        },
+                        "self": null,
+                        "images": {
+                            "16x9": {
+                                "title": "FilmMittwoch im Ersten",
+                                "alt": "Bild zur Sendung FilmMittwoch im Ersten",
+                                "producerName": "Das Erste",
+                                "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:f2a1910d6674d399?w={width}&f=",
+                                "aspectRatio": "16x9"
+                            }
+                        },
+                        "shortSynopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "synopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "longSynopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "modificationDate": null,
+                        "assetSource": "TwilightFeeder",
+                        "groupingType": "SHOW",
+                        "homepage": {
+                            "id": null,
+                            "title": "FilmMittwoch im Ersten",
+                            "href": "https://www.daserste.de/unterhaltung/film/filmmittwoch-im-ersten/index.html",
+                            "type": null
+                        },
+                        "hasSeasons": false,
+                        "seriesDetail": null,
+                        "isChildContent": false
+                    },
+                    "subtitled": true,
+                    "titleVisible": true,
+                    "type": "ondemand"
+                },
+                {
+                    "availableTo": "2022-06-25T18:15:00Z",
+                    "broadcastedOn": "2021-12-22T19:15:00Z",
+                    "decor": "none",
+                    "duration": 5986,
+                    "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vM2ZkYWFkNDctY2RmMi00NTVkLWJkNmMtYjY3YTNlYjRmM2JiL2F1ZGlvZGVza3JpcHRpb24",
+                    "images": {
+                        "aspect16x9": {
+                            "alt": "Um kein Aufsehen zu erregen und möglichst viel Akzeptanz im Umfeld zu erhalten, erfinden Alma (Maren Eggert) und Tom (Dan Stevens) eine gemeinsame, \"menschliche\" Geschichte.",
+                            "producerName": "SWR/Letterbox Filmproduktion",
+                            "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:97f0d74a66943511?w={width}&f=",
+                            "title": "Ich bin dein Mensch"
+                        }
+                    },
+                    "isChildContent": false,
+                    "longTitle": "Ich bin dein Mensch - Hörfassung",
+                    "maturityContentRating": "NONE",
+                    "mediumTitle": "Ich bin dein Mensch - Hörfassung",
+                    "personalized": false,
+                    "playtime": null,
+                    "publicationService": {
+                        "name": "Das Erste",
+                        "logo": {
+                            "title": "Logo Das Erste",
+                            "alt": "Logo Das Erste",
+                            "producerName": "Das Erste",
+                            "src": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2213972a8d101de1/16x9?w={width}&f=",
+                            "aspectRatio": "16x9"
+                        },
+                        "publisherType": "TV",
+                        "partner": "das_erste",
+                        "id": "b3JnYW5pemF0aW9uX0RhcyBFcnN0ZQ"
+                    },
+                    "links": {
+                        "self": {
+                            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vM2ZkYWFkNDctY2RmMi00NTVkLWJkNmMtYjY3YTNlYjRmM2JiL2F1ZGlvZGVza3JpcHRpb24",
+                            "urlId": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vM2ZkYWFkNDctY2RmMi00NTVkLWJkNmMtYjY3YTNlYjRmM2JiL2F1ZGlvZGVza3JpcHRpb24",
+                            "title": "Ich bin dein Mensch - Hörfassung",
+                            "href": "https://api.ardmediathek.de/page-gateway/teasers/ard/items/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vM2ZkYWFkNDctY2RmMi00NTVkLWJkNmMtYjY3YTNlYjRmM2JiL2F1ZGlvZGVza3JpcHRpb24",
+                            "type": "application/vnd.ard.teaser+json",
+                            "partner": "ard"
+                        },
+                        "target": {
+                            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vM2ZkYWFkNDctY2RmMi00NTVkLWJkNmMtYjY3YTNlYjRmM2JiL2F1ZGlvZGVza3JpcHRpb24",
+                            "urlId": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vM2ZkYWFkNDctY2RmMi00NTVkLWJkNmMtYjY3YTNlYjRmM2JiL2F1ZGlvZGVza3JpcHRpb24",
+                            "title": "Ich bin dein Mensch - Hörfassung",
+                            "href": "https://api.ardmediathek.de/page-gateway/pages/ard/item/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vM2ZkYWFkNDctY2RmMi00NTVkLWJkNmMtYjY3YTNlYjRmM2JiL2F1ZGlvZGVza3JpcHRpb24?devicetype=pc&embedded=true",
+                            "type": "application/vnd.ard.page+json",
+                            "partner": "ard"
+                        }
+                    },
+                    "shortTitle": "Ich bin dein Mensch - Hörfassung",
+                    "show": {
+                        "id": "crid://daserste.de/filmmittwoch im ersten",
+                        "coremediaId": 10318946,
+                        "title": "FilmMittwoch im Ersten",
+                        "publisher": {
+                            "name": "Das Erste",
+                            "logo": {
+                                "title": "Logo Das Erste",
+                                "alt": "Logo Das Erste",
+                                "producerName": "Das Erste",
+                                "src": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2213972a8d101de1/16x9?w={width}&f=",
+                                "aspectRatio": "16x9"
+                            },
+                            "publisherType": "TV",
+                            "partner": "das_erste",
+                            "id": "b3JnYW5pemF0aW9uX0RhcyBFcnN0ZQ"
+                        },
+                        "self": null,
+                        "images": {
+                            "16x9": {
+                                "title": "FilmMittwoch im Ersten",
+                                "alt": "Bild zur Sendung FilmMittwoch im Ersten",
+                                "producerName": "Das Erste",
+                                "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:f2a1910d6674d399?w={width}&f=",
+                                "aspectRatio": "16x9"
+                            }
+                        },
+                        "shortSynopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "synopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "longSynopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "modificationDate": null,
+                        "assetSource": "TwilightFeeder",
+                        "groupingType": "SHOW",
+                        "homepage": {
+                            "id": null,
+                            "title": "FilmMittwoch im Ersten",
+                            "href": "https://www.daserste.de/unterhaltung/film/filmmittwoch-im-ersten/index.html",
+                            "type": null
+                        },
+                        "hasSeasons": false,
+                        "seriesDetail": null,
+                        "isChildContent": false
+                    },
+                    "subtitled": true,
+                    "titleVisible": true,
+                    "type": "ondemand"
+                },
+                {
+                    "availableTo": null,
+                    "broadcastedOn": "2021-12-22T19:15:00Z",
+                    "decor": "none",
+                    "duration": 130,
+                    "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMTQ2MTVkYWEtYWI4Mi00ZGYzLTk3NzQtMmY5YWQ1NTc2MWU4",
+                    "images": {
+                        "aspect16x9": {
+                            "alt": "Um kein Aufsehen zu erregen und möglichst viel Akzeptanz im Umfeld zu erhalten, erfinden Alma (Maren Eggert) und Tom (Dan Stevens) eine gemeinsame, \"menschliche\" Geschichte.",
+                            "producerName": "SWR/Letterbox Filmproduktion",
+                            "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:a10f8d3144684a73?w={width}&f=",
+                            "title": "XL-Trailer: Ich bin dein Mensch"
+                        }
+                    },
+                    "isChildContent": false,
+                    "longTitle": "XL-Trailer: Ich bin dein Mensch",
+                    "maturityContentRating": "NONE",
+                    "mediumTitle": "XL-Trailer: Ich bin dein Mensch",
+                    "personalized": false,
+                    "playtime": null,
+                    "publicationService": {
+                        "name": "Das Erste",
+                        "logo": {
+                            "title": "Logo Das Erste",
+                            "alt": "Logo Das Erste",
+                            "producerName": "Das Erste",
+                            "src": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2213972a8d101de1/16x9?w={width}&f=",
+                            "aspectRatio": "16x9"
+                        },
+                        "publisherType": "TV",
+                        "partner": "das_erste",
+                        "id": "b3JnYW5pemF0aW9uX0RhcyBFcnN0ZQ"
+                    },
+                    "links": {
+                        "self": {
+                            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMTQ2MTVkYWEtYWI4Mi00ZGYzLTk3NzQtMmY5YWQ1NTc2MWU4",
+                            "urlId": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMTQ2MTVkYWEtYWI4Mi00ZGYzLTk3NzQtMmY5YWQ1NTc2MWU4",
+                            "title": "XL-Trailer: Ich bin dein Mensch",
+                            "href": "https://api.ardmediathek.de/page-gateway/teasers/ard/items/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMTQ2MTVkYWEtYWI4Mi00ZGYzLTk3NzQtMmY5YWQ1NTc2MWU4",
+                            "type": "application/vnd.ard.teaser+json",
+                            "partner": "ard"
+                        },
+                        "target": {
+                            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMTQ2MTVkYWEtYWI4Mi00ZGYzLTk3NzQtMmY5YWQ1NTc2MWU4",
+                            "urlId": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMTQ2MTVkYWEtYWI4Mi00ZGYzLTk3NzQtMmY5YWQ1NTc2MWU4",
+                            "title": "XL-Trailer: Ich bin dein Mensch",
+                            "href": "https://api.ardmediathek.de/page-gateway/pages/ard/item/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMTQ2MTVkYWEtYWI4Mi00ZGYzLTk3NzQtMmY5YWQ1NTc2MWU4?devicetype=pc&embedded=true",
+                            "type": "application/vnd.ard.page+json",
+                            "partner": "ard"
+                        }
+                    },
+                    "shortTitle": "XL-Trailer: Ich bin dein Mensch",
+                    "show": {
+                        "id": "crid://daserste.de/filmmittwoch im ersten",
+                        "coremediaId": 10318946,
+                        "title": "FilmMittwoch im Ersten",
+                        "publisher": {
+                            "name": "Das Erste",
+                            "logo": {
+                                "title": "Logo Das Erste",
+                                "alt": "Logo Das Erste",
+                                "producerName": "Das Erste",
+                                "src": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2213972a8d101de1/16x9?w={width}&f=",
+                                "aspectRatio": "16x9"
+                            },
+                            "publisherType": "TV",
+                            "partner": "das_erste",
+                            "id": "b3JnYW5pemF0aW9uX0RhcyBFcnN0ZQ"
+                        },
+                        "self": null,
+                        "images": {
+                            "16x9": {
+                                "title": "FilmMittwoch im Ersten",
+                                "alt": "Bild zur Sendung FilmMittwoch im Ersten",
+                                "producerName": "Das Erste",
+                                "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:f2a1910d6674d399?w={width}&f=",
+                                "aspectRatio": "16x9"
+                            }
+                        },
+                        "shortSynopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "synopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "longSynopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "modificationDate": null,
+                        "assetSource": "TwilightFeeder",
+                        "groupingType": "SHOW",
+                        "homepage": {
+                            "id": null,
+                            "title": "FilmMittwoch im Ersten",
+                            "href": "https://www.daserste.de/unterhaltung/film/filmmittwoch-im-ersten/index.html",
+                            "type": null
+                        },
+                        "hasSeasons": false,
+                        "seriesDetail": null,
+                        "isChildContent": false
+                    },
+                    "subtitled": false,
+                    "titleVisible": true,
+                    "type": "ondemand"
+                },
+                {
+                    "availableTo": null,
+                    "broadcastedOn": "2021-12-22T19:15:00Z",
+                    "decor": "none",
+                    "duration": 106,
+                    "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vNDdmYWNlNWQtN2Y0Yi00ODRmLTllOGYtOTI2YWI2OTUyNDU0",
+                    "images": {
+                        "aspect16x9": {
+                            "alt": "Alma (Maren Eggert) lernt Tom (Dan Stevens) kennen, den angeblich perfekt auf ihre Bedürfnisse abgestimmten Mann.",
+                            "producerName": "SWR/Letterbox Filmproduktion",
+                            "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:d5c79e5034017f04?w={width}&f=",
+                            "title": "Einen Roboter lieben?"
+                        }
+                    },
+                    "isChildContent": false,
+                    "longTitle": "Einen Roboter lieben?",
+                    "maturityContentRating": "NONE",
+                    "mediumTitle": "Einen Roboter lieben?",
+                    "personalized": false,
+                    "playtime": null,
+                    "publicationService": {
+                        "name": "Das Erste",
+                        "logo": {
+                            "title": "Logo Das Erste",
+                            "alt": "Logo Das Erste",
+                            "producerName": "Das Erste",
+                            "src": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2213972a8d101de1/16x9?w={width}&f=",
+                            "aspectRatio": "16x9"
+                        },
+                        "publisherType": "TV",
+                        "partner": "das_erste",
+                        "id": "b3JnYW5pemF0aW9uX0RhcyBFcnN0ZQ"
+                    },
+                    "links": {
+                        "self": {
+                            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vNDdmYWNlNWQtN2Y0Yi00ODRmLTllOGYtOTI2YWI2OTUyNDU0",
+                            "urlId": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vNDdmYWNlNWQtN2Y0Yi00ODRmLTllOGYtOTI2YWI2OTUyNDU0",
+                            "title": "Einen Roboter lieben?",
+                            "href": "https://api.ardmediathek.de/page-gateway/teasers/ard/items/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vNDdmYWNlNWQtN2Y0Yi00ODRmLTllOGYtOTI2YWI2OTUyNDU0",
+                            "type": "application/vnd.ard.teaser+json",
+                            "partner": "ard"
+                        },
+                        "target": {
+                            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vNDdmYWNlNWQtN2Y0Yi00ODRmLTllOGYtOTI2YWI2OTUyNDU0",
+                            "urlId": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vNDdmYWNlNWQtN2Y0Yi00ODRmLTllOGYtOTI2YWI2OTUyNDU0",
+                            "title": "Einen Roboter lieben?",
+                            "href": "https://api.ardmediathek.de/page-gateway/pages/ard/item/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vNDdmYWNlNWQtN2Y0Yi00ODRmLTllOGYtOTI2YWI2OTUyNDU0?devicetype=pc&embedded=true",
+                            "type": "application/vnd.ard.page+json",
+                            "partner": "ard"
+                        }
+                    },
+                    "shortTitle": "Einen Roboter lieben?",
+                    "show": {
+                        "id": "crid://daserste.de/filmmittwoch im ersten",
+                        "coremediaId": 10318946,
+                        "title": "FilmMittwoch im Ersten",
+                        "publisher": {
+                            "name": "Das Erste",
+                            "logo": {
+                                "title": "Logo Das Erste",
+                                "alt": "Logo Das Erste",
+                                "producerName": "Das Erste",
+                                "src": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2213972a8d101de1/16x9?w={width}&f=",
+                                "aspectRatio": "16x9"
+                            },
+                            "publisherType": "TV",
+                            "partner": "das_erste",
+                            "id": "b3JnYW5pemF0aW9uX0RhcyBFcnN0ZQ"
+                        },
+                        "self": null,
+                        "images": {
+                            "16x9": {
+                                "title": "FilmMittwoch im Ersten",
+                                "alt": "Bild zur Sendung FilmMittwoch im Ersten",
+                                "producerName": "Das Erste",
+                                "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:f2a1910d6674d399?w={width}&f=",
+                                "aspectRatio": "16x9"
+                            }
+                        },
+                        "shortSynopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "synopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "longSynopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "modificationDate": null,
+                        "assetSource": "TwilightFeeder",
+                        "groupingType": "SHOW",
+                        "homepage": {
+                            "id": null,
+                            "title": "FilmMittwoch im Ersten",
+                            "href": "https://www.daserste.de/unterhaltung/film/filmmittwoch-im-ersten/index.html",
+                            "type": null
+                        },
+                        "hasSeasons": false,
+                        "seriesDetail": null,
+                        "isChildContent": false
+                    },
+                    "subtitled": false,
+                    "titleVisible": true,
+                    "type": "ondemand"
+                },
+                {
+                    "availableTo": null,
+                    "broadcastedOn": "2021-12-22T19:15:00Z",
+                    "decor": "none",
+                    "duration": 439,
+                    "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vOGFlYjI0MDYtZjZhOC00MGQxLWEyYzEtOTliYzU3MTU2NGJi",
+                    "images": {
+                        "aspect16x9": {
+                            "alt": "Maria Schrader (re.) mit den beiden Hauptdarstellern Maren Eggert (li.) und Dan Stevens (Mi.) bei den Dreharbeiten im Millet-Saal des Berliner Pergamon-Museums.",
+                            "producerName": "SWR/Letterbox Filmproduktion",
+                            "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:935209a7d15b9a41?w={width}&f=",
+                            "title": "Regisseurin Maria Schrader über den Film"
+                        }
+                    },
+                    "isChildContent": false,
+                    "longTitle": "Regisseurin Maria Schrader über den Film",
+                    "maturityContentRating": "NONE",
+                    "mediumTitle": "Regisseurin Maria Schrader über den Film",
+                    "personalized": false,
+                    "playtime": null,
+                    "publicationService": {
+                        "name": "Das Erste",
+                        "logo": {
+                            "title": "Logo Das Erste",
+                            "alt": "Logo Das Erste",
+                            "producerName": "Das Erste",
+                            "src": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2213972a8d101de1/16x9?w={width}&f=",
+                            "aspectRatio": "16x9"
+                        },
+                        "publisherType": "TV",
+                        "partner": "das_erste",
+                        "id": "b3JnYW5pemF0aW9uX0RhcyBFcnN0ZQ"
+                    },
+                    "links": {
+                        "self": {
+                            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vOGFlYjI0MDYtZjZhOC00MGQxLWEyYzEtOTliYzU3MTU2NGJi",
+                            "urlId": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vOGFlYjI0MDYtZjZhOC00MGQxLWEyYzEtOTliYzU3MTU2NGJi",
+                            "title": "Regisseurin Maria Schrader über den Film",
+                            "href": "https://api.ardmediathek.de/page-gateway/teasers/ard/items/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vOGFlYjI0MDYtZjZhOC00MGQxLWEyYzEtOTliYzU3MTU2NGJi",
+                            "type": "application/vnd.ard.teaser+json",
+                            "partner": "ard"
+                        },
+                        "target": {
+                            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vOGFlYjI0MDYtZjZhOC00MGQxLWEyYzEtOTliYzU3MTU2NGJi",
+                            "urlId": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vOGFlYjI0MDYtZjZhOC00MGQxLWEyYzEtOTliYzU3MTU2NGJi",
+                            "title": "Regisseurin Maria Schrader über den Film",
+                            "href": "https://api.ardmediathek.de/page-gateway/pages/ard/item/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vOGFlYjI0MDYtZjZhOC00MGQxLWEyYzEtOTliYzU3MTU2NGJi?devicetype=pc&embedded=true",
+                            "type": "application/vnd.ard.page+json",
+                            "partner": "ard"
+                        }
+                    },
+                    "shortTitle": "Regisseurin Maria Schrader über den Film",
+                    "show": {
+                        "id": "crid://daserste.de/filmmittwoch im ersten",
+                        "coremediaId": 10318946,
+                        "title": "FilmMittwoch im Ersten",
+                        "publisher": {
+                            "name": "Das Erste",
+                            "logo": {
+                                "title": "Logo Das Erste",
+                                "alt": "Logo Das Erste",
+                                "producerName": "Das Erste",
+                                "src": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2213972a8d101de1/16x9?w={width}&f=",
+                                "aspectRatio": "16x9"
+                            },
+                            "publisherType": "TV",
+                            "partner": "das_erste",
+                            "id": "b3JnYW5pemF0aW9uX0RhcyBFcnN0ZQ"
+                        },
+                        "self": null,
+                        "images": {
+                            "16x9": {
+                                "title": "FilmMittwoch im Ersten",
+                                "alt": "Bild zur Sendung FilmMittwoch im Ersten",
+                                "producerName": "Das Erste",
+                                "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:f2a1910d6674d399?w={width}&f=",
+                                "aspectRatio": "16x9"
+                            }
+                        },
+                        "shortSynopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "synopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "longSynopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "modificationDate": null,
+                        "assetSource": "TwilightFeeder",
+                        "groupingType": "SHOW",
+                        "homepage": {
+                            "id": null,
+                            "title": "FilmMittwoch im Ersten",
+                            "href": "https://www.daserste.de/unterhaltung/film/filmmittwoch-im-ersten/index.html",
+                            "type": null
+                        },
+                        "hasSeasons": false,
+                        "seriesDetail": null,
+                        "isChildContent": false
+                    },
+                    "subtitled": false,
+                    "titleVisible": true,
+                    "type": "ondemand"
+                },
+                {
+                    "availableTo": null,
+                    "broadcastedOn": "2021-12-22T19:15:00Z",
+                    "decor": "none",
+                    "duration": 196,
+                    "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vYjFjZjhkYTYtYzYyMS00ZWY2LTkxZmUtMzg4MGMxNjM0YjRk",
+                    "images": {
+                        "aspect16x9": {
+                            "alt": "Tom (Dan Stevens) sucht Alma im Pergamonmuseum.",
+                            "producerName": "SWR/Letterbox Filmproduktion",
+                            "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:f432405a554a1435?w={width}&f=",
+                            "title": "Dan Stevens über seine Rolle"
+                        }
+                    },
+                    "isChildContent": false,
+                    "longTitle": "Dan Stevens über seine Rolle",
+                    "maturityContentRating": "NONE",
+                    "mediumTitle": "Dan Stevens über seine Rolle",
+                    "personalized": false,
+                    "playtime": null,
+                    "publicationService": {
+                        "name": "Das Erste",
+                        "logo": {
+                            "title": "Logo Das Erste",
+                            "alt": "Logo Das Erste",
+                            "producerName": "Das Erste",
+                            "src": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2213972a8d101de1/16x9?w={width}&f=",
+                            "aspectRatio": "16x9"
+                        },
+                        "publisherType": "TV",
+                        "partner": "das_erste",
+                        "id": "b3JnYW5pemF0aW9uX0RhcyBFcnN0ZQ"
+                    },
+                    "links": {
+                        "self": {
+                            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vYjFjZjhkYTYtYzYyMS00ZWY2LTkxZmUtMzg4MGMxNjM0YjRk",
+                            "urlId": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vYjFjZjhkYTYtYzYyMS00ZWY2LTkxZmUtMzg4MGMxNjM0YjRk",
+                            "title": "Dan Stevens über seine Rolle",
+                            "href": "https://api.ardmediathek.de/page-gateway/teasers/ard/items/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vYjFjZjhkYTYtYzYyMS00ZWY2LTkxZmUtMzg4MGMxNjM0YjRk",
+                            "type": "application/vnd.ard.teaser+json",
+                            "partner": "ard"
+                        },
+                        "target": {
+                            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vYjFjZjhkYTYtYzYyMS00ZWY2LTkxZmUtMzg4MGMxNjM0YjRk",
+                            "urlId": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vYjFjZjhkYTYtYzYyMS00ZWY2LTkxZmUtMzg4MGMxNjM0YjRk",
+                            "title": "Dan Stevens über seine Rolle",
+                            "href": "https://api.ardmediathek.de/page-gateway/pages/ard/item/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vYjFjZjhkYTYtYzYyMS00ZWY2LTkxZmUtMzg4MGMxNjM0YjRk?devicetype=pc&embedded=true",
+                            "type": "application/vnd.ard.page+json",
+                            "partner": "ard"
+                        }
+                    },
+                    "shortTitle": "Dan Stevens über seine Rolle",
+                    "show": {
+                        "id": "crid://daserste.de/filmmittwoch im ersten",
+                        "coremediaId": 10318946,
+                        "title": "FilmMittwoch im Ersten",
+                        "publisher": {
+                            "name": "Das Erste",
+                            "logo": {
+                                "title": "Logo Das Erste",
+                                "alt": "Logo Das Erste",
+                                "producerName": "Das Erste",
+                                "src": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2213972a8d101de1/16x9?w={width}&f=",
+                                "aspectRatio": "16x9"
+                            },
+                            "publisherType": "TV",
+                            "partner": "das_erste",
+                            "id": "b3JnYW5pemF0aW9uX0RhcyBFcnN0ZQ"
+                        },
+                        "self": null,
+                        "images": {
+                            "16x9": {
+                                "title": "FilmMittwoch im Ersten",
+                                "alt": "Bild zur Sendung FilmMittwoch im Ersten",
+                                "producerName": "Das Erste",
+                                "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:f2a1910d6674d399?w={width}&f=",
+                                "aspectRatio": "16x9"
+                            }
+                        },
+                        "shortSynopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "synopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "longSynopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "modificationDate": null,
+                        "assetSource": "TwilightFeeder",
+                        "groupingType": "SHOW",
+                        "homepage": {
+                            "id": null,
+                            "title": "FilmMittwoch im Ersten",
+                            "href": "https://www.daserste.de/unterhaltung/film/filmmittwoch-im-ersten/index.html",
+                            "type": null
+                        },
+                        "hasSeasons": false,
+                        "seriesDetail": null,
+                        "isChildContent": false
+                    },
+                    "subtitled": false,
+                    "titleVisible": true,
+                    "type": "ondemand"
+                },
+                {
+                    "availableTo": null,
+                    "broadcastedOn": "2021-12-22T19:15:00Z",
+                    "decor": "none",
+                    "duration": 303,
+                    "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMGViMGZmY2YtYWZmZi00MTgzLTk2ODktMzg3ODFlOThhMjFm",
+                    "images": {
+                        "aspect16x9": {
+                            "alt": "Maren Eggert als Anthropologin Alma.",
+                            "producerName": "SWR/Letterbox Filmproduktion",
+                            "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:f352c1b5a3f4eb0f?w={width}&f=",
+                            "title": "Maren Eggert über ihre Rolle"
+                        }
+                    },
+                    "isChildContent": false,
+                    "longTitle": "Maren Eggert über ihre Rolle",
+                    "maturityContentRating": "NONE",
+                    "mediumTitle": "Maren Eggert über ihre Rolle",
+                    "personalized": false,
+                    "playtime": null,
+                    "publicationService": {
+                        "name": "Das Erste",
+                        "logo": {
+                            "title": "Logo Das Erste",
+                            "alt": "Logo Das Erste",
+                            "producerName": "Das Erste",
+                            "src": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2213972a8d101de1/16x9?w={width}&f=",
+                            "aspectRatio": "16x9"
+                        },
+                        "publisherType": "TV",
+                        "partner": "das_erste",
+                        "id": "b3JnYW5pemF0aW9uX0RhcyBFcnN0ZQ"
+                    },
+                    "links": {
+                        "self": {
+                            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMGViMGZmY2YtYWZmZi00MTgzLTk2ODktMzg3ODFlOThhMjFm",
+                            "urlId": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMGViMGZmY2YtYWZmZi00MTgzLTk2ODktMzg3ODFlOThhMjFm",
+                            "title": "Maren Eggert über ihre Rolle",
+                            "href": "https://api.ardmediathek.de/page-gateway/teasers/ard/items/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMGViMGZmY2YtYWZmZi00MTgzLTk2ODktMzg3ODFlOThhMjFm",
+                            "type": "application/vnd.ard.teaser+json",
+                            "partner": "ard"
+                        },
+                        "target": {
+                            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMGViMGZmY2YtYWZmZi00MTgzLTk2ODktMzg3ODFlOThhMjFm",
+                            "urlId": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMGViMGZmY2YtYWZmZi00MTgzLTk2ODktMzg3ODFlOThhMjFm",
+                            "title": "Maren Eggert über ihre Rolle",
+                            "href": "https://api.ardmediathek.de/page-gateway/pages/ard/item/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMGViMGZmY2YtYWZmZi00MTgzLTk2ODktMzg3ODFlOThhMjFm?devicetype=pc&embedded=true",
+                            "type": "application/vnd.ard.page+json",
+                            "partner": "ard"
+                        }
+                    },
+                    "shortTitle": "Maren Eggert über ihre Rolle",
+                    "show": {
+                        "id": "crid://daserste.de/filmmittwoch im ersten",
+                        "coremediaId": 10318946,
+                        "title": "FilmMittwoch im Ersten",
+                        "publisher": {
+                            "name": "Das Erste",
+                            "logo": {
+                                "title": "Logo Das Erste",
+                                "alt": "Logo Das Erste",
+                                "producerName": "Das Erste",
+                                "src": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2213972a8d101de1/16x9?w={width}&f=",
+                                "aspectRatio": "16x9"
+                            },
+                            "publisherType": "TV",
+                            "partner": "das_erste",
+                            "id": "b3JnYW5pemF0aW9uX0RhcyBFcnN0ZQ"
+                        },
+                        "self": null,
+                        "images": {
+                            "16x9": {
+                                "title": "FilmMittwoch im Ersten",
+                                "alt": "Bild zur Sendung FilmMittwoch im Ersten",
+                                "producerName": "Das Erste",
+                                "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:f2a1910d6674d399?w={width}&f=",
+                                "aspectRatio": "16x9"
+                            }
+                        },
+                        "shortSynopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "synopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "longSynopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "modificationDate": null,
+                        "assetSource": "TwilightFeeder",
+                        "groupingType": "SHOW",
+                        "homepage": {
+                            "id": null,
+                            "title": "FilmMittwoch im Ersten",
+                            "href": "https://www.daserste.de/unterhaltung/film/filmmittwoch-im-ersten/index.html",
+                            "type": null
+                        },
+                        "hasSeasons": false,
+                        "seriesDetail": null,
+                        "isChildContent": false
+                    },
+                    "subtitled": false,
+                    "titleVisible": true,
+                    "type": "ondemand"
+                },
+                {
+                    "availableTo": "2022-03-15T22:59:00Z",
+                    "broadcastedOn": "2021-12-15T19:15:00Z",
+                    "decor": "none",
+                    "duration": 5179,
+                    "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vNzlhM2EwY2MtM2ZiYi00MWEyLWFiYzgtODU0NGU1YzNmMTFh",
+                    "images": {
+                        "aspect16x9": {
+                            "alt": "Tobias Moretti ist Johann Hellström",
+                            "producerName": "NDR/Bernard Hermant/Andreas Schlieter",
+                            "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:d89a39d15214a224?w={width}&f=",
+                            "title": "Das Haus"
+                        }
+                    },
+                    "isChildContent": false,
+                    "longTitle": "Das Haus",
+                    "maturityContentRating": "NONE",
+                    "mediumTitle": "Das Haus",
+                    "personalized": false,
+                    "playtime": null,
+                    "publicationService": {
+                        "name": "Das Erste",
+                        "logo": {
+                            "title": "Logo Das Erste",
+                            "alt": "Logo Das Erste",
+                            "producerName": "Das Erste",
+                            "src": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2213972a8d101de1/16x9?w={width}&f=",
+                            "aspectRatio": "16x9"
+                        },
+                        "publisherType": "TV",
+                        "partner": "das_erste",
+                        "id": "b3JnYW5pemF0aW9uX0RhcyBFcnN0ZQ"
+                    },
+                    "links": {
+                        "self": {
+                            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vNzlhM2EwY2MtM2ZiYi00MWEyLWFiYzgtODU0NGU1YzNmMTFh",
+                            "urlId": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vNzlhM2EwY2MtM2ZiYi00MWEyLWFiYzgtODU0NGU1YzNmMTFh",
+                            "title": "Das Haus",
+                            "href": "https://api.ardmediathek.de/page-gateway/teasers/ard/items/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vNzlhM2EwY2MtM2ZiYi00MWEyLWFiYzgtODU0NGU1YzNmMTFh",
+                            "type": "application/vnd.ard.teaser+json",
+                            "partner": "ard"
+                        },
+                        "target": {
+                            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vNzlhM2EwY2MtM2ZiYi00MWEyLWFiYzgtODU0NGU1YzNmMTFh",
+                            "urlId": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vNzlhM2EwY2MtM2ZiYi00MWEyLWFiYzgtODU0NGU1YzNmMTFh",
+                            "title": "Das Haus",
+                            "href": "https://api.ardmediathek.de/page-gateway/pages/ard/item/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vNzlhM2EwY2MtM2ZiYi00MWEyLWFiYzgtODU0NGU1YzNmMTFh?devicetype=pc&embedded=true",
+                            "type": "application/vnd.ard.page+json",
+                            "partner": "ard"
+                        }
+                    },
+                    "shortTitle": "Das Haus",
+                    "show": {
+                        "id": "crid://daserste.de/filmmittwoch im ersten",
+                        "coremediaId": 10318946,
+                        "title": "FilmMittwoch im Ersten",
+                        "publisher": {
+                            "name": "Das Erste",
+                            "logo": {
+                                "title": "Logo Das Erste",
+                                "alt": "Logo Das Erste",
+                                "producerName": "Das Erste",
+                                "src": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2213972a8d101de1/16x9?w={width}&f=",
+                                "aspectRatio": "16x9"
+                            },
+                            "publisherType": "TV",
+                            "partner": "das_erste",
+                            "id": "b3JnYW5pemF0aW9uX0RhcyBFcnN0ZQ"
+                        },
+                        "self": null,
+                        "images": {
+                            "16x9": {
+                                "title": "FilmMittwoch im Ersten",
+                                "alt": "Bild zur Sendung FilmMittwoch im Ersten",
+                                "producerName": "Das Erste",
+                                "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:f2a1910d6674d399?w={width}&f=",
+                                "aspectRatio": "16x9"
+                            }
+                        },
+                        "shortSynopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "synopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "longSynopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "modificationDate": null,
+                        "assetSource": "TwilightFeeder",
+                        "groupingType": "SHOW",
+                        "homepage": {
+                            "id": null,
+                            "title": "FilmMittwoch im Ersten",
+                            "href": "https://www.daserste.de/unterhaltung/film/filmmittwoch-im-ersten/index.html",
+                            "type": null
+                        },
+                        "hasSeasons": false,
+                        "seriesDetail": null,
+                        "isChildContent": false
+                    },
+                    "subtitled": true,
+                    "titleVisible": true,
+                    "type": "ondemand"
+                },
+                {
+                    "availableTo": "2022-03-15T22:59:00Z",
+                    "broadcastedOn": "2021-12-15T19:15:00Z",
+                    "decor": "none",
+                    "duration": 5179,
+                    "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vNzlhM2EwY2MtM2ZiYi00MWEyLWFiYzgtODU0NGU1YzNmMTFhL2F1ZGlvZGVza3JpcHRpb24",
+                    "images": {
+                        "aspect16x9": {
+                            "alt": "Tobias Moretti ist Johann Hellström",
+                            "producerName": "NDR/Bernard Hermant/Andreas Schlieter",
+                            "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:d89a39d15214a224?w={width}&f=",
+                            "title": "Das Haus"
+                        }
+                    },
+                    "isChildContent": false,
+                    "longTitle": "Das Haus - Hörfassung",
+                    "maturityContentRating": "NONE",
+                    "mediumTitle": "Das Haus - Hörfassung",
+                    "personalized": false,
+                    "playtime": null,
+                    "publicationService": {
+                        "name": "Das Erste",
+                        "logo": {
+                            "title": "Logo Das Erste",
+                            "alt": "Logo Das Erste",
+                            "producerName": "Das Erste",
+                            "src": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2213972a8d101de1/16x9?w={width}&f=",
+                            "aspectRatio": "16x9"
+                        },
+                        "publisherType": "TV",
+                        "partner": "das_erste",
+                        "id": "b3JnYW5pemF0aW9uX0RhcyBFcnN0ZQ"
+                    },
+                    "links": {
+                        "self": {
+                            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vNzlhM2EwY2MtM2ZiYi00MWEyLWFiYzgtODU0NGU1YzNmMTFhL2F1ZGlvZGVza3JpcHRpb24",
+                            "urlId": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vNzlhM2EwY2MtM2ZiYi00MWEyLWFiYzgtODU0NGU1YzNmMTFhL2F1ZGlvZGVza3JpcHRpb24",
+                            "title": "Das Haus - Hörfassung",
+                            "href": "https://api.ardmediathek.de/page-gateway/teasers/ard/items/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vNzlhM2EwY2MtM2ZiYi00MWEyLWFiYzgtODU0NGU1YzNmMTFhL2F1ZGlvZGVza3JpcHRpb24",
+                            "type": "application/vnd.ard.teaser+json",
+                            "partner": "ard"
+                        },
+                        "target": {
+                            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vNzlhM2EwY2MtM2ZiYi00MWEyLWFiYzgtODU0NGU1YzNmMTFhL2F1ZGlvZGVza3JpcHRpb24",
+                            "urlId": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vNzlhM2EwY2MtM2ZiYi00MWEyLWFiYzgtODU0NGU1YzNmMTFhL2F1ZGlvZGVza3JpcHRpb24",
+                            "title": "Das Haus - Hörfassung",
+                            "href": "https://api.ardmediathek.de/page-gateway/pages/ard/item/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vNzlhM2EwY2MtM2ZiYi00MWEyLWFiYzgtODU0NGU1YzNmMTFhL2F1ZGlvZGVza3JpcHRpb24?devicetype=pc&embedded=true",
+                            "type": "application/vnd.ard.page+json",
+                            "partner": "ard"
+                        }
+                    },
+                    "shortTitle": "Das Haus - Hörfassung",
+                    "show": {
+                        "id": "crid://daserste.de/filmmittwoch im ersten",
+                        "coremediaId": 10318946,
+                        "title": "FilmMittwoch im Ersten",
+                        "publisher": {
+                            "name": "Das Erste",
+                            "logo": {
+                                "title": "Logo Das Erste",
+                                "alt": "Logo Das Erste",
+                                "producerName": "Das Erste",
+                                "src": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2213972a8d101de1/16x9?w={width}&f=",
+                                "aspectRatio": "16x9"
+                            },
+                            "publisherType": "TV",
+                            "partner": "das_erste",
+                            "id": "b3JnYW5pemF0aW9uX0RhcyBFcnN0ZQ"
+                        },
+                        "self": null,
+                        "images": {
+                            "16x9": {
+                                "title": "FilmMittwoch im Ersten",
+                                "alt": "Bild zur Sendung FilmMittwoch im Ersten",
+                                "producerName": "Das Erste",
+                                "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:f2a1910d6674d399?w={width}&f=",
+                                "aspectRatio": "16x9"
+                            }
+                        },
+                        "shortSynopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "synopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "longSynopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "modificationDate": null,
+                        "assetSource": "TwilightFeeder",
+                        "groupingType": "SHOW",
+                        "homepage": {
+                            "id": null,
+                            "title": "FilmMittwoch im Ersten",
+                            "href": "https://www.daserste.de/unterhaltung/film/filmmittwoch-im-ersten/index.html",
+                            "type": null
+                        },
+                        "hasSeasons": false,
+                        "seriesDetail": null,
+                        "isChildContent": false
+                    },
+                    "subtitled": true,
+                    "titleVisible": true,
+                    "type": "ondemand"
+                },
+                {
+                    "availableTo": "2022-02-17T22:59:00Z",
+                    "broadcastedOn": "2021-11-17T19:15:00Z",
+                    "decor": "none",
+                    "duration": 5341,
+                    "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vZDQwM2IzZjEtMmRiZC00YmI4LWI3YmUtNTNiYTU4MzZjYTg1",
+                    "images": {
+                        "aspect16x9": {
+                            "alt": "Pablo (Felix Winternitz) hat Stella (Adele Neuhauser) für einen Event gestylt. Sie überprüft das Ergebnis.",
+                            "producerName": "BR/Bavaria Fiction GmbH/ORF",
+                            "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:9eaf1a03b51bd761?w={width}&f=",
+                            "title": "Faltenfrei - "
+                        }
+                    },
+                    "isChildContent": false,
+                    "longTitle": "Faltenfrei",
+                    "maturityContentRating": "NONE",
+                    "mediumTitle": "Faltenfrei",
+                    "personalized": false,
+                    "playtime": null,
+                    "publicationService": {
+                        "name": "Das Erste",
+                        "logo": {
+                            "title": "Logo Das Erste",
+                            "alt": "Logo Das Erste",
+                            "producerName": "Das Erste",
+                            "src": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2213972a8d101de1/16x9?w={width}&f=",
+                            "aspectRatio": "16x9"
+                        },
+                        "publisherType": "TV",
+                        "partner": "das_erste",
+                        "id": "b3JnYW5pemF0aW9uX0RhcyBFcnN0ZQ"
+                    },
+                    "links": {
+                        "self": {
+                            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vZDQwM2IzZjEtMmRiZC00YmI4LWI3YmUtNTNiYTU4MzZjYTg1",
+                            "urlId": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vZDQwM2IzZjEtMmRiZC00YmI4LWI3YmUtNTNiYTU4MzZjYTg1",
+                            "title": "Faltenfrei",
+                            "href": "https://api.ardmediathek.de/page-gateway/teasers/ard/items/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vZDQwM2IzZjEtMmRiZC00YmI4LWI3YmUtNTNiYTU4MzZjYTg1",
+                            "type": "application/vnd.ard.teaser+json",
+                            "partner": "ard"
+                        },
+                        "target": {
+                            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vZDQwM2IzZjEtMmRiZC00YmI4LWI3YmUtNTNiYTU4MzZjYTg1",
+                            "urlId": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vZDQwM2IzZjEtMmRiZC00YmI4LWI3YmUtNTNiYTU4MzZjYTg1",
+                            "title": "Faltenfrei",
+                            "href": "https://api.ardmediathek.de/page-gateway/pages/ard/item/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vZDQwM2IzZjEtMmRiZC00YmI4LWI3YmUtNTNiYTU4MzZjYTg1?devicetype=pc&embedded=true",
+                            "type": "application/vnd.ard.page+json",
+                            "partner": "ard"
+                        }
+                    },
+                    "shortTitle": "Faltenfrei",
+                    "show": {
+                        "id": "crid://daserste.de/filmmittwoch im ersten",
+                        "coremediaId": 10318946,
+                        "title": "FilmMittwoch im Ersten",
+                        "publisher": {
+                            "name": "Das Erste",
+                            "logo": {
+                                "title": "Logo Das Erste",
+                                "alt": "Logo Das Erste",
+                                "producerName": "Das Erste",
+                                "src": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2213972a8d101de1/16x9?w={width}&f=",
+                                "aspectRatio": "16x9"
+                            },
+                            "publisherType": "TV",
+                            "partner": "das_erste",
+                            "id": "b3JnYW5pemF0aW9uX0RhcyBFcnN0ZQ"
+                        },
+                        "self": null,
+                        "images": {
+                            "16x9": {
+                                "title": "FilmMittwoch im Ersten",
+                                "alt": "Bild zur Sendung FilmMittwoch im Ersten",
+                                "producerName": "Das Erste",
+                                "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:f2a1910d6674d399?w={width}&f=",
+                                "aspectRatio": "16x9"
+                            }
+                        },
+                        "shortSynopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "synopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "longSynopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "modificationDate": null,
+                        "assetSource": "TwilightFeeder",
+                        "groupingType": "SHOW",
+                        "homepage": {
+                            "id": null,
+                            "title": "FilmMittwoch im Ersten",
+                            "href": "https://www.daserste.de/unterhaltung/film/filmmittwoch-im-ersten/index.html",
+                            "type": null
+                        },
+                        "hasSeasons": false,
+                        "seriesDetail": null,
+                        "isChildContent": false
+                    },
+                    "subtitled": true,
+                    "titleVisible": true,
+                    "type": "ondemand"
+                },
+                {
+                    "availableTo": "2022-02-17T22:59:00Z",
+                    "broadcastedOn": "2021-11-17T19:15:00Z",
+                    "decor": "none",
+                    "duration": 5341,
+                    "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vZDQwM2IzZjEtMmRiZC00YmI4LWI3YmUtNTNiYTU4MzZjYTg1L2F1ZGlvZGVza3JpcHRpb24",
+                    "images": {
+                        "aspect16x9": {
+                            "alt": "Pablo (Felix Winternitz) hat Stella (Adele Neuhauser) für einen Event gestylt. Sie überprüft das Ergebnis.",
+                            "producerName": "BR/Bavaria Fiction GmbH/ORF",
+                            "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:9eaf1a03b51bd761?w={width}&f=",
+                            "title": "Faltenfrei - "
+                        }
+                    },
+                    "isChildContent": false,
+                    "longTitle": "Faltenfrei - Hörfassung",
+                    "maturityContentRating": "NONE",
+                    "mediumTitle": "Faltenfrei - Hörfassung",
+                    "personalized": false,
+                    "playtime": null,
+                    "publicationService": {
+                        "name": "Das Erste",
+                        "logo": {
+                            "title": "Logo Das Erste",
+                            "alt": "Logo Das Erste",
+                            "producerName": "Das Erste",
+                            "src": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2213972a8d101de1/16x9?w={width}&f=",
+                            "aspectRatio": "16x9"
+                        },
+                        "publisherType": "TV",
+                        "partner": "das_erste",
+                        "id": "b3JnYW5pemF0aW9uX0RhcyBFcnN0ZQ"
+                    },
+                    "links": {
+                        "self": {
+                            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vZDQwM2IzZjEtMmRiZC00YmI4LWI3YmUtNTNiYTU4MzZjYTg1L2F1ZGlvZGVza3JpcHRpb24",
+                            "urlId": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vZDQwM2IzZjEtMmRiZC00YmI4LWI3YmUtNTNiYTU4MzZjYTg1L2F1ZGlvZGVza3JpcHRpb24",
+                            "title": "Faltenfrei - Hörfassung",
+                            "href": "https://api.ardmediathek.de/page-gateway/teasers/ard/items/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vZDQwM2IzZjEtMmRiZC00YmI4LWI3YmUtNTNiYTU4MzZjYTg1L2F1ZGlvZGVza3JpcHRpb24",
+                            "type": "application/vnd.ard.teaser+json",
+                            "partner": "ard"
+                        },
+                        "target": {
+                            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vZDQwM2IzZjEtMmRiZC00YmI4LWI3YmUtNTNiYTU4MzZjYTg1L2F1ZGlvZGVza3JpcHRpb24",
+                            "urlId": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vZDQwM2IzZjEtMmRiZC00YmI4LWI3YmUtNTNiYTU4MzZjYTg1L2F1ZGlvZGVza3JpcHRpb24",
+                            "title": "Faltenfrei - Hörfassung",
+                            "href": "https://api.ardmediathek.de/page-gateway/pages/ard/item/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vZDQwM2IzZjEtMmRiZC00YmI4LWI3YmUtNTNiYTU4MzZjYTg1L2F1ZGlvZGVza3JpcHRpb24?devicetype=pc&embedded=true",
+                            "type": "application/vnd.ard.page+json",
+                            "partner": "ard"
+                        }
+                    },
+                    "shortTitle": "Faltenfrei - Hörfassung",
+                    "show": {
+                        "id": "crid://daserste.de/filmmittwoch im ersten",
+                        "coremediaId": 10318946,
+                        "title": "FilmMittwoch im Ersten",
+                        "publisher": {
+                            "name": "Das Erste",
+                            "logo": {
+                                "title": "Logo Das Erste",
+                                "alt": "Logo Das Erste",
+                                "producerName": "Das Erste",
+                                "src": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2213972a8d101de1/16x9?w={width}&f=",
+                                "aspectRatio": "16x9"
+                            },
+                            "publisherType": "TV",
+                            "partner": "das_erste",
+                            "id": "b3JnYW5pemF0aW9uX0RhcyBFcnN0ZQ"
+                        },
+                        "self": null,
+                        "images": {
+                            "16x9": {
+                                "title": "FilmMittwoch im Ersten",
+                                "alt": "Bild zur Sendung FilmMittwoch im Ersten",
+                                "producerName": "Das Erste",
+                                "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:f2a1910d6674d399?w={width}&f=",
+                                "aspectRatio": "16x9"
+                            }
+                        },
+                        "shortSynopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "synopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "longSynopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "modificationDate": null,
+                        "assetSource": "TwilightFeeder",
+                        "groupingType": "SHOW",
+                        "homepage": {
+                            "id": null,
+                            "title": "FilmMittwoch im Ersten",
+                            "href": "https://www.daserste.de/unterhaltung/film/filmmittwoch-im-ersten/index.html",
+                            "type": null
+                        },
+                        "hasSeasons": false,
+                        "seriesDetail": null,
+                        "isChildContent": false
+                    },
+                    "subtitled": true,
+                    "titleVisible": true,
+                    "type": "ondemand"
+                },
+                {
+                    "availableTo": "2022-02-10T22:59:00Z",
+                    "broadcastedOn": "2021-11-10T19:15:00Z",
+                    "decor": "none",
+                    "duration": 5336,
+                    "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vODlkOGNiYzYtMGE0NC00ZTIxLTlhMmYtZjk0ZDVmMGJiYzcz",
+                    "images": {
+                        "aspect16x9": {
+                            "alt": "Die Reise geht los - von links: Maria (Esel Lore), Felix (Yoran Leicher) und Marcel (Mehdi Nebbou). Weiteres Bildmaterial finden Sie unter www.br-foto.de.",
+                            "producerName": "BR/Hager Moss Film GmbH",
+                            "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:a5667bad4242333a?w={width}&f=",
+                            "title": "12 Tage Sommer - "
+                        }
+                    },
+                    "isChildContent": false,
+                    "longTitle": "12 Tage Sommer",
+                    "maturityContentRating": "NONE",
+                    "mediumTitle": "12 Tage Sommer",
+                    "personalized": false,
+                    "playtime": null,
+                    "publicationService": {
+                        "name": "Das Erste",
+                        "logo": {
+                            "title": "Logo Das Erste",
+                            "alt": "Logo Das Erste",
+                            "producerName": "Das Erste",
+                            "src": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2213972a8d101de1/16x9?w={width}&f=",
+                            "aspectRatio": "16x9"
+                        },
+                        "publisherType": "TV",
+                        "partner": "das_erste",
+                        "id": "b3JnYW5pemF0aW9uX0RhcyBFcnN0ZQ"
+                    },
+                    "links": {
+                        "self": {
+                            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vODlkOGNiYzYtMGE0NC00ZTIxLTlhMmYtZjk0ZDVmMGJiYzcz",
+                            "urlId": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vODlkOGNiYzYtMGE0NC00ZTIxLTlhMmYtZjk0ZDVmMGJiYzcz",
+                            "title": "12 Tage Sommer",
+                            "href": "https://api.ardmediathek.de/page-gateway/teasers/ard/items/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vODlkOGNiYzYtMGE0NC00ZTIxLTlhMmYtZjk0ZDVmMGJiYzcz",
+                            "type": "application/vnd.ard.teaser+json",
+                            "partner": "ard"
+                        },
+                        "target": {
+                            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vODlkOGNiYzYtMGE0NC00ZTIxLTlhMmYtZjk0ZDVmMGJiYzcz",
+                            "urlId": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vODlkOGNiYzYtMGE0NC00ZTIxLTlhMmYtZjk0ZDVmMGJiYzcz",
+                            "title": "12 Tage Sommer",
+                            "href": "https://api.ardmediathek.de/page-gateway/pages/ard/item/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vODlkOGNiYzYtMGE0NC00ZTIxLTlhMmYtZjk0ZDVmMGJiYzcz?devicetype=pc&embedded=true",
+                            "type": "application/vnd.ard.page+json",
+                            "partner": "ard"
+                        }
+                    },
+                    "shortTitle": "12 Tage Sommer",
+                    "show": {
+                        "id": "crid://daserste.de/filmmittwoch im ersten",
+                        "coremediaId": 10318946,
+                        "title": "FilmMittwoch im Ersten",
+                        "publisher": {
+                            "name": "Das Erste",
+                            "logo": {
+                                "title": "Logo Das Erste",
+                                "alt": "Logo Das Erste",
+                                "producerName": "Das Erste",
+                                "src": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2213972a8d101de1/16x9?w={width}&f=",
+                                "aspectRatio": "16x9"
+                            },
+                            "publisherType": "TV",
+                            "partner": "das_erste",
+                            "id": "b3JnYW5pemF0aW9uX0RhcyBFcnN0ZQ"
+                        },
+                        "self": null,
+                        "images": {
+                            "16x9": {
+                                "title": "FilmMittwoch im Ersten",
+                                "alt": "Bild zur Sendung FilmMittwoch im Ersten",
+                                "producerName": "Das Erste",
+                                "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:f2a1910d6674d399?w={width}&f=",
+                                "aspectRatio": "16x9"
+                            }
+                        },
+                        "shortSynopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "synopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "longSynopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "modificationDate": null,
+                        "assetSource": "TwilightFeeder",
+                        "groupingType": "SHOW",
+                        "homepage": {
+                            "id": null,
+                            "title": "FilmMittwoch im Ersten",
+                            "href": "https://www.daserste.de/unterhaltung/film/filmmittwoch-im-ersten/index.html",
+                            "type": null
+                        },
+                        "hasSeasons": false,
+                        "seriesDetail": null,
+                        "isChildContent": false
+                    },
+                    "subtitled": true,
+                    "titleVisible": true,
+                    "type": "ondemand"
+                },
+                {
+                    "availableTo": "2022-02-10T22:59:00Z",
+                    "broadcastedOn": "2021-11-10T19:15:00Z",
+                    "decor": "none",
+                    "duration": 5336,
+                    "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vODlkOGNiYzYtMGE0NC00ZTIxLTlhMmYtZjk0ZDVmMGJiYzczL2F1ZGlvZGVza3JpcHRpb24",
+                    "images": {
+                        "aspect16x9": {
+                            "alt": "Die Reise geht los - von links: Maria (Esel Lore), Felix (Yoran Leicher) und Marcel (Mehdi Nebbou). Weiteres Bildmaterial finden Sie unter www.br-foto.de.",
+                            "producerName": "BR/Hager Moss Film GmbH",
+                            "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:a5667bad4242333a?w={width}&f=",
+                            "title": "12 Tage Sommer - "
+                        }
+                    },
+                    "isChildContent": false,
+                    "longTitle": "12 Tage Sommer - Hörfassung",
+                    "maturityContentRating": "NONE",
+                    "mediumTitle": "12 Tage Sommer - Hörfassung",
+                    "personalized": false,
+                    "playtime": null,
+                    "publicationService": {
+                        "name": "Das Erste",
+                        "logo": {
+                            "title": "Logo Das Erste",
+                            "alt": "Logo Das Erste",
+                            "producerName": "Das Erste",
+                            "src": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2213972a8d101de1/16x9?w={width}&f=",
+                            "aspectRatio": "16x9"
+                        },
+                        "publisherType": "TV",
+                        "partner": "das_erste",
+                        "id": "b3JnYW5pemF0aW9uX0RhcyBFcnN0ZQ"
+                    },
+                    "links": {
+                        "self": {
+                            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vODlkOGNiYzYtMGE0NC00ZTIxLTlhMmYtZjk0ZDVmMGJiYzczL2F1ZGlvZGVza3JpcHRpb24",
+                            "urlId": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vODlkOGNiYzYtMGE0NC00ZTIxLTlhMmYtZjk0ZDVmMGJiYzczL2F1ZGlvZGVza3JpcHRpb24",
+                            "title": "12 Tage Sommer - Hörfassung",
+                            "href": "https://api.ardmediathek.de/page-gateway/teasers/ard/items/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vODlkOGNiYzYtMGE0NC00ZTIxLTlhMmYtZjk0ZDVmMGJiYzczL2F1ZGlvZGVza3JpcHRpb24",
+                            "type": "application/vnd.ard.teaser+json",
+                            "partner": "ard"
+                        },
+                        "target": {
+                            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vODlkOGNiYzYtMGE0NC00ZTIxLTlhMmYtZjk0ZDVmMGJiYzczL2F1ZGlvZGVza3JpcHRpb24",
+                            "urlId": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vODlkOGNiYzYtMGE0NC00ZTIxLTlhMmYtZjk0ZDVmMGJiYzczL2F1ZGlvZGVza3JpcHRpb24",
+                            "title": "12 Tage Sommer - Hörfassung",
+                            "href": "https://api.ardmediathek.de/page-gateway/pages/ard/item/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vODlkOGNiYzYtMGE0NC00ZTIxLTlhMmYtZjk0ZDVmMGJiYzczL2F1ZGlvZGVza3JpcHRpb24?devicetype=pc&embedded=true",
+                            "type": "application/vnd.ard.page+json",
+                            "partner": "ard"
+                        }
+                    },
+                    "shortTitle": "12 Tage Sommer - Hörfassung",
+                    "show": {
+                        "id": "crid://daserste.de/filmmittwoch im ersten",
+                        "coremediaId": 10318946,
+                        "title": "FilmMittwoch im Ersten",
+                        "publisher": {
+                            "name": "Das Erste",
+                            "logo": {
+                                "title": "Logo Das Erste",
+                                "alt": "Logo Das Erste",
+                                "producerName": "Das Erste",
+                                "src": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2213972a8d101de1/16x9?w={width}&f=",
+                                "aspectRatio": "16x9"
+                            },
+                            "publisherType": "TV",
+                            "partner": "das_erste",
+                            "id": "b3JnYW5pemF0aW9uX0RhcyBFcnN0ZQ"
+                        },
+                        "self": null,
+                        "images": {
+                            "16x9": {
+                                "title": "FilmMittwoch im Ersten",
+                                "alt": "Bild zur Sendung FilmMittwoch im Ersten",
+                                "producerName": "Das Erste",
+                                "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:f2a1910d6674d399?w={width}&f=",
+                                "aspectRatio": "16x9"
+                            }
+                        },
+                        "shortSynopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "synopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "longSynopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "modificationDate": null,
+                        "assetSource": "TwilightFeeder",
+                        "groupingType": "SHOW",
+                        "homepage": {
+                            "id": null,
+                            "title": "FilmMittwoch im Ersten",
+                            "href": "https://www.daserste.de/unterhaltung/film/filmmittwoch-im-ersten/index.html",
+                            "type": null
+                        },
+                        "hasSeasons": false,
+                        "seriesDetail": null,
+                        "isChildContent": false
+                    },
+                    "subtitled": true,
+                    "titleVisible": true,
+                    "type": "ondemand"
+                },
+                {
+                    "availableTo": "2022-02-03T22:59:00Z",
+                    "broadcastedOn": "2021-11-03T19:15:00Z",
+                    "decor": "none",
+                    "duration": 5336,
+                    "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMmI2ZmUzMGItNzE5MC00NDcxLTk2MDEtOTI3M2Q2NDBmNGUw",
+                    "images": {
+                        "aspect16x9": {
+                            "alt": "Cynthia Bonsant (Heike Makatsch) und die Brille der aktuellen Act App.",
+                            "producerName": "WDR",
+                            "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:be69b5c574462297?w={width}&f=",
+                            "title": "Zero - "
+                        }
+                    },
+                    "isChildContent": false,
+                    "longTitle": "Zero",
+                    "maturityContentRating": "NONE",
+                    "mediumTitle": "Zero",
+                    "personalized": false,
+                    "playtime": null,
+                    "publicationService": {
+                        "name": "Das Erste",
+                        "logo": {
+                            "title": "Logo Das Erste",
+                            "alt": "Logo Das Erste",
+                            "producerName": "Das Erste",
+                            "src": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2213972a8d101de1/16x9?w={width}&f=",
+                            "aspectRatio": "16x9"
+                        },
+                        "publisherType": "TV",
+                        "partner": "das_erste",
+                        "id": "b3JnYW5pemF0aW9uX0RhcyBFcnN0ZQ"
+                    },
+                    "links": {
+                        "self": {
+                            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMmI2ZmUzMGItNzE5MC00NDcxLTk2MDEtOTI3M2Q2NDBmNGUw",
+                            "urlId": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMmI2ZmUzMGItNzE5MC00NDcxLTk2MDEtOTI3M2Q2NDBmNGUw",
+                            "title": "Zero",
+                            "href": "https://api.ardmediathek.de/page-gateway/teasers/ard/items/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMmI2ZmUzMGItNzE5MC00NDcxLTk2MDEtOTI3M2Q2NDBmNGUw",
+                            "type": "application/vnd.ard.teaser+json",
+                            "partner": "ard"
+                        },
+                        "target": {
+                            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMmI2ZmUzMGItNzE5MC00NDcxLTk2MDEtOTI3M2Q2NDBmNGUw",
+                            "urlId": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMmI2ZmUzMGItNzE5MC00NDcxLTk2MDEtOTI3M2Q2NDBmNGUw",
+                            "title": "Zero",
+                            "href": "https://api.ardmediathek.de/page-gateway/pages/ard/item/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMmI2ZmUzMGItNzE5MC00NDcxLTk2MDEtOTI3M2Q2NDBmNGUw?devicetype=pc&embedded=true",
+                            "type": "application/vnd.ard.page+json",
+                            "partner": "ard"
+                        }
+                    },
+                    "shortTitle": "Zero",
+                    "show": {
+                        "id": "crid://daserste.de/filmmittwoch im ersten",
+                        "coremediaId": 10318946,
+                        "title": "FilmMittwoch im Ersten",
+                        "publisher": {
+                            "name": "Das Erste",
+                            "logo": {
+                                "title": "Logo Das Erste",
+                                "alt": "Logo Das Erste",
+                                "producerName": "Das Erste",
+                                "src": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2213972a8d101de1/16x9?w={width}&f=",
+                                "aspectRatio": "16x9"
+                            },
+                            "publisherType": "TV",
+                            "partner": "das_erste",
+                            "id": "b3JnYW5pemF0aW9uX0RhcyBFcnN0ZQ"
+                        },
+                        "self": null,
+                        "images": {
+                            "16x9": {
+                                "title": "FilmMittwoch im Ersten",
+                                "alt": "Bild zur Sendung FilmMittwoch im Ersten",
+                                "producerName": "Das Erste",
+                                "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:f2a1910d6674d399?w={width}&f=",
+                                "aspectRatio": "16x9"
+                            }
+                        },
+                        "shortSynopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "synopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "longSynopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "modificationDate": null,
+                        "assetSource": "TwilightFeeder",
+                        "groupingType": "SHOW",
+                        "homepage": {
+                            "id": null,
+                            "title": "FilmMittwoch im Ersten",
+                            "href": "https://www.daserste.de/unterhaltung/film/filmmittwoch-im-ersten/index.html",
+                            "type": null
+                        },
+                        "hasSeasons": false,
+                        "seriesDetail": null,
+                        "isChildContent": false
+                    },
+                    "subtitled": true,
+                    "titleVisible": true,
+                    "type": "ondemand"
+                },
+                {
+                    "availableTo": "2022-02-03T22:59:00Z",
+                    "broadcastedOn": "2021-11-03T19:15:00Z",
+                    "decor": "none",
+                    "duration": 5336,
+                    "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMzI2NmRiMzItOGExYy00Njc2LTkxZDAtZGJjYjZkMGU1NzA3",
+                    "images": {
+                        "aspect16x9": {
+                            "alt": "Cynthia Bonsant (Heike Makatsch) und die Brille der aktuellen Act App.",
+                            "producerName": "WDR",
+                            "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:36850cf326f52f2e?w={width}&f=",
+                            "title": "Zero (Hörfassung) - "
+                        }
+                    },
+                    "isChildContent": false,
+                    "longTitle": "Zero (Hörfassung)",
+                    "maturityContentRating": "NONE",
+                    "mediumTitle": "Zero (Hörfassung)",
+                    "personalized": false,
+                    "playtime": null,
+                    "publicationService": {
+                        "name": "Das Erste",
+                        "logo": {
+                            "title": "Logo Das Erste",
+                            "alt": "Logo Das Erste",
+                            "producerName": "Das Erste",
+                            "src": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2213972a8d101de1/16x9?w={width}&f=",
+                            "aspectRatio": "16x9"
+                        },
+                        "publisherType": "TV",
+                        "partner": "das_erste",
+                        "id": "b3JnYW5pemF0aW9uX0RhcyBFcnN0ZQ"
+                    },
+                    "links": {
+                        "self": {
+                            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMzI2NmRiMzItOGExYy00Njc2LTkxZDAtZGJjYjZkMGU1NzA3",
+                            "urlId": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMzI2NmRiMzItOGExYy00Njc2LTkxZDAtZGJjYjZkMGU1NzA3",
+                            "title": "Zero (Hörfassung)",
+                            "href": "https://api.ardmediathek.de/page-gateway/teasers/ard/items/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMzI2NmRiMzItOGExYy00Njc2LTkxZDAtZGJjYjZkMGU1NzA3",
+                            "type": "application/vnd.ard.teaser+json",
+                            "partner": "ard"
+                        },
+                        "target": {
+                            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMzI2NmRiMzItOGExYy00Njc2LTkxZDAtZGJjYjZkMGU1NzA3",
+                            "urlId": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMzI2NmRiMzItOGExYy00Njc2LTkxZDAtZGJjYjZkMGU1NzA3",
+                            "title": "Zero (Hörfassung)",
+                            "href": "https://api.ardmediathek.de/page-gateway/pages/ard/item/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMzI2NmRiMzItOGExYy00Njc2LTkxZDAtZGJjYjZkMGU1NzA3?devicetype=pc&embedded=true",
+                            "type": "application/vnd.ard.page+json",
+                            "partner": "ard"
+                        }
+                    },
+                    "shortTitle": "Zero (Hörfassung)",
+                    "show": {
+                        "id": "crid://daserste.de/filmmittwoch im ersten",
+                        "coremediaId": 10318946,
+                        "title": "FilmMittwoch im Ersten",
+                        "publisher": {
+                            "name": "Das Erste",
+                            "logo": {
+                                "title": "Logo Das Erste",
+                                "alt": "Logo Das Erste",
+                                "producerName": "Das Erste",
+                                "src": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2213972a8d101de1/16x9?w={width}&f=",
+                                "aspectRatio": "16x9"
+                            },
+                            "publisherType": "TV",
+                            "partner": "das_erste",
+                            "id": "b3JnYW5pemF0aW9uX0RhcyBFcnN0ZQ"
+                        },
+                        "self": null,
+                        "images": {
+                            "16x9": {
+                                "title": "FilmMittwoch im Ersten",
+                                "alt": "Bild zur Sendung FilmMittwoch im Ersten",
+                                "producerName": "Das Erste",
+                                "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:f2a1910d6674d399?w={width}&f=",
+                                "aspectRatio": "16x9"
+                            }
+                        },
+                        "shortSynopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "synopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "longSynopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "modificationDate": null,
+                        "assetSource": "TwilightFeeder",
+                        "groupingType": "SHOW",
+                        "homepage": {
+                            "id": null,
+                            "title": "FilmMittwoch im Ersten",
+                            "href": "https://www.daserste.de/unterhaltung/film/filmmittwoch-im-ersten/index.html",
+                            "type": null
+                        },
+                        "hasSeasons": false,
+                        "seriesDetail": null,
+                        "isChildContent": false
+                    },
+                    "subtitled": false,
+                    "titleVisible": true,
+                    "type": "ondemand"
+                },
+                {
+                    "availableTo": "2022-04-20T21:59:00Z",
+                    "broadcastedOn": "2021-10-20T18:15:00Z",
+                    "decor": "none",
+                    "duration": 5348,
+                    "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vYzk3OWQxYTctM2Q2NC00NWI4LTljOWQtMDIyYWRlM2Q2MTI5",
+                    "images": {
+                        "aspect16x9": {
+                            "alt": "Malte Klingsor (Ulrich Matthes, li.) und Patrick Laubenstein (Justus von Dohnányi).",
+                            "producerName": "keine Angabe",
+                            "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:dbba7a5ecb85f9bc?w={width}&f=",
+                            "title": "Freunde - "
+                        }
+                    },
+                    "isChildContent": false,
+                    "longTitle": "Freunde",
+                    "maturityContentRating": "NONE",
+                    "mediumTitle": "Freunde",
+                    "personalized": false,
+                    "playtime": null,
+                    "publicationService": {
+                        "name": "Das Erste",
+                        "logo": {
+                            "title": "Logo Das Erste",
+                            "alt": "Logo Das Erste",
+                            "producerName": "Das Erste",
+                            "src": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2213972a8d101de1/16x9?w={width}&f=",
+                            "aspectRatio": "16x9"
+                        },
+                        "publisherType": "TV",
+                        "partner": "das_erste",
+                        "id": "b3JnYW5pemF0aW9uX0RhcyBFcnN0ZQ"
+                    },
+                    "links": {
+                        "self": {
+                            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vYzk3OWQxYTctM2Q2NC00NWI4LTljOWQtMDIyYWRlM2Q2MTI5",
+                            "urlId": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vYzk3OWQxYTctM2Q2NC00NWI4LTljOWQtMDIyYWRlM2Q2MTI5",
+                            "title": "Freunde",
+                            "href": "https://api.ardmediathek.de/page-gateway/teasers/ard/items/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vYzk3OWQxYTctM2Q2NC00NWI4LTljOWQtMDIyYWRlM2Q2MTI5",
+                            "type": "application/vnd.ard.teaser+json",
+                            "partner": "ard"
+                        },
+                        "target": {
+                            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vYzk3OWQxYTctM2Q2NC00NWI4LTljOWQtMDIyYWRlM2Q2MTI5",
+                            "urlId": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vYzk3OWQxYTctM2Q2NC00NWI4LTljOWQtMDIyYWRlM2Q2MTI5",
+                            "title": "Freunde",
+                            "href": "https://api.ardmediathek.de/page-gateway/pages/ard/item/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vYzk3OWQxYTctM2Q2NC00NWI4LTljOWQtMDIyYWRlM2Q2MTI5?devicetype=pc&embedded=true",
+                            "type": "application/vnd.ard.page+json",
+                            "partner": "ard"
+                        }
+                    },
+                    "shortTitle": "Freunde",
+                    "show": {
+                        "id": "crid://daserste.de/filmmittwoch im ersten",
+                        "coremediaId": 10318946,
+                        "title": "FilmMittwoch im Ersten",
+                        "publisher": {
+                            "name": "Das Erste",
+                            "logo": {
+                                "title": "Logo Das Erste",
+                                "alt": "Logo Das Erste",
+                                "producerName": "Das Erste",
+                                "src": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2213972a8d101de1/16x9?w={width}&f=",
+                                "aspectRatio": "16x9"
+                            },
+                            "publisherType": "TV",
+                            "partner": "das_erste",
+                            "id": "b3JnYW5pemF0aW9uX0RhcyBFcnN0ZQ"
+                        },
+                        "self": null,
+                        "images": {
+                            "16x9": {
+                                "title": "FilmMittwoch im Ersten",
+                                "alt": "Bild zur Sendung FilmMittwoch im Ersten",
+                                "producerName": "Das Erste",
+                                "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:f2a1910d6674d399?w={width}&f=",
+                                "aspectRatio": "16x9"
+                            }
+                        },
+                        "shortSynopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "synopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "longSynopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "modificationDate": null,
+                        "assetSource": "TwilightFeeder",
+                        "groupingType": "SHOW",
+                        "homepage": {
+                            "id": null,
+                            "title": "FilmMittwoch im Ersten",
+                            "href": "https://www.daserste.de/unterhaltung/film/filmmittwoch-im-ersten/index.html",
+                            "type": null
+                        },
+                        "hasSeasons": false,
+                        "seriesDetail": null,
+                        "isChildContent": false
+                    },
+                    "subtitled": true,
+                    "titleVisible": true,
+                    "type": "ondemand"
+                },
+                {
+                    "availableTo": "2022-04-20T21:59:00Z",
+                    "broadcastedOn": "2021-10-20T18:15:00Z",
+                    "decor": "none",
+                    "duration": 5348,
+                    "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMTcyZDc3ZDktN2Q0My00NTIyLTljNDEtNDA5YzA3OWYzZTBi",
+                    "images": {
+                        "aspect16x9": {
+                            "alt": "Malte Klingsor (Ulrich Matthes, li.) und Patrick Laubenstein (Justus von Dohnányi).",
+                            "producerName": "keine Angabe",
+                            "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:9a3b18c28863b142?w={width}&f=",
+                            "title": "Freunde (Hörfassung) - "
+                        }
+                    },
+                    "isChildContent": false,
+                    "longTitle": "Freunde (Hörfassung)",
+                    "maturityContentRating": "NONE",
+                    "mediumTitle": "Freunde (Hörfassung)",
+                    "personalized": false,
+                    "playtime": null,
+                    "publicationService": {
+                        "name": "Das Erste",
+                        "logo": {
+                            "title": "Logo Das Erste",
+                            "alt": "Logo Das Erste",
+                            "producerName": "Das Erste",
+                            "src": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2213972a8d101de1/16x9?w={width}&f=",
+                            "aspectRatio": "16x9"
+                        },
+                        "publisherType": "TV",
+                        "partner": "das_erste",
+                        "id": "b3JnYW5pemF0aW9uX0RhcyBFcnN0ZQ"
+                    },
+                    "links": {
+                        "self": {
+                            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMTcyZDc3ZDktN2Q0My00NTIyLTljNDEtNDA5YzA3OWYzZTBi",
+                            "urlId": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMTcyZDc3ZDktN2Q0My00NTIyLTljNDEtNDA5YzA3OWYzZTBi",
+                            "title": "Freunde (Hörfassung)",
+                            "href": "https://api.ardmediathek.de/page-gateway/teasers/ard/items/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMTcyZDc3ZDktN2Q0My00NTIyLTljNDEtNDA5YzA3OWYzZTBi",
+                            "type": "application/vnd.ard.teaser+json",
+                            "partner": "ard"
+                        },
+                        "target": {
+                            "id": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMTcyZDc3ZDktN2Q0My00NTIyLTljNDEtNDA5YzA3OWYzZTBi",
+                            "urlId": "Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMTcyZDc3ZDktN2Q0My00NTIyLTljNDEtNDA5YzA3OWYzZTBi",
+                            "title": "Freunde (Hörfassung)",
+                            "href": "https://api.ardmediathek.de/page-gateway/pages/ard/item/Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMTcyZDc3ZDktN2Q0My00NTIyLTljNDEtNDA5YzA3OWYzZTBi?devicetype=pc&embedded=true",
+                            "type": "application/vnd.ard.page+json",
+                            "partner": "ard"
+                        }
+                    },
+                    "shortTitle": "Freunde (Hörfassung)",
+                    "show": {
+                        "id": "crid://daserste.de/filmmittwoch im ersten",
+                        "coremediaId": 10318946,
+                        "title": "FilmMittwoch im Ersten",
+                        "publisher": {
+                            "name": "Das Erste",
+                            "logo": {
+                                "title": "Logo Das Erste",
+                                "alt": "Logo Das Erste",
+                                "producerName": "Das Erste",
+                                "src": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2213972a8d101de1/16x9?w={width}&f=",
+                                "aspectRatio": "16x9"
+                            },
+                            "publisherType": "TV",
+                            "partner": "das_erste",
+                            "id": "b3JnYW5pemF0aW9uX0RhcyBFcnN0ZQ"
+                        },
+                        "self": null,
+                        "images": {
+                            "16x9": {
+                                "title": "FilmMittwoch im Ersten",
+                                "alt": "Bild zur Sendung FilmMittwoch im Ersten",
+                                "producerName": "Das Erste",
+                                "src": "https://api.ardmediathek.de/image-service/images/urn:ard:image:f2a1910d6674d399?w={width}&f=",
+                                "aspectRatio": "16x9"
+                            }
+                        },
+                        "shortSynopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "synopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "longSynopsis": "Besondere Filme im Ersten. Die Videos zum FilmMittwoch sehen Sie hier.",
+                        "modificationDate": null,
+                        "assetSource": "TwilightFeeder",
+                        "groupingType": "SHOW",
+                        "homepage": {
+                            "id": null,
+                            "title": "FilmMittwoch im Ersten",
+                            "href": "https://www.daserste.de/unterhaltung/film/filmmittwoch-im-ersten/index.html",
+                            "type": null
+                        },
+                        "hasSeasons": false,
+                        "seriesDetail": null,
+                        "isChildContent": false
+                    },
+                    "subtitled": false,
+                    "titleVisible": true,
+                    "type": "ondemand"
+                }
+            ],
+            "title": "FilmMittwoch im Ersten",
+            "titleVisible": true,
+            "type": "gridlist"
+        }
+    ]
 }
