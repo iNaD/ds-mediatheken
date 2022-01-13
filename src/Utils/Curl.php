@@ -2,6 +2,7 @@
 
 namespace TheiNaD\DSMediatheken\Utils;
 
+use CurlHandle;
 use RuntimeException;
 
 /**
@@ -70,9 +71,7 @@ class Curl
     }
 
     /**
-     * @param resource $curl
-     *
-     * @noinspection CurlSslServerSpoofingInspection
+     * @param CurlHandle|resource $curl
      */
     protected function setDefaults($curl)
     {
@@ -80,13 +79,11 @@ class Curl
         curl_setopt($curl, CURLOPT_USERAGENT, DOWNLOAD_STATION_USER_AGENT);
         curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true);
         curl_setopt($curl, CURLOPT_FAILONERROR, true);
-        curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
-        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
     }
 
     /**
-     * @param resource $curl
-     * @param array    $options
+     * @param CurlHandle|resource $curl
+     * @param array               $options
      */
     protected function applyOptions($curl, $options)
     {
