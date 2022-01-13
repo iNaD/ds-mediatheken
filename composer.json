@@ -34,7 +34,7 @@
     "scripts": {
         "serve": "php -S localhost:8080 -t ./frontend/public",
         "test": "phpunit",
-        "lint": "phpcs",
+        "lint": "phpcs -p",
         "autofix": "phpcbf"
     },
     "scripts-descriptions": {
