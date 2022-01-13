@@ -45,7 +45,7 @@ include_once __DIR__ . '/Mediatheken/DreiSat.php';
  *
  * @author    Daniel Gehn <me@theinad.com>
  * @version   0.6.2
- * @copyright 2017-2020 Daniel Gehn
+ * @copyright 2017-2022 Daniel Gehn
  * @license   http://opensource.org/licenses/MIT Licensed under MIT License
  */
 class SynoFileHostingMediathek

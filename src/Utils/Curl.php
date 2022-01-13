@@ -8,7 +8,7 @@ use RuntimeException;
  * Simple Curl wrapper to make things easier and mockable.
  *
  * @author    Daniel Gehn <me@theinad.com>
- * @copyright 2018-2020 Daniel Gehn
+ * @copyright 2018-2022 Daniel Gehn
  * @license   http://opensource.org/licenses/MIT Licensed under MIT License
  */
 class Curl
