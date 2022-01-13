@@ -55,7 +55,7 @@ class Curl
 
         $result = curl_exec($curl);
         if (!$result) {
-            throw new RuntimeException(sprintf('Request failed (%s): %s', curl_errno($curl), curl_error($curl)));
+            throw new RuntimeException(sprintf('Request failed for URL %s (%s): %s', $url, curl_errno($curl), curl_error($curl)));
         }
 
         curl_close($curl);

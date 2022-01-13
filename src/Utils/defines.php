@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Setting up defines for use outside of the Download Station environment.
  */
