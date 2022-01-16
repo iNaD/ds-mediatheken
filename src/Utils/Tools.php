@@ -269,14 +269,4 @@ class Tools
 
         return $protocol . ':' . $fileUrl;
     }
-
-    /**
-     * @param string $filename
-     *
-     * @return false|string
-     */
-    public function readGraphqlQuery($filename)
-    {
-        return file_get_contents(__DIR__ . '/../graphql/' . $filename);
-    }
 }

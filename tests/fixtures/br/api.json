@@ -1,0 +1,347 @@
+[
+    {
+        "data": {
+            "viewer": {
+                "id": "Viewer:__VIEWER",
+                "__typename": "Viewer"
+            },
+            "video": {
+                "id": "av:61a608e395643a000747383e",
+                "title": "Der Bulle von Tölz: Der Mord im Kloster",
+                "kicker": "Krimi mit Ottfried Fischer",
+                "slug": "krimi-mit-ottfried-fischer-der-bulle-von-toelz-der-mord-im-kloster",
+                "shortDescription": "Im Kloster St. Ehrentraud bei Bad Tölz ist eine junge Nonne mit einer mittelalterlichen Droge vergiftet worden. Kurze Zeit später wird eine weitere Nonne mit aufgeschnittenen Pulsadern aufgefunden. Kommissar Benno Berghammer und seine Kollegin Sabrina Lorenz ermitteln ...",
+                "description": "Bei der Mordkommission der Kripo Tölz geht eine anonyme Mitteilung ein, im Kloster St. Ehrentraud, einem alten, strengen Nonnenorden, wäre eine junge Nonne unter merkwürdigen Umständen verstorben. Kommissar Benno Berghammer will ermitteln, doch die Priorin Mutter Maria Ancilla kann einen gültigen Totenschein vorlegen, auch Prälat Hinter will keine Hilfe sein, und Staatsanwalt Lenz untersagt sogar sehr energisch alle weiteren Ermittlungen.\n\nBenno aber lässt nun erst recht nicht locker und findet den Verfasser der anonymen Nachricht, den alten Hausarzt des Klosters. Dieser bestätigt nun auf einem neuen Totenschein die \"unnatürliche Todesursache\". Daraufhin können sich auch das Kloster, Prälat Hinter und der sehr verärgerte Staatsanwalt Lenz nicht mehr gegen die polizeilichen Ermittlungen stellen. Die eilends in der Gruft eingemauerte Leiche wird exhumiert und die Gerichtsmedizin entdeckt schnell, dass das Opfer mittels seltener, mittelalterlichen Drogen vergiftet wurde. Das Kloster unterliegt aber strengen Klausurregeln, weshalb jetzt natürlich die Nonnen des Klosters unter besonderen Verdacht geraten. Weil aber Männern generell jeglicher Zutritt verwehrt ist, wird nun von Staatsanwalt, Benno, Prälat Hinter und der Priorin entschieden, dass Sabrina Lorenz innerhalb des Klosters die Ermittlungen aufnimmt.\n\nDer Kommissar ist indessen ständiger Kostgänger am Mittagstisch des Prälaten, da Resi dort als Pfarrersköchin aushilft. Dort lernt er auch die junge Pastoralreferentin Maria Mittendorfer kennen und schätzen. Bald schon stellt sich heraus, dass Maria einige Jahre als Novizin im Kloster St. Ehrentraud war und mit dem Opfer, der Alleinerbin eines respektablen Vermögens, befreundet war.\n\nBei Sabrinas Ermittlungen im Kloster gerät die alte, merkwürdige Apothekerin des Klosters, Frau Humiliata, ins Blickfeld. Dann aber wird eine junge Nonne vermisst: Maria Fidelis, die, wie sich herausstellt, eine sehr persönliche Beziehung zum Opfer gehabt haben soll. Ist also ein Beziehungsdrama zwischen zwei Nonnen die Lösung des Falls? Als man bald darauf die gesuchte Maria Fidelis mit aufgeschnittenen Pulsadern auf dem Speicher des Klosters findet, scheint der Fall gelöst und wird von Staatsanwaltschaft und Kirche schnell und bereitwillig zu den Akten gelegt.\n\nDoch Benno und Sabrina sind skeptisch und ermitteln weiter: Was könnte ein Motiv für den Mord an dieser jungen Nonne sein und welche der Nonnen, neben der Apothekerin, hat die nötigen Sachkenntnisse für diesen Giftmord?\n\nMaria Mittendorfer hat da eine Idee: Sie und Sabrina wollen nachts heimlich ins Kloster eindringen und weiter ermitteln ...",
+                "status": {
+                    "id": "av:http://ard.de/ontologies/lifeCycle#published",
+                    "__typename": "Status"
+                },
+                "downloadable": false,
+                "bookmarked": false,
+                "__typename": "Programme",
+                "reactions": {
+                    "dislikes": 4,
+                    "__typename": "ClipReactions",
+                    "likes": 23
+                },
+                "myInteractions": {
+                    "id": "u:61e4602da72f2200095dbae4",
+                    "reaction": null,
+                    "__typename": "ContentInteraction"
+                },
+                "embeddable": false,
+                "embedCode": "<iframe width=\"560\" height=\"315\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen src=\"https://www.br.de/mediathek/embed/av:61a608e395643a000747383e?autoplay=false&muted=false\"></iframe>",
+                "canonicalUrl": "https://www.br.de/mediathek/video/krimi-mit-ottfried-fischer-der-bulle-von-toelz-der-mord-im-kloster-av:61a608e395643a000747383e",
+                "videoFiles": {
+                    "edges": [
+                        {
+                            "node": {
+                                "id": "av:61e333688c265100085ee407",
+                                "publicLocation": "https://cdn-storage.br.de/geo/MUJIuUOVBwQIbtC2uKJDM6OhuLnC_2rH_71S/_-iS/_2rg5-rc5U1S/159b2b96-5aa5-4453-9800-a4d554c54092_X.mp4",
+                                "videoProfile": {
+                                    "id": "av:http://ard.de/ontologies/audioVideo#VideoProfile_HD",
+                                    "height": 720,
+                                    "__typename": "VideoProfile"
+                                },
+                                "__typename": "VideoFile",
+                                "subtitles": {
+                                    "edges": [
+                                        {
+                                            "node": {
+                                                "timedTextFiles": {
+                                                    "edges": [
+                                                        {
+                                                            "node": {
+                                                                "publicLocation": "https://www.br.de/untertitel/7457ff78-5c43-4745-b591-c8eb01e57b74.vtt",
+                                                                "__typename": "TimedTextFile"
+                                                            },
+                                                            "__typename": "TimedTextFileEdge"
+                                                        }
+                                                    ],
+                                                    "__typename": "TimedTextFileConnection"
+                                                },
+                                                "__typename": "Caption"
+                                            },
+                                            "__typename": "SubtitleEdge"
+                                        }
+                                    ],
+                                    "__typename": "SubtitleConnection"
+                                }
+                            },
+                            "__typename": "VideoFileEdge"
+                        },
+                        {
+                            "node": {
+                                "id": "av:61e33368666c650009456d48",
+                                "publicLocation": "https://cdn-storage.br.de/geo/MUJIuUOVBwQIbtC2uKJDM6OhuLnC_2rH_71S/_-iS/_2rg5-rc5U1S/159b2b96-5aa5-4453-9800-a4d554c54092_E.mp4",
+                                "videoProfile": {
+                                    "id": "av:http://ard.de/ontologies/audioVideo#VideoProfile_Large",
+                                    "height": 360,
+                                    "__typename": "VideoProfile"
+                                },
+                                "__typename": "VideoFile",
+                                "subtitles": {
+                                    "edges": [
+                                        {
+                                            "node": {
+                                                "timedTextFiles": {
+                                                    "edges": [
+                                                        {
+                                                            "node": {
+                                                                "publicLocation": "https://www.br.de/untertitel/7457ff78-5c43-4745-b591-c8eb01e57b74.vtt",
+                                                                "__typename": "TimedTextFile"
+                                                            },
+                                                            "__typename": "TimedTextFileEdge"
+                                                        }
+                                                    ],
+                                                    "__typename": "TimedTextFileConnection"
+                                                },
+                                                "__typename": "Caption"
+                                            },
+                                            "__typename": "SubtitleEdge"
+                                        }
+                                    ],
+                                    "__typename": "SubtitleConnection"
+                                }
+                            },
+                            "__typename": "VideoFileEdge"
+                        },
+                        {
+                            "node": {
+                                "id": "av:61e33368666c650009456d45",
+                                "publicLocation": "https://cdn-storage.br.de/geo/MUJIuUOVBwQIbtC2uKJDM6OhuLnC_2rH_71S/_-iS/_2rg5-rc5U1S/159b2b96-5aa5-4453-9800-a4d554c54092_A.mp4",
+                                "videoProfile": {
+                                    "id": "av:http://ard.de/ontologies/audioVideo#VideoProfile_Mobile",
+                                    "height": 270,
+                                    "__typename": "VideoProfile"
+                                },
+                                "__typename": "VideoFile",
+                                "subtitles": {
+                                    "edges": [
+                                        {
+                                            "node": {
+                                                "timedTextFiles": {
+                                                    "edges": [
+                                                        {
+                                                            "node": {
+                                                                "publicLocation": "https://www.br.de/untertitel/7457ff78-5c43-4745-b591-c8eb01e57b74.vtt",
+                                                                "__typename": "TimedTextFile"
+                                                            },
+                                                            "__typename": "TimedTextFileEdge"
+                                                        }
+                                                    ],
+                                                    "__typename": "TimedTextFileConnection"
+                                                },
+                                                "__typename": "Caption"
+                                            },
+                                            "__typename": "SubtitleEdge"
+                                        }
+                                    ],
+                                    "__typename": "SubtitleConnection"
+                                }
+                            },
+                            "__typename": "VideoFileEdge"
+                        },
+                        {
+                            "node": {
+                                "id": "av:61e333688c265100085ee400",
+                                "publicLocation": "https://cdn-storage.br.de/geo/MUJIuUOVBwQIbtC2uKJDM6OhuLnC_2rH_71S/_-iS/_2rg5-rc5U1S/159b2b96-5aa5-4453-9800-a4d554c54092_C.mp4",
+                                "videoProfile": {
+                                    "id": "av:http://ard.de/ontologies/audioVideo#VideoProfile_Premium",
+                                    "height": 540,
+                                    "__typename": "VideoProfile"
+                                },
+                                "__typename": "VideoFile",
+                                "subtitles": {
+                                    "edges": [
+                                        {
+                                            "node": {
+                                                "timedTextFiles": {
+                                                    "edges": [
+                                                        {
+                                                            "node": {
+                                                                "publicLocation": "https://www.br.de/untertitel/7457ff78-5c43-4745-b591-c8eb01e57b74.vtt",
+                                                                "__typename": "TimedTextFile"
+                                                            },
+                                                            "__typename": "TimedTextFileEdge"
+                                                        }
+                                                    ],
+                                                    "__typename": "TimedTextFileConnection"
+                                                },
+                                                "__typename": "Caption"
+                                            },
+                                            "__typename": "SubtitleEdge"
+                                        }
+                                    ],
+                                    "__typename": "SubtitleConnection"
+                                }
+                            },
+                            "__typename": "VideoFileEdge"
+                        },
+                        {
+                            "node": {
+                                "id": "av:61e33368666c650009456d4c",
+                                "publicLocation": "https://br-i.akamaihd.net/i/geo/MUJIuUOVBwQIbtC2uKJDM6OhuLnC_2rH_71S/_-iS/_2rg5-rc5U1S/159b2b96-5aa5-4453-9800-a4d554c54092_,A,E,C,X,.mp4.csmil/master.m3u8?__b__=200",
+                                "videoProfile": {
+                                    "id": "av:http://ard.de/ontologies/audioVideo#VideoProfile_HLS",
+                                    "height": null,
+                                    "__typename": "VideoProfile"
+                                },
+                                "__typename": "VideoFile",
+                                "subtitles": {
+                                    "edges": [
+                                        {
+                                            "node": {
+                                                "timedTextFiles": {
+                                                    "edges": [
+                                                        {
+                                                            "node": {
+                                                                "publicLocation": "https://www.br.de/untertitel/7457ff78-5c43-4745-b591-c8eb01e57b74.vtt",
+                                                                "__typename": "TimedTextFile"
+                                                            },
+                                                            "__typename": "TimedTextFileEdge"
+                                                        }
+                                                    ],
+                                                    "__typename": "TimedTextFileConnection"
+                                                },
+                                                "__typename": "Caption"
+                                            },
+                                            "__typename": "SubtitleEdge"
+                                        }
+                                    ],
+                                    "__typename": "SubtitleConnection"
+                                }
+                            },
+                            "__typename": "VideoFileEdge"
+                        }
+                    ],
+                    "__typename": "VideoFileConnection"
+                },
+                "availableUntil": "2022-01-22T20:45:00.000Z",
+                "versionFrom": "2022-01-15T20:45:00.000Z",
+                "duration": 5447,
+                "ageRestriction": 12,
+                "defaultTeaserImage": {
+                    "id": "av:61e3d4ff8d6e970008bd6a95",
+                    "shortDescription": "Benno (Ottfried Fischer, rechts) lernt bei Prälat Hinter (Michael Lerchenberg) die junge Pastoralreferentin Maria Mittendorfer (Jule Ronstedt) kennen. Bald stellt sich heraus, dass Maria die Tote kannte, denn sie war selbst vor einigen Jahren als Novizin im Kloster Ehrentraud.",
+                    "copyright": "BR/SAT.1/Magdalena Mate",
+                    "imageFiles": {
+                        "edges": [
+                            {
+                                "node": {
+                                    "id": "av:61e3d4ff8d6e970008bd6a94",
+                                    "publicLocation": "https://img.br.de/1c6df47e-c926-4930-a92a-daf4b1039ec5.jpeg",
+                                    "crops": {
+                                        "count": 2,
+                                        "edges": [
+                                            {
+                                                "node": {
+                                                    "id": "av:61e3d4ff8d6e970008bd6a94|MS43OA==",
+                                                    "publicLocation": "https://img.br.de/1c6df47e-c926-4930-a92a-daf4b1039ec5.jpeg",
+                                                    "width": 1920,
+                                                    "height": 1080,
+                                                    "__typename": "ImageFileCrop"
+                                                },
+                                                "__typename": "ImageFileCropEdge"
+                                            }
+                                        ],
+                                        "__typename": "ImageFileCropConnection"
+                                    },
+                                    "__typename": "ImageFile"
+                                },
+                                "__typename": "ImageFileEdge"
+                            }
+                        ],
+                        "__typename": "ImageFileConnection"
+                    },
+                    "__typename": "Image"
+                },
+                "episodeNumber": null,
+                "initialScreening": {
+                    "id": "av:61a608e395643a000747383e|61e3d6670ea78000088b0ecb",
+                    "start": "2022-01-15T19:15:00.000Z",
+                    "__typename": "BroadcastEvent",
+                    "publishedBy": {
+                        "name": "BR Fernsehen",
+                        "__typename": "BroadcastService"
+                    }
+                },
+                "items": {
+                    "edges": [],
+                    "__typename": "ItemConnection"
+                },
+                "episodeOf": {
+                    "title": "Der Bulle von Tölz",
+                    "kicker": "Krimi-Reihe mit Ottfried Fischer",
+                    "id": "av:589068c97a47d700120431b3",
+                    "slug": "der-bulle-von-toelz",
+                    "__typename": "Series",
+                    "description": null,
+                    "scheduleInfo": null,
+                    "subscribed": false
+                },
+                "moreEpisodes": [
+                    {
+                        "current": true,
+                        "node": {
+                            "__typename": "Programme",
+                            "title": "Der Bulle von Tölz: Der Mord im Kloster",
+                            "kicker": "Krimi mit Ottfried Fischer",
+                            "episodeNumber": null,
+                            "versionFrom": "2022-01-15T20:45:00.000Z",
+                            "initialScreening": {
+                                "id": "av:61a608e395643a000747383e|61e3d6670ea78000088b0ecb",
+                                "start": "2022-01-15T19:15:00.000Z",
+                                "__typename": "BroadcastEvent"
+                            },
+                            "duration": 5447,
+                            "id": "av:61a608e395643a000747383e",
+                            "defaultTeaserImage": {
+                                "id": "av:61e3d4ff8d6e970008bd6a95",
+                                "shortDescription": "Benno (Ottfried Fischer, rechts) lernt bei Prälat Hinter (Michael Lerchenberg) die junge Pastoralreferentin Maria Mittendorfer (Jule Ronstedt) kennen. Bald stellt sich heraus, dass Maria die Tote kannte, denn sie war selbst vor einigen Jahren als Novizin im Kloster Ehrentraud.",
+                                "copyright": "BR/SAT.1/Magdalena Mate",
+                                "imageFiles": {
+                                    "edges": [
+                                        {
+                                            "node": {
+                                                "id": "av:61e3d4ff8d6e970008bd6a94",
+                                                "publicLocation": "https://img.br.de/1c6df47e-c926-4930-a92a-daf4b1039ec5.jpeg",
+                                                "crops": {
+                                                    "count": 2,
+                                                    "edges": [
+                                                        {
+                                                            "node": {
+                                                                "id": "av:61e3d4ff8d6e970008bd6a94|MS43OA==",
+                                                                "publicLocation": "https://img.br.de/1c6df47e-c926-4930-a92a-daf4b1039ec5.jpeg",
+                                                                "width": 1920,
+                                                                "height": 1080,
+                                                                "__typename": "ImageFileCrop"
+                                                            },
+                                                            "__typename": "ImageFileCropEdge"
+                                                        }
+                                                    ],
+                                                    "__typename": "ImageFileCropConnection"
+                                                },
+                                                "__typename": "ImageFile"
+                                            },
+                                            "__typename": "ImageFileEdge"
+                                        }
+                                    ],
+                                    "__typename": "ImageFileConnection"
+                                },
+                                "__typename": "Image"
+                            },
+                            "slug": "krimi-mit-ottfried-fischer-der-bulle-von-toelz-der-mord-im-kloster"
+                        },
+                        "__typename": "SiblingProgrammeEntry"
+                    }
+                ],
+                "relatedLinks": {
+                    "edges": [],
+                    "__typename": "ExternalURLConnection"
+                },
+                "kidsContent": false
+            }
+        }
+    }
+]
