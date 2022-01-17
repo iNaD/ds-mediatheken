@@ -89,7 +89,19 @@ class KiKa extends Mediathek
             // we need a bitrate to find the best quality
             $bitrateVideo = $this->getTools()->pregMatchDefault('#<bitrateVideo>(.*?)<\/bitrateVideo>#si', $source);
             if ($bitrateVideo === null) {
-                return $result;
+                $frameWidth = $this->getTools()->pregMatchDefault('#<frameWidth>(.*?)<\/frameWidth>#si', $source);
+                if ($frameWidth !== null) {
+                    $bitrateVideo = $frameWidth;
+                }
+
+                $frameHeight = $this->getTools()->pregMatchDefault('#<frameHeight>(.*?)<\/frameHeight>#si', $source);
+                if ($frameHeight !== null) {
+                    $bitrateVideo = ($bitrateVideo ? $bitrateVideo : 0) + $frameHeight;
+                }
+
+                if ($bitrateVideo === null) {
+                    return $result;
+                }
             }
 
             if ($result->getBitrateRating() < $bitrateVideo) {
