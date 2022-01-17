@@ -32,14 +32,27 @@ A Synology NAS with the latest version of `DiskStation Manager` (at least DSM 5.
 ### Supported Media Libraries
 
 - 3sat (`3sat.de`)
-- ARD (`ardmediathek.de`, `mediathek.daserste.de`)
+- ARD (`ardmediathek.de`)
+    - Supports these channels
+        - Das Erste
+        - BR
+        - hr
+        - MDR
+        - NDR
+        - Radio Bremen
+        - rbb
+        - SR
+        - SWR
+        - WDR
+        - ONE
+        - ARTE
+        - funk
+        - ARD alpha
+        - tagesschau24
+        - phoenix
 - Arte (`arte.tv`)
 - BR (`br.de`)
 - KiKa (`kika.de`)
-- MDR (`mdr.de`)
-- NDR (`ndr.de`)
-- RBB (`mediathek.rbb-online.de`)
-- WDR (`wdr.de/mediathek`, `one.ard.de/mediathek`)
 - ZDF Mediathek (`zdf.de`)
 
 ### Download

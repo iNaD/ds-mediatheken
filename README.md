@@ -32,14 +32,27 @@ Ein Synology-NAS mit einer aktuellen Version des `DiskStation Managers` (mindest
 ### Unterstützte Mediatheken
 
 - 3sat (`3sat.de`)
-- ARD (`ardmediathek.de`, `mediathek.daserste.de`)
+- ARD (`ardmediathek.de`)
+    - Unterstützt diese Sender
+        - Das Erste
+        - BR
+        - hr
+        - MDR
+        - NDR
+        - Radio Bremen
+        - rbb
+        - SR
+        - SWR
+        - WDR
+        - ONE
+        - ARTE
+        - funk
+        - ARD alpha
+        - tagesschau24
+        - phoenix
 - Arte (`arte.tv`)
 - BR (`br.de`)
 - KiKa (`kika.de`)
-- MDR (`mdr.de`)
-- NDR (`ndr.de`)
-- RBB (`mediathek.rbb-online.de`)
-- WDR (`wdr.de/mediathek`, `one.ard.de/mediathek`)
 - ZDF Mediathek (`zdf.de`)
 
 ### Download
