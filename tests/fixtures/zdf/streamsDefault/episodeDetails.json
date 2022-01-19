@@ -1,0 +1,1328 @@
+{
+    "contentType": "episode",
+    "title": "Krieg der Träume - 1918-1939 - Überleben",
+    "editorialDate": "2021-12-31T05:00:00.000+01:00",
+    "leadParagraph": "Im November 1918 kapituliert Deutschland. Der Erste Weltkrieg ist zu Ende und mit ihm wurde die alte Ordnung der Monarchien und Imperien hinweggefegt. Für die Bewohner Europas beginnt eine Reise ins Ungewisse. Der Kampfs ums Überleben geht weiter, die Welt muss neu geordnet werden und für die Menschen beginnt ein \"Krieg der Träume\".",
+    "teasertext": "Im November 1918 kapituliert Deutschland. Der Erste Weltkrieg ist zu Ende und mit ihm wurde die alte Ordnung der Monarchien und Imperien hinweggefegt. Für die Bewohner Europas beginnt eine Reise ins Ungewisse. Der Kampfs ums Überleben geht weiter, die Welt muss neu geordnet werden und für die Menschen beginnt ein \"Krieg der Träume\".",
+    "http:\/\/zdf.de\/rels\/next-video-page": {
+        "title": "Krieg der Träume - 1918-1939 - Frieden",
+        "editorialDate": "2021-12-31T05:00:00.000+01:00",
+        "teaserImageRef": {
+            "title": "Krieg der Träume - 1918-1939 - Frieden",
+            "altText": "Krieg der Träume - 1918-1939 - Frieden",
+            "copyrightNotice": "arte",
+            "source": "arte",
+            "profile": "http:\/\/zdf.de\/rels\/image",
+            "self": "\/content\/documents\/zdf\/arte\/krieg-der-traume-1918-1939\/image-artede-krieg-der-traeume---1918-1939---frieden-100.json?profile=player",
+            "canonical": "\/content\/documents\/image-artede-krieg-der-traeume---1918-1939---frieden-100.json",
+            "layouts": {
+                "1280x720": "https:\/\/www.zdf.de\/assets\/image-artede-krieg-der-traeume---1918-1939---frieden-100~1280x720?cb=1641034017193",
+                "1920x1080": "https:\/\/www.zdf.de\/assets\/image-artede-krieg-der-traeume---1918-1939---frieden-100~1920x1080?cb=1641034017193",
+                "384x216": "https:\/\/www.zdf.de\/assets\/image-artede-krieg-der-traeume---1918-1939---frieden-100~384x216?cb=1641034017193",
+                "768x432": "https:\/\/www.zdf.de\/assets\/image-artede-krieg-der-traeume---1918-1939---frieden-100~768x432?cb=1641034017193",
+                "original": "https:\/\/www.zdf.de\/assets\/image-artede-krieg-der-traeume---1918-1939---frieden-100~original?cb=1641034017193"
+            }
+        },
+        "http:\/\/zdf.de\/rels\/category": {
+            "profile": "http:\/\/zdf.de\/rels\/content\/structureNodeDocument-breadcrumb",
+            "self": "\/content\/structure\/zdf\/arte?profile=breadcrumb",
+            "canonical": "\/content\/structure\/zdf\/arte",
+            "title": "ARTE",
+            "http:\/\/zdf.de\/rels\/target": {
+                "id": "arte-126",
+                "externalId": "SCMS_ca4ba465-f6c1-4add-9514-368c43fccaf1",
+                "title": "ARTE",
+                "hasVideo": true,
+                "contentType": "category",
+                "profile": "http:\/\/zdf.de\/rels\/content\/page-index-navigation",
+                "self": "\/content\/documents\/zdf\/arte?profile=navigation",
+                "canonical": "\/content\/documents\/arte-126.json",
+                "structureNodePath": "\/zdf\/arte",
+                "stage": [
+                    {
+                        "profile": "http:\/\/zdf.de\/rels\/content\/group-header-s-navigation",
+                        "teaser": [
+                            {
+                                "http:\/\/zdf.de\/rels\/target": {
+                                    "title": "ARTE Keyvisual Category",
+                                    "altText": "ARTE Keyvisual Category",
+                                    "copyrightNotice": "ARTE",
+                                    "source": "ARTE",
+                                    "profile": "http:\/\/zdf.de\/rels\/image",
+                                    "self": "\/content\/documents\/zdf\/arte\/arte-stage-visual-category-100.json",
+                                    "canonical": "\/content\/documents\/arte-stage-visual-category-100.json",
+                                    "layouts": {
+                                        "1140x120": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1140x120?cb=1620830098223",
+                                        "1140x240": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1140x240?cb=1620830098223",
+                                        "1152x1296": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1152x1296?cb=1620830098223",
+                                        "1200x480": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1200x480?cb=1620830098223",
+                                        "1280x720": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1280x720?cb=1620830098223",
+                                        "1280xauto": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1280xauto?cb=1620830098223",
+                                        "1300x650": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1300x650?cb=1620830098223",
+                                        "1500x300": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1500x300?cb=1620830098223",
+                                        "1500x600": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1500x600?cb=1620830098223",
+                                        "1500x800": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1500x800?cb=1620830098223",
+                                        "1800x720": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1800x720?cb=1620830098223",
+                                        "1900x200": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1900x200?cb=1620830098223",
+                                        "1900x400": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1900x400?cb=1620830098223",
+                                        "1900x570": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1900x570?cb=1620830098223",
+                                        "1920x1080": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1920x1080?cb=1620830098223",
+                                        "225x400": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~225x400?cb=1620830098223",
+                                        "2400x1350": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~2400x1350?cb=1620830098223",
+                                        "240x270": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~240x270?cb=1620830098223",
+                                        "276x155": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~276x155?cb=1620830098223",
+                                        "276x311": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~276x311?cb=1620830098223",
+                                        "314x314": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~314x314?cb=1620830098223",
+                                        "380x170": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~380x170?cb=1620830098223",
+                                        "384x216": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~384x216?cb=1620830098223",
+                                        "384xauto": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~384xauto?cb=1620830098223",
+                                        "405x720": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~405x720?cb=1620830098223",
+                                        "640x720": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~640x720?cb=1620830098223",
+                                        "760x340": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~760x340?cb=1620830098223",
+                                        "768x432": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~768x432?cb=1620830098223",
+                                        "768xauto": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~768xauto?cb=1620830098223",
+                                        "840x140": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~840x140?cb=1620830098223",
+                                        "840x280": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~840x280?cb=1620830098223",
+                                        "840x360": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~840x360?cb=1620830098223",
+                                        "860x344": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~860x344?cb=1620830098223",
+                                        "936x520": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~936x520?cb=1620830098223",
+                                        "original": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~original?cb=1620830098223"
+                                    }
+                                },
+                                "displayBrandLogo": true,
+                                "profile": "http:\/\/zdf.de\/rels\/content-reference\/teaser-header-s"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "http:\/\/zdf.de\/rels\/sharing-url": "https:\/\/www.zdf.de\/arte\/krieg-der-traume-1918-1939\/page-video-artede-krieg-der-traeume---1918-1939---frieden-100.html",
+        "http:\/\/zdf.de\/rels\/brand": {
+            "profile": "http:\/\/zdf.de\/rels\/content\/structureNodeDocument-breadcrumb",
+            "self": "\/content\/structure\/zdf\/arte\/krieg-der-traume-1918-1939?profile=breadcrumb",
+            "canonical": "\/content\/structure\/zdf\/arte\/krieg-der-traume-1918-1939",
+            "title": "Krieg der Träume 1918-1939",
+            "http:\/\/zdf.de\/rels\/target": {
+                "id": "collection-index-page-artede-collection-artede-rc-013347-252",
+                "externalId": "SCMS_index-page-artede-collection_artede_rc-013347-",
+                "title": "Krieg der Träume 1918-1939",
+                "contentType": "brand",
+                "profile": "http:\/\/zdf.de\/rels\/content\/page-index-navigation",
+                "self": "\/content\/documents\/zdf\/arte\/krieg-der-traume-1918-1939?profile=navigation",
+                "canonical": "\/content\/documents\/collection-index-page-artede-collection-artede-rc-013347-252.json",
+                "structureNodePath": "\/zdf\/arte\/krieg-der-traume-1918-1939",
+                "stage": [
+                    {
+                        "profile": "http:\/\/zdf.de\/rels\/content\/group-header-m-navigation",
+                        "teaser": [
+                            {
+                                "http:\/\/zdf.de\/rels\/target": {
+                                    "title": "Krieg der Träume 1918-1939",
+                                    "altText": "Krieg der Träume 1918-1939",
+                                    "copyrightNotice": "arte",
+                                    "source": "arte",
+                                    "profile": "http:\/\/zdf.de\/rels\/image",
+                                    "self": "\/content\/documents\/zdf\/arte\/krieg-der-traume-1918-1939\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100.json",
+                                    "canonical": "\/content\/documents\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100.json",
+                                    "layouts": {
+                                        "1140x120": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1140x120?cb=1641541856274",
+                                        "1140x240": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1140x240?cb=1641541856274",
+                                        "1152x1296": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1152x1296?cb=1641541856274",
+                                        "1200x480": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1200x480?cb=1641541856274",
+                                        "1280x720": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1280x720?cb=1641541856274",
+                                        "1280xauto": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1280xauto?cb=1641541856274",
+                                        "1300x650": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1300x650?cb=1641541856274",
+                                        "1500x300": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1500x300?cb=1641541856274",
+                                        "1500x600": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1500x600?cb=1641541856274",
+                                        "1500x800": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1500x800?cb=1641541856274",
+                                        "1800x720": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1800x720?cb=1641541856274",
+                                        "1900x200": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1900x200?cb=1641541856274",
+                                        "1900x400": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1900x400?cb=1641541856274",
+                                        "1900x570": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1900x570?cb=1641541856274",
+                                        "1920x1080": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1920x1080?cb=1641541856274",
+                                        "225x400": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~225x400?cb=1641541856274",
+                                        "2400x1350": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~2400x1350?cb=1641541856274",
+                                        "240x270": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~240x270?cb=1641541856274",
+                                        "2600x1300": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~2600x1300?cb=1641541856274",
+                                        "276x155": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~276x155?cb=1641541856274",
+                                        "276x311": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~276x311?cb=1641541856274",
+                                        "2850x300": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~2850x300?cb=1641541856274",
+                                        "2850x600": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~2850x600?cb=1641541856274",
+                                        "314x314": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~314x314?cb=1641541856274",
+                                        "380x170": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~380x170?cb=1641541856274",
+                                        "3840x2160": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~3840x2160?cb=1641541856274",
+                                        "384x216": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~384x216?cb=1641541856274",
+                                        "384xauto": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~384xauto?cb=1641541856274",
+                                        "405x720": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~405x720?cb=1641541856274",
+                                        "640x720": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~640x720?cb=1641541856274",
+                                        "760x340": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~760x340?cb=1641541856274",
+                                        "768x432": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~768x432?cb=1641541856274",
+                                        "768xauto": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~768xauto?cb=1641541856274",
+                                        "840x140": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~840x140?cb=1641541856274",
+                                        "840x280": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~840x280?cb=1641541856274",
+                                        "840x360": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~840x360?cb=1641541856274",
+                                        "860x344": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~860x344?cb=1641541856274",
+                                        "936x520": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~936x520?cb=1641541856274",
+                                        "original": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~original?cb=1641541856274"
+                                    }
+                                },
+                                "headerDecorationText": "",
+                                "profile": "http:\/\/zdf.de\/rels\/content-reference\/teaser-header-m",
+                                "http:\/\/zdf.de\/rels\/content-owner": {
+                                    "id": "content-owner-arte-102",
+                                    "externalId": "SCMS_3e6412b5-bd04-4cf9-bb76-a2414a977ec3",
+                                    "profile": "http:\/\/zdf.de\/rels\/content\/conf-content-owner",
+                                    "self": "\/content\/documents\/zdf\/arte\/content-owner-arte-102.json",
+                                    "canonical": "\/content\/documents\/content-owner-arte-102.json",
+                                    "title": "ARTE",
+                                    "logo": {
+                                        "title": "arte Logo",
+                                        "altText": "arte Logo",
+                                        "profile": "http:\/\/zdf.de\/rels\/image",
+                                        "self": "\/content\/documents\/zdf\/arte\/logo-arte-content-owner-100.json",
+                                        "canonical": "\/content\/documents\/logo-arte-content-owner-100.json",
+                                        "layouts": {
+                                            "240x270": "https:\/\/www.zdf.de\/assets\/logo-arte-content-owner-100~240x270?cb=1606389232278",
+                                            "276x155": "https:\/\/www.zdf.de\/assets\/logo-arte-content-owner-100~276x155?cb=1606389232278",
+                                            "276x311": "https:\/\/www.zdf.de\/assets\/logo-arte-content-owner-100~276x311?cb=1606389232278",
+                                            "314x314": "https:\/\/www.zdf.de\/assets\/logo-arte-content-owner-100~314x314?cb=1606389232278",
+                                            "380x170": "https:\/\/www.zdf.de\/assets\/logo-arte-content-owner-100~380x170?cb=1606389232278",
+                                            "384x216": "https:\/\/www.zdf.de\/assets\/logo-arte-content-owner-100~384x216?cb=1606389232278",
+                                            "384xauto": "https:\/\/www.zdf.de\/assets\/logo-arte-content-owner-100~384xauto?cb=1606389232278",
+                                            "760x340": "https:\/\/www.zdf.de\/assets\/logo-arte-content-owner-100~760x340?cb=1606389232278",
+                                            "original": "https:\/\/www.zdf.de\/assets\/logo-arte-content-owner-100~original?cb=1606389232278"
+                                        }
+                                    },
+                                    "http:\/\/zdf.de\/rels\/content-owner-link": {
+                                        "htmlAnchor": {
+                                            "profile": "http:\/\/zdf.de\/rels\/teaser-target-web",
+                                            "href": "\/arte",
+                                            "title": "ARTE"
+                                        },
+                                        "profile": "http:\/\/zdf.de\/rels\/content\/index-link-page-index",
+                                        "id": "arte-126",
+                                        "title": "ARTE",
+                                        "contentType": "category"
+                                    },
+                                    "label": "Ein Angebot von"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "profile": "http:\/\/zdf.de\/rels\/content\/page-video-playlist2",
+        "self": "\/content\/documents\/zdf\/arte\/krieg-der-traume-1918-1939\/page-video-artede-krieg-der-traeume---1918-1939---frieden-100.json?profile=playlist2",
+        "http:\/\/zdf.de\/rels\/player": "\/content\/documents\/zdf\/arte\/krieg-der-traume-1918-1939\/page-video-artede-krieg-der-traeume---1918-1939---frieden-100.json?profile=player2",
+        "canonical": "\/content\/documents\/page-video-artede-krieg-der-traeume---1918-1939---frieden-100.json",
+        "tracking": {
+            "szmng": {
+                "st": "zdf",
+                "cp": "ARTE\/Krieg_der_Traeume_1918-1939",
+                "sv": "ke",
+                "co": "episode\/Krieg_der_Traeume_-_1918-1939_-_Frieden\/page-video-artede_video_artede_067244-002-A"
+            },
+            "zdf": {
+                "config-v2": {
+                    "playerTrackingRateInSeconds": 60
+                },
+                "templates-v2": {
+                    "view": "\/\/tracksrv.zdf.de\/event?eventType=view&trackingId={trackingId}&appId={appId}{&searchResultsCount,abGroup,abName,searchParams,szmAge,szmGender,szmConfidence,loggedIn,subprofile,campaign}&assetId={assetId}&pagePath=https%3A%2F%2Fwww.zdf.de%2Farte%2Fkrieg-der-traume-1918-1939%2Fpage-video-artede-krieg-der-traeume---1918-1939---frieden-100.html",
+                    "click": "\/\/tracksrv.zdf.de\/event?eventType=click&trackingId={trackingId}&appId={appId}&clickedClusterPosition={clickedClusterPosition}&clickedTeaserPosition={clickedTeaserPosition}{&searchParams,abGroup,abName,recoEngine,element,recoId,szmAge,szmGender,szmConfidence,loggedIn,subprofile,nodeId}&assetId={assetId}&targetAssetId={targetAssetId}&pagePath=https%3A%2F%2Fwww.zdf.de%2Farte%2Fkrieg-der-traume-1918-1939%2Fpage-video-artede-krieg-der-traeume---1918-1939---frieden-100.html",
+                    "pause": "\/\/tracksrv.zdf.de\/event?eventType=pause&trackingId={trackingId}&appId={appId}&currentPosition={currentPosition}&duration={duration}{&abGroup,abName,playbackProgress,videoAssetId,szmAge,szmGender,szmConfidence,loggedIn,subprofile,playbackRate}&assetId={assetId}&pagePath=https%3A%2F%2Fwww.zdf.de%2Farte%2Fkrieg-der-traume-1918-1939%2Fpage-video-artede-krieg-der-traeume---1918-1939---frieden-100.html",
+                    "play": "\/\/tracksrv.zdf.de\/event?eventType=play&trackingId={trackingId}&appId={appId}&currentPosition={currentPosition}&duration={duration}{&abGroup,abName,playbackProgress,videoAssetId,szmAge,szmGender,szmConfidence,loggedIn,subprofile,playbackRate}&assetId={assetId}&pagePath=https%3A%2F%2Fwww.zdf.de%2Farte%2Fkrieg-der-traume-1918-1939%2Fpage-video-artede-krieg-der-traeume---1918-1939---frieden-100.html"
+                }
+            },
+            "atInternet": {
+                "page": {
+                    "level1": "zdf",
+                    "level2": "47",
+                    "chapter1": "\/Krieg_der_Traeume_1918-1939",
+                    "chapter2": "episode",
+                    "chapter3": "page-video-artede_video_artede_067244-002-A",
+                    "name": "Krieg_der_Traeume_-_1918-1939_-_Frieden",
+                    "customObject": {
+                        "domain": "zdf",
+                        "level1": "zdf",
+                        "level2": "ARTE",
+                        "chapter1": "\/Krieg_der_Traeume_1918-1939",
+                        "broadcast": "arte",
+                        "id": "page-video-artede-krieg-der-traeume---1918-1939---frieden-100",
+                        "inhaltsTyp": "episode",
+                        "chapter4": ""
+                    }
+                },
+                "richMedia": {
+                    "mediaType": "video",
+                    "mediaLevel2": "47",
+                    "mediaLabel": "Krieg_der_Traeume_1918-1939::Krieg_der_Traeume_-_1918-1939_-_Frieden",
+                    "mediaTheme1": "ARTE",
+                    "mediaTheme2": "Krieg_der_Traeume_1918-1939",
+                    "mediaTheme3": "episode",
+                    "refreshDuration": {
+                        "0": 5,
+                        "1": 30,
+                        "5": 60
+                    },
+                    "duration": "3150",
+                    "broadcastMode": "clip"
+                },
+                "event": {
+                    "level1": "zdf",
+                    "level2": "47",
+                    "chapter1": "\/Krieg_der_Traeume_1918-1939",
+                    "customObject": {
+                        "domain": "zdf",
+                        "level1": "zdf",
+                        "level2": "ARTE",
+                        "chapter1": "\/Krieg_der_Traeume_1918-1939",
+                        "broadcast": "arte",
+                        "id": "page-video-artede-krieg-der-traeume---1918-1939---frieden-100",
+                        "inhaltsTyp": "episode"
+                    }
+                },
+                "customVars": {
+                    "site": {
+                        "id": "page-video-artede-krieg-der-traeume---1918-1939---frieden-100",
+                        "chapter2": "episode",
+                        "chapter3": "page-video-artede_video_artede_067244-002-A"
+                    }
+                }
+            }
+        },
+        "mainVideoContent": {
+            "http:\/\/zdf.de\/rels\/target": {
+                "title": "Krieg der Träume - 1918-1939 - Frieden",
+                "contentType": "episode",
+                "extId": "video_artede_067244-002-A",
+                "attrs": [
+                    "UT"
+                ],
+                "duration": 3150,
+                "geoLocation": "dach",
+                "fsk": "none",
+                "visible": true,
+                "visibleFrom": "2021-12-31T05:00:00.000+01:00",
+                "visibleTo": "2022-01-30T05:00:00.000+01:00",
+                "isOnlineOnly": true,
+                "aspectRatio": "16:9",
+                "endDate": "2022-01-30T05:00:00.000+01:00",
+                "profile": "http:\/\/zdf.de\/rels\/content\/content-video-vod-partner-teaser",
+                "self": "\/content\/documents\/zdf\/arte\/krieg-der-traume-1918-1939\/vod-artede-krieg-der-traeume---1918-1939---frieden-100.json?profile=teaser",
+                "canonical": "\/content\/documents\/vod-artede-krieg-der-traeume---1918-1939---frieden-100.json",
+                "streams": {
+                    "default": {
+                        "label": "Normal",
+                        "extId": "video_artede_067244-002-A",
+                        "http:\/\/zdf.de\/rels\/streams\/ptmd-template": "\/content\/documents\/vod-artede-krieg-der-traeume---1918-1939---frieden-100.json?profile=tmd"
+                    }
+                }
+            },
+            "profile": "http:\/\/zdf.de\/rels\/content-reference\/video-content"
+        }
+    },
+    "teaserImageRef": {
+        "title": "Krieg der Träume - 1918-1939 - Überleben",
+        "altText": "Krieg der Träume - 1918-1939 - Überleben",
+        "copyrightNotice": "arte",
+        "source": "arte",
+        "profile": "http:\/\/zdf.de\/rels\/image",
+        "self": "\/content\/documents\/zdf\/arte\/krieg-der-traume-1918-1939\/image-artede-krieg-der-traeume---1918-1939---ueberleben-100.json?profile=player",
+        "canonical": "\/content\/documents\/image-artede-krieg-der-traeume---1918-1939---ueberleben-100.json",
+        "layouts": {
+            "1280x720": "https:\/\/www.zdf.de\/assets\/image-artede-krieg-der-traeume---1918-1939---ueberleben-100~1280x720?cb=1641034010138",
+            "1920x1080": "https:\/\/www.zdf.de\/assets\/image-artede-krieg-der-traeume---1918-1939---ueberleben-100~1920x1080?cb=1641034010138",
+            "384x216": "https:\/\/www.zdf.de\/assets\/image-artede-krieg-der-traeume---1918-1939---ueberleben-100~384x216?cb=1641034010138",
+            "768x432": "https:\/\/www.zdf.de\/assets\/image-artede-krieg-der-traeume---1918-1939---ueberleben-100~768x432?cb=1641034010138",
+            "original": "https:\/\/www.zdf.de\/assets\/image-artede-krieg-der-traeume---1918-1939---ueberleben-100~original?cb=1641034010138"
+        }
+    },
+    "embeddingPossible": false,
+    "http:\/\/zdf.de\/rels\/category": {
+        "profile": "http:\/\/zdf.de\/rels\/content\/structureNodeDocument-breadcrumb",
+        "self": "\/content\/structure\/zdf\/arte?profile=breadcrumb",
+        "canonical": "\/content\/structure\/zdf\/arte",
+        "title": "ARTE",
+        "http:\/\/zdf.de\/rels\/target": {
+            "id": "arte-126",
+            "externalId": "SCMS_ca4ba465-f6c1-4add-9514-368c43fccaf1",
+            "title": "ARTE",
+            "hasVideo": true,
+            "contentType": "category",
+            "profile": "http:\/\/zdf.de\/rels\/content\/page-index-navigation",
+            "self": "\/content\/documents\/zdf\/arte?profile=navigation",
+            "canonical": "\/content\/documents\/arte-126.json",
+            "structureNodePath": "\/zdf\/arte",
+            "stage": [
+                {
+                    "profile": "http:\/\/zdf.de\/rels\/content\/group-header-s-navigation",
+                    "teaser": [
+                        {
+                            "http:\/\/zdf.de\/rels\/target": {
+                                "title": "ARTE Keyvisual Category",
+                                "altText": "ARTE Keyvisual Category",
+                                "copyrightNotice": "ARTE",
+                                "source": "ARTE",
+                                "profile": "http:\/\/zdf.de\/rels\/image",
+                                "self": "\/content\/documents\/zdf\/arte\/arte-stage-visual-category-100.json",
+                                "canonical": "\/content\/documents\/arte-stage-visual-category-100.json",
+                                "layouts": {
+                                    "1140x120": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1140x120?cb=1620830098223",
+                                    "1140x240": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1140x240?cb=1620830098223",
+                                    "1152x1296": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1152x1296?cb=1620830098223",
+                                    "1200x480": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1200x480?cb=1620830098223",
+                                    "1280x720": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1280x720?cb=1620830098223",
+                                    "1280xauto": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1280xauto?cb=1620830098223",
+                                    "1300x650": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1300x650?cb=1620830098223",
+                                    "1500x300": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1500x300?cb=1620830098223",
+                                    "1500x600": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1500x600?cb=1620830098223",
+                                    "1500x800": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1500x800?cb=1620830098223",
+                                    "1800x720": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1800x720?cb=1620830098223",
+                                    "1900x200": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1900x200?cb=1620830098223",
+                                    "1900x400": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1900x400?cb=1620830098223",
+                                    "1900x570": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1900x570?cb=1620830098223",
+                                    "1920x1080": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1920x1080?cb=1620830098223",
+                                    "225x400": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~225x400?cb=1620830098223",
+                                    "2400x1350": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~2400x1350?cb=1620830098223",
+                                    "240x270": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~240x270?cb=1620830098223",
+                                    "276x155": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~276x155?cb=1620830098223",
+                                    "276x311": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~276x311?cb=1620830098223",
+                                    "314x314": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~314x314?cb=1620830098223",
+                                    "380x170": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~380x170?cb=1620830098223",
+                                    "384x216": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~384x216?cb=1620830098223",
+                                    "384xauto": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~384xauto?cb=1620830098223",
+                                    "405x720": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~405x720?cb=1620830098223",
+                                    "640x720": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~640x720?cb=1620830098223",
+                                    "760x340": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~760x340?cb=1620830098223",
+                                    "768x432": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~768x432?cb=1620830098223",
+                                    "768xauto": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~768xauto?cb=1620830098223",
+                                    "840x140": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~840x140?cb=1620830098223",
+                                    "840x280": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~840x280?cb=1620830098223",
+                                    "840x360": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~840x360?cb=1620830098223",
+                                    "860x344": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~860x344?cb=1620830098223",
+                                    "936x520": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~936x520?cb=1620830098223",
+                                    "original": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~original?cb=1620830098223"
+                                }
+                            },
+                            "displayBrandLogo": true,
+                            "profile": "http:\/\/zdf.de\/rels\/content-reference\/teaser-header-s"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "http:\/\/zdf.de\/rels\/uri": "https:\/\/www.zdf.de\/uri\/page-video-artede_video_artede_067244-001-A",
+    "http:\/\/zdf.de\/rels\/sharing-url": "https:\/\/www.zdf.de\/arte\/krieg-der-traume-1918-1939\/page-video-artede-krieg-der-traeume---1918-1939---ueberleben-100.html",
+    "http:\/\/zdf.de\/rels\/brand": {
+        "profile": "http:\/\/zdf.de\/rels\/content\/structureNodeDocument-breadcrumb",
+        "self": "\/content\/structure\/zdf\/arte\/krieg-der-traume-1918-1939?profile=breadcrumb",
+        "canonical": "\/content\/structure\/zdf\/arte\/krieg-der-traume-1918-1939",
+        "title": "Krieg der Träume 1918-1939",
+        "http:\/\/zdf.de\/rels\/target": {
+            "id": "collection-index-page-artede-collection-artede-rc-013347-252",
+            "externalId": "SCMS_index-page-artede-collection_artede_rc-013347-",
+            "title": "Krieg der Träume 1918-1939",
+            "contentType": "brand",
+            "profile": "http:\/\/zdf.de\/rels\/content\/page-index-navigation",
+            "self": "\/content\/documents\/zdf\/arte\/krieg-der-traume-1918-1939?profile=navigation",
+            "canonical": "\/content\/documents\/collection-index-page-artede-collection-artede-rc-013347-252.json",
+            "structureNodePath": "\/zdf\/arte\/krieg-der-traume-1918-1939",
+            "stage": [
+                {
+                    "profile": "http:\/\/zdf.de\/rels\/content\/group-header-m-navigation",
+                    "teaser": [
+                        {
+                            "http:\/\/zdf.de\/rels\/target": {
+                                "title": "Krieg der Träume 1918-1939",
+                                "altText": "Krieg der Träume 1918-1939",
+                                "copyrightNotice": "arte",
+                                "source": "arte",
+                                "profile": "http:\/\/zdf.de\/rels\/image",
+                                "self": "\/content\/documents\/zdf\/arte\/krieg-der-traume-1918-1939\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100.json",
+                                "canonical": "\/content\/documents\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100.json",
+                                "layouts": {
+                                    "1140x120": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1140x120?cb=1641541856274",
+                                    "1140x240": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1140x240?cb=1641541856274",
+                                    "1152x1296": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1152x1296?cb=1641541856274",
+                                    "1200x480": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1200x480?cb=1641541856274",
+                                    "1280x720": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1280x720?cb=1641541856274",
+                                    "1280xauto": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1280xauto?cb=1641541856274",
+                                    "1300x650": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1300x650?cb=1641541856274",
+                                    "1500x300": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1500x300?cb=1641541856274",
+                                    "1500x600": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1500x600?cb=1641541856274",
+                                    "1500x800": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1500x800?cb=1641541856274",
+                                    "1800x720": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1800x720?cb=1641541856274",
+                                    "1900x200": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1900x200?cb=1641541856274",
+                                    "1900x400": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1900x400?cb=1641541856274",
+                                    "1900x570": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1900x570?cb=1641541856274",
+                                    "1920x1080": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1920x1080?cb=1641541856274",
+                                    "225x400": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~225x400?cb=1641541856274",
+                                    "2400x1350": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~2400x1350?cb=1641541856274",
+                                    "240x270": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~240x270?cb=1641541856274",
+                                    "2600x1300": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~2600x1300?cb=1641541856274",
+                                    "276x155": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~276x155?cb=1641541856274",
+                                    "276x311": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~276x311?cb=1641541856274",
+                                    "2850x300": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~2850x300?cb=1641541856274",
+                                    "2850x600": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~2850x600?cb=1641541856274",
+                                    "314x314": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~314x314?cb=1641541856274",
+                                    "380x170": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~380x170?cb=1641541856274",
+                                    "3840x2160": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~3840x2160?cb=1641541856274",
+                                    "384x216": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~384x216?cb=1641541856274",
+                                    "384xauto": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~384xauto?cb=1641541856274",
+                                    "405x720": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~405x720?cb=1641541856274",
+                                    "640x720": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~640x720?cb=1641541856274",
+                                    "760x340": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~760x340?cb=1641541856274",
+                                    "768x432": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~768x432?cb=1641541856274",
+                                    "768xauto": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~768xauto?cb=1641541856274",
+                                    "840x140": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~840x140?cb=1641541856274",
+                                    "840x280": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~840x280?cb=1641541856274",
+                                    "840x360": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~840x360?cb=1641541856274",
+                                    "860x344": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~860x344?cb=1641541856274",
+                                    "936x520": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~936x520?cb=1641541856274",
+                                    "original": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~original?cb=1641541856274"
+                                }
+                            },
+                            "headerDecorationText": "",
+                            "profile": "http:\/\/zdf.de\/rels\/content-reference\/teaser-header-m",
+                            "http:\/\/zdf.de\/rels\/content-owner": {
+                                "id": "content-owner-arte-102",
+                                "externalId": "SCMS_3e6412b5-bd04-4cf9-bb76-a2414a977ec3",
+                                "profile": "http:\/\/zdf.de\/rels\/content\/conf-content-owner",
+                                "self": "\/content\/documents\/zdf\/arte\/content-owner-arte-102.json",
+                                "canonical": "\/content\/documents\/content-owner-arte-102.json",
+                                "title": "ARTE",
+                                "logo": {
+                                    "title": "arte Logo",
+                                    "altText": "arte Logo",
+                                    "profile": "http:\/\/zdf.de\/rels\/image",
+                                    "self": "\/content\/documents\/zdf\/arte\/logo-arte-content-owner-100.json",
+                                    "canonical": "\/content\/documents\/logo-arte-content-owner-100.json",
+                                    "layouts": {
+                                        "240x270": "https:\/\/www.zdf.de\/assets\/logo-arte-content-owner-100~240x270?cb=1606389232278",
+                                        "276x155": "https:\/\/www.zdf.de\/assets\/logo-arte-content-owner-100~276x155?cb=1606389232278",
+                                        "276x311": "https:\/\/www.zdf.de\/assets\/logo-arte-content-owner-100~276x311?cb=1606389232278",
+                                        "314x314": "https:\/\/www.zdf.de\/assets\/logo-arte-content-owner-100~314x314?cb=1606389232278",
+                                        "380x170": "https:\/\/www.zdf.de\/assets\/logo-arte-content-owner-100~380x170?cb=1606389232278",
+                                        "384x216": "https:\/\/www.zdf.de\/assets\/logo-arte-content-owner-100~384x216?cb=1606389232278",
+                                        "384xauto": "https:\/\/www.zdf.de\/assets\/logo-arte-content-owner-100~384xauto?cb=1606389232278",
+                                        "760x340": "https:\/\/www.zdf.de\/assets\/logo-arte-content-owner-100~760x340?cb=1606389232278",
+                                        "original": "https:\/\/www.zdf.de\/assets\/logo-arte-content-owner-100~original?cb=1606389232278"
+                                    }
+                                },
+                                "http:\/\/zdf.de\/rels\/content-owner-link": {
+                                    "htmlAnchor": {
+                                        "profile": "http:\/\/zdf.de\/rels\/teaser-target-web",
+                                        "href": "\/arte",
+                                        "title": "ARTE"
+                                    },
+                                    "profile": "http:\/\/zdf.de\/rels\/content\/index-link-page-index",
+                                    "id": "arte-126",
+                                    "title": "ARTE",
+                                    "contentType": "category"
+                                },
+                                "label": "Ein Angebot von"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "tvService": "arte",
+    "profile": "http:\/\/zdf.de\/rels\/content\/page-video-player-3",
+    "self": "\/content\/documents\/zdf\/arte\/krieg-der-traume-1918-1939\/page-video-artede-krieg-der-traeume---1918-1939---ueberleben-100.json?profile=player-3",
+    "canonical": "\/content\/documents\/page-video-artede-krieg-der-traeume---1918-1939---ueberleben-100.json",
+    "http:\/\/zdf.de\/rels\/recommended-videos": {
+        "profile": "http://zdf.de/rels/broker/recommendation/result",
+        "self": "/broker/recommendations?brokerConfiguration=dokumentenbasiert&docs=SCMS_page-video-artede_video_artede_067244-001-A%3A1.0&types=page-video&limit=1&hasVideo=true&pageId=SCMS_page-video-artede_video_artede_067244-001-A&pageContentType=episode&profile=player-3",
+        "first": "/broker/recommendations?brokerConfiguration=dokumentenbasiert&docs=SCMS_page-video-artede_video_artede_067244-001-A%3A1.0&types=page-video&limit=1&hasVideo=true&pageId=SCMS_page-video-artede_video_artede_067244-001-A&pageContentType=episode&profile=player-3",
+        "totalResultsCount": 1,
+        "configuration": "dokumentenbasiert",
+        "http://zdf.de/rels/recommendation/suggestions": [],
+        "http://zdf.de/rels/recommendation/results": [
+            {
+                "id": "SCMS_page-video-artede_video_artede_067244-002-A",
+                "score": 165.79977,
+                "profile": "http://zdf.de/rels/search/result",
+                "viewCount": 0,
+                "ratingCount": 0,
+                "engine": "fingerprints",
+                "enginePosition": 0,
+                "trackingIdentifier": "broker-0.81.377-dokumentenbasiert-fingerprints-0.83.317",
+                "brokerRequestUrl": "http://gitops-prod-api-integration-varnish/recommendation/fingerprint?docs=SCMS_page-video-artede_video_artede_067244-001-A%3A1.0&includeNestedObjects=false&limit=2&types=page-video&hasVideo=true&pageId=SCMS_page-video-artede_video_artede_067244-001-A&pageContentType=episode&profile=player-3",
+                "http://zdf.de/rels/target": {
+                    "title": "Krieg der Träume - 1918-1939 - Frieden",
+                    "editorialDate": "2021-12-31T05:00:00.000+01:00",
+                    "teaserImageRef": {
+                        "title": "Krieg der Träume - 1918-1939 - Frieden",
+                        "altText": "Krieg der Träume - 1918-1939 - Frieden",
+                        "copyrightNotice": "arte",
+                        "source": "arte",
+                        "profile": "http:\/\/zdf.de\/rels\/image",
+                        "self": "\/content\/documents\/zdf\/arte\/krieg-der-traume-1918-1939\/image-artede-krieg-der-traeume---1918-1939---frieden-100.json?profile=player",
+                        "canonical": "\/content\/documents\/image-artede-krieg-der-traeume---1918-1939---frieden-100.json",
+                        "layouts": {
+                            "1280x720": "https:\/\/www.zdf.de\/assets\/image-artede-krieg-der-traeume---1918-1939---frieden-100~1280x720?cb=1641034017193",
+                            "1920x1080": "https:\/\/www.zdf.de\/assets\/image-artede-krieg-der-traeume---1918-1939---frieden-100~1920x1080?cb=1641034017193",
+                            "384x216": "https:\/\/www.zdf.de\/assets\/image-artede-krieg-der-traeume---1918-1939---frieden-100~384x216?cb=1641034017193",
+                            "768x432": "https:\/\/www.zdf.de\/assets\/image-artede-krieg-der-traeume---1918-1939---frieden-100~768x432?cb=1641034017193",
+                            "original": "https:\/\/www.zdf.de\/assets\/image-artede-krieg-der-traeume---1918-1939---frieden-100~original?cb=1641034017193"
+                        }
+                    },
+                    "http:\/\/zdf.de\/rels\/category": {
+                        "profile": "http:\/\/zdf.de\/rels\/content\/structureNodeDocument-breadcrumb",
+                        "self": "\/content\/structure\/zdf\/arte?profile=breadcrumb",
+                        "canonical": "\/content\/structure\/zdf\/arte",
+                        "title": "ARTE",
+                        "http:\/\/zdf.de\/rels\/target": {
+                            "id": "arte-126",
+                            "externalId": "SCMS_ca4ba465-f6c1-4add-9514-368c43fccaf1",
+                            "title": "ARTE",
+                            "hasVideo": true,
+                            "contentType": "category",
+                            "profile": "http:\/\/zdf.de\/rels\/content\/page-index-navigation",
+                            "self": "\/content\/documents\/zdf\/arte?profile=navigation",
+                            "canonical": "\/content\/documents\/arte-126.json",
+                            "structureNodePath": "\/zdf\/arte",
+                            "stage": [
+                                {
+                                    "profile": "http:\/\/zdf.de\/rels\/content\/group-header-s-navigation",
+                                    "teaser": [
+                                        {
+                                            "http:\/\/zdf.de\/rels\/target": {
+                                                "title": "ARTE Keyvisual Category",
+                                                "altText": "ARTE Keyvisual Category",
+                                                "copyrightNotice": "ARTE",
+                                                "source": "ARTE",
+                                                "profile": "http:\/\/zdf.de\/rels\/image",
+                                                "self": "\/content\/documents\/zdf\/arte\/arte-stage-visual-category-100.json",
+                                                "canonical": "\/content\/documents\/arte-stage-visual-category-100.json",
+                                                "layouts": {
+                                                    "1140x120": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1140x120?cb=1620830098223",
+                                                    "1140x240": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1140x240?cb=1620830098223",
+                                                    "1152x1296": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1152x1296?cb=1620830098223",
+                                                    "1200x480": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1200x480?cb=1620830098223",
+                                                    "1280x720": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1280x720?cb=1620830098223",
+                                                    "1280xauto": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1280xauto?cb=1620830098223",
+                                                    "1300x650": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1300x650?cb=1620830098223",
+                                                    "1500x300": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1500x300?cb=1620830098223",
+                                                    "1500x600": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1500x600?cb=1620830098223",
+                                                    "1500x800": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1500x800?cb=1620830098223",
+                                                    "1800x720": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1800x720?cb=1620830098223",
+                                                    "1900x200": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1900x200?cb=1620830098223",
+                                                    "1900x400": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1900x400?cb=1620830098223",
+                                                    "1900x570": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1900x570?cb=1620830098223",
+                                                    "1920x1080": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1920x1080?cb=1620830098223",
+                                                    "225x400": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~225x400?cb=1620830098223",
+                                                    "2400x1350": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~2400x1350?cb=1620830098223",
+                                                    "240x270": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~240x270?cb=1620830098223",
+                                                    "276x155": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~276x155?cb=1620830098223",
+                                                    "276x311": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~276x311?cb=1620830098223",
+                                                    "314x314": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~314x314?cb=1620830098223",
+                                                    "380x170": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~380x170?cb=1620830098223",
+                                                    "384x216": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~384x216?cb=1620830098223",
+                                                    "384xauto": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~384xauto?cb=1620830098223",
+                                                    "405x720": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~405x720?cb=1620830098223",
+                                                    "640x720": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~640x720?cb=1620830098223",
+                                                    "760x340": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~760x340?cb=1620830098223",
+                                                    "768x432": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~768x432?cb=1620830098223",
+                                                    "768xauto": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~768xauto?cb=1620830098223",
+                                                    "840x140": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~840x140?cb=1620830098223",
+                                                    "840x280": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~840x280?cb=1620830098223",
+                                                    "840x360": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~840x360?cb=1620830098223",
+                                                    "860x344": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~860x344?cb=1620830098223",
+                                                    "936x520": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~936x520?cb=1620830098223",
+                                                    "original": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~original?cb=1620830098223"
+                                                }
+                                            },
+                                            "displayBrandLogo": true,
+                                            "profile": "http:\/\/zdf.de\/rels\/content-reference\/teaser-header-s"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    "http:\/\/zdf.de\/rels\/sharing-url": "https:\/\/www.zdf.de\/arte\/krieg-der-traume-1918-1939\/page-video-artede-krieg-der-traeume---1918-1939---frieden-100.html",
+                    "http:\/\/zdf.de\/rels\/brand": {
+                        "profile": "http:\/\/zdf.de\/rels\/content\/structureNodeDocument-breadcrumb",
+                        "self": "\/content\/structure\/zdf\/arte\/krieg-der-traume-1918-1939?profile=breadcrumb",
+                        "canonical": "\/content\/structure\/zdf\/arte\/krieg-der-traume-1918-1939",
+                        "title": "Krieg der Träume 1918-1939",
+                        "http:\/\/zdf.de\/rels\/target": {
+                            "id": "collection-index-page-artede-collection-artede-rc-013347-252",
+                            "externalId": "SCMS_index-page-artede-collection_artede_rc-013347-",
+                            "title": "Krieg der Träume 1918-1939",
+                            "contentType": "brand",
+                            "profile": "http:\/\/zdf.de\/rels\/content\/page-index-navigation",
+                            "self": "\/content\/documents\/zdf\/arte\/krieg-der-traume-1918-1939?profile=navigation",
+                            "canonical": "\/content\/documents\/collection-index-page-artede-collection-artede-rc-013347-252.json",
+                            "structureNodePath": "\/zdf\/arte\/krieg-der-traume-1918-1939",
+                            "stage": [
+                                {
+                                    "profile": "http:\/\/zdf.de\/rels\/content\/group-header-m-navigation",
+                                    "teaser": [
+                                        {
+                                            "http:\/\/zdf.de\/rels\/target": {
+                                                "title": "Krieg der Träume 1918-1939",
+                                                "altText": "Krieg der Träume 1918-1939",
+                                                "copyrightNotice": "arte",
+                                                "source": "arte",
+                                                "profile": "http:\/\/zdf.de\/rels\/image",
+                                                "self": "\/content\/documents\/zdf\/arte\/krieg-der-traume-1918-1939\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100.json",
+                                                "canonical": "\/content\/documents\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100.json",
+                                                "layouts": {
+                                                    "1140x120": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1140x120?cb=1641541856274",
+                                                    "1140x240": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1140x240?cb=1641541856274",
+                                                    "1152x1296": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1152x1296?cb=1641541856274",
+                                                    "1200x480": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1200x480?cb=1641541856274",
+                                                    "1280x720": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1280x720?cb=1641541856274",
+                                                    "1280xauto": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1280xauto?cb=1641541856274",
+                                                    "1300x650": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1300x650?cb=1641541856274",
+                                                    "1500x300": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1500x300?cb=1641541856274",
+                                                    "1500x600": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1500x600?cb=1641541856274",
+                                                    "1500x800": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1500x800?cb=1641541856274",
+                                                    "1800x720": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1800x720?cb=1641541856274",
+                                                    "1900x200": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1900x200?cb=1641541856274",
+                                                    "1900x400": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1900x400?cb=1641541856274",
+                                                    "1900x570": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1900x570?cb=1641541856274",
+                                                    "1920x1080": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1920x1080?cb=1641541856274",
+                                                    "225x400": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~225x400?cb=1641541856274",
+                                                    "2400x1350": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~2400x1350?cb=1641541856274",
+                                                    "240x270": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~240x270?cb=1641541856274",
+                                                    "2600x1300": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~2600x1300?cb=1641541856274",
+                                                    "276x155": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~276x155?cb=1641541856274",
+                                                    "276x311": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~276x311?cb=1641541856274",
+                                                    "2850x300": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~2850x300?cb=1641541856274",
+                                                    "2850x600": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~2850x600?cb=1641541856274",
+                                                    "314x314": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~314x314?cb=1641541856274",
+                                                    "380x170": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~380x170?cb=1641541856274",
+                                                    "3840x2160": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~3840x2160?cb=1641541856274",
+                                                    "384x216": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~384x216?cb=1641541856274",
+                                                    "384xauto": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~384xauto?cb=1641541856274",
+                                                    "405x720": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~405x720?cb=1641541856274",
+                                                    "640x720": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~640x720?cb=1641541856274",
+                                                    "760x340": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~760x340?cb=1641541856274",
+                                                    "768x432": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~768x432?cb=1641541856274",
+                                                    "768xauto": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~768xauto?cb=1641541856274",
+                                                    "840x140": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~840x140?cb=1641541856274",
+                                                    "840x280": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~840x280?cb=1641541856274",
+                                                    "840x360": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~840x360?cb=1641541856274",
+                                                    "860x344": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~860x344?cb=1641541856274",
+                                                    "936x520": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~936x520?cb=1641541856274",
+                                                    "original": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~original?cb=1641541856274"
+                                                }
+                                            },
+                                            "headerDecorationText": "",
+                                            "profile": "http:\/\/zdf.de\/rels\/content-reference\/teaser-header-m",
+                                            "http:\/\/zdf.de\/rels\/content-owner": {
+                                                "id": "content-owner-arte-102",
+                                                "externalId": "SCMS_3e6412b5-bd04-4cf9-bb76-a2414a977ec3",
+                                                "profile": "http:\/\/zdf.de\/rels\/content\/conf-content-owner",
+                                                "self": "\/content\/documents\/zdf\/arte\/content-owner-arte-102.json",
+                                                "canonical": "\/content\/documents\/content-owner-arte-102.json",
+                                                "title": "ARTE",
+                                                "logo": {
+                                                    "title": "arte Logo",
+                                                    "altText": "arte Logo",
+                                                    "profile": "http:\/\/zdf.de\/rels\/image",
+                                                    "self": "\/content\/documents\/zdf\/arte\/logo-arte-content-owner-100.json",
+                                                    "canonical": "\/content\/documents\/logo-arte-content-owner-100.json",
+                                                    "layouts": {
+                                                        "240x270": "https:\/\/www.zdf.de\/assets\/logo-arte-content-owner-100~240x270?cb=1606389232278",
+                                                        "276x155": "https:\/\/www.zdf.de\/assets\/logo-arte-content-owner-100~276x155?cb=1606389232278",
+                                                        "276x311": "https:\/\/www.zdf.de\/assets\/logo-arte-content-owner-100~276x311?cb=1606389232278",
+                                                        "314x314": "https:\/\/www.zdf.de\/assets\/logo-arte-content-owner-100~314x314?cb=1606389232278",
+                                                        "380x170": "https:\/\/www.zdf.de\/assets\/logo-arte-content-owner-100~380x170?cb=1606389232278",
+                                                        "384x216": "https:\/\/www.zdf.de\/assets\/logo-arte-content-owner-100~384x216?cb=1606389232278",
+                                                        "384xauto": "https:\/\/www.zdf.de\/assets\/logo-arte-content-owner-100~384xauto?cb=1606389232278",
+                                                        "760x340": "https:\/\/www.zdf.de\/assets\/logo-arte-content-owner-100~760x340?cb=1606389232278",
+                                                        "original": "https:\/\/www.zdf.de\/assets\/logo-arte-content-owner-100~original?cb=1606389232278"
+                                                    }
+                                                },
+                                                "http:\/\/zdf.de\/rels\/content-owner-link": {
+                                                    "htmlAnchor": {
+                                                        "profile": "http:\/\/zdf.de\/rels\/teaser-target-web",
+                                                        "href": "\/arte",
+                                                        "title": "ARTE"
+                                                    },
+                                                    "profile": "http:\/\/zdf.de\/rels\/content\/index-link-page-index",
+                                                    "id": "arte-126",
+                                                    "title": "ARTE",
+                                                    "contentType": "category"
+                                                },
+                                                "label": "Ein Angebot von"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    "profile": "http:\/\/zdf.de\/rels\/content\/page-video-playlist2",
+                    "self": "\/content\/documents\/zdf\/arte\/krieg-der-traume-1918-1939\/page-video-artede-krieg-der-traeume---1918-1939---frieden-100.json?profile=playlist2",
+                    "http:\/\/zdf.de\/rels\/player": "\/content\/documents\/zdf\/arte\/krieg-der-traume-1918-1939\/page-video-artede-krieg-der-traeume---1918-1939---frieden-100.json?profile=player2",
+                    "canonical": "\/content\/documents\/page-video-artede-krieg-der-traeume---1918-1939---frieden-100.json",
+                    "tracking": {
+                        "szmng": {
+                            "st": "zdf",
+                            "cp": "ARTE\/Krieg_der_Traeume_1918-1939",
+                            "sv": "ke",
+                            "co": "episode\/Krieg_der_Traeume_-_1918-1939_-_Frieden\/page-video-artede_video_artede_067244-002-A"
+                        },
+                        "zdf": {
+                            "config-v2": {
+                                "playerTrackingRateInSeconds": 60
+                            },
+                            "templates-v2": {
+                                "view": "\/\/tracksrv.zdf.de\/event?eventType=view&trackingId={trackingId}&appId={appId}{&searchResultsCount,abGroup,abName,searchParams,szmAge,szmGender,szmConfidence,loggedIn,subprofile,campaign}&assetId={assetId}&pagePath=https%3A%2F%2Fwww.zdf.de%2Farte%2Fkrieg-der-traume-1918-1939%2Fpage-video-artede-krieg-der-traeume---1918-1939---frieden-100.html",
+                                "click": "\/\/tracksrv.zdf.de\/event?eventType=click&trackingId={trackingId}&appId={appId}&clickedClusterPosition={clickedClusterPosition}&clickedTeaserPosition={clickedTeaserPosition}{&searchParams,abGroup,abName,recoEngine,element,recoId,szmAge,szmGender,szmConfidence,loggedIn,subprofile,nodeId}&assetId={assetId}&targetAssetId={targetAssetId}&pagePath=https%3A%2F%2Fwww.zdf.de%2Farte%2Fkrieg-der-traume-1918-1939%2Fpage-video-artede-krieg-der-traeume---1918-1939---frieden-100.html",
+                                "pause": "\/\/tracksrv.zdf.de\/event?eventType=pause&trackingId={trackingId}&appId={appId}&currentPosition={currentPosition}&duration={duration}{&abGroup,abName,playbackProgress,videoAssetId,szmAge,szmGender,szmConfidence,loggedIn,subprofile,playbackRate}&assetId={assetId}&pagePath=https%3A%2F%2Fwww.zdf.de%2Farte%2Fkrieg-der-traume-1918-1939%2Fpage-video-artede-krieg-der-traeume---1918-1939---frieden-100.html",
+                                "play": "\/\/tracksrv.zdf.de\/event?eventType=play&trackingId={trackingId}&appId={appId}&currentPosition={currentPosition}&duration={duration}{&abGroup,abName,playbackProgress,videoAssetId,szmAge,szmGender,szmConfidence,loggedIn,subprofile,playbackRate}&assetId={assetId}&pagePath=https%3A%2F%2Fwww.zdf.de%2Farte%2Fkrieg-der-traume-1918-1939%2Fpage-video-artede-krieg-der-traeume---1918-1939---frieden-100.html"
+                            }
+                        },
+                        "atInternet": {
+                            "page": {
+                                "level1": "zdf",
+                                "level2": "47",
+                                "chapter1": "\/Krieg_der_Traeume_1918-1939",
+                                "chapter2": "episode",
+                                "chapter3": "page-video-artede_video_artede_067244-002-A",
+                                "name": "Krieg_der_Traeume_-_1918-1939_-_Frieden",
+                                "customObject": {
+                                    "domain": "zdf",
+                                    "level1": "zdf",
+                                    "level2": "ARTE",
+                                    "chapter1": "\/Krieg_der_Traeume_1918-1939",
+                                    "broadcast": "arte",
+                                    "id": "page-video-artede-krieg-der-traeume---1918-1939---frieden-100",
+                                    "inhaltsTyp": "episode",
+                                    "chapter4": ""
+                                }
+                            },
+                            "richMedia": {
+                                "mediaType": "video",
+                                "mediaLevel2": "47",
+                                "mediaLabel": "Krieg_der_Traeume_1918-1939::Krieg_der_Traeume_-_1918-1939_-_Frieden",
+                                "mediaTheme1": "ARTE",
+                                "mediaTheme2": "Krieg_der_Traeume_1918-1939",
+                                "mediaTheme3": "episode",
+                                "refreshDuration": {
+                                    "0": 5,
+                                    "1": 30,
+                                    "5": 60
+                                },
+                                "duration": "3150",
+                                "broadcastMode": "clip"
+                            },
+                            "event": {
+                                "level1": "zdf",
+                                "level2": "47",
+                                "chapter1": "\/Krieg_der_Traeume_1918-1939",
+                                "customObject": {
+                                    "domain": "zdf",
+                                    "level1": "zdf",
+                                    "level2": "ARTE",
+                                    "chapter1": "\/Krieg_der_Traeume_1918-1939",
+                                    "broadcast": "arte",
+                                    "id": "page-video-artede-krieg-der-traeume---1918-1939---frieden-100",
+                                    "inhaltsTyp": "episode"
+                                }
+                            },
+                            "customVars": {
+                                "site": {
+                                    "id": "page-video-artede-krieg-der-traeume---1918-1939---frieden-100",
+                                    "chapter2": "episode",
+                                    "chapter3": "page-video-artede_video_artede_067244-002-A"
+                                }
+                            }
+                        }
+                    },
+                    "mainVideoContent": {
+                        "http:\/\/zdf.de\/rels\/target": {
+                            "title": "Krieg der Träume - 1918-1939 - Frieden",
+                            "contentType": "episode",
+                            "extId": "video_artede_067244-002-A",
+                            "attrs": [
+                                "UT"
+                            ],
+                            "duration": 3150,
+                            "geoLocation": "dach",
+                            "fsk": "none",
+                            "visible": true,
+                            "visibleFrom": "2021-12-31T05:00:00.000+01:00",
+                            "visibleTo": "2022-01-30T05:00:00.000+01:00",
+                            "isOnlineOnly": true,
+                            "aspectRatio": "16:9",
+                            "endDate": "2022-01-30T05:00:00.000+01:00",
+                            "profile": "http:\/\/zdf.de\/rels\/content\/content-video-vod-partner-teaser",
+                            "self": "\/content\/documents\/zdf\/arte\/krieg-der-traume-1918-1939\/vod-artede-krieg-der-traeume---1918-1939---frieden-100.json?profile=teaser",
+                            "canonical": "\/content\/documents\/vod-artede-krieg-der-traeume---1918-1939---frieden-100.json",
+                            "streams": {
+                                "default": {
+                                    "label": "Normal",
+                                    "extId": "video_artede_067244-002-A",
+                                    "http:\/\/zdf.de\/rels\/streams\/ptmd-template": "\/content\/documents\/vod-artede-krieg-der-traeume---1918-1939---frieden-100.json?profile=tmd"
+                                }
+                            }
+                        },
+                        "profile": "http:\/\/zdf.de\/rels\/content-reference\/video-content"
+                    }
+                },
+                "configuration": "dokumentenbasiert"
+            }
+        ]
+    },
+    "http:\/\/zdf.de\/rels\/recommended-videos-object-reference": {
+        "profile": "http:\/\/zdf.de\/rels\/object-reference",
+        "reference-type": "virtual",
+        "uri": "\/broker\/recommendations?brokerConfiguration=dokumentenbasiert&docs=SCMS_page-video-artede_video_artede_067244-001-A%3A1.0&types=page-video&limit=26&hasVideo=true&pageId=SCMS_page-video-artede_video_artede_067244-001-A&pageContentType=episode&profile=player-3"
+    },
+    "tracking": {
+        "atInternet": {
+            "page": {
+                "level1": "zdf",
+                "level2": "47",
+                "chapter1": "\/Krieg_der_Traeume_1918-1939",
+                "chapter2": "episode",
+                "chapter3": "page-video-artede_video_artede_067244-001-A",
+                "name": "Krieg_der_Traeume_-_1918-1939_-_Ueberleben",
+                "customObject": {
+                    "domain": "zdf",
+                    "level1": "zdf",
+                    "level2": "ARTE",
+                    "chapter1": "\/Krieg_der_Traeume_1918-1939",
+                    "broadcast": "arte",
+                    "id": "page-video-artede-krieg-der-traeume---1918-1939---ueberleben-100",
+                    "inhaltsTyp": "episode",
+                    "chapter4": ""
+                }
+            },
+            "richMedia": {
+                "mediaType": "video",
+                "mediaLevel2": "47",
+                "mediaLabel": "|Krieg_der_Traeume_1918-1939|Krieg_der_Traeume_-_1918-1939_-_Ueberleben",
+                "mediaTheme1": "ARTE",
+                "mediaTheme2": "Krieg_der_Traeume_1918-1939",
+                "mediaTheme3": "episode",
+                "refreshDuration": {
+                    "0": 5,
+                    "1": 30,
+                    "5": 60
+                },
+                "duration": "3146",
+                "broadcastMode": "clip"
+            },
+            "event": {
+                "level1": "zdf",
+                "level2": "47",
+                "chapter1": "\/Krieg_der_Traeume_1918-1939",
+                "customObject": {
+                    "domain": "zdf",
+                    "level1": "zdf",
+                    "level2": "ARTE",
+                    "chapter1": "\/Krieg_der_Traeume_1918-1939",
+                    "broadcast": "arte",
+                    "id": "page-video-artede-krieg-der-traeume---1918-1939---ueberleben-100",
+                    "inhaltsTyp": "episode"
+                }
+            },
+            "customVars": {
+                "site": {
+                    "id": "page-video-artede-krieg-der-traeume---1918-1939---ueberleben-100",
+                    "chapter2": "episode",
+                    "chapter3": "page-video-artede_video_artede_067244-001-A"
+                }
+            }
+        },
+        "nielsen": {
+            "content": {
+                "type": "content",
+                "assetid": "{streamExtId}",
+                "program": "Krieg der Träume 1918-1939",
+                "title": "Krieg der Träume 1918-1939|Krieg der Träume - 1918-1939 - Überleben|{streamExtId}",
+                "length": "3146",
+                "nol_c2": "p2,Y",
+                "nol_c5": "p5,ZDFmediathek",
+                "nol_c7": "p7,{streamExtId}",
+                "nol_c8": "p8,3146",
+                "nol_c9": "p9,Krieg der Träume - 1918-1939 - Überleben",
+                "nol_c10": "p10,arte",
+                "nol_c12": "p12,Content",
+                "nol_c14": "p14,2021-12-31T05:00:00",
+                "nol_c15": "p15,067244-001-A",
+                "nol_c16": "p16,Krieg der Träume 1918-1939",
+                "nol_c18": "p18,N",
+                "nol_c19": "p19,ARTE|31.12.2021 05:00|30.01.2022 05:00|none|dach|true|ARTE"
+            },
+            "addContent": {
+                "nol_c19": "p19,ARTE|31.12.2021 05:00|30.01.2022 05:00|none|dach|true|ARTE",
+                "nol_c15": "p15,067244-001-A",
+                "nol_c14": "p14,2021-12-31T05:00:00",
+                "nol_c10": "p10,arte"
+            }
+        },
+        "szmng": {
+            "st": "zdf",
+            "cp": "ARTE\/Krieg_der_Traeume_1918-1939",
+            "sv": "ke",
+            "co": "episode\/Krieg_der_Traeume_-_1918-1939_-_Ueberleben\/page-video-artede_video_artede_067244-001-A"
+        },
+        "zdf": {
+            "config-v2": {
+                "playerTrackingRateInSeconds": 60
+            },
+            "templates-v2": {
+                "click": "\/\/tracksrv.zdf.de\/event?eventType=click&trackingId={trackingId}&appId={appId}&clickedClusterPosition={clickedClusterPosition}&clickedTeaserPosition={clickedTeaserPosition}{&searchParams,abGroup,abName,recoEngine,element,recoId,szmAge,szmGender,szmConfidence,loggedIn,subprofile,nodeId}&assetId={assetId}&targetAssetId={targetAssetId}&pagePath=https%3A%2F%2Fwww.zdf.de%2Farte%2Fkrieg-der-traume-1918-1939%2Fpage-video-artede-krieg-der-traeume---1918-1939---ueberleben-100.html",
+                "view": "\/\/tracksrv.zdf.de\/event?eventType=view&trackingId={trackingId}&appId={appId}{&searchResultsCount,abGroup,abName,searchParams,szmAge,szmGender,szmConfidence,loggedIn,subprofile,campaign}&assetId={assetId}&pagePath=https%3A%2F%2Fwww.zdf.de%2Farte%2Fkrieg-der-traume-1918-1939%2Fpage-video-artede-krieg-der-traeume---1918-1939---ueberleben-100.html",
+                "pause": "\/\/tracksrv.zdf.de\/event?eventType=pause&trackingId={trackingId}&appId={appId}&currentPosition={currentPosition}&duration={duration}{&abGroup,abName,playbackProgress,videoAssetId,szmAge,szmGender,szmConfidence,loggedIn,subprofile,playbackRate}&assetId={assetId}&pagePath=https%3A%2F%2Fwww.zdf.de%2Farte%2Fkrieg-der-traume-1918-1939%2Fpage-video-artede-krieg-der-traeume---1918-1939---ueberleben-100.html",
+                "play": "\/\/tracksrv.zdf.de\/event?eventType=play&trackingId={trackingId}&appId={appId}&currentPosition={currentPosition}&duration={duration}{&abGroup,abName,playbackProgress,videoAssetId,szmAge,szmGender,szmConfidence,loggedIn,subprofile,playbackRate}&assetId={assetId}&pagePath=https%3A%2F%2Fwww.zdf.de%2Farte%2Fkrieg-der-traume-1918-1939%2Fpage-video-artede-krieg-der-traeume---1918-1939---ueberleben-100.html"
+            }
+        }
+    },
+    "http:\/\/zdf.de\/rels\/next-video-editorial": {
+        "title": "Krieg der Träume - 1918-1939 - Frieden",
+        "editorialDate": "2021-12-31T05:00:00.000+01:00",
+        "teaserImageRef": {
+            "title": "Krieg der Träume - 1918-1939 - Frieden",
+            "altText": "Krieg der Träume - 1918-1939 - Frieden",
+            "copyrightNotice": "arte",
+            "source": "arte",
+            "profile": "http:\/\/zdf.de\/rels\/image",
+            "self": "\/content\/documents\/zdf\/arte\/krieg-der-traume-1918-1939\/image-artede-krieg-der-traeume---1918-1939---frieden-100.json?profile=player",
+            "canonical": "\/content\/documents\/image-artede-krieg-der-traeume---1918-1939---frieden-100.json",
+            "layouts": {
+                "1280x720": "https:\/\/www.zdf.de\/assets\/image-artede-krieg-der-traeume---1918-1939---frieden-100~1280x720?cb=1641034017193",
+                "1920x1080": "https:\/\/www.zdf.de\/assets\/image-artede-krieg-der-traeume---1918-1939---frieden-100~1920x1080?cb=1641034017193",
+                "384x216": "https:\/\/www.zdf.de\/assets\/image-artede-krieg-der-traeume---1918-1939---frieden-100~384x216?cb=1641034017193",
+                "768x432": "https:\/\/www.zdf.de\/assets\/image-artede-krieg-der-traeume---1918-1939---frieden-100~768x432?cb=1641034017193",
+                "original": "https:\/\/www.zdf.de\/assets\/image-artede-krieg-der-traeume---1918-1939---frieden-100~original?cb=1641034017193"
+            }
+        },
+        "http:\/\/zdf.de\/rels\/category": {
+            "profile": "http:\/\/zdf.de\/rels\/content\/structureNodeDocument-breadcrumb",
+            "self": "\/content\/structure\/zdf\/arte?profile=breadcrumb",
+            "canonical": "\/content\/structure\/zdf\/arte",
+            "title": "ARTE",
+            "http:\/\/zdf.de\/rels\/target": {
+                "id": "arte-126",
+                "externalId": "SCMS_ca4ba465-f6c1-4add-9514-368c43fccaf1",
+                "title": "ARTE",
+                "hasVideo": true,
+                "contentType": "category",
+                "profile": "http:\/\/zdf.de\/rels\/content\/page-index-navigation",
+                "self": "\/content\/documents\/zdf\/arte?profile=navigation",
+                "canonical": "\/content\/documents\/arte-126.json",
+                "structureNodePath": "\/zdf\/arte",
+                "stage": [
+                    {
+                        "profile": "http:\/\/zdf.de\/rels\/content\/group-header-s-navigation",
+                        "teaser": [
+                            {
+                                "http:\/\/zdf.de\/rels\/target": {
+                                    "title": "ARTE Keyvisual Category",
+                                    "altText": "ARTE Keyvisual Category",
+                                    "copyrightNotice": "ARTE",
+                                    "source": "ARTE",
+                                    "profile": "http:\/\/zdf.de\/rels\/image",
+                                    "self": "\/content\/documents\/zdf\/arte\/arte-stage-visual-category-100.json",
+                                    "canonical": "\/content\/documents\/arte-stage-visual-category-100.json",
+                                    "layouts": {
+                                        "1140x120": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1140x120?cb=1620830098223",
+                                        "1140x240": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1140x240?cb=1620830098223",
+                                        "1152x1296": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1152x1296?cb=1620830098223",
+                                        "1200x480": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1200x480?cb=1620830098223",
+                                        "1280x720": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1280x720?cb=1620830098223",
+                                        "1280xauto": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1280xauto?cb=1620830098223",
+                                        "1300x650": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1300x650?cb=1620830098223",
+                                        "1500x300": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1500x300?cb=1620830098223",
+                                        "1500x600": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1500x600?cb=1620830098223",
+                                        "1500x800": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1500x800?cb=1620830098223",
+                                        "1800x720": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1800x720?cb=1620830098223",
+                                        "1900x200": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1900x200?cb=1620830098223",
+                                        "1900x400": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1900x400?cb=1620830098223",
+                                        "1900x570": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1900x570?cb=1620830098223",
+                                        "1920x1080": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~1920x1080?cb=1620830098223",
+                                        "225x400": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~225x400?cb=1620830098223",
+                                        "2400x1350": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~2400x1350?cb=1620830098223",
+                                        "240x270": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~240x270?cb=1620830098223",
+                                        "276x155": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~276x155?cb=1620830098223",
+                                        "276x311": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~276x311?cb=1620830098223",
+                                        "314x314": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~314x314?cb=1620830098223",
+                                        "380x170": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~380x170?cb=1620830098223",
+                                        "384x216": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~384x216?cb=1620830098223",
+                                        "384xauto": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~384xauto?cb=1620830098223",
+                                        "405x720": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~405x720?cb=1620830098223",
+                                        "640x720": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~640x720?cb=1620830098223",
+                                        "760x340": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~760x340?cb=1620830098223",
+                                        "768x432": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~768x432?cb=1620830098223",
+                                        "768xauto": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~768xauto?cb=1620830098223",
+                                        "840x140": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~840x140?cb=1620830098223",
+                                        "840x280": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~840x280?cb=1620830098223",
+                                        "840x360": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~840x360?cb=1620830098223",
+                                        "860x344": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~860x344?cb=1620830098223",
+                                        "936x520": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~936x520?cb=1620830098223",
+                                        "original": "https:\/\/www.zdf.de\/assets\/arte-stage-visual-category-100~original?cb=1620830098223"
+                                    }
+                                },
+                                "displayBrandLogo": true,
+                                "profile": "http:\/\/zdf.de\/rels\/content-reference\/teaser-header-s"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "http:\/\/zdf.de\/rels\/sharing-url": "https:\/\/www.zdf.de\/arte\/krieg-der-traume-1918-1939\/page-video-artede-krieg-der-traeume---1918-1939---frieden-100.html",
+        "http:\/\/zdf.de\/rels\/brand": {
+            "profile": "http:\/\/zdf.de\/rels\/content\/structureNodeDocument-breadcrumb",
+            "self": "\/content\/structure\/zdf\/arte\/krieg-der-traume-1918-1939?profile=breadcrumb",
+            "canonical": "\/content\/structure\/zdf\/arte\/krieg-der-traume-1918-1939",
+            "title": "Krieg der Träume 1918-1939",
+            "http:\/\/zdf.de\/rels\/target": {
+                "id": "collection-index-page-artede-collection-artede-rc-013347-252",
+                "externalId": "SCMS_index-page-artede-collection_artede_rc-013347-",
+                "title": "Krieg der Träume 1918-1939",
+                "contentType": "brand",
+                "profile": "http:\/\/zdf.de\/rels\/content\/page-index-navigation",
+                "self": "\/content\/documents\/zdf\/arte\/krieg-der-traume-1918-1939?profile=navigation",
+                "canonical": "\/content\/documents\/collection-index-page-artede-collection-artede-rc-013347-252.json",
+                "structureNodePath": "\/zdf\/arte\/krieg-der-traume-1918-1939",
+                "stage": [
+                    {
+                        "profile": "http:\/\/zdf.de\/rels\/content\/group-header-m-navigation",
+                        "teaser": [
+                            {
+                                "http:\/\/zdf.de\/rels\/target": {
+                                    "title": "Krieg der Träume 1918-1939",
+                                    "altText": "Krieg der Träume 1918-1939",
+                                    "copyrightNotice": "arte",
+                                    "source": "arte",
+                                    "profile": "http:\/\/zdf.de\/rels\/image",
+                                    "self": "\/content\/documents\/zdf\/arte\/krieg-der-traume-1918-1939\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100.json",
+                                    "canonical": "\/content\/documents\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100.json",
+                                    "layouts": {
+                                        "1140x120": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1140x120?cb=1641541856274",
+                                        "1140x240": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1140x240?cb=1641541856274",
+                                        "1152x1296": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1152x1296?cb=1641541856274",
+                                        "1200x480": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1200x480?cb=1641541856274",
+                                        "1280x720": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1280x720?cb=1641541856274",
+                                        "1280xauto": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1280xauto?cb=1641541856274",
+                                        "1300x650": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1300x650?cb=1641541856274",
+                                        "1500x300": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1500x300?cb=1641541856274",
+                                        "1500x600": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1500x600?cb=1641541856274",
+                                        "1500x800": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1500x800?cb=1641541856274",
+                                        "1800x720": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1800x720?cb=1641541856274",
+                                        "1900x200": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1900x200?cb=1641541856274",
+                                        "1900x400": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1900x400?cb=1641541856274",
+                                        "1900x570": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1900x570?cb=1641541856274",
+                                        "1920x1080": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~1920x1080?cb=1641541856274",
+                                        "225x400": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~225x400?cb=1641541856274",
+                                        "2400x1350": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~2400x1350?cb=1641541856274",
+                                        "240x270": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~240x270?cb=1641541856274",
+                                        "2600x1300": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~2600x1300?cb=1641541856274",
+                                        "276x155": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~276x155?cb=1641541856274",
+                                        "276x311": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~276x311?cb=1641541856274",
+                                        "2850x300": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~2850x300?cb=1641541856274",
+                                        "2850x600": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~2850x600?cb=1641541856274",
+                                        "314x314": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~314x314?cb=1641541856274",
+                                        "380x170": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~380x170?cb=1641541856274",
+                                        "3840x2160": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~3840x2160?cb=1641541856274",
+                                        "384x216": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~384x216?cb=1641541856274",
+                                        "384xauto": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~384xauto?cb=1641541856274",
+                                        "405x720": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~405x720?cb=1641541856274",
+                                        "640x720": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~640x720?cb=1641541856274",
+                                        "760x340": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~760x340?cb=1641541856274",
+                                        "768x432": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~768x432?cb=1641541856274",
+                                        "768xauto": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~768xauto?cb=1641541856274",
+                                        "840x140": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~840x140?cb=1641541856274",
+                                        "840x280": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~840x280?cb=1641541856274",
+                                        "840x360": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~840x360?cb=1641541856274",
+                                        "860x344": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~860x344?cb=1641541856274",
+                                        "936x520": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~936x520?cb=1641541856274",
+                                        "original": "https:\/\/www.zdf.de\/assets\/collection-landscape-image-artede-krieg-der-traeume-1918-1939-100~original?cb=1641541856274"
+                                    }
+                                },
+                                "headerDecorationText": "",
+                                "profile": "http:\/\/zdf.de\/rels\/content-reference\/teaser-header-m",
+                                "http:\/\/zdf.de\/rels\/content-owner": {
+                                    "id": "content-owner-arte-102",
+                                    "externalId": "SCMS_3e6412b5-bd04-4cf9-bb76-a2414a977ec3",
+                                    "profile": "http:\/\/zdf.de\/rels\/content\/conf-content-owner",
+                                    "self": "\/content\/documents\/zdf\/arte\/content-owner-arte-102.json",
+                                    "canonical": "\/content\/documents\/content-owner-arte-102.json",
+                                    "title": "ARTE",
+                                    "logo": {
+                                        "title": "arte Logo",
+                                        "altText": "arte Logo",
+                                        "profile": "http:\/\/zdf.de\/rels\/image",
+                                        "self": "\/content\/documents\/zdf\/arte\/logo-arte-content-owner-100.json",
+                                        "canonical": "\/content\/documents\/logo-arte-content-owner-100.json",
+                                        "layouts": {
+                                            "240x270": "https:\/\/www.zdf.de\/assets\/logo-arte-content-owner-100~240x270?cb=1606389232278",
+                                            "276x155": "https:\/\/www.zdf.de\/assets\/logo-arte-content-owner-100~276x155?cb=1606389232278",
+                                            "276x311": "https:\/\/www.zdf.de\/assets\/logo-arte-content-owner-100~276x311?cb=1606389232278",
+                                            "314x314": "https:\/\/www.zdf.de\/assets\/logo-arte-content-owner-100~314x314?cb=1606389232278",
+                                            "380x170": "https:\/\/www.zdf.de\/assets\/logo-arte-content-owner-100~380x170?cb=1606389232278",
+                                            "384x216": "https:\/\/www.zdf.de\/assets\/logo-arte-content-owner-100~384x216?cb=1606389232278",
+                                            "384xauto": "https:\/\/www.zdf.de\/assets\/logo-arte-content-owner-100~384xauto?cb=1606389232278",
+                                            "760x340": "https:\/\/www.zdf.de\/assets\/logo-arte-content-owner-100~760x340?cb=1606389232278",
+                                            "original": "https:\/\/www.zdf.de\/assets\/logo-arte-content-owner-100~original?cb=1606389232278"
+                                        }
+                                    },
+                                    "http:\/\/zdf.de\/rels\/content-owner-link": {
+                                        "htmlAnchor": {
+                                            "profile": "http:\/\/zdf.de\/rels\/teaser-target-web",
+                                            "href": "\/arte",
+                                            "title": "ARTE"
+                                        },
+                                        "profile": "http:\/\/zdf.de\/rels\/content\/index-link-page-index",
+                                        "id": "arte-126",
+                                        "title": "ARTE",
+                                        "contentType": "category"
+                                    },
+                                    "label": "Ein Angebot von"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "profile": "http:\/\/zdf.de\/rels\/content\/page-video-player-3-teaser",
+        "self": "\/content\/documents\/zdf\/arte\/krieg-der-traume-1918-1939\/page-video-artede-krieg-der-traeume---1918-1939---frieden-100.json?profile=player-3-teaser",
+        "http:\/\/zdf.de\/rels\/player": "\/content\/documents\/zdf\/arte\/krieg-der-traume-1918-1939\/page-video-artede-krieg-der-traeume---1918-1939---frieden-100.json?profile=player-3-teaser",
+        "canonical": "\/content\/documents\/page-video-artede-krieg-der-traeume---1918-1939---frieden-100.json",
+        "tracking": {
+            "szmng": {
+                "st": "zdf",
+                "cp": "ARTE\/Krieg_der_Traeume_1918-1939",
+                "sv": "ke",
+                "co": "episode\/Krieg_der_Traeume_-_1918-1939_-_Frieden\/page-video-artede_video_artede_067244-002-A"
+            },
+            "zdf": {
+                "config-v2": {
+                    "playerTrackingRateInSeconds": 60
+                },
+                "templates-v2": {
+                    "view": "\/\/tracksrv.zdf.de\/event?eventType=view&trackingId={trackingId}&appId={appId}{&searchResultsCount,abGroup,abName,searchParams,szmAge,szmGender,szmConfidence,loggedIn,subprofile,campaign}&assetId={assetId}&pagePath=https%3A%2F%2Fwww.zdf.de%2Farte%2Fkrieg-der-traume-1918-1939%2Fpage-video-artede-krieg-der-traeume---1918-1939---frieden-100.html",
+                    "click": "\/\/tracksrv.zdf.de\/event?eventType=click&trackingId={trackingId}&appId={appId}&clickedClusterPosition={clickedClusterPosition}&clickedTeaserPosition={clickedTeaserPosition}{&searchParams,abGroup,abName,recoEngine,element,recoId,szmAge,szmGender,szmConfidence,loggedIn,subprofile,nodeId}&assetId={assetId}&targetAssetId={targetAssetId}&pagePath=https%3A%2F%2Fwww.zdf.de%2Farte%2Fkrieg-der-traume-1918-1939%2Fpage-video-artede-krieg-der-traeume---1918-1939---frieden-100.html",
+                    "pause": "\/\/tracksrv.zdf.de\/event?eventType=pause&trackingId={trackingId}&appId={appId}&currentPosition={currentPosition}&duration={duration}{&abGroup,abName,playbackProgress,videoAssetId,szmAge,szmGender,szmConfidence,loggedIn,subprofile,playbackRate}&assetId={assetId}&pagePath=https%3A%2F%2Fwww.zdf.de%2Farte%2Fkrieg-der-traume-1918-1939%2Fpage-video-artede-krieg-der-traeume---1918-1939---frieden-100.html",
+                    "play": "\/\/tracksrv.zdf.de\/event?eventType=play&trackingId={trackingId}&appId={appId}&currentPosition={currentPosition}&duration={duration}{&abGroup,abName,playbackProgress,videoAssetId,szmAge,szmGender,szmConfidence,loggedIn,subprofile,playbackRate}&assetId={assetId}&pagePath=https%3A%2F%2Fwww.zdf.de%2Farte%2Fkrieg-der-traume-1918-1939%2Fpage-video-artede-krieg-der-traeume---1918-1939---frieden-100.html"
+                }
+            },
+            "atInternet": {
+                "page": {
+                    "level1": "zdf",
+                    "level2": "47",
+                    "chapter1": "\/Krieg_der_Traeume_1918-1939",
+                    "chapter2": "episode",
+                    "chapter3": "page-video-artede_video_artede_067244-002-A",
+                    "name": "Krieg_der_Traeume_-_1918-1939_-_Frieden",
+                    "customObject": {
+                        "domain": "zdf",
+                        "level1": "zdf",
+                        "level2": "ARTE",
+                        "chapter1": "\/Krieg_der_Traeume_1918-1939",
+                        "broadcast": "arte",
+                        "id": "page-video-artede-krieg-der-traeume---1918-1939---frieden-100",
+                        "inhaltsTyp": "episode",
+                        "chapter4": ""
+                    }
+                },
+                "richMedia": {
+                    "mediaType": "video",
+                    "mediaLevel2": "47",
+                    "mediaLabel": "Krieg_der_Traeume_1918-1939::Krieg_der_Traeume_-_1918-1939_-_Frieden",
+                    "mediaTheme1": "ARTE",
+                    "mediaTheme2": "Krieg_der_Traeume_1918-1939",
+                    "mediaTheme3": "episode",
+                    "refreshDuration": {
+                        "0": 5,
+                        "1": 30,
+                        "5": 60
+                    },
+                    "duration": "3150",
+                    "broadcastMode": "clip"
+                },
+                "event": {
+                    "level1": "zdf",
+                    "level2": "47",
+                    "chapter1": "\/Krieg_der_Traeume_1918-1939",
+                    "customObject": {
+                        "domain": "zdf",
+                        "level1": "zdf",
+                        "level2": "ARTE",
+                        "chapter1": "\/Krieg_der_Traeume_1918-1939",
+                        "broadcast": "arte",
+                        "id": "page-video-artede-krieg-der-traeume---1918-1939---frieden-100",
+                        "inhaltsTyp": "episode"
+                    }
+                },
+                "customVars": {
+                    "site": {
+                        "id": "page-video-artede-krieg-der-traeume---1918-1939---frieden-100",
+                        "chapter2": "episode",
+                        "chapter3": "page-video-artede_video_artede_067244-002-A"
+                    }
+                }
+            }
+        },
+        "externalId": "SCMS_page-video-artede_video_artede_067244-002-A",
+        "mainVideoContent": {
+            "http:\/\/zdf.de\/rels\/target": {
+                "title": "Krieg der Träume - 1918-1939 - Frieden",
+                "contentType": "episode",
+                "extId": "video_artede_067244-002-A",
+                "attrs": [
+                    "UT"
+                ],
+                "duration": 3150,
+                "geoLocation": "dach",
+                "fsk": "none",
+                "visible": true,
+                "visibleFrom": "2021-12-31T05:00:00.000+01:00",
+                "visibleTo": "2022-01-30T05:00:00.000+01:00",
+                "isOnlineOnly": true,
+                "aspectRatio": "16:9",
+                "endDate": "2022-01-30T05:00:00.000+01:00",
+                "profile": "http:\/\/zdf.de\/rels\/content\/content-video-vod-partner-teaser",
+                "self": "\/content\/documents\/zdf\/arte\/krieg-der-traume-1918-1939\/vod-artede-krieg-der-traeume---1918-1939---frieden-100.json?profile=teaser",
+                "canonical": "\/content\/documents\/vod-artede-krieg-der-traeume---1918-1939---frieden-100.json",
+                "streams": {
+                    "default": {
+                        "label": "Normal",
+                        "extId": "video_artede_067244-002-A",
+                        "http:\/\/zdf.de\/rels\/streams\/ptmd-template": "\/content\/documents\/vod-artede-krieg-der-traeume---1918-1939---frieden-100.json?profile=tmd"
+                    }
+                }
+            },
+            "profile": "http:\/\/zdf.de\/rels\/content-reference\/video-content"
+        }
+    },
+    "currentVideoType": "episode",
+    "mainVideoContent": {
+        "http:\/\/zdf.de\/rels\/target": {
+            "title": "Krieg der Träume - 1918-1939 - Überleben",
+            "duration": 3146,
+            "visible": true,
+            "visibleFrom": "2021-12-31T05:00:00.000+01:00",
+            "visibleTo": "2022-01-30T05:00:00.000+01:00",
+            "aspectRatio": "16:9",
+            "profile": "http:\/\/zdf.de\/rels\/content\/content-video-vod-partner-player",
+            "self": "\/content\/documents\/zdf\/arte\/krieg-der-traume-1918-1939\/vod-artede-krieg-der-traeume---1918-1939---ueberleben-100.json?profile=player",
+            "canonical": "\/content\/documents\/vod-artede-krieg-der-traeume---1918-1939---ueberleben-100.json",
+            "streams": {
+                "default": {
+                    "label": "Normal",
+                    "extId": "video_artede_067244-001-A",
+                    "http:\/\/zdf.de\/rels\/streams\/ptmd-template": "\/content\/documents\/vod-artede-krieg-der-traeume---1918-1939---ueberleben-100.json?profile=tmd"
+                }
+            }
+        },
+        "profile": "http:\/\/zdf.de\/rels\/content-reference\/video-content"
+    }
+}

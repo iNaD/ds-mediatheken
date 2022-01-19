@@ -106,11 +106,18 @@ class ZDF extends Mediathek
 
         $contentObject = json_decode($content, false);
 
-        $downloadInformationUrl =
-            $contentObject
-                ->{static::$JSON_OBJ_ELEMENT_MAIN_VIDEO_CONTENT}
-                ->{static::$JSON_OBJ_ELEMENT_TARGET}
+        $mainVideoContentTarget = $contentObject
+            ->{static::$JSON_OBJ_ELEMENT_MAIN_VIDEO_CONTENT}
+            ->{static::$JSON_OBJ_ELEMENT_TARGET};
+
+        if (property_exists($mainVideoContentTarget, static::$JSON_ELEMENT_DOWNLOAD_INFORMATION_URL)) {
+            $downloadInformationUrl = $mainVideoContentTarget->{static::$JSON_ELEMENT_DOWNLOAD_INFORMATION_URL};
+        } else {
+            $downloadInformationUrl = $mainVideoContentTarget
+                ->streams
+                ->default
                 ->{static::$JSON_ELEMENT_DOWNLOAD_INFORMATION_URL};
+        }
 
         $downloadUrl =
             static::$API_BASE_URL . str_replace(

@@ -1,0 +1,123 @@
+{
+    "attributes": {
+        "duration": {
+            "profile": "http:\/\/zdf.de\/rels\/streams\/ptmd\/attributes\/attribute",
+            "value": 3146000
+        },
+        "downloadAllowed": {
+            "profile": "http:\/\/zdf.de\/rels\/streams\/ptmd\/attributes\/attribute",
+            "value": false
+        },
+        "geoLocation": {
+            "profile": "http:\/\/zdf.de\/rels\/streams\/ptmd\/attributes\/attribute",
+            "value": "dach"
+        },
+        "fsk": {
+            "profile": "http:\/\/zdf.de\/rels\/streams\/ptmd\/attributes\/attribute",
+            "value": "none"
+        },
+        "profile": "http:\/\/zdf.de\/rels\/streams\/ptmd\/attributes"
+    },
+    "basename": "video_artede_067244-001-A",
+    "captions": [
+        {
+            "offset": "0",
+            "profile": "http:\/\/zdf.de\/rels\/streams\/ptmd\/caption",
+            "format": "ebu-tt-d-basic-de",
+            "language": "deu",
+            "class": "omu",
+            "uri": "https:\/\/arte-zdf-mediathek.akamaized.net\/am\/mp4\/067000\/067200\/067244-001-B-VO-ALL_ebutt_1gyNW1LBF9d.xml"
+        },
+        {
+            "offset": "0",
+            "profile": "http:\/\/zdf.de\/rels\/streams\/ptmd\/caption",
+            "format": "webvtt",
+            "language": "deu",
+            "class": "omu",
+            "uri": "https:\/\/arte-zdf-mediathek.akamaized.net\/am\/mp4\/067000\/067200\/067244-001-B-VO-ALL_1gyNW1LBF9d.vtt"
+        }
+    ],
+    "documentVersion": 1,
+    "mandant": "mediathek",
+    "playerId": "ngplayer_2_3",
+    "priorityList": [
+        {
+            "formitaeten": [
+                {
+                    "profile": "http:\/\/zdf.de\/rels\/streams\/ptmd\/priority-list-item\/formitaet",
+                    "qualities": [
+                        {
+                            "audio": {
+                                "tracks": [
+                                    {
+                                        "language": "deu",
+                                        "class": "main",
+                                        "uri": "https:\/\/artezdfmediathek-vh.akamaihd.net\/i\/am\/mp4\/067000\/067200\/067244-001-B_1_VO-STA_AMM-IPTV-ZDF_XQ.1gyNi1LBGOP.smil\/master.m3u8",
+                                        "profile": "http:\/\/zdf.de\/rels\/streams\/ptmd\/priority-list-item\/formitaet\/quality\/audio\/track"
+                                    }
+                                ],
+                                "profile": "http:\/\/zdf.de\/rels\/streams\/ptmd\/priority-list-item\/formitaet\/quality\/audio"
+                            },
+                            "hd": false,
+                            "profile": "http:\/\/zdf.de\/rels\/streams\/ptmd\/priority-list-item\/formitaet\/quality",
+                            "quality": "auto"
+                        }
+                    ],
+                    "mimeType": "application\/x-mpegURL",
+                    "type": "h264_aac_ts_http_m3u8_http",
+                    "facets": [],
+                    "isAdaptive": true
+                }
+            ],
+            "profile": "http:\/\/zdf.de\/rels\/streams\/ptmd\/priority-list-item"
+        },
+        {
+            "formitaeten": [
+                {
+                    "profile": "http:\/\/zdf.de\/rels\/streams\/ptmd\/priority-list-item\/formitaet",
+                    "qualities": [
+                        {
+                            "audio": {
+                                "tracks": [
+                                    {
+                                        "language": "deu",
+                                        "class": "main",
+                                        "uri": "https:\/\/arte-zdf-mediathek.akamaized.net\/am\/mp4\/067000\/067200\/067244-001-B_HQ_1_VO-STA_06376547_MP4-800_AMM-IPTV-ZDF_1gyNW1LBF9d.mp4",
+                                        "profile": "http:\/\/zdf.de\/rels\/streams\/ptmd\/priority-list-item\/formitaet\/quality\/audio\/track"
+                                    }
+                                ],
+                                "profile": "http:\/\/zdf.de\/rels\/streams\/ptmd\/priority-list-item\/formitaet\/quality\/audio"
+                            },
+                            "hd": false,
+                            "profile": "http:\/\/zdf.de\/rels\/streams\/ptmd\/priority-list-item\/formitaet\/quality",
+                            "quality": "low"
+                        },
+                        {
+                            "audio": {
+                                "tracks": [
+                                    {
+                                        "language": "deu",
+                                        "class": "main",
+                                        "uri": "https:\/\/arte-zdf-mediathek.akamaized.net\/am\/mp4\/067000\/067200\/067244-001-B_SQ_1_VO-STA_06376548_MP4-2200_AMM-IPTV-ZDF_1gyNi1LBGJW.mp4",
+                                        "profile": "http:\/\/zdf.de\/rels\/streams\/ptmd\/priority-list-item\/formitaet\/quality\/audio\/track"
+                                    }
+                                ],
+                                "profile": "http:\/\/zdf.de\/rels\/streams\/ptmd\/priority-list-item\/formitaet\/quality\/audio"
+                            },
+                            "hd": true,
+                            "profile": "http:\/\/zdf.de\/rels\/streams\/ptmd\/priority-list-item\/formitaet\/quality",
+                            "quality": "high"
+                        }
+                    ],
+                    "mimeType": "video\/mp4",
+                    "type": "h264_aac_mp4_http_na_na",
+                    "facets": [
+                        "progressive"
+                    ],
+                    "isAdaptive": false
+                }
+            ],
+            "profile": "http:\/\/zdf.de\/rels\/streams\/ptmd\/priority-list-item"
+        }
+    ]
+}
