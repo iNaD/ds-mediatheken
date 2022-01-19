@@ -32,8 +32,17 @@ final class ZDFTest extends TestCase
      *
      * @return void
      */
-    public function testDownloadFromValidUrl($downloadUrl, $downloadFixture, $episodeDetailsUrl, $episodeDetailsFixture, $formitaetenUrl, $formitaetenFixture, $mediaFileUrl, $title, $episodeTitle): void
-    {
+    public function testDownloadFromValidUrl(
+        $downloadUrl,
+        $downloadFixture,
+        $episodeDetailsUrl,
+        $episodeDetailsFixture,
+        $formitaetenUrl,
+        $formitaetenFixture,
+        $mediaFileUrl,
+        $title,
+        $episodeTitle
+    ): void {
         $logger = $this->createMock(Logger::class);
         $curl = $this->createMock(Curl::class);
         $tools = new Tools($logger, $curl);
