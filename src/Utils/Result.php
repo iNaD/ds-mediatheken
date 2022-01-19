@@ -6,7 +6,7 @@ namespace TheiNaD\DSMediatheken\Utils;
  * Represents a result of a Mediathek
  *
  * @author    Daniel Gehn <me@theinad.com>
- * @copyright 2017-2020 Daniel Gehn
+ * @copyright 2017-2022 Daniel Gehn
  * @license   http://opensource.org/licenses/MIT Licensed under MIT License
  */
 class Result

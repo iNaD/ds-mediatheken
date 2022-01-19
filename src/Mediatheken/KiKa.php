@@ -7,12 +7,12 @@ use TheiNaD\DSMediatheken\Utils\Result;
 
 /**
  * @author    Daniel Gehn <me@theinad.com>
- * @copyright 2017-2020 Daniel Gehn
+ * @copyright 2017-2022 Daniel Gehn
  * @license   http://opensource.org/licenses/MIT Licensed under MIT License
  */
 class KiKa extends Mediathek
 {
-    const PROGRESSIVE_DOWNLOAD_PATTERN = '#<progressiveDownloadUrl>(.*?)<\/progressiveDownloadUrl>#si';
+    protected const PROGRESSIVE_DOWNLOAD_PATTERN = '#<progressiveDownloadUrl>(.*?)<\/progressiveDownloadUrl>#si';
 
     protected static $SUPPORT_MATCHER = ['kika.de'];
 
@@ -89,7 +89,19 @@ class KiKa extends Mediathek
             // we need a bitrate to find the best quality
             $bitrateVideo = $this->getTools()->pregMatchDefault('#<bitrateVideo>(.*?)<\/bitrateVideo>#si', $source);
             if ($bitrateVideo === null) {
-                return $result;
+                $frameWidth = $this->getTools()->pregMatchDefault('#<frameWidth>(.*?)<\/frameWidth>#si', $source);
+                if ($frameWidth !== null) {
+                    $bitrateVideo = $frameWidth;
+                }
+
+                $frameHeight = $this->getTools()->pregMatchDefault('#<frameHeight>(.*?)<\/frameHeight>#si', $source);
+                if ($frameHeight !== null) {
+                    $bitrateVideo = ($bitrateVideo ? $bitrateVideo : 0) + $frameHeight;
+                }
+
+                if ($bitrateVideo === null) {
+                    return $result;
+                }
             }
 
             if ($result->getBitrateRating() < $bitrateVideo) {

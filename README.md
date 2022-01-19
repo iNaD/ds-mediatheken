@@ -32,14 +32,27 @@ Ein Synology-NAS mit einer aktuellen Version des `DiskStation Managers` (mindest
 ### Unterstützte Mediatheken
 
 - 3sat (`3sat.de`)
-- ARD (`ardmediathek.de`, `mediathek.daserste.de`)
+- ARD (`ardmediathek.de`)
+    - Unterstützt diese Sender
+        - Das Erste
+        - BR
+        - hr
+        - MDR
+        - NDR
+        - Radio Bremen
+        - rbb
+        - SR
+        - SWR
+        - WDR
+        - ONE
+        - ARTE
+        - funk
+        - ARD alpha
+        - tagesschau24
+        - phoenix
 - Arte (`arte.tv`)
 - BR (`br.de`)
 - KiKa (`kika.de`)
-- MDR (`mdr.de`)
-- NDR (`ndr.de`)
-- RBB (`mediathek.rbb-online.de`)
-- WDR (`wdr.de/mediathek`, `one.ard.de/mediathek`)
 - ZDF Mediathek (`zdf.de`)
 
 ### Download
@@ -93,7 +106,7 @@ Du möchtest das Projekt unterstützen und schätzt die Arbeit dahinter? Schreib
 ```
 The MIT License (MIT)
 
-Copyright (c) 2017-2020 Daniel Gehn
+Copyright (c) 2017-2022 Daniel Gehn
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

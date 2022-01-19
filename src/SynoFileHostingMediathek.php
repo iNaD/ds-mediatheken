@@ -8,10 +8,6 @@ use TheiNaD\DSMediatheken\Mediatheken\Arte;
 use TheiNaD\DSMediatheken\Mediatheken\BR;
 use TheiNaD\DSMediatheken\Mediatheken\DreiSat;
 use TheiNaD\DSMediatheken\Mediatheken\KiKa;
-use TheiNaD\DSMediatheken\Mediatheken\MDR;
-use TheiNaD\DSMediatheken\Mediatheken\NDR;
-use TheiNaD\DSMediatheken\Mediatheken\RBB;
-use TheiNaD\DSMediatheken\Mediatheken\WDR;
 use TheiNaD\DSMediatheken\Mediatheken\ZDF;
 use TheiNaD\DSMediatheken\Utils\Curl;
 use TheiNaD\DSMediatheken\Utils\Logger;
@@ -30,10 +26,6 @@ include_once __DIR__ . '/Mediatheken/ARD.php';
 include_once __DIR__ . '/Mediatheken/Arte.php';
 include_once __DIR__ . '/Mediatheken/BR.php';
 include_once __DIR__ . '/Mediatheken/KiKa.php';
-include_once __DIR__ . '/Mediatheken/MDR.php';
-include_once __DIR__ . '/Mediatheken/NDR.php';
-include_once __DIR__ . '/Mediatheken/RBB.php';
-include_once __DIR__ . '/Mediatheken/WDR.php';
 include_once __DIR__ . '/Mediatheken/ZDF.php';
 include_once __DIR__ . '/Mediatheken/DreiSat.php';
 // phpcs:enable
@@ -45,22 +37,18 @@ include_once __DIR__ . '/Mediatheken/DreiSat.php';
  *
  * @author    Daniel Gehn <me@theinad.com>
  * @version   0.6.2
- * @copyright 2017-2020 Daniel Gehn
+ * @copyright 2017-2022 Daniel Gehn
  * @license   http://opensource.org/licenses/MIT Licensed under MIT License
  */
 class SynoFileHostingMediathek
 {
-    const DEFAULT_LOG_PATH = '/tmp/mediathek.log';
-    const MEDIATHEKEN = [
+    protected const DEFAULT_LOG_PATH = '/tmp/mediathek.log';
+    protected const MEDIATHEKEN = [
         ARD::class,
         Arte::class,
         BR::class,
         DreiSat::class,
         KiKa::class,
-        MDR::class,
-        NDR::class,
-        RBB::class,
-        WDR::class,
         ZDF::class,
     ];
 

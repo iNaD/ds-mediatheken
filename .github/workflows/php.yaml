@@ -1,4 +1,4 @@
-name: PHP Composer
+name: Lint, Test & Build PHP
 
 on:
     push:
@@ -40,3 +40,12 @@ jobs:
 
             - name: Run test suite
               run: composer run-script test
+
+            - name: Build provider
+              run: ./build.sh
+
+            - name: Save provider as artifact
+              uses: actions/upload-artifact@v2
+              with:
+                name: provider
+                path: build/mediathek.host

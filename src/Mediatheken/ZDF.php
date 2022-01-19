@@ -7,7 +7,7 @@ use TheiNaD\DSMediatheken\Utils\Result;
 
 /**
  * @author    Daniel Gehn <me@theinad.com>
- * @copyright 2017-2020 Daniel Gehn
+ * @copyright 2017-2022 Daniel Gehn
  * @license   http://opensource.org/licenses/MIT Licensed under MIT License
  */
 class ZDF extends Mediathek
@@ -106,11 +106,18 @@ class ZDF extends Mediathek
 
         $contentObject = json_decode($content, false);
 
-        $downloadInformationUrl =
-            $contentObject
-                ->{static::$JSON_OBJ_ELEMENT_MAIN_VIDEO_CONTENT}
-                ->{static::$JSON_OBJ_ELEMENT_TARGET}
+        $mainVideoContentTarget = $contentObject
+            ->{static::$JSON_OBJ_ELEMENT_MAIN_VIDEO_CONTENT}
+            ->{static::$JSON_OBJ_ELEMENT_TARGET};
+
+        if (property_exists($mainVideoContentTarget, static::$JSON_ELEMENT_DOWNLOAD_INFORMATION_URL)) {
+            $downloadInformationUrl = $mainVideoContentTarget->{static::$JSON_ELEMENT_DOWNLOAD_INFORMATION_URL};
+        } else {
+            $downloadInformationUrl = $mainVideoContentTarget
+                ->streams
+                ->default
                 ->{static::$JSON_ELEMENT_DOWNLOAD_INFORMATION_URL};
+        }
 
         $downloadUrl =
             static::$API_BASE_URL . str_replace(

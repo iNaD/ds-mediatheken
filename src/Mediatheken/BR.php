@@ -7,17 +7,13 @@ use TheiNaD\DSMediatheken\Utils\Result;
 
 /**
  * @author    Daniel Gehn <me@theinad.com>
- * @copyright 2017-2020 Daniel Gehn
+ * @copyright 2017-2022 Daniel Gehn
  * @license   http://opensource.org/licenses/MIT Licensed under MIT License
  */
 class BR extends Mediathek
 {
-    const RELAY_BOOTSTRAP_DATA_PATTERN = '#window\.__RELAY_BOOTSTRAP_DATA__ = (.*?);#i';
-    const ALLOWED_MIMETYPES = ['video/mp4'];
-
     protected static $SUPPORT_MATCHER = 'br.de';
-    protected static $API_BASE_URL = 'https://api.mediathek.br.de';
-    protected static $RELAY_BATCH = '/graphql/relayBatch';
+    protected static $API_URL = 'https://api.mediathek.br.de/graphql';
 
     /**
      * @param string $url
@@ -30,56 +26,29 @@ class BR extends Mediathek
     {
         $result = new Result();
 
-        $videoPage = $this->getTools()->curlRequest($url);
-        if ($videoPage === null) {
-            $this->getLogger()->log('Video Page (' . $url . ') using login data (' . $username . '@'
-                . $password . ') could not be loaded.');
+        $videoId = $this->getTools()->pregMatchDefault('#(av:[a-zA-Z0-9]+)#i', $url);
+        if ($videoId === null) {
+            $this->getLogger()->log('Could not extract videoId from url ' . $url);
 
             return null;
         }
 
-        $metaData = $this->extractMetadata($videoPage);
-        if ($metaData === null) {
-            $this->getLogger()->log(sprintf('Failed to extract bootstrap json from url "%s"', $url));
-
-            return null;
-        }
-
-        $videoId = $metaData->data->node->id;
-
-        $detailPageRendererQuery = $this->detailPageRendererQuery($videoId);
-        if ($detailPageRendererQuery === null) {
+        $detailPageQuery = $this->detailPageQuery($videoId);
+        if ($detailPageQuery === null) {
             $this->getLogger()->log('Failed to retrieve video data from graphql');
 
             return null;
         }
 
-        $videoFiles = $detailPageRendererQuery->data->video->videoFiles->edges;
+        $videoFiles = $detailPageQuery->data->video->videoFiles->edges;
         foreach ($videoFiles as $videoFile) {
             $result = $this->processVideoFile($videoFile->node, $result);
         }
 
-        $result->setTitle($metaData->data->node->kicker);
-        $result->setEpisodeTitle($metaData->data->node->title);
+        $result->setTitle($detailPageQuery->data->video->kicker);
+        $result->setEpisodeTitle($detailPageQuery->data->video->title);
 
         return $result;
-    }
-
-    /**
-     * @param string $videoPage
-     *
-     * @return object|null
-     */
-    protected function extractMetadata($videoPage)
-    {
-        $bootstrapData = $this->getTools()->pregMatchDefault(self::RELAY_BOOTSTRAP_DATA_PATTERN, $videoPage);
-        if ($bootstrapData === null) {
-            return null;
-        }
-
-        $bootstrapJson = json_decode($bootstrapData, false);
-
-        return $bootstrapJson[0][1];
     }
 
     /**
@@ -87,18 +56,24 @@ class BR extends Mediathek
      *
      * @return object|null
      */
-    protected function detailPageRendererQuery($videoId)
+    protected function detailPageQuery($videoId)
     {
         $jsonData = [
             [
-                'id' => 'DetailPageRendererQuery',
-                'query' => $this->getTools()->readGraphqlQuery('br.graphql'),
+                'operationName' => 'detailPageQuery',
+                'extensions' => [
+                    'persistedQuery' => [
+                        'version' => 1,
+                        'sha256Hash' => '2d9f3248ef298727025898a384ae1d56d0884883048cc8e1b6df0b1711150ef8',
+                    ],
+                ],
                 'variables' => [
                     'clipId' => $videoId,
                 ],
             ],
         ];
-        $curlResponse = $this->getTools()->curlRequest(static::$API_BASE_URL . static::$RELAY_BATCH, [
+
+        $curlResponse = $this->getTools()->curlRequest(static::$API_URL, [
             CURLOPT_POST => true,
             CURLOPT_HTTPHEADER => [
                 'Content-Type: application/json',
@@ -123,11 +98,11 @@ class BR extends Mediathek
      */
     protected function processVideoFile($videoFile, $result)
     {
-        if (!in_array($videoFile->mimetype, static::ALLOWED_MIMETYPES, true)) {
+        if ($videoFile->videoProfile->height === null) {
             return $result;
         }
 
-        $qualityRating = $videoFile->videoProfile->width * $videoFile->videoProfile->height;
+        $qualityRating = $videoFile->videoProfile->height;
         if ($qualityRating <= $result->getQualityRating()) {
             return $result;
         }

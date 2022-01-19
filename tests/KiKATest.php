@@ -12,7 +12,7 @@ use TheiNaD\DSMediatheken\Utils\Tools;
  * Unit Test for KiKa
  *
  * @author    Daniel Gehn <me@theinad.com>
- * @copyright 2018-2020 Daniel Gehn
+ * @copyright 2018-2022 Daniel Gehn
  * @license   http://opensource.org/licenses/MIT Licensed under MIT License
  */
 final class KiKaTest extends TestCase
@@ -46,5 +46,37 @@ final class KiKaTest extends TestCase
         $this->assertEquals($MEDIA_FILE_URL, $result->getUri());
         $this->assertEquals('SHERLOCK YACK - Der Zoodetektiv', $result->getTitle());
         $this->assertEquals('24. Wer hat das Zebra bepinselt?', $result->getEpisodeTitle());
+    }
+
+    public function testDownloadInfoCanBeRetrievedFromValidUrlWithoutBitrate(): void
+    {
+        $VALID_DOWNLOAD_URL =
+            'https://www.kika.de/yakari/sendungen/videos/folge-zehn-der-fluss-des-vergessens-100.html';
+        $API_URL = 'https://www.kika.de/yakari/sendungen/videos/folge-zehn-der-fluss-des-vergessens-100-avCustom.xml';
+        $MEDIA_FILE_URL =
+            'https://wdrmedien-a.akamaihd.net/medp/ondemand/weltweit/fsk0/262/2623669/2623669_41799039.mp4';
+
+        $logger = $this->createMock(Logger::class);
+        $curl = $this->createMock(Curl::class);
+        $tools = new Tools($logger, $curl);
+
+        $curl->expects($this->exactly(2))
+            ->method('request')
+            ->withConsecutive(
+                [$this->equalTo($VALID_DOWNLOAD_URL)],
+                [$this->equalTo($API_URL)]
+            )
+            ->willReturnOnConsecutiveCalls(
+                $this->getFixture('kika/no-bitrate/videoPage.html'),
+                $this->getFixture('kika/no-bitrate/apiResponse.xml')
+            );
+
+        $kika = new KiKa($logger, $tools);
+        $result = $kika->getDownloadInfo($VALID_DOWNLOAD_URL);
+
+        $this->assertInstanceOf(Result::class, $result);
+        $this->assertEquals($MEDIA_FILE_URL, $result->getUri());
+        $this->assertEquals('Yakari', $result->getTitle());
+        $this->assertEquals('10. Der Fluss des Vergessens', $result->getEpisodeTitle());
     }
 }

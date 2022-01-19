@@ -2,19 +2,19 @@
 
 namespace TheiNaD\DSMediatheken\Utils;
 
+use CurlHandle;
 use RuntimeException;
 
 /**
  * Simple Curl wrapper to make things easier and mockable.
  *
  * @author    Daniel Gehn <me@theinad.com>
- * @copyright 2018-2020 Daniel Gehn
+ * @copyright 2018-2022 Daniel Gehn
  * @license   http://opensource.org/licenses/MIT Licensed under MIT License
  */
 class Curl
 {
-    public static $MOBILE_USERAGENT =
-        'Mozilla/5.0 (Linux; Android 4.1; Galaxy Nexus Build/JRN84D)' .
+    public static $MOBILE_USERAGENT = 'Mozilla/5.0 (Linux; Android 4.1; Galaxy Nexus Build/JRN84D)' .
         ' AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19';
 
     /**
@@ -55,7 +55,14 @@ class Curl
 
         $result = curl_exec($curl);
         if (!$result) {
-            throw new RuntimeException(sprintf('Request failed (%s): %s', curl_errno($curl), curl_error($curl)));
+            throw new RuntimeException(
+                sprintf(
+                    'Request failed for URL %s (%s): %s',
+                    $url,
+                    curl_errno($curl),
+                    curl_error($curl)
+                )
+            );
         }
 
         curl_close($curl);
@@ -64,9 +71,7 @@ class Curl
     }
 
     /**
-     * @param resource $curl
-     *
-     * @noinspection CurlSslServerSpoofingInspection
+     * @param CurlHandle|resource $curl
      */
     protected function setDefaults($curl)
     {
@@ -74,13 +79,11 @@ class Curl
         curl_setopt($curl, CURLOPT_USERAGENT, DOWNLOAD_STATION_USER_AGENT);
         curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true);
         curl_setopt($curl, CURLOPT_FAILONERROR, true);
-        curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
-        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
     }
 
     /**
-     * @param resource $curl
-     * @param array    $options
+     * @param CurlHandle|resource $curl
+     * @param array               $options
      */
     protected function applyOptions($curl, $options)
     {

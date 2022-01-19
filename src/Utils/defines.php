@@ -1,7 +1,9 @@
 <?php
+
 /**
  * Setting up defines for use outside of the Download Station environment.
  */
+
 if (!defined('LOGIN_FAIL')) {
     define('LOGIN_FAIL', 4);
 }

@@ -12,15 +12,16 @@ use TheiNaD\DSMediatheken\Utils\Tools;
  * Unit Test for BR
  *
  * @author    Daniel Gehn <me@theinad.com>
- * @copyright 2018-2020 Daniel Gehn
+ * @copyright 2018-2022 Daniel Gehn
  * @license   http://opensource.org/licenses/MIT Licensed under MIT License
  */
 final class BRTest extends TestCase
 {
-    protected static $VALID_DOWNLOAD_URL = 'https://www.br.de/mediathek/video/heiter-bis-toedlich-alles-klara-mord-' .
-    'nach-feierabend-av:5dd560152786bb001a4ef549';
-    protected static $RELAY_BATCH_URL = 'https://api.mediathek.br.de/graphql/relayBatch';
-    protected static $MEDIA_URL = 'https://cdn-storage.br.de/geo/b7/2020-01/10/a58e8de833a411eaa0b0984be10adece_X.mp4';
+    protected static $VALID_DOWNLOAD_URL = 'https://www.br.de/mediathek/video/krimi-mit-ottfried-fischer-der-bulle' .
+        '-von-toelz-der-mord-im-kloster-av:61a608e395643a000747383e';
+    protected static $API_URL = 'https://api.mediathek.br.de/graphql';
+    protected static $MEDIA_URL = 'https://cdn-storage.br.de/geo/MUJIuUOVBwQIbtC2uKJDM6OhuLnC_2rH_71S/_-iS/' .
+        '_2rg5-rc5U1S/159b2b96-5aa5-4453-9800-a4d554c54092_X.mp4';
 
     public function testDownloadInfoCanBeRetrievedFromValidUrl(): void
     {
@@ -28,15 +29,13 @@ final class BRTest extends TestCase
         $curl = $this->createMock(Curl::class);
         $tools = new Tools($logger, $curl);
 
-        $curl->expects($this->exactly(2))
+        $curl->expects($this->exactly(1))
             ->method('request')
             ->withConsecutive(
-                [$this->equalTo(self::$VALID_DOWNLOAD_URL)],
-                [$this->equalTo(self::$RELAY_BATCH_URL)]
+                [$this->equalTo(self::$API_URL)]
             )
             ->willReturnOnConsecutiveCalls(
-                $this->getFixture('br/videoPage.html'),
-                $this->getFixture('br/relayBatchResponse.json')
+                $this->getFixture('br/api.json')
             );
 
         $br = new BR($logger, $tools);
@@ -47,7 +46,7 @@ final class BRTest extends TestCase
         $this->assertNotEmpty($result->getTitle());
         $this->assertNotEmpty($result->getEpisodeTitle());
         $this->assertEquals(self::$MEDIA_URL, $result->getUri());
-        $this->assertEquals('Heiter bis tödlich - Alles Klara', $result->getTitle());
-        $this->assertEquals('Mord nach Feierabend', $result->getEpisodeTitle());
+        $this->assertEquals('Krimi mit Ottfried Fischer', $result->getTitle());
+        $this->assertEquals('Der Bulle von Tölz: Der Mord im Kloster', $result->getEpisodeTitle());
     }
 }

@@ -8,7 +8,7 @@ use Exception;
  * Little helpers
  *
  * @author    Daniel Gehn <me@theinad.com>
- * @copyright 2017-2020 Daniel Gehn
+ * @copyright 2017-2022 Daniel Gehn
  * @license   http://opensource.org/licenses/MIT Licensed under MIT License
  */
 class Tools
@@ -268,15 +268,5 @@ class Tools
         $protocol = substr($baseUrl, 0, strpos($baseUrl, '://'));
 
         return $protocol . ':' . $fileUrl;
-    }
-
-    /**
-     * @param string $filename
-     *
-     * @return false|string
-     */
-    public function readGraphqlQuery($filename)
-    {
-        return file_get_contents(__DIR__ . '/../graphql/' . $filename);
     }
 }

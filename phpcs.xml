@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <ruleset name="PHP_CodeSniffer">
-    <rule ref="PSR2"/>
+    <rule ref="PSR12"/>
 
     <file>src</file>
     <file>tests</file>
