@@ -4,8 +4,6 @@
 
 Allows you to download videos from the german public service broadcasters' media libraries via Synology Download Station.
 
-[![Build Status](https://travis-ci.com/iNaD/ds-mediatheken.svg?branch=master)](https://travis-ci.com/iNaD/ds-mediatheken)
-
 ## Table of Content
 
 - [Features](#features)

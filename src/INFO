@@ -2,7 +2,7 @@
     "name": "mediathek",
     "hostprefix": "zdf.de,3sat.de,ardmediathek.de,arte.tv,kika.de,br.de",
     "displayname": "ÖR Mediatheken",
-    "version": "0.6.2",
+    "version": "0.7.0",
     "authentication": "no",
     "module": "SynoFileHostingMediathek.php",
     "class": "TheiNaD\\DSMediatheken\\SynoFileHostingMediathek",
