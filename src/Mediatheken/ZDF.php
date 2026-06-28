@@ -87,43 +87,36 @@ class ZDF extends Mediathek
         }
 
         $apiToken = $this->getApiToken($videoPage);
-        $contentUrl = $this->getContentUrl($videoPage);
-        if ($apiToken === null || $contentUrl === null) {
-            $this->getLogger()->log('API Token (' . $apiToken . ') or content url (' . $contentUrl
-                . ') could not be found.');
+        if ($apiToken === null) {
+            $this->getLogger()->log('API Token could not be found.');
 
             return null;
         }
 
         $this->getLogger()->log('API Token is ' . $apiToken);
 
-        $content = $this->apiRequest($contentUrl, $apiToken);
-        if ($content === null) {
-            $this->getLogger()->log('Failed to retrieve content.');
-
-            return null;
+        // Current zdf.de pages embed the ptmd template directly. Older pages (e.g. 3sat.de) only
+        // reference a content document that has to be fetched to resolve the template.
+        $contentObject = null;
+        $ptmdTemplate = $this->getPtmdTemplate($videoPage);
+        if ($ptmdTemplate === null) {
+            $contentObject = $this->getContentObject($videoPage, $apiToken);
+            if ($contentObject !== null) {
+                $ptmdTemplate = $this->getPtmdTemplateFromContent($contentObject);
+            }
         }
 
-        $contentObject = json_decode($content, false);
+        if ($ptmdTemplate === null) {
+            $this->getLogger()->log('ptmd template could not be found.');
 
-        $mainVideoContentTarget = $contentObject
-            ->{static::$JSON_OBJ_ELEMENT_MAIN_VIDEO_CONTENT}
-            ->{static::$JSON_OBJ_ELEMENT_TARGET};
-
-        if (property_exists($mainVideoContentTarget, static::$JSON_ELEMENT_DOWNLOAD_INFORMATION_URL)) {
-            $downloadInformationUrl = $mainVideoContentTarget->{static::$JSON_ELEMENT_DOWNLOAD_INFORMATION_URL};
-        } else {
-            $downloadInformationUrl = $mainVideoContentTarget
-                ->streams
-                ->default
-                ->{static::$JSON_ELEMENT_DOWNLOAD_INFORMATION_URL};
+            return null;
         }
 
         $downloadUrl =
             static::$API_BASE_URL . str_replace(
                 static::$PLACEHOLDER_PLAYER_ID,
                 static::$PLAYER_ID,
-                $downloadInformationUrl
+                $ptmdTemplate
             );
 
         $downloadContent = $this->apiRequest($downloadUrl, $apiToken);
@@ -145,21 +138,77 @@ class ZDF extends Mediathek
             return null;
         }
 
-        $result->setTitle($this->getTitle($contentObject));
-        $result->setEpisodeTitle($this->getEpisodeTitle($contentObject));
+        if ($contentObject !== null) {
+            $result->setTitle($this->getTitle($contentObject));
+            $result->setEpisodeTitle($this->getEpisodeTitle($contentObject));
+        } else {
+            $result->setTitle($this->getTitleFromPage($videoPage));
+            $result->setEpisodeTitle($this->getEpisodeTitleFromPage($videoPage));
+        }
         $result->setUri($this->getTools()->addProtocolFromUrlIfMissing($result->getUri(), $url));
 
         return $result;
     }
 
     /**
+     * Extracts the player's api token. Current zdf.de pages embed the JSON as an escaped string
+     * (e.g. \"videoToken\":{\"apiToken\":\"...\"}); older pages (3sat.de) expose "apiToken": "...".
+     *
      * @param string $videoPage
      *
      * @return string|null
      */
     protected function getApiToken($videoPage)
     {
+        $apiToken = $this->getTools()->pregMatchDefault(
+            '#videoToken\\\\?":\{\\\\?"apiToken\\\\?":\\\\?"([A-Za-z0-9]+)#i',
+            $videoPage
+        );
+        if ($apiToken !== null) {
+            return $apiToken;
+        }
+
         return $this->getTools()->pregMatchDefault('#"apiToken": "(.*?)",#i', $videoPage);
+    }
+
+    /**
+     * Extracts the ptmd template (relative path, still containing the {playerId} placeholder)
+     * embedded directly in current zdf.de pages. Returns null on older pages that reference a
+     * content document instead.
+     *
+     * @param string $videoPage
+     *
+     * @return string|null
+     */
+    protected function getPtmdTemplate($videoPage)
+    {
+        return $this->getTools()->pregMatchDefault(
+            '#ptmdTemplate\\\\?":\\\\?"([^"\\\\]+)#i',
+            $videoPage
+        );
+    }
+
+    /**
+     * Loads and decodes the content document referenced by older pages (3sat.de).
+     *
+     * @param string $videoPage
+     * @param string $apiToken
+     *
+     * @return object|null
+     */
+    protected function getContentObject($videoPage, $apiToken)
+    {
+        $contentUrl = $this->getContentUrl($videoPage);
+        if ($contentUrl === null) {
+            return null;
+        }
+
+        $content = $this->apiRequest($contentUrl, $apiToken);
+        if ($content === null) {
+            return null;
+        }
+
+        return json_decode($content, false);
     }
 
     /**
@@ -170,6 +219,40 @@ class ZDF extends Mediathek
     protected function getContentUrl($videoPage)
     {
         return $this->getTools()->pregMatchDefault('#"content": "(.*?)",#i', $videoPage);
+    }
+
+    /**
+     * Resolves the ptmd template from a content document.
+     *
+     * @param object $contentObject
+     *
+     * @return string|null
+     */
+    protected function getPtmdTemplateFromContent($contentObject)
+    {
+        if (
+            !isset($contentObject->{static::$JSON_OBJ_ELEMENT_MAIN_VIDEO_CONTENT}
+                ->{static::$JSON_OBJ_ELEMENT_TARGET})
+        ) {
+            return null;
+        }
+
+        $mainVideoContentTarget = $contentObject
+            ->{static::$JSON_OBJ_ELEMENT_MAIN_VIDEO_CONTENT}
+            ->{static::$JSON_OBJ_ELEMENT_TARGET};
+
+        if (property_exists($mainVideoContentTarget, static::$JSON_ELEMENT_DOWNLOAD_INFORMATION_URL)) {
+            return $mainVideoContentTarget->{static::$JSON_ELEMENT_DOWNLOAD_INFORMATION_URL};
+        }
+
+        if (isset($mainVideoContentTarget->streams->default->{static::$JSON_ELEMENT_DOWNLOAD_INFORMATION_URL})) {
+            return $mainVideoContentTarget
+                ->streams
+                ->default
+                ->{static::$JSON_ELEMENT_DOWNLOAD_INFORMATION_URL};
+        }
+
+        return null;
     }
 
     /**
@@ -332,6 +415,8 @@ class ZDF extends Mediathek
     }
 
     /**
+     * Title (show/brand) from a content document (older pages).
+     *
      * @param object $contentObject
      *
      * @return string
@@ -346,6 +431,8 @@ class ZDF extends Mediathek
     }
 
     /**
+     * Episode title from a content document (older pages).
+     *
      * @param object $contentObject
      *
      * @return string
@@ -355,5 +442,36 @@ class ZDF extends Mediathek
         $episodeTitle = @$contentObject->{static::$JSON_OBJ_ELEMENT_TITLE};
 
         return trim($episodeTitle);
+    }
+
+    /**
+     * Title from a current zdf.de page payload (\"video\":{...,\"title\":\"...\"}).
+     *
+     * @param string $videoPage
+     *
+     * @return string
+     */
+    protected function getTitleFromPage($videoPage)
+    {
+        $title = $this->getTools()->pregMatchDefault(
+            '#"video\\\\?":\{(?:\\\\?"__typename\\\\?":\\\\?"Video\\\\?",)?\\\\?"title\\\\?":\\\\?"([^"\\\\]+)#i',
+            $videoPage,
+            ''
+        );
+
+        return trim($title);
+    }
+
+    /**
+     * Current zdf.de pages do not expose a separate episode title next to the program title, so
+     * the title alone is used to build the filename.
+     *
+     * @param string $videoPage
+     *
+     * @return string
+     */
+    protected function getEpisodeTitleFromPage($videoPage)
+    {
+        return '';
     }
 }
