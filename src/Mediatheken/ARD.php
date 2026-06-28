@@ -13,9 +13,17 @@ use TheiNaD\DSMediatheken\Utils\Result;
 class ARD extends Mediathek
 {
     public static $API_BASE_URL = 'https://api.ardmediathek.de/page-gateway/pages/ard/item/';
-    protected static $VALID_QUALITIES = [0, 1, 2, 3, 4];
     protected static $SUPPORT_MATCHER = ['ardmediathek.de', 'mediathek.daserste.de'];
     protected static $PLAYER_WIDGET_TYPE = 'player_ondemand';
+    protected static $WANTED_MIME_TYPE = 'video/mp4';
+
+    /**
+     * Suffix appended to the document id of "grouping" pages (e.g. films). The actual playable
+     * item is reachable under the same id with this suffix removed.
+     *
+     * @var string
+     */
+    protected static $GROUPING_SUFFIX = '-movie';
 
     /**
      * @param string $url
@@ -47,23 +55,18 @@ class ARD extends Mediathek
                 continue;
             }
 
-            foreach ($widget->mediaCollection->embedded->_mediaArray as $media) {
-                foreach ($media->_mediaStreamArray as $mediaStream) {
-                    if (
-                        $this->mediaStreamHasNeededProperties($mediaStream) &&
-                        $this->mediaStreamHasValidQuality($mediaStream)
-                    ) {
-                        if ($mediaStream->_quality > $result->getQualityRating()) {
-                            $this->getLogger()->log(sprintf('Found stream with quality "%s"', $mediaStream->_quality));
+            foreach ($this->getMediaList($widget) as $media) {
+                if (!$this->isUsableMedia($media)) {
+                    continue;
+                }
 
-                            $stream = $this->getHighestQualityStream($mediaStream->_stream);
-                            if ($stream !== null) {
-                                $result = new Result();
-                                $result->setQualityRating($mediaStream->_quality);
-                                $result->setUri($stream);
-                            }
-                        }
-                    }
+                $quality = $this->getMediaQuality($media);
+                if ($quality > $result->getQualityRating()) {
+                    $this->getLogger()->log(sprintf('Found stream with quality "%s"', $quality));
+
+                    $result = new Result();
+                    $result->setQualityRating($quality);
+                    $result->setUri($media->url);
                 }
             }
 
@@ -94,7 +97,36 @@ class ARD extends Mediathek
      */
     protected function getDocumentIdFromUrl($url)
     {
-        return $this->getTools()->pregMatchDefault('#/([^/]+)/?$#i', $url, null);
+        $documentId = $this->getTools()->pregMatchDefault('#/([^/]+?)/?$#i', $url, null);
+        if ($documentId === null) {
+            return null;
+        }
+
+        return $this->normalizeDocumentId($documentId);
+    }
+
+    /**
+     * Some pages (e.g. films) link to a "grouping" document id that the item API does not know
+     * about. The playable item shares the same base64 encoded id, just without the grouping
+     * suffix, so we strip it before querying the API.
+     *
+     * @param string $documentId
+     *
+     * @return string
+     */
+    protected function normalizeDocumentId($documentId)
+    {
+        $decoded = base64_decode($documentId, true);
+        if ($decoded === false || !$this->getTools()->endsWith($decoded, self::$GROUPING_SUFFIX)) {
+            return $documentId;
+        }
+
+        $decoded = substr($decoded, 0, -strlen(self::$GROUPING_SUFFIX));
+        $normalized = rtrim(base64_encode($decoded), '=');
+
+        $this->getLogger()->log(sprintf('Normalized grouping documentId to "%s"', $normalized));
+
+        return $normalized;
     }
 
     /**
@@ -108,71 +140,52 @@ class ARD extends Mediathek
     }
 
     /**
-     * @param object $mediaStream
+     * Collects all media entries of a player widget across the available streams.
      *
-     * @return bool
-     */
-    protected function mediaStreamHasNeededProperties($mediaStream)
-    {
-        return property_exists($mediaStream, '_stream') && property_exists($mediaStream, '_quality');
-    }
-
-    /**
-     * @param object $mediaStream
+     * @param object $widget
      *
-     * @return bool
+     * @return array
      */
-    protected function mediaStreamHasValidQuality($mediaStream)
+    protected function getMediaList($widget)
     {
-        return in_array($mediaStream->_quality, self::$VALID_QUALITIES, true);
-    }
-
-    /**
-     * @param mixed $streams
-     *
-     * @return mixed
-     */
-    protected function getHighestQualityStream($streams)
-    {
-        if (!is_array($streams)) {
-            return $streams;
+        if (!isset($widget->mediaCollection->embedded->streams)) {
+            return [];
         }
 
-        $this->getLogger()->log('Multiple streams found for single quality');
+        $mediaList = [];
+        foreach ($widget->mediaCollection->embedded->streams as $stream) {
+            if (!isset($stream->media)) {
+                continue;
+            }
 
-        $hqStream = [
-            'quality' => 0,
-            'url' => null,
-        ];
-
-        foreach ($streams as $stream) {
-            $quality = $this->getQualityFromStreamUrl($stream);
-
-            $this->getLogger()->log(sprintf('Found quality "%s" for url "%s"', $quality, $stream));
-
-            if ($quality > $hqStream['quality']) {
-                $hqStream['quality'] = $quality;
-                $hqStream['url'] = $stream;
+            foreach ($stream->media as $media) {
+                $mediaList[] = $media;
             }
         }
 
-        $this->getLogger()->log(sprintf(
-            'Best url is "%s" with quality of "%s"',
-            $hqStream['url'],
-            $hqStream['quality']
-        ));
-
-        return $hqStream['url'];
+        return $mediaList;
     }
 
     /**
-     * @param string $stream
+     * @param object $media
      *
-     * @return string|null
+     * @return bool
      */
-    protected function getQualityFromStreamUrl($stream)
+    protected function isUsableMedia($media)
     {
-        return $this->getTools()->pregMatchDefault('#\/(\d+)-[\d_]+\.mp4#i', $stream, 0);
+        return isset($media->url, $media->mimeType) && $media->mimeType === self::$WANTED_MIME_TYPE;
+    }
+
+    /**
+     * The horizontal resolution is used as a quality indicator, higher meaning better.
+     *
+     * @param object $media
+     *
+     * @return int
+     */
+    protected function getMediaQuality($media)
+    {
+        return isset($media->maxHResolutionPx) ? (int)$media->maxHResolutionPx : 0;
     }
 
     /**
@@ -183,8 +196,13 @@ class ARD extends Mediathek
      */
     protected function addTitle($widget, Result $result)
     {
-        $result->setTitle($widget->show->title);
-        $result->setEpisodeTitle($widget->title);
+        if (isset($widget->show->title)) {
+            $result->setTitle($widget->show->title);
+        }
+
+        if (isset($widget->title)) {
+            $result->setEpisodeTitle($widget->title);
+        }
 
         return $result;
     }

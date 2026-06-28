@@ -19,14 +19,16 @@ final class ARDTest extends TestCase
 {
     public function testDownloadInfoCanBeRetrievedFromValidUrl(): void
     {
+        // Film pages link to a "grouping" document id (suffix "-movie"). The provider has to
+        // resolve it to the playable item id before querying the API.
         $VALID_DOWNLOAD_URL =
-            'https://www.ardmediathek.de/video/filmmittwoch-im-ersten/geliefert-oder-drama/das-erste/' .
-            'Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMjE4MzkzZTMtYjIyMy00Njg2LWJmNTMtM2M2NTg5MzIxYzMw/';
+            'https://www.ardmediathek.de/film/toubab/' .
+            'Y3JpZDovL3pkZi5kZS9QUk9EMS9TQ01TX2ZiODZlYWFjLWQwNzUtNDcxMS1hYzNiLWMxNDgxMDA0MmYyZS1tb3ZpZQ';
         $API_URL = ARD::$API_BASE_URL .
-            'Y3JpZDovL2Rhc2Vyc3RlLmRlL2ZpbG1taXR0d29jaCBpbSBlcnN0ZW4vMjE4MzkzZTMtYjIyMy00Njg2LWJmNTMtM2M2NTg5MzIxYzMw';
+            'Y3JpZDovL3pkZi5kZS9QUk9EMS9TQ01TX2ZiODZlYWFjLWQwNzUtNDcxMS1hYzNiLWMxNDgxMDA0MmYyZQ';
         $MEDIA_FILE_URL =
-            'https://pdvideosdaserste-a.akamaihd.net/int/2021/10/04/218393e3-b223-4686-bf53-3c6589321c30/' .
-            '1920-1_978535.mp4';
+            'https://nrodlzdf-a.akamaihd.net/dach/zdf/23/08/230828_2015_sendung_dks/1/' .
+            '230828_2015_sendung_dks_a3a4_3328k_p15v15.mp4';
 
         $logger = $this->createMock(Logger::class);
         $curl = $this->createMock(Curl::class);
@@ -46,7 +48,7 @@ final class ARDTest extends TestCase
 
         $this->assertInstanceOf(Result::class, $result);
         $this->assertEquals($MEDIA_FILE_URL, $result->getUri());
-        $this->assertEquals('FilmMittwoch im Ersten', $result->getTitle());
-        $this->assertEquals('Geliefert', $result->getEpisodeTitle());
+        $this->assertEquals('Toubab', $result->getTitle());
+        $this->assertEquals('Toubab', $result->getEpisodeTitle());
     }
 }
