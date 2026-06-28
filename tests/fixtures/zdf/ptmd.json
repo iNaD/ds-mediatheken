@@ -6,7 +6,7 @@
       },
       "duration" : {
          "profile" : "http://zdf.de/rels/streams/ptmd/attributes/attribute",
-         "value" : 2858000
+         "value" : 5559000
       },
       "fsk" : {
          "profile" : "http://zdf.de/rels/streams/ptmd/attributes/attribute",
@@ -18,7 +18,7 @@
       },
       "profile" : "http://zdf.de/rels/streams/ptmd/attributes"
    },
-   "basename" : "200208_2145_sendung_bad",
+   "basename" : "230828_2015_sendung_dks",
    "captions" : [
       {
          "class" : "hoh",
@@ -26,7 +26,7 @@
          "language" : "deu",
          "offset" : 0,
          "profile" : "http://zdf.de/rels/streams/ptmd/caption",
-         "uri" : "https://utstreaming.zdf.de/mtt/zdf/20/02/200208_2145_sendung_bad/3/F1024594_hoh_deu_Bad_Banks_II_1_Schoene_neue_Welt_080220.xml"
+         "uri" : "https://utstreaming.zdf.de/mtt/zdf/23/08/230828_2015_sendung_dks/7/F1029583_hoh_deu_FdW_Toubab_280823.xml"
       },
       {
          "class" : "hoh",
@@ -34,7 +34,7 @@
          "language" : "deu",
          "offset" : 0,
          "profile" : "http://zdf.de/rels/streams/ptmd/caption",
-         "uri" : "https://utstreaming.zdf.de/mtt/zdf/20/02/200208_2145_sendung_bad/3/F1024594_hoh_deu_Bad_Banks_II_1_Schoene_neue_Welt_080220.vtt"
+         "uri" : "https://utstreaming.zdf.de/mtt/zdf/23/08/230828_2015_sendung_dks/7/F1029583_hoh_deu_FdW_Toubab_280823.vtt"
       }
    ],
    "documentVersion" : 2,
@@ -58,14 +58,14 @@
                               "class" : "main",
                               "language" : "deu",
                               "profile" : "http://zdf.de/rels/streams/ptmd/priority-list-item/formitaet/quality/audio/track",
-                              "uri" : "https://zdfvoddach-vh.akamaihd.net/i/zdf/20/02/200208_2145_sendung_bad/3/200208_2145_sendung_bad_a,1a2_476k_p9,1a2_776k_p11,3a4_776k_p11,1a2_1496k_p13,1a2_2296k_p14,1a2_3296k_p15,v14.mp4.csmil/master.m3u8?audiotrack=1:deu:TV%20Ton,2:deu:Audiodeskription"
+                              "uri" : "https://zdfvod.akamaized.net/i/mp4/dach/zdf/23/08/230828_2015_sendung_dks/1/230828_2015_sendung_dks,_a1a2_508k_p9,_a3a4_508k_p9,_a1a2_808k_p11,_a1a2_1628k_p13,_a1a2_3328k_p15,v15.mp4.csmil/master.m3u8?audiotrack=0:deu:TV%20Ton,1:deu:Audiodeskription"
                            },
                            {
                               "cdn" : "akamai",
                               "class" : "ad",
                               "language" : "deu",
                               "profile" : "http://zdf.de/rels/streams/ptmd/priority-list-item/formitaet/quality/audio/track",
-                              "uri" : "https://zdfvoddach-vh.akamaihd.net/i/zdf/20/02/200208_2145_sendung_bad/3/200208_2145_sendung_bad_a,3a4_476k_p9,3a4_776k_p11,1a2_776k_p11,3a4_1496k_p13,3a4_2296k_p14,3a4_3296k_p15,v14.mp4.csmil/master.m3u8?audiotrack=1:deu:Audiodeskription,2:deu:TV%20Ton"
+                              "uri" : "https://zdfvod.akamaized.net/i/mp4/dach/zdf/23/08/230828_2015_sendung_dks/1/230828_2015_sendung_dks,_a3a4_508k_p9,_a1a2_508k_p9,_a3a4_808k_p11,_a3a4_1628k_p13,_a3a4_3328k_p15,v15.mp4.csmil/master.m3u8?audiotrack=0:deu:Audiodeskription,1:deu:TV%20Ton"
                            }
                         ]
                      },
@@ -82,14 +82,14 @@
                               "class" : "main",
                               "language" : "deu",
                               "profile" : "http://zdf.de/rels/streams/ptmd/priority-list-item/formitaet/quality/audio/track",
-                              "uri" : "https://zdfvoddach-vh.akamaihd.net/i/zdf/20/02/200208_2145_sendung_bad/3/200208_2145_sendung_bad_a,1a2_476k_p9,1a2_776k_p11,3a4_776k_p11,1a2_1496k_p13,1a2_2296k_p14,1a2_3296k_p15,v14.mp4.csmil/master.m3u8?audiotrack=1:deu:TV%20Ton,2:deu:Audiodeskription"
+                              "uri" : "https://zdfvod.akamaized.net/i/mp4/dach/zdf/23/08/230828_2015_sendung_dks/1/230828_2015_sendung_dks,_a1a2_508k_p9,_a3a4_508k_p9,_a1a2_808k_p11,_a1a2_1628k_p13,_a1a2_3328k_p15,v15.mp4.csmil/master.m3u8?audiotrack=0:deu:TV%20Ton,1:deu:Audiodeskription"
                            },
                            {
                               "cdn" : "akamai",
                               "class" : "ad",
                               "language" : "deu",
                               "profile" : "http://zdf.de/rels/streams/ptmd/priority-list-item/formitaet/quality/audio/track",
-                              "uri" : "https://zdfvoddach-vh.akamaihd.net/i/zdf/20/02/200208_2145_sendung_bad/3/200208_2145_sendung_bad_a,3a4_476k_p9,3a4_776k_p11,1a2_776k_p11,3a4_1496k_p13,3a4_2296k_p14,3a4_3296k_p15,v14.mp4.csmil/master.m3u8?audiotrack=1:deu:Audiodeskription,2:deu:TV%20Ton"
+                              "uri" : "https://zdfvod.akamaized.net/i/mp4/dach/zdf/23/08/230828_2015_sendung_dks/1/230828_2015_sendung_dks,_a3a4_508k_p9,_a1a2_508k_p9,_a3a4_808k_p11,_a3a4_1628k_p13,_a3a4_3328k_p15,v15.mp4.csmil/master.m3u8?audiotrack=0:deu:Audiodeskription,1:deu:TV%20Ton"
                            }
                         ]
                      },
@@ -106,14 +106,14 @@
                               "class" : "main",
                               "language" : "deu",
                               "profile" : "http://zdf.de/rels/streams/ptmd/priority-list-item/formitaet/quality/audio/track",
-                              "uri" : "https://zdfvoddach-vh.akamaihd.net/i/zdf/20/02/200208_2145_sendung_bad/3/200208_2145_sendung_bad_a,1a2_476k_p9,1a2_776k_p11,3a4_776k_p11,1a2_1496k_p13,v14.mp4.csmil/master.m3u8?audiotrack=1:deu:TV%20Ton,2:deu:Audiodeskription"
+                              "uri" : "https://zdfvod.akamaized.net/i/mp4/dach/zdf/23/08/230828_2015_sendung_dks/1/230828_2015_sendung_dks,_a1a2_508k_p9,_a3a4_508k_p9,_a1a2_808k_p11,_a1a2_1628k_p13,v15.mp4.csmil/master.m3u8?audiotrack=0:deu:TV%20Ton,1:deu:Audiodeskription"
                            },
                            {
                               "cdn" : "akamai",
                               "class" : "ad",
                               "language" : "deu",
                               "profile" : "http://zdf.de/rels/streams/ptmd/priority-list-item/formitaet/quality/audio/track",
-                              "uri" : "https://zdfvoddach-vh.akamaihd.net/i/zdf/20/02/200208_2145_sendung_bad/3/200208_2145_sendung_bad_a,3a4_476k_p9,3a4_776k_p11,1a2_776k_p11,3a4_1496k_p13,v14.mp4.csmil/master.m3u8?audiotrack=1:deu:Audiodeskription,2:deu:TV%20Ton"
+                              "uri" : "https://zdfvod.akamaized.net/i/mp4/dach/zdf/23/08/230828_2015_sendung_dks/1/230828_2015_sendung_dks,_a3a4_508k_p9,_a1a2_508k_p9,_a3a4_808k_p11,_a3a4_1628k_p13,v15.mp4.csmil/master.m3u8?audiotrack=0:deu:Audiodeskription,1:deu:TV%20Ton"
                            }
                         ]
                      },
@@ -146,14 +146,14 @@
                               "class" : "main",
                               "language" : "deu",
                               "profile" : "http://zdf.de/rels/streams/ptmd/priority-list-item/formitaet/quality/audio/track",
-                              "uri" : "https://nrodlzdf-a.akamaihd.net/dach/zdf/20/02/200208_2145_sendung_bad/3/200208_2145_sendung_bad_a1a2_1496k_p13v14.mp4"
+                              "uri" : "https://nrodlzdf-a.akamaihd.net/dach/zdf/23/08/230828_2015_sendung_dks/1/230828_2015_sendung_dks_a1a2_1628k_p13v15.mp4"
                            },
                            {
                               "cdn" : "akamai",
                               "class" : "ad",
                               "language" : "deu",
                               "profile" : "http://zdf.de/rels/streams/ptmd/priority-list-item/formitaet/quality/audio/track",
-                              "uri" : "https://nrodlzdf-a.akamaihd.net/dach/zdf/20/02/200208_2145_sendung_bad/3/200208_2145_sendung_bad_a3a4_1496k_p13v14.mp4"
+                              "uri" : "https://nrodlzdf-a.akamaihd.net/dach/zdf/23/08/230828_2015_sendung_dks/1/230828_2015_sendung_dks_a3a4_1628k_p13v15.mp4"
                            }
                         ]
                      },
@@ -171,14 +171,14 @@
                               "class" : "main",
                               "language" : "deu",
                               "profile" : "http://zdf.de/rels/streams/ptmd/priority-list-item/formitaet/quality/audio/track",
-                              "uri" : "https://nrodlzdf-a.akamaihd.net/dach/zdf/20/02/200208_2145_sendung_bad/3/200208_2145_sendung_bad_a1a2_776k_p11v14.mp4"
+                              "uri" : "https://nrodlzdf-a.akamaihd.net/dach/zdf/23/08/230828_2015_sendung_dks/1/230828_2015_sendung_dks_a1a2_808k_p11v15.mp4"
                            },
                            {
                               "cdn" : "akamai",
                               "class" : "ad",
                               "language" : "deu",
                               "profile" : "http://zdf.de/rels/streams/ptmd/priority-list-item/formitaet/quality/audio/track",
-                              "uri" : "https://nrodlzdf-a.akamaihd.net/dach/zdf/20/02/200208_2145_sendung_bad/3/200208_2145_sendung_bad_a3a4_776k_p11v14.mp4"
+                              "uri" : "https://nrodlzdf-a.akamaihd.net/dach/zdf/23/08/230828_2015_sendung_dks/1/230828_2015_sendung_dks_a3a4_808k_p11v15.mp4"
                            }
                         ]
                      },
@@ -196,14 +196,14 @@
                               "class" : "main",
                               "language" : "deu",
                               "profile" : "http://zdf.de/rels/streams/ptmd/priority-list-item/formitaet/quality/audio/track",
-                              "uri" : "https://nrodlzdf-a.akamaihd.net/dach/zdf/20/02/200208_2145_sendung_bad/3/200208_2145_sendung_bad_a1a2_476k_p9v14.mp4"
+                              "uri" : "https://nrodlzdf-a.akamaihd.net/dach/zdf/23/08/230828_2015_sendung_dks/1/230828_2015_sendung_dks_a1a2_508k_p9v15.mp4"
                            },
                            {
                               "cdn" : "akamai",
                               "class" : "ad",
                               "language" : "deu",
                               "profile" : "http://zdf.de/rels/streams/ptmd/priority-list-item/formitaet/quality/audio/track",
-                              "uri" : "https://nrodlzdf-a.akamaihd.net/dach/zdf/20/02/200208_2145_sendung_bad/3/200208_2145_sendung_bad_a3a4_476k_p9v14.mp4"
+                              "uri" : "https://nrodlzdf-a.akamaihd.net/dach/zdf/23/08/230828_2015_sendung_dks/1/230828_2015_sendung_dks_a3a4_508k_p9v15.mp4"
                            }
                         ]
                      },
@@ -237,14 +237,14 @@
                               "class" : "main",
                               "language" : "deu",
                               "profile" : "http://zdf.de/rels/streams/ptmd/priority-list-item/formitaet/quality/audio/track",
-                              "uri" : "https://rodlzdf-a.akamaihd.net/dach/zdf/20/02/200208_2145_sendung_bad/3/200208_2145_sendung_bad_a1a2_1496k_p13v14.mp4"
+                              "uri" : "https://rodlzdf-a.akamaihd.net/dach/zdf/23/08/230828_2015_sendung_dks/1/230828_2015_sendung_dks_a1a2_1628k_p13v15.mp4"
                            },
                            {
                               "cdn" : "akamai",
                               "class" : "ad",
                               "language" : "deu",
                               "profile" : "http://zdf.de/rels/streams/ptmd/priority-list-item/formitaet/quality/audio/track",
-                              "uri" : "https://rodlzdf-a.akamaihd.net/dach/zdf/20/02/200208_2145_sendung_bad/3/200208_2145_sendung_bad_a3a4_1496k_p13v14.mp4"
+                              "uri" : "https://rodlzdf-a.akamaihd.net/dach/zdf/23/08/230828_2015_sendung_dks/1/230828_2015_sendung_dks_a3a4_1628k_p13v15.mp4"
                            }
                         ]
                      },
@@ -262,14 +262,14 @@
                               "class" : "main",
                               "language" : "deu",
                               "profile" : "http://zdf.de/rels/streams/ptmd/priority-list-item/formitaet/quality/audio/track",
-                              "uri" : "https://rodlzdf-a.akamaihd.net/dach/zdf/20/02/200208_2145_sendung_bad/3/200208_2145_sendung_bad_a1a2_776k_p11v14.mp4"
+                              "uri" : "https://rodlzdf-a.akamaihd.net/dach/zdf/23/08/230828_2015_sendung_dks/1/230828_2015_sendung_dks_a1a2_808k_p11v15.mp4"
                            },
                            {
                               "cdn" : "akamai",
                               "class" : "ad",
                               "language" : "deu",
                               "profile" : "http://zdf.de/rels/streams/ptmd/priority-list-item/formitaet/quality/audio/track",
-                              "uri" : "https://rodlzdf-a.akamaihd.net/dach/zdf/20/02/200208_2145_sendung_bad/3/200208_2145_sendung_bad_a3a4_776k_p11v14.mp4"
+                              "uri" : "https://rodlzdf-a.akamaihd.net/dach/zdf/23/08/230828_2015_sendung_dks/1/230828_2015_sendung_dks_a3a4_808k_p11v15.mp4"
                            }
                         ]
                      },
@@ -283,102 +283,15 @@
             }
          ],
          "profile" : "http://zdf.de/rels/streams/ptmd/priority-list-item"
-      },
-      {
-         "formitaeten" : [
-            {
-               "facets" : [],
-               "isAdaptive" : true,
-               "mimeType" : "application/f4m+xml",
-               "profile" : "http://zdf.de/rels/streams/ptmd/priority-list-item/formitaet",
-               "qualities" : [
-                  {
-                     "audio" : {
-                        "profile" : "http://zdf.de/rels/streams/ptmd/priority-list-item/formitaet/quality/audio",
-                        "tracks" : [
-                           {
-                              "cdn" : "akamai",
-                              "class" : "main",
-                              "language" : "deu",
-                              "profile" : "http://zdf.de/rels/streams/ptmd/priority-list-item/formitaet/quality/audio/track",
-                              "uri" : "http://zdf_hdflash_dach-vh.akamaihd.net/z/meta-files/zdf/smil/f4m/300/20/02/200208_2145_sendung_bad/3/200208_2145_sendung_bad.smil/manifest.f4m"
-                           },
-                           {
-                              "cdn" : "akamai",
-                              "class" : "ad",
-                              "language" : "deu",
-                              "profile" : "http://zdf.de/rels/streams/ptmd/priority-list-item/formitaet/quality/audio/track",
-                              "uri" : "http://zdf_hdflash_dach-vh.akamaihd.net/z/meta-files/zdf/smil/f4m/300/20/02/200208_2145_sendung_bad/3/200208_2145_sendung_bad.smil/manifest.f4m"
-                           }
-                        ]
-                     },
-                     "hd" : true,
-                     "profile" : "http://zdf.de/rels/streams/ptmd/priority-list-item/formitaet/quality",
-                     "quality" : "auto"
-                  },
-                  {
-                     "audio" : {
-                        "profile" : "http://zdf.de/rels/streams/ptmd/priority-list-item/formitaet/quality/audio",
-                        "tracks" : [
-                           {
-                              "cdn" : "akamai",
-                              "class" : "main",
-                              "language" : "deu",
-                              "profile" : "http://zdf.de/rels/streams/ptmd/priority-list-item/formitaet/quality/audio/track",
-                              "uri" : "http://zdf_hdflash_dach-vh.akamaihd.net/z/meta-files/zdf/smil/f4m/300/20/02/200208_2145_sendung_bad/3/200208_2145_sendung_bad.smil/manifest.f4m"
-                           },
-                           {
-                              "cdn" : "akamai",
-                              "class" : "ad",
-                              "language" : "deu",
-                              "profile" : "http://zdf.de/rels/streams/ptmd/priority-list-item/formitaet/quality/audio/track",
-                              "uri" : "http://zdf_hdflash_dach-vh.akamaihd.net/z/meta-files/zdf/smil/f4m/300/20/02/200208_2145_sendung_bad/3/200208_2145_sendung_bad.smil/manifest.f4m"
-                           }
-                        ]
-                     },
-                     "hd" : true,
-                     "profile" : "http://zdf.de/rels/streams/ptmd/priority-list-item/formitaet/quality",
-                     "quality" : "high"
-                  },
-                  {
-                     "audio" : {
-                        "profile" : "http://zdf.de/rels/streams/ptmd/priority-list-item/formitaet/quality/audio",
-                        "tracks" : [
-                           {
-                              "cdn" : "akamai",
-                              "class" : "main",
-                              "language" : "deu",
-                              "profile" : "http://zdf.de/rels/streams/ptmd/priority-list-item/formitaet/quality/audio/track",
-                              "uri" : "http://zdf_hdflash_dach-vh.akamaihd.net/z/meta-files/zdf/smil/f4m/200/20/02/200208_2145_sendung_bad/3/200208_2145_sendung_bad.smil/manifest.f4m"
-                           },
-                           {
-                              "cdn" : "akamai",
-                              "class" : "ad",
-                              "language" : "deu",
-                              "profile" : "http://zdf.de/rels/streams/ptmd/priority-list-item/formitaet/quality/audio/track",
-                              "uri" : "http://zdf_hdflash_dach-vh.akamaihd.net/z/meta-files/zdf/smil/f4m/200/20/02/200208_2145_sendung_bad/3/200208_2145_sendung_bad.smil/manifest.f4m"
-                           }
-                        ]
-                     },
-                     "hd" : false,
-                     "mimeCodec" : "avc1.4d401f, mp4a.40.2",
-                     "profile" : "http://zdf.de/rels/streams/ptmd/priority-list-item/formitaet/quality",
-                     "quality" : "med"
-                  }
-               ],
-               "type" : "h264_aac_f4f_http_f4m_http"
-            }
-         ],
-         "profile" : "http://zdf.de/rels/streams/ptmd/priority-list-item"
       }
    ],
    "profile" : "http://zdf.de/rels/streams/ptmd",
    "scrubPreview" : {
       "ImageInterval" : "2000",
-      "ImageUrlScheme" : "https://pvstreaming.zdf.de/dach/img/zdf/20/02/200208_2145_sendung_bad/3/scrubpreview/200208_2145_sendung_bad_%index%.jpg",
+      "ImageUrlScheme" : "https://pvstreaming.zdf.de/dach/img/zdf/23/08/230828_2015_sendung_dks/7/scrubpreview/230828_2015_sendung_dks_%index%.jpg",
       "ImagesPerColumn" : "5",
       "ImagesPerRow" : "5"
    },
-   "self" : "/tmd/2/ngplayer_2_3/vod/ptmd/mediathek/200208_2145_sendung_bad/3",
-   "version" : 3
+   "self" : "/tmd/2/ngplayer_2_3/vod/ptmd/mediathek/230828_2015_sendung_dks/7",
+   "version" : 7
 }
